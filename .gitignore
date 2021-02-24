@@ -22,3 +22,27 @@ datasets/titanic
 datasets/words
 datasets/jsb_chorales
 
+**/.bak
+**/.bak.*
+**/.ckpt
+**/.old
+**/.pyc
+**/.DS_Store
+**/.ipynb_checkpoints
+**/.vscode/
+notebooks/checkpoint
+notebooks/logs/*
+notebooks/tf_logs/*
+notebooks/images/**/*.png
+notebooks/images/**/*.dot
+notebooks/my_*
+notebooks/person.proto
+notebooks/person.desc
+notebooks/person_pb2.py
+notebooks/datasets/flowers
+notebooks/datasets/lifesat/lifesat.csv
+notebooks/datasets/spam
+notebooks/datasets/titanic
+notebooks/datasets/words
+notebooks/datasets/jsb_chorales
+
