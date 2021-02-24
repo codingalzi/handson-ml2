@@ -33,27 +33,34 @@
 
 #### 오프라인
 
-자신의 컴퓨터를 활용하여 오프라인 상에서 주피터 노트북을 실행하려면 
+먼저 자신의 컴퓨터에
 [주피터 노트북 리포지토리](https://github.com/codingalzi/handson-ml)
 [<img src="view-on-github.png" alt="View On GitHub" style="height:25px;"/>](https://github.com/codingalzi/handson-ml) 를 
 복제한다. 
 이후 아래 두 가지 방식 중에 하나를 선택하여 주피터 노트북과 소스코드를 실행할 수 있다.
 
-* Anaconda 활용
+* 아나콘다(Anaconda) 활용
 * 도커(docker) 활용
 
-- 방법 3: 윈도우 10 + 아나콘다 + Tensorflow 2(GPU 지원)
-    * 준비사항
-        * MS의 [Visual Studio](https://visualstudio.microsoft.com/) 설치 
-        * [Anaconda](https://www.anaconda.com/products/individual) 설치
-        * 이후 아래 참조 사이트 내용대로 설치 진행
-        * 주의사항: 텐서플로우2 부터는 cpu/gpu 용도 구분하지 않음.
-    * 참조 사이트:
-        * 주: [TensorFlow: GPU support](https://www.tensorflow.org/install/gpu) 
-            (한글 선택 가능)
-            * "소프트웨어 요구사항"을 반드시 확인할 것
-            * cuDNN SDK 사이트는 (무료) 계정 필요.
-        * 보조: [텐서플로우 윈도우 10 GPU 설치](https://teddylee777.github.io/colab/tensorflow-gpu-install-windows)
-            * 설치 순서 및 방법 참고용
-            * 세부사항은 반드시 앞서 언급한 "소프트웨어 요구사항"의 내용대로 해야 함.
-            * 특히 각 소프트웨어의 버전에 주의해야 함. 임의로 설치하면 안됨.
+#### 아나콘다 환경 설치
+
+* 설치환경: 윈도우 10 + 아나콘다 + Tensorflow 2(GPU 지원 가능)
+   * 준비사항
+      * MS의 [Visual Studio](https://visualstudio.microsoft.com/) 설치 
+      * [Anaconda](https://www.anaconda.com/products/individual) 설치
+      * 이후 아래 참조 사이트 내용대로 GPU 드라이버 설치
+      * environment.yml 를 이용하여 아나콘다 환경 설정
+      ```yml
+      $ conda env create -f environment.yml
+      $ conda activate tf2
+      $ python -m ipykernel install --user --name=python3
+      ```
+   * 참조:
+      * 주: [TensorFlow: GPU support](https://www.tensorflow.org/install/gpu) (한글 선택 가능)
+         * 주의사항: 텐서플로우2 부터는 cpu/gpu 용도 구분하지 않음.
+         * "소프트웨어 요구사항"을 반드시 확인할 것
+         * cuDNN SDK 사이트는 (무료) 계정 필요.
+      * 보조: [텐서플로우 윈도우 10 GPU 설치](https://teddylee777.github.io/colab/tensorflow-gpu-install-windows)
+         * 설치 순서 및 방법 참고용
+         * 세부사항은 반드시 앞서 언급한 "소프트웨어 요구사항"의 내용대로 해야 함.
+         * 특히 각 소프트웨어의 버전에 주의해야 함. 임의로 설치하면 안됨.
