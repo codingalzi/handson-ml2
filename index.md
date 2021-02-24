@@ -37,6 +37,12 @@
 [주피터 노트북 리포지토리](https://github.com/codingalzi/handson-ml)
 [<img src="view-on-github.png" alt="View On GitHub" style="height:25px;"/>](https://github.com/codingalzi/handson-ml) 를 
 복제한다. 
+
+```bash
+$ git clone https://github.com/codingalzi/handson-ml.git
+$ cd handson-ml
+```
+
 이후 아래 두 가지 방식 중에 하나를 선택하여 주피터 노트북과 소스코드를 실행할 수 있다.
 
 * 아나콘다(Anaconda) 활용
