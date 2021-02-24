@@ -1,61 +1,10 @@
 오렐리앙 제롱(Aur&eacute;lien G&eacute;ron)의 핸즈온 머신러닝(2판)의 주피터 노트북과 강의 슬라이드 제공
 
-#### 감사의 글
-
-자료를 공개한 저자 오렐리앙 제롱과 강의자료를 지원한 한빛아카데미에게 진심어린 감사를 전합니다.
-
 ### 슬라이드 목차
 
 - 1장 한 눈에 보는 머신러닝 &nbsp;
     [[html]](./slides/handson-ml2-01.slides.html)
     [[pdf]](./slides/handson-ml2-01-slides.pdf)
-- 2장 머신러닝 프로젝트 처음부터 끝까지 &nbsp;
-    [[html]](./slides/handson-ml2-02.slides.html)
-    [[pdf]](./slides/handson-ml2-02-slides.pdf)
-- 3장 분류 &nbsp;
-    [[html]](./slides/handson-ml2-03.slides.html)
-    [[pdf]](./slides/handson-ml2-03-slides.pdf)
-- 4장 모델 훈련 &nbsp;
-    [[html]](./slides/handson-ml2-04.slides.html)
-    [[pdf]](./slides/handson-ml2-04-slides.pdf)
-- 5장 서포트벡터머신 &nbsp;
-    [[html]](./slides/handson-ml2-05.slides.html)
-    [[pdf]](./slides/handson-ml2-05-slides.pdf)
-- 6장 의사결정나무 &nbsp;
-    [[html]](./slides/handson-ml2-06.slides.html)
-    [[pdf]](./slides/handson-ml2-06-slides.pdf)
-- 7장 앙상블 학습과 랜덤포레스트 &nbsp;
-    [[html]](./slides/handson-ml2-07.slides.html)
-    [[pdf]](./slides/handson-ml2-07-slides.pdf)
-- 8장 차원축소 &nbsp;
-    [[html]](./slides/handson-ml2-08.slides.html)
-    [[pdf]](./slides/handson-ml2-08-slides.pdf)
-- 9장 비지도학습 &nbsp;
-    [[html]](./slides/handson-ml2-09.slides.html)
-    [[pdf]](./slides/handson-ml2-09-slides.pdf)
-- 10장 케라스를 사용한 인공신경망 소개 &nbsp;
-    [[html]](./slides/handson-ml2-10.slides.html)
-    [[pdf]](./slides/handson-ml2-10-slides.pdf)
-- 11장 심층신경망 훈련 &nbsp;
-    [[html]](./slides/handson-ml2-11.slides.html)
-    [[pdf]](./slides/handson-ml2-11-slides.pdf)
-- 14장 합성곱신경망: 컴퓨터비전
-    - 1부 &nbsp;
-        [[html]](./slides/handson-ml2-14-1.slides.html)
-        [[pdf]](./slides/handson-ml2-14-1-slides.pdf)
-    - 2부 &nbsp;
-        [[html]](./slides/handson-ml2-14-2.slides.html)
-        [[pdf]](./slides/handson-ml2-14-2-slides.pdf)
-- 15장 RNN과 CNN 활용: 순차데이터 처리 &nbsp;
-    [[html]](./slides/handson-ml2-15.slides.html)
-    [[pdf]](./slides/handson-ml2-15-slides.pdf)
-- 18장 강화학습
-    - 1부 &nbsp;
-        [[html]](./slides/handson-ml2-18-1.slides.html)
-        [[pdf]](./slides/handson-ml2-18-1-slides.pdf)
-    - 2부 &nbsp;
-        [[html]](./slides/handson-ml2-18-2.slides.html)
-        [[pdf]](./slides/handson-ml2-18-2-slides.pdf)
 - ...
 
 *주의: HTML을 이용하여 슬라이드를 사용할 경우 전진과 후진을 `space`와 `shift+space` 키를 활용할 것.*
@@ -100,8 +49,6 @@
             * 세부사항은 반드시 앞서 언급한 "소프트웨어 요구사항"의 내용대로 해야 함.
             * 특히 각 소프트웨어의 버전에 주의해야 함. 임의로 설치하면 안됨.
 
----
+### 감사의 글
 
-#### 깃허브 마크다운 사용법 
-
-깃허브에서 사용되는 마크다운에 자세한 안내는 [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/) 참조.
+자료를 공개한 저자 오렐리앙 제롱(Aur&eacute;lien G&eacute;ron)과 강의자료를 지원한 한빛아카데미에게 진심어린 감사를 전합니다.
