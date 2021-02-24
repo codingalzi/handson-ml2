@@ -16,7 +16,7 @@
      $ conda activate tf2
      $ python -m ipykernel install --user --name=python3
      ```
-  1. 주피터 노트북 실행
+  1. 주피터 서버 실행
      ```bash
      $ jupyter notebook
      ```
@@ -34,13 +34,14 @@
      * 세부사항은 반드시 앞서 언급한 "소프트웨어 요구사항"의 내용대로 해야 함.
      * 특히 각 소프트웨어의 버전에 주의해야 함. 임의로 설치하면 안됨.
 
-* 한 번 설정된 아나콘다 가상환경 `tf2`를 이후에 다시 활용하려면 아래 명령어를 터미널 창에서 실행만 하면 됨. 
-  ```bash
-  $ cd $HOME # or whatever development directory you chose earlier
-  $ cd handson-ml2
-  $ conda activate tf2
-  $ jupyter notebook
-  ```
+* 주피터 서버 재실행
+  1. 한 번 설정된 아나콘다 가상환경 `tf2`를 이후에 다시 활용하려면 아래 명령어를 터미널 창에서 실행만 하면 됨. 
+     ```bash
+     $ cd $HOME # or whatever development directory you chose earlier
+     $ cd handson-ml2
+     $ conda activate tf2
+     $ jupyter notebook
+     ```
 
 ### 도커(docker) 이미지 생성
 
