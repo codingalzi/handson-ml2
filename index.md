@@ -59,7 +59,10 @@ $ cd handson-ml
 ### 심층신경망 참고 동영상
 - [수학자가 설명하는 심층 신경망](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi)
 - 딥러닝 옵티마이저 선택 문제
-   - [Tom Goldstein: "An empirical look at generalization in neural nets"](https://www.youtube.com/watch?t=1304&v=kcVWAKf7UAg&feature=youtu.be)
+   - [Tom Goldstein: "An empirical look at generalization in neural nets"](https://youtu.be/kcVWAKf7UAg?t=1304)
+- 손실함수 그래픽
+   - [Tom Goldstein: "What do neural loss surfaces look like?"](https://youtu.be/78vq6kgsTa8?t=237)
+
 ### 강화학습 관련 동영상
 - [알파고(이세돌) vs. 알파고 제로 비교 소개 동영상](https://www.youtube.com/watch?v=MgowR4pq3e8)
 - [강화학습 학습과정 예제: Multi-Agent Hide and Seek](https://www.youtube.com/watch?v=kopoLzvh5jY)
