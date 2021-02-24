@@ -62,8 +62,8 @@ $ cd handson-ml
          $ python -m ipykernel install --user --name=python3
          ```
 
-   * 참조:
-      * 주: [TensorFlow: GPU support](https://www.tensorflow.org/install/gpu) (한글 선택 가능)
+   * GPU 드라이버 설치 참조 사이트:
+      * 주(main): [TensorFlow: GPU support](https://www.tensorflow.org/install/gpu) (한글 선택 가능)
          * 주의사항: 텐서플로우2 부터는 cpu/gpu 용도 구분하지 않음.
          * "소프트웨어 요구사항"을 반드시 확인할 것
          * cuDNN SDK 사이트는 (무료) 계정 필요.
