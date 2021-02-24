@@ -44,7 +44,7 @@
 * 도커 허브 활용
   1. 도커 허브에서 아나콘다와 텐서플로우2를 지원하는 도커이미지 가져오기(pull)
   1. 가져온 도커 이미지에서 `environment.yml`을 이용하여 아나콘다 패키지 추가 설치
-    ```bash
-    conda env update --name myenv --file environment.yml
-    ```
+     ```bash
+     conda env update --name myenv --file environment.yml
+     ```
   1. 
