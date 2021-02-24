@@ -53,7 +53,7 @@ $ cd handson-ml
 ### 딥러닝 훈련 코드 모음집
 
 - [Keras Code Examples](https://keras.io/examples/)
-- [paperswithcode datasets](https://www.paperswithcode.com/datasets)
+- [PapersWithCode datasets](https://www.paperswithcode.com/datasets)
 - [Sebastian Raschka's datasets](https://sebastianraschka.com/blog/2021/ml-dl-datasets.html)
 
 ### 심층신경망 참고 동영상
