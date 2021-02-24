@@ -12,6 +12,7 @@
     * 주피터 노트북(html): [[ipynb]](./notebooks/handson-ml-01.html)
 1. ...
 
+**링크 활용법**
 * HTML 슬라이드는 온라인 상에서 학습할 때 유용
     * 스마트폰/태블릿 등에서 좌우터치 사용 가능 
     * PC용 브라우저의 경우 `space`와 `shift+space` 키 활용
