@@ -1,4 +1,4 @@
-오렐리앙 제롱(Aur&eacute;lien G&eacute;ron)의 핸즈온 머신러닝(2판)의 주피터 노트북과 강의 슬라이드 제공
+&lt;핸즈온 머신러닝(2판)&gt;의 소스코드와 예제 및 연습문제에 대한 설명을 담은 주피터 노트북과 강의 슬라이드를 제공합니다.
 
 ### 슬라이드 목차
 
@@ -18,10 +18,10 @@
 
 #### 온라인
 
-추천: [구글 코랩 활용 ](https://colab.research.google.com/github/liganega/handson-ml2/blob/master/)
-<a href="https://colab.research.google.com/github/liganega/handson-ml2/blob/master/"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+추천: [구글 코랩 활용 ](https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/)
+<a href="https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
-*주의: 온라인 상에서 작업한 내용은 저장되지 않으며, 따라서 먼저 자신의 계정으로 사본을 만들어야 함.
+* 주의: 온라인 상에서 실습한 내용을 저장하려면 먼저 자신의 계정으로 사본을 만들어야 함.
 
 #### 오프라인
 
