@@ -9,18 +9,19 @@
 * 환경설정 과정 및 주피터 노트북 실행
   1. [아나콘다(Anaconda)](https://www.anaconda.com/products/individual) 설치
   1. 이후 아래 참조 사이트 내용대로 GPU 드라이버 설치
-  1. 터미널(terminal) 창애소 environment.yml 를 이용하여 아나콘다 환경 설정 완료
+  1. 터미널(terminal) 창에서 environment.yml 를 이용하여 아나콘다 가상환경(virtual environment) 설정
      ```bash
      $ conda env create -f environment.yml
      $ conda activate tf2
      $ python -m ipykernel install --user --name=python3
      ```
-   1. 주피터 노트북 실행
-      ```bash
-      $ jupyter notebook
-      ```
-      브라우저가 자동으로 실행되지 않을 경우 수동으로 [localhost:8888](http://localhost:8888/tree) 방문 후 
-      `index.ipynb` 노트북 선택.
+  1. 주피터 노트북 실행
+     ```bash
+     $ jupyter notebook
+     ```
+     브라우저가 자동으로 실행되지 않을 경우 수동으로 [localhost:8888](http://localhost:8888/tree) 방문 후 
+     `index.ipynb` 노트북 선택.
+  1. 
      
 * GPU 드라이버 설치 참조 사이트
   * 주(main): [TensorFlow: GPU support](https://www.tensorflow.org/install/gpu) (한글 선택 가능)
@@ -33,6 +34,7 @@
      * 특히 각 소프트웨어의 버전에 주의해야 함. 임의로 설치하면 안됨.
 
 * 아나콘다 환경설정 사용법
+  * 한 번 설정된 아나콘다 가상환경은 
 
 ### 도커(docker) 이미지 생성
 
