@@ -52,15 +52,16 @@ $ cd handson-ml
 
 * 설치환경: 윈도우 10 + 아나콘다 + Tensorflow 2(GPU 지원 가능)
    * 준비사항
-      * MS의 [Visual Studio](https://visualstudio.microsoft.com/) 설치 
       * [Anaconda](https://www.anaconda.com/products/individual) 설치
       * 이후 아래 참조 사이트 내용대로 GPU 드라이버 설치
       * environment.yml 를 이용하여 아나콘다 환경 설정
+
          ```bash
          $ conda env create -f environment.yml
          $ conda activate tf2
          $ python -m ipykernel install --user --name=python3
          ```
+
    * 참조:
       * 주: [TensorFlow: GPU support](https://www.tensorflow.org/install/gpu) (한글 선택 가능)
          * 주의사항: 텐서플로우2 부터는 cpu/gpu 용도 구분하지 않음.
