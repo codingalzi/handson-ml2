@@ -40,7 +40,7 @@ $ git clone https://github.com/codingalzi/handson-ml.git
 $ cd handson-ml
 ```
 
-이후 아래 두 가지 방식 중에 하나를 선택하여 주피터 노트북과 소스코드를 실행할 수 있습니다.
+아래 두 가지 방식 중에 하나를 선택하여 주피터 노트북과 소스코드를 실행할 수 있습니다.
 자세한 내용은 [프로그래밍 환경설정 안내](./INSTALL.md)를 참조하세요.
 
 * 아나콘다(Anaconda) 활용
