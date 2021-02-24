@@ -47,4 +47,4 @@
      ```bash
      conda env update --name myenv --file environment.yml
      ```
-  1. 
+  1. 도커 이미지 업데이트
