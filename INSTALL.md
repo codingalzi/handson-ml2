@@ -4,7 +4,7 @@
 아래 설명은 윈도우(Windows) 10을 기준으로 합니다.
 리눅스의 경우는 설치 방식만 다를 뿐 과정은 거의 동일하지만, 아래에서 설명하는 도커 이미지를 활용하는 방식을 추천합니다. 
 
-## 윈도우 10 + 아나콘다(Anaconda) + Tensorflow 2(GPU 지원 가능)
+## 윈도우 10 + 아나콘다(Anaconda) + Tensorflow 2(GPU 지원)
 
 * 환경설정 과정 및 주피터 노트북 서버 실행
   1. [아나콘다(Anaconda)](https://www.anaconda.com/products/individual) 설치
