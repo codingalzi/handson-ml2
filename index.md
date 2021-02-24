@@ -5,7 +5,7 @@
 
 1. 한 눈에 보는 머신러닝
     * 슬라이드: [[html]](./slides/handson-ml-01.slides.html), [[pdf]](./slides/handson-ml-01-slides.pdf)
-    * 주피터 노트북(html): [[ipynb](./notebooks/handson-ml-01.html)] 
+    * 주피터 노트북(html): [[ipynb]](./notebooks/handson-ml-01.html)
 1. ...
 
 * HTML 슬라이드는 온라인 상에서 학습할 때 유용
