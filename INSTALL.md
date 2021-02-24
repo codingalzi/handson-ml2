@@ -6,10 +6,10 @@
 
 ### 윈도우 10 + 아나콘다 + Tensorflow 2(GPU 지원 가능)
 
-* 준비사항
-  * [Anaconda](https://www.anaconda.com/products/individual) 설치
-  * 이후 아래 참조 사이트 내용대로 GPU 드라이버 설치
-  * environment.yml 를 이용하여 아나콘다 환경 설정
+* 환경설정 과정
+  1. [Anaconda](https://www.anaconda.com/products/individual) 설치
+  1. 이후 아래 참조 사이트 내용대로 GPU 드라이버 설치
+  1. environment.yml 를 이용하여 아나콘다 환경 설정
 
      ```bash
      $ conda env create -f environment.yml
