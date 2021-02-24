@@ -25,7 +25,7 @@
 * [구글 코랩 활용 ](https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/)
 <a href="https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
-* 주의: 온라인 상에서 실습한 내용을 저장하려면 먼저 자신의 계정으로 사본을 만들어야 함.
+**주의사항: 온라인 상에서 실습한 내용을 저장하려면 먼저 자신의 계정으로 사본을 만들어야 함.**
 
 #### 오프라인
 
