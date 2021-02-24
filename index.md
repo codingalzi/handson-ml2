@@ -1,11 +1,10 @@
-&lt;핸즈온 머신러닝(2판)&gt;의 소스코드와 예제 및 연습문제를 담은 주피터 노트북을 바탕으로
-머신러닝/딥러닝의 기초를 소개합니다.
+[&lt;핸즈온 머신러닝(2판)&gt;](https://m.hanbit.co.kr/store/books/book_view.html?p_code=B7033438574)의 
+소스코드와 예제 및 연습문제를 담은 주피터 노트북을 바탕으로 머신러닝/딥러닝의 기초를 소개합니다.
 
-### 슬라이드 목차
+### 목차
 
-1. 한 눈에 보는 머신러닝 &nbsp;
-    [[html]](./slides/handson-ml2-01.slides.html)
-    [[pdf]](./slides/handson-ml2-01-slides.pdf)
+1. 한 눈에 보는 머신러닝
+    * 슬라이드: [[html]](./slides/handson-ml2-01.slides.html) [[pdf]](./slides/handson-ml2-01-slides.pdf)
 1. ...
 
 * HTML 슬라이드는 온라인 상에서 학습할 때 유용
@@ -19,7 +18,6 @@
     - 다양한 주제에 대한 딥러닝 모델 구현 및 훈련방법 소개
 
 ### 주피터 노트북 학습
-
 #### 온라인
 
 추천: [구글 코랩 활용 ](https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/)
@@ -29,7 +27,9 @@
 
 #### 오프라인
 
-추천 활용법: [GitHub:handson-ml2](https://github.com/liganega/handson-ml2)를 복제한 후에 도커 활용.
+추천 활용법: [강의 주피터 노트북 리포지토리](https://github.com/codingalzi/handson-ml)
+[<img src="view-on-github.png" alt="View On GitHub" style="height:25px;"/>](https://github.com/codingalzi/handson-ml) 를 
+복제한 후에 도커 활용.
 도커 이미지는 아래 방법으로 구할 수 있음:
 - 방법1: 저자 제공 [도커 이미지](https://hub.docker.com/r/ageron/handson-ml2/tags) 사용
     * latest 또는 2020.03 Tag 사용 가능.
