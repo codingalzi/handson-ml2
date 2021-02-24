@@ -48,7 +48,7 @@ $ cd handson-ml
 * 아나콘다(Anaconda) 활용
 * 도커(docker) 활용
 
-#### 아나콘다 환경 설치
+#### 아나콘다 환경 설정
 
 * 설치환경: 윈도우 10 + 아나콘다 + Tensorflow 2(GPU 지원 가능)
    * 준비사항
