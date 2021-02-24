@@ -22,17 +22,24 @@
 
 #### 온라인(추천)
 
+**주의사항:** 온라인 상에서 실습한 내용을 저장하려면 먼저 자신의 계정으로 사본을 만들어야 함.
+
 * [구글 코랩 활용 ](https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/)
 <a href="https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
-**주의사항: 온라인 상에서 실습한 내용을 저장하려면 먼저 자신의 계정으로 사본을 만들어야 함.**
-
 #### 오프라인
 
-추천 활용법: [강의 주피터 노트북 리포지토리](https://github.com/codingalzi/handson-ml)
+자신의 컴퓨터를 활용하여 오프라인 상에서 주피터 노트북을 실행하려면 
+[주피터 노트북 리포지토리](https://github.com/codingalzi/handson-ml)
 [<img src="view-on-github.png" alt="View On GitHub" style="height:25px;"/>](https://github.com/codingalzi/handson-ml) 를 
-복제한 후에 도커 활용.
-도커 이미지는 아래 방법으로 구할 수 있음:
+복제한다. 
+이후 아래 두 가지 방식 중에 하나를 선택하여 주피터 노트북과 소스코드를 실행할 수 있다.
+
+* 도커(docker) 활용
+* 
+* 
+* 
+* . 도커 이미지는 아래 방법으로 구할 수 있음.
 - 방법1: 저자 제공 [도커 이미지](https://hub.docker.com/r/ageron/handson-ml2/tags) 사용
     * latest 또는 2020.03 Tag 사용 가능.
     * GPU 미지원.
