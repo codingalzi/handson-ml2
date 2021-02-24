@@ -6,7 +6,7 @@
 
 ### 윈도우 10 + 아나콘다(Anaconda) + Tensorflow 2(GPU 지원 가능)
 
-* 환경설정 과정 및 주피터 노트북 실행
+* 환경설정 과정 및 주피터 노트북 서버 실행
   1. [아나콘다(Anaconda)](https://www.anaconda.com/products/individual) 설치
   1. 이후 아래 참조 사이트 내용대로 GPU 드라이버 설치
   1. 터미널(terminal) 창에서 environment.yml 를 이용하여 아나콘다 가상환경(virtual environment) 설정.
@@ -16,7 +16,7 @@
      $ conda activate tf2
      $ python -m ipykernel install --user --name=python3
      ```
-  1. 주피터 서버 실행
+  1. 주피터 노트북 서버 실행
      ```bash
      $ jupyter notebook
      ```
@@ -35,10 +35,12 @@
      * 특히 각 소프트웨어의 버전에 주의해야 함. 임의로 설치하면 안됨.
 
 * 주피터 서버 재실행
-  1. 한 번 설정된 아나콘다 가상환경 `tf2`를 이후에 다시 활용하려면 아래 명령어를 터미널 창에서 실행만 하면 됨. 
+  1. 프로젝트 리포지토리로 이동
      ```bash
-     $ cd $HOME # or whatever development directory you chose earlier
-     $ cd handson-ml2
+     $ cd 기타경로/handson-ml
+     ```
+  1. 아나콘다 가상환경 `tf2` 지정 후 주피터 노트북 서버 실행
+     ```bash
      $ conda activate tf2
      $ jupyter notebook
      ```
