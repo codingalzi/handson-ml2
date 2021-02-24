@@ -19,7 +19,8 @@
       ```bash
       $ jupyter notebook
       ```
-      브라우저가 자동으로 실행되지 않을 경우 수동으로 `localhost:8888` 방문 후 `index.ipynb` 노트북 선택.
+      브라우저가 자동으로 실행되지 않을 경우 수동으로 [localhost:8888](http://localhost:8888/tree) 방문 후 
+      `index.ipynb` 노트북 선택.
      
 * GPU 드라이버 설치 참조 사이트
   * 주(main): [TensorFlow: GPU support](https://www.tensorflow.org/install/gpu) (한글 선택 가능)
