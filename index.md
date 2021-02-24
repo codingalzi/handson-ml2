@@ -1,11 +1,11 @@
 [&lt;핸즈온 머신러닝(2판)&gt;](https://m.hanbit.co.kr/store/books/book_view.html?p_code=B7033438574)의 
 소스코드와 예제 및 연습문제를 담은 주피터 노트북을 바탕으로 머신러닝/딥러닝의 기초를 소개합니다.
 
-### 감사의 글
+## 감사의 글
 
 자료를 공개한 저자 오렐리앙 제롱(Aur&eacute;lien G&eacute;ron)과 강의자료를 지원한 한빛아카데미에게 진심어린 감사를 전합니다.
 
-### 목차
+## 목차
 
 1. 한 눈에 보는 머신러닝
     * 슬라이드: [[html]](./slides/handson-ml-01.slides.html), [[pdf]](./slides/handson-ml-01-slides.pdf)
@@ -17,21 +17,21 @@
     * PC용 브라우저의 경우 `space`와 `shift+space` 키 활용
 * PDF 슬라이드는 PC용 브라우저에서 직접 읽거나 다운로드한 후 사용하면 유용
 
-### 딥러닝 훈련 코드 모음집
+## 딥러닝 훈련 코드 모음집
 
 - [Keras Code Examples](https://keras.io/examples/)
     - 다양한 주제에 대한 딥러닝 모델 구현 및 훈련방법 소개
 
-### 주피터 노트북 학습
+## 주피터 노트북 학습
 
-#### 온라인(추천)
+### 온라인(추천)
 
 **주의사항:** 온라인 상에서 실습한 내용을 저장하려면 먼저 자신의 계정으로 사본을 만들어야 합니다.
 
 * [구글 코랩 ](https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/)
 <a href="https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> 활용
 
-#### 오프라인
+### 오프라인
 
 먼저 자신의 컴퓨터에
 [주피터 노트북 리포지토리](https://github.com/codingalzi/handson-ml)
