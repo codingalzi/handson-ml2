@@ -9,8 +9,9 @@
 * 환경설정 과정 및 주피터 노트북 서버 실행
   1. [아나콘다(Anaconda)](https://www.anaconda.com/products/individual) 설치
   1. 이후 아래 참조 사이트 내용대로 GPU 드라이버 설치
-  1. 터미널(terminal) 창에서 environment.yml 를 이용하여 아나콘다 가상환경(virtual environment) 설정.
-     (가상환경 이름은 `tf2`로 `environment.yml` 파일에 지정되어 있음)
+  1. 터미널(terminal) 창에서 [environment.yml](https://github.com/codingalzi/handson-ml/blob/master/environment.yml)을 
+     이용하여 아나콘다 가상환경(virtual environment) 설정.
+     (가상환경 이름은 `tf2`로 `environment.yml` 파일에 지정되어 있으며, 직접 수정 가능.)
      ```bash
      $ conda env create -f environment.yml
      $ conda activate tf2
@@ -22,24 +23,23 @@
      ```
      브라우저가 자동으로 실행되지 않을 경우 수동으로 [localhost:8888](http://localhost:8888/tree) 방문 후 
      `index.ipynb` 노트북 선택.
-  1. 실행 종료: 브라우저를 닫은 후 터미널 창에서 `Ctrl-C`를 눌러 주피터 서버 실행 종료
-     
+  1. 실행 종료: 브라우저를 닫은 후 터미널 창에서 `Ctrl-C`를 눌러 주피터 서버 실행 종료  
 * GPU 드라이버 설치 참조 사이트
-  * 주(main): [TensorFlow: GPU support](https://www.tensorflow.org/install/gpu) (한글 선택 가능)
+  * [TensorFlow: GPU support](https://www.tensorflow.org/install/gpu) (한글 선택 가능)
      * 주의사항: 텐서플로우2 부터는 cpu/gpu 용도 구분하지 않음.
      * "소프트웨어 요구사항"을 반드시 확인할 것
      * cuDNN SDK 사이트는 (무료) 계정 필요.
-  * 보조: [텐서플로우 윈도우 10 GPU 설치](https://teddylee777.github.io/colab/tensorflow-gpu-install-windows)
+  * [텐서플로우 윈도우 10 GPU 설치](https://teddylee777.github.io/colab/tensorflow-gpu-install-windows)
      * 설치 순서 및 방법 참고용
      * 세부사항은 반드시 앞서 언급한 "소프트웨어 요구사항"의 내용대로 해야 함.
      * 특히 각 소프트웨어의 버전에 주의해야 함. 임의로 설치하면 안됨.
-
 * 주피터 서버 재실행
   1. 프로젝트 리포지토리로 이동
      ```bash
-     $ cd 기타경로/handson-ml
+     $ 기타경로/handson-ml
      ```
-  1. 아나콘다 가상환경 `tf2` 지정 후 주피터 노트북 서버 실행
+     (기타경로: handson-ml 폴더가 포함된 디렉토리의 경로)
+  1. 아나콘다 가상환경을 `tf2`로 지정한 후 주피터 노트북 서버 실행
      ```bash
      $ conda activate tf2
      $ jupyter notebook
