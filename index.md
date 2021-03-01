@@ -8,8 +8,10 @@
 ### 목차
 
 1. 한 눈에 보는 머신러닝
-    * 슬라이드: [[html]](./slides/handson-ml-01.slides.html), [[pdf]](./slides/handson-ml-01-slides.pdf)
-    * 주피터 노트북: [[html]](./notebooks/handson-ml-01.html), [[colab]](./slides/handson-ml-01-slides.pdf)
+    * 슬라이드: [[html]](./slides/handson-ml-01.slides.html), 
+	[[pdf]](./slides/handson-ml-01-slides.pdf)
+    * 주피터 노트북: [[html]](./notebooks/handson-ml-01.html), 
+	[[colab]](https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/notebooks/handson-ml-01.ipynb)
 1. ...
 
 **링크 활용법**
