@@ -9,24 +9,27 @@
 
 1. 한 눈에 보는 머신러닝
     * 슬라이드: [[html]](./slides/handson-ml-01.slides.html), [[pdf]](./slides/handson-ml-01-slides.pdf)
-    * 주피터 노트북(html): [[ipynb]](./notebooks/handson-ml-01.html)
+    * 주피터 노트북: [[html]](./notebooks/handson-ml-01.html), [[colab]](./slides/handson-ml-01-slides.pdf)
 1. ...
 
 **링크 활용법**
-* HTML 슬라이드: 온라인 상에서 학습할 때 유용
-    * 스마트폰/태블릿 등에서 좌우터치 사용 가능 
-    * PC용 브라우저의 경우 `space`와 `shift+space` 키 활용
-* PDF 슬라이드: PC용 브라우저에서 직접 읽거나 다운로드한 후 사용하면 유용
-* 주피터 노트북(html): 읽기 전용 주피터 노트북. 실행은 아래에서 소개하는 구글 코랩 활용할 것.
+* 슬라이드
+   * HTML 버전: 온라인 상에서 학습할 때 유용
+       * 스마트폰/태블릿 등에서 좌우방향 터치 사용 가능 
+       * PC용 브라우저의 경우 `space`와 `shift+space` 키 활용
+   * PDF 버전: PC용 브라우저에서 직접 읽거나 다운로드한 후 사용
+* 주피터 노트북
+   * HTML 버전: 읽기 전용 주피터 노트북
+   * colab 버전: 구글 코랩에서 직접 실행 가능한 주피터 노트북
 
-### 주피터 노트북 학습
+### 주피터 노트북 학습법
 
 #### 온라인(추천)
 
-**주의사항:** 온라인 상에서 실습한 내용을 저장하려면 먼저 자신의 계정으로 사본을 만들어야 합니다.
-
 * [구글 코랩 ](https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/)
 <a href="https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> 활용
+
+**주의사항:** 온라인 상에서 실습한 내용을 저장하려면 먼저 자신의 계정으로 사본을 만들어 저장한 후에 수정 및 실행해야 합니다.
 
 #### 오프라인
 
