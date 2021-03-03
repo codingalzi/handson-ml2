@@ -13017,25 +13017,6 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
-<style type="text/css">
-    
-
-<script>
-    MathJax.Hub.Config({
-        "HTML-CSS": {
-            /*preferredFont: "TeX",*/
-            /*availableFonts: ["TeX", "STIX"],*/
-            styles: {
-                scale: 100,
-                ".MathJax_Display": {
-                    "font-size": "100%",
-                }
-            }
-        }
-    });
-</script>
-    
-    </style>
 
 
 <style type="text/css">
@@ -13103,6 +13084,51 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#51452;&#50836;-&#45236;&#50857;">&#51452;&#50836; &#45236;&#50857;<a class="anchor-link" href="#&#51452;&#50836;-&#45236;&#50857;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>모델 기반 학습<ul>
+<li>선형 회귀</li>
+</ul>
+</li>
+<li>머신러닝의 주요 도전 과제<ul>
+<li>대표성 없는 훈련 데이터</li>
+<li>과대적합과 모델 규제</li>
+</ul>
+</li>
+<li>사례 기반 학습<ul>
+<li>k-최근접 이웃 회귀</li>
+</ul>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>참고:</strong> 
+사용되는 코드의 세부사항을 지금 당장 일일이 이해할 필요는 없으며 설명되는 코드의 전체 구조에 대한 감을 익히는 데에 집중해야 한다.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#44592;&#48376;-&#49444;&#51221;">&#44592;&#48376; &#49444;&#51221;<a class="anchor-link" href="#&#44592;&#48376;-&#49444;&#51221;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>파이썬 3을 이용한다.</p>
 <ul>
 <li>파이썬 버전: 3.5 이상</li>
@@ -13145,83 +13171,14 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="&#47784;&#45944;-&#44592;&#48152;-&#54617;&#49845;:-&#50696;&#51228;-&#53076;&#46300;">&#47784;&#45944; &#44592;&#48152; &#54617;&#49845;: &#50696;&#51228; &#53076;&#46300;<a class="anchor-link" href="#&#47784;&#45944;-&#44592;&#48152;-&#54617;&#49845;:-&#50696;&#51228;-&#53076;&#46300;">&#182;</a></h4><ul>
-<li>핸즈온 머신러닝(2판) 48쪽~53쪽</li>
-<li>아래 예제 코드의 세부사항을 지금 당장 일일이 이해할 필요는 없지만 전체 구조에 대한 감을 잡는 일은 매우 중요함.</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>아래에 정의되는 <code>prepare_country_stats()</code> 함수는
-OECD에서 제공하는 삶의 만족도 데이터와 
-IMF의 1인당 국내총생산(GDP) 데이터를 병합(merge)하는 
-용도로 사용된다.</p>
+<p>다음은 주피터 노트북에서 그래프를 깔금하게 그리기 위한 설정이다.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">prepare_country_stats</span><span class="p">(</span><span class="n">oecd_bli</span><span class="p">,</span> <span class="n">gdp_per_capita</span><span class="p">):</span>
-    <span class="n">oecd_bli</span> <span class="o">=</span> <span class="n">oecd_bli</span><span class="p">[</span><span class="n">oecd_bli</span><span class="p">[</span><span class="s2">&quot;INEQUALITY&quot;</span><span class="p">]</span><span class="o">==</span><span class="s2">&quot;TOT&quot;</span><span class="p">]</span>
-    <span class="n">oecd_bli</span> <span class="o">=</span> <span class="n">oecd_bli</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s2">&quot;Country&quot;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s2">&quot;Indicator&quot;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s2">&quot;Value&quot;</span><span class="p">)</span>
-    <span class="n">gdp_per_capita</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;2015&quot;</span><span class="p">:</span> <span class="s2">&quot;GDP per capita&quot;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-    <span class="n">gdp_per_capita</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;Country&quot;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-    <span class="n">full_country_stats</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">left</span><span class="o">=</span><span class="n">oecd_bli</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="n">gdp_per_capita</span><span class="p">,</span>
-                                  <span class="n">left_index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">right_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-    <span class="n">full_country_stats</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># 1인당 GDP 기준 정렬</span>
-    <span class="n">remove_indices</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">35</span><span class="p">]</span>
-    <span class="n">keep_indices</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">36</span><span class="p">))</span> <span class="o">-</span> <span class="nb">set</span><span class="p">(</span><span class="n">remove_indices</span><span class="p">))</span>
-    <span class="k">return</span> <span class="n">full_country_stats</span><span class="p">[[</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">,</span> <span class="s1">&#39;Life satisfaction&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">keep_indices</span><span class="p">]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>책에 포함된 코드는 사용하는 데이터가 주피터 노트북과 동일한 디렉토리에 위치한다고 가정한다.
-여기서는 해당 데이터를 datasets/lifesat 디렉토리로 다운로드하는 방식을 사용한다.</p>
-<p>먼저 앞서 언급한 디렉토리의 경로를 지정한다.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
-<span class="n">datapath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;datasets&quot;</span><span class="p">,</span> <span class="s2">&quot;lifesat&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>주피터 노트북에서 그래프를 깔금하게 그리기 위한 설정을 아래와 같이 준비한다.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
@@ -13239,13 +13196,88 @@ IMF의 1인당 국내총생산(GDP) 데이터를 병합(merge)하는
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>앞서 지정한 디렉토리로 데이터를 다운로드한다.
-다운로드할 데이터는 저자의 깃허브 리포지토리에 저장되어 있으며,
-두 개의 csv 파일을 다운로드 한다.</p>
-<ul>
-<li>2015년도 기준 OECD의 더 나은 삶의 지수(BLI) 데이터: oecd_bli_2015.csv</li>
-<li>IMF의 1인당 국내총생산 데이터(GDP) 데이터: gdp_per_capita.csv</li>
-</ul>
+<p>여기서 필요한 모듈을 불러온다.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#47784;&#45944;-&#44592;&#48152;-&#54617;&#49845;">&#47784;&#45944; &#44592;&#48152; &#54617;&#49845;<a class="anchor-link" href="#&#47784;&#45944;-&#44592;&#48152;-&#54617;&#49845;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#44536;&#47000;&#54532;-&#51200;&#51109;-&#54632;&#49688;-&#49440;&#50616;">&#44536;&#47000;&#54532; &#51200;&#51109; &#54632;&#49688; &#49440;&#50616;<a class="anchor-link" href="#&#44536;&#47000;&#54532;-&#51200;&#51109;-&#54632;&#49688;-&#49440;&#50616;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>아래 <code>save_fig()</code> 함수는 지정된 디렉토리에 생성된 그래프를 저장하는 함수이다.</p>
+<p><strong>주의사항:</strong> 이 함수는 아래 코드 이해를 위해 전혀 필요하지 않다.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="c1"># 그래프 저장을 디렉토리 지정</span>
+<span class="n">PROJECT_ROOT_DIR</span> <span class="o">=</span> <span class="s2">&quot;.&quot;</span>
+<span class="n">CHAPTER_ID</span> <span class="o">=</span> <span class="s2">&quot;fundamentals&quot;</span>
+<span class="n">IMAGES_PATH</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">PROJECT_ROOT_DIR</span><span class="p">,</span> <span class="s2">&quot;images&quot;</span><span class="p">,</span> <span class="n">CHAPTER_ID</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">IMAGES_PATH</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># 그래프 저장 함수 선언</span>
+<span class="k">def</span> <span class="nf">save_fig</span><span class="p">(</span><span class="n">fig_id</span><span class="p">,</span> <span class="n">tight_layout</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">fig_extension</span><span class="o">=</span><span class="s2">&quot;png&quot;</span><span class="p">,</span> <span class="n">resolution</span><span class="o">=</span><span class="mi">300</span><span class="p">):</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">IMAGES_PATH</span><span class="p">,</span> <span class="n">fig_id</span> <span class="o">+</span> <span class="s2">&quot;.&quot;</span> <span class="o">+</span> <span class="n">fig_extension</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Saving figure&quot;</span><span class="p">,</span> <span class="n">fig_id</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">tight_layout</span><span class="p">:</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="n">fig_extension</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="n">resolution</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#47924;&#51089;&#50948;&#49457;-&#49884;&#46300;-&#51648;&#51221;">&#47924;&#51089;&#50948;&#49457; &#49884;&#46300; &#51648;&#51221;<a class="anchor-link" href="#&#47924;&#51089;&#50948;&#49457;-&#49884;&#46300;-&#51648;&#51221;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>실행할 때 마다 동일한 결과가 나오도록 무작위 함수들의 시드(seed)를 지정한다.</p>
+<p><strong>참고:</strong> 실습용 데이터에 무작위로 생성된 데이터를 더해 훈련 효과를 높이는 경우가 많다. 따라서 동일한 코드를 반복 실행할 때 동일한 결과를 생성하도록 무작위성의 시드를 지정한다. 사용되는 시드번호는 중요하지 않다.</p>
 
 </div>
 </div>
@@ -13253,6 +13285,65 @@ IMF의 1인당 국내총생산(GDP) 데이터를 병합(merge)하는
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#45936;&#51060;&#53552;-&#45796;&#50868;&#47196;&#46300;">&#45936;&#51060;&#53552; &#45796;&#50868;&#47196;&#46300;<a class="anchor-link" href="#&#45936;&#51060;&#53552;-&#45796;&#50868;&#47196;&#46300;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>책에 포함된 코드는 사용하는 데이터 파일이 주피터 노트북과 동일한 디렉토리에 위치한다고 가정한다.
+여기서는 해당 데이터를 <code>datasets/lifesat</code> 디렉토리로 직접 다운로드하여 사용한다.</p>
+<p>데이터 파일을 다운로드하기 전에 앞서 언급한 디렉토리의 경로를 지정한다.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">datapath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;datasets&quot;</span><span class="p">,</span> <span class="s2">&quot;lifesat&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>앞서 지정한 디렉토리로 데이터를 다운로드한다.
+다운로드할 데이터는 저자의 깃허브 리포지토리에 저장된
+두 개의 csv 파일이다.</p>
+<ul>
+<li><code>oecd_bli_2015.csv</code>: 2015년도 기준 OECD의 더 나은 삶의 지수(BLI) 데이터</li>
+<li><code>gdp_per_capita.csv</code>: IMF의 1인당 국내총생산 데이터(GDP) 데이터</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">urllib.request</span>
@@ -13291,499 +13382,27 @@ IMF의 1인당 국내총생산(GDP) 데이터를 병합(merge)하는
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>다운로드한 두 개의 데이터 파일을 파이썬에서 사용할 수 있도록 
-팬다스(pandas) 데이터프레임(dataframe) 자료형으로 적재한다.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">sklearn.linear_model</span>
-
-<span class="c1"># BLI 데이터 적재</span>
-<span class="n">oecd_bli</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">datapath</span> <span class="o">+</span> <span class="s2">&quot;oecd_bli_2015.csv&quot;</span><span class="p">,</span> <span class="n">thousands</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
-
-<span class="c1"># GDP 데이터 적재</span>
-<span class="n">gdp_per_capita</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">datapath</span> <span class="o">+</span> <span class="s2">&quot;gdp_per_capita.csv&quot;</span><span class="p">,</span><span class="n">thousands</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span><span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span>
-                             <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;latin1&#39;</span><span class="p">,</span> <span class="n">na_values</span><span class="o">=</span><span class="s2">&quot;n/a&quot;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><code>prepare_country_stats()</code> 함수를 이용하여 BLI 데이터와 
-GDP 데이터를 병합한다.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">country_stats</span> <span class="o">=</span> <span class="n">prepare_country_stats</span><span class="p">(</span><span class="n">oecd_bli</span><span class="p">,</span> <span class="n">gdp_per_capita</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>첫재 칸은 국가, 둘째 칸은 1인당 GDP, 셋째 칸은 BLI
-(삶의 만족도)를 가리킨다.
-병합할 때 2015년도의 1인당 GDP 기준으로 국가를 오름차순으로 정열한다.</p>
-<p>병합된 데이터에서 1인당 GDP 기준 하위 다섯 개 국가의 데이터는 다음과  같다.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">country_stats</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[30]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>GDP per capita</th>
-      <th>Life satisfaction</th>
-    </tr>
-    <tr>
-      <th>Country</th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Russia</th>
-      <td>9054.914</td>
-      <td>6.0</td>
-    </tr>
-    <tr>
-      <th>Turkey</th>
-      <td>9437.372</td>
-      <td>5.6</td>
-    </tr>
-    <tr>
-      <th>Hungary</th>
-      <td>12239.894</td>
-      <td>4.9</td>
-    </tr>
-    <tr>
-      <th>Poland</th>
-      <td>12495.334</td>
-      <td>5.8</td>
-    </tr>
-    <tr>
-      <th>Slovak Republic</th>
-      <td>15991.736</td>
-      <td>6.1</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>병합된 데이터에서 1인당 GDP 기준 상위 다섯 개 국가의 데이터는 다음과  같다.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">country_stats</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[34]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>GDP per capita</th>
-      <th>Life satisfaction</th>
-    </tr>
-    <tr>
-      <th>Country</th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Iceland</th>
-      <td>50854.583</td>
-      <td>7.5</td>
-    </tr>
-    <tr>
-      <th>Australia</th>
-      <td>50961.865</td>
-      <td>7.3</td>
-    </tr>
-    <tr>
-      <th>Ireland</th>
-      <td>51350.744</td>
-      <td>7.0</td>
-    </tr>
-    <tr>
-      <th>Denmark</th>
-      <td>52114.165</td>
-      <td>7.5</td>
-    </tr>
-    <tr>
-      <th>United States</th>
-      <td>55805.204</td>
-      <td>7.2</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>병합된 데이터에서 1인당 GDP와 삶의 만족도(BLI)
-넘퍼이 어레이로 분리해서 추출한다.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 국가별 1인당 GDP 데이터를 담은 numpy 어레이</span>
-<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">country_stats</span><span class="p">[</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">]]</span>
-
-<span class="c1"># 국가별 삶의 만족도(BLI) 데이터를 담은 numpy 어레이</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">country_stats</span><span class="p">[</span><span class="s2">&quot;Life satisfaction&quot;</span><span class="p">]]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>1인당 GDP와 삶의 만족도(BLI)의 관계를 산점도(scatter plot)로 그리면 다음과 같다.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">country_stats</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;scatter&#39;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Life satisfaction&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-
-<div class="output_png output_subarea ">
-<img src="data:image/png;base64,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
-"
->
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>산점도에 따르면 1인당 GDP와 삶의 만족도가 어느 정도 선형관계에 있음을 알 수 있다. 
-이를 확인하기 위해 사이킷런(scikit-learn)의 선형회귀 모델을 적용해본다.</p>
-<p>먼저, 선형회귀 모델을 준비한다.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">linear_model</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>이제, 주어진 데이터를 이용하여 선형회귀 모델을 훈련시킨다.</p>
-<ul>
-<li><code>X</code>: 국가별 1인당 GDP</li>
-<li><code>y</code>: 국가별 삶의 만족도(BLI)</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[45]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>LinearRegression(copy_X=True, fit_intercept=True, n_jobs=None, normalize=False)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>훈련된 모델을 이용하여 키프러스의 삶의 만족도를 예측해보자.</p>
-<ul>
-<li>키프러스의 2015년도 기준 1인당 GDP: 22,587 달러</li>
-<li>예측값: 5.96242338</li>
-</ul>
-<p><strong>주의사항:</strong> <code>predict()</code> 함수는 아래 모양의 리스트를 인자로 사용한다.</p>
-<div class="highlight"><pre><span></span><span class="p">[[</span><span class="mi">12345</span><span class="p">],[</span><span class="mi">23456</span><span class="p">],[</span><span class="mi">34567</span><span class="p">],</span> <span class="o">...</span><span class="p">]</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[52]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_new</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">22587</span><span class="p">]]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_new</span><span class="p">))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[[5.96242338]]
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>그림 저장 함수 정의</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Where to save the figures</span>
-<span class="n">PROJECT_ROOT_DIR</span> <span class="o">=</span> <span class="s2">&quot;.&quot;</span>
-<span class="n">CHAPTER_ID</span> <span class="o">=</span> <span class="s2">&quot;fundamentals&quot;</span>
-<span class="n">IMAGES_PATH</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">PROJECT_ROOT_DIR</span><span class="p">,</span> <span class="s2">&quot;images&quot;</span><span class="p">,</span> <span class="n">CHAPTER_ID</span><span class="p">)</span>
-<span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">IMAGES_PATH</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">save_fig</span><span class="p">(</span><span class="n">fig_id</span><span class="p">,</span> <span class="n">tight_layout</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">fig_extension</span><span class="o">=</span><span class="s2">&quot;png&quot;</span><span class="p">,</span> <span class="n">resolution</span><span class="o">=</span><span class="mi">300</span><span class="p">):</span>
-    <span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">IMAGES_PATH</span><span class="p">,</span> <span class="n">fig_id</span> <span class="o">+</span> <span class="s2">&quot;.&quot;</span> <span class="o">+</span> <span class="n">fig_extension</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Saving figure&quot;</span><span class="p">,</span> <span class="n">fig_id</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">tight_layout</span><span class="p">:</span>
-        <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="n">fig_extension</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="n">resolution</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>실행할 때 마다 동일한 결과가 나오도록 무작위 함수들의 시드(seed) 지정</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="&#49334;&#51032;-&#47564;&#51313;&#46020;-&#45936;&#51060;&#53552;-&#51201;&#51116;&#50752;-&#51456;&#48708;">&#49334;&#51032; &#47564;&#51313;&#46020; &#45936;&#51060;&#53552; &#51201;&#51116;&#50752; &#51456;&#48708;<a class="anchor-link" href="#&#49334;&#51032;-&#47564;&#51313;&#46020;-&#45936;&#51060;&#53552;-&#51201;&#51116;&#50752;-&#51456;&#48708;">&#182;</a></h5>
+<h3 id="&#49334;&#51032;-&#47564;&#51313;&#46020;-&#45936;&#51060;&#53552;-&#51201;&#51116;&#50752;-&#51456;&#48708;">&#49334;&#51032; &#47564;&#51313;&#46020; &#45936;&#51060;&#53552; &#51201;&#51116;&#50752; &#51456;&#48708;<a class="anchor-link" href="#&#49334;&#51032;-&#47564;&#51313;&#46020;-&#45936;&#51060;&#53552;-&#51201;&#51116;&#50752;-&#51456;&#48708;">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>필요한 경우 OECD 웹사이트에서 직접 '더 나은 삶의 지수(BLI)' 데이터를 CSV 파일로 다운받아서 <code>datasets/lifesat/</code> 디렉토리에 저장할 수 있다.</p>
+<p>아래 코드는 OECD 에서 다운로드한 csv 파일에서 국가별 삶의 만족도 지수(BLI) 산출에 필요한 데이터만 데이터프레임 객체로 불러온다.
+이런 과정을 <strong>데이터 적재</strong>(data loading)라 한다.
+데이터 적재 후 필요한 데이터만 추출해서 선형 회귀 모델 훈련을 위해 데이터를 준비시킨다.
+아래 코드는 <code>"INEQUALITY"</code> 특성이 <code>"TOT"</code>로 정해진 데이터만 가져온다.</p>
+<p><strong>참고:</strong> 특성 포함 코드 관련 설명은 <a href="https://www.kaggle.com/danyfang/gdp-and-life-satisfactory-analysis/notebook">GDP and Life Satisfactory Analysis</a>에서 찾아볼 수 있다.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>참고:</strong> 
+필요한 경우 OECD 웹사이트에서 직접 '더 나은 삶의 지수(BLI)' 데이터를 CSV 파일로 다운받아서 <code>datasets/lifesat/</code> 디렉토리에 저장할 수 있다.</p>
 <ul>
 <li>BLI = Better Life Index</li>
 <li>BLI 파일 링크: <a href="http://stats.oecd.org/index.aspx?DataSetCode=BLI">http://stats.oecd.org/index.aspx?DataSetCode=BLI</a></li>
@@ -13794,13 +13413,15 @@ GDP 데이터를 병합한다.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">oecd_bli</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">datapath</span> <span class="o">+</span> <span class="s2">&quot;oecd_bli_2015.csv&quot;</span><span class="p">,</span> <span class="n">thousands</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
 <span class="n">oecd_bli</span> <span class="o">=</span> <span class="n">oecd_bli</span><span class="p">[</span><span class="n">oecd_bli</span><span class="p">[</span><span class="s2">&quot;INEQUALITY&quot;</span><span class="p">]</span><span class="o">==</span><span class="s2">&quot;TOT&quot;</span><span class="p">]</span>
 <span class="n">oecd_bli</span> <span class="o">=</span> <span class="n">oecd_bli</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s2">&quot;Country&quot;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s2">&quot;Indicator&quot;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s2">&quot;Value&quot;</span><span class="p">)</span>
-<span class="n">oecd_bli</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># 알파벳 순으로 첫 5개 국가 데이터 보여주기</span>
+<span class="n">oecd_bli</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -13813,7 +13434,7 @@ GDP 데이터를 병합한다.</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[10]:</div>
+    <div class="prompt output_prompt">Out[9]:</div>
 
 
 
@@ -13944,6 +13565,87 @@ GDP 데이터를 병합한다.</p>
       <td>94.0</td>
       <td>17.0</td>
     </tr>
+    <tr>
+      <th>Belgium</th>
+      <td>21.0</td>
+      <td>6.6</td>
+      <td>4.5</td>
+      <td>2.0</td>
+      <td>72.0</td>
+      <td>4.57</td>
+      <td>62.0</td>
+      <td>1.1</td>
+      <td>28307.0</td>
+      <td>83876.0</td>
+      <td>21.0</td>
+      <td>5.0</td>
+      <td>80.5</td>
+      <td>6.9</td>
+      <td>3.88</td>
+      <td>48082.0</td>
+      <td>94.0</td>
+      <td>2.2</td>
+      <td>74.0</td>
+      <td>509.0</td>
+      <td>15.71</td>
+      <td>89.0</td>
+      <td>87.0</td>
+      <td>18.9</td>
+    </tr>
+    <tr>
+      <th>Brazil</th>
+      <td>18.0</td>
+      <td>7.9</td>
+      <td>4.0</td>
+      <td>6.7</td>
+      <td>45.0</td>
+      <td>10.41</td>
+      <td>67.0</td>
+      <td>25.5</td>
+      <td>11664.0</td>
+      <td>6844.0</td>
+      <td>21.0</td>
+      <td>4.6</td>
+      <td>73.7</td>
+      <td>7.0</td>
+      <td>1.97</td>
+      <td>17177.0</td>
+      <td>90.0</td>
+      <td>1.6</td>
+      <td>69.0</td>
+      <td>402.0</td>
+      <td>14.97</td>
+      <td>79.0</td>
+      <td>72.0</td>
+      <td>16.3</td>
+    </tr>
+    <tr>
+      <th>Canada</th>
+      <td>15.0</td>
+      <td>1.3</td>
+      <td>10.5</td>
+      <td>0.2</td>
+      <td>89.0</td>
+      <td>3.94</td>
+      <td>72.0</td>
+      <td>1.5</td>
+      <td>29365.0</td>
+      <td>67913.0</td>
+      <td>21.0</td>
+      <td>6.4</td>
+      <td>81.5</td>
+      <td>7.3</td>
+      <td>0.90</td>
+      <td>46911.0</td>
+      <td>92.0</td>
+      <td>2.5</td>
+      <td>89.0</td>
+      <td>522.0</td>
+      <td>14.25</td>
+      <td>61.0</td>
+      <td>91.0</td>
+      <td>17.2</td>
+    </tr>
   </tbody>
 </table>
 </div>
@@ -13955,9 +13657,17 @@ GDP 데이터를 병합한다.</p>
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>알파벳 순으로 첫 5개 국가의 삶의 만족도(BLI)는 <code>"Life satisfaction"</code> 컬럼(column)에서 확인할 수 있다.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">oecd_bli</span><span class="p">[</span><span class="s2">&quot;Life satisfaction&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -13973,7 +13683,7 @@ GDP 데이터를 병합한다.</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[11]:</div>
+    <div class="prompt output_prompt">Out[10]:</div>
 
 
 
@@ -13997,16 +13707,17 @@ Name: Life satisfaction, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="1&#51064;&#45817;-GDP-&#45936;&#51060;&#53552;-&#51201;&#51116;&#50752;-&#51456;&#48708;">1&#51064;&#45817; GDP &#45936;&#51060;&#53552; &#51201;&#51116;&#50752; &#51456;&#48708;<a class="anchor-link" href="#1&#51064;&#45817;-GDP-&#45936;&#51060;&#53552;-&#51201;&#51116;&#50752;-&#51456;&#48708;">&#182;</a></h1>
+<h3 id="1&#51064;&#45817;-GDP-&#45936;&#51060;&#53552;-&#51201;&#51116;&#50752;-&#51456;&#48708;">1&#51064;&#45817; GDP &#45936;&#51060;&#53552; &#51201;&#51116;&#50752; &#51456;&#48708;<a class="anchor-link" href="#1&#51064;&#45817;-GDP-&#45936;&#51060;&#53552;-&#51201;&#51116;&#50752;-&#51456;&#48708;">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>앞서 설명한 대로 1인당 GDP 데이터를 다운받아서 <code>datasets/lifesat/</code> 디렉토리에 저장하면 된다.</p>
+<p>아래 코드는 IMF 에서 다운로드한 csv 파일에서 2015년 기준 국가별 1인당 GDP 관련 데이터를 데이터프레임 객체로 불러온다.
+앞서 설명한 대로 1인당 GDP 데이터를 다운받아서 <code>datasets/lifesat/</code> 디렉토리에 저장하면 된다.</p>
 <ul>
-<li>파일 링크: <a href="http://goo.gl/j1MSKe">국제통화기금(IMF)</a></li>
+<li>파일 원본 링크: <a href="http://goo.gl/j1MSKe">국제통화기금(IMF)</a></li>
 </ul>
 
 </div>
@@ -14014,14 +13725,16 @@ Name: Life satisfaction, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">gdp_per_capita</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">datapath</span><span class="o">+</span><span class="s2">&quot;gdp_per_capita.csv&quot;</span><span class="p">,</span> <span class="n">thousands</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span>
                              <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;latin1&#39;</span><span class="p">,</span> <span class="n">na_values</span><span class="o">=</span><span class="s2">&quot;n/a&quot;</span><span class="p">)</span>
-<span class="n">gdp_per_capita</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;2015&quot;</span><span class="p">:</span> <span class="s2">&quot;GDP per capita&quot;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">gdp_per_capita</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;2015&quot;</span><span class="p">:</span> <span class="s2">&quot;GDP per capita&quot;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># &quot;2015&quot; 컬럼 이름을 &quot;GDP per capita&quot; 로 변경 </span>
 <span class="n">gdp_per_capita</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;Country&quot;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">gdp_per_capita</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># 알파벳 순으로 첫 5개 국가 GDP 정보 확인</span>
+<span class="n">gdp_per_capita</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -14034,7 +13747,7 @@ Name: Life satisfaction, dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[12]:</div>
+    <div class="prompt output_prompt">Out[11]:</div>
 
 
 
@@ -14093,6 +13806,33 @@ Name: Life satisfaction, dtype: float64</pre>
       <td>3995.383</td>
       <td>2010.0</td>
     </tr>
+    <tr>
+      <th>Algeria</th>
+      <td>Gross domestic product per capita, current prices</td>
+      <td>U.S. dollars</td>
+      <td>Units</td>
+      <td>See notes for:  Gross domestic product, curren...</td>
+      <td>4318.135</td>
+      <td>2014.0</td>
+    </tr>
+    <tr>
+      <th>Angola</th>
+      <td>Gross domestic product per capita, current prices</td>
+      <td>U.S. dollars</td>
+      <td>Units</td>
+      <td>See notes for:  Gross domestic product, curren...</td>
+      <td>4100.315</td>
+      <td>2014.0</td>
+    </tr>
+    <tr>
+      <th>Antigua and Barbuda</th>
+      <td>Gross domestic product per capita, current prices</td>
+      <td>U.S. dollars</td>
+      <td>Units</td>
+      <td>See notes for:  Gross domestic product, curren...</td>
+      <td>14414.302</td>
+      <td>2011.0</td>
+    </tr>
   </tbody>
 </table>
 </div>
@@ -14104,14 +13844,59 @@ Name: Life satisfaction, dtype: float64</pre>
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#45936;&#51060;&#53552;-&#48337;&#54633;">&#45936;&#51060;&#53552; &#48337;&#54633;<a class="anchor-link" href="#&#45936;&#51060;&#53552;-&#48337;&#54633;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>두 데이터를 하나의 데이터프레임으로 병합한다.
+삶의 지수 데이터를 왼편에, 1인당 GDP 데이터를 오른편에 위치시키며 기준은 국가명이다.
+또한 1인당 GDP 기준으로 오름차순으로 국가를 정렬시킨다.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>참고:</strong> 두 데이터 파일을 병합한 이유는 두 데이트를 GDP 기준으로 동일하게 정렬하기 위해서이다.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">full_country_stats</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">left</span><span class="o">=</span><span class="n">oecd_bli</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="n">gdp_per_capita</span><span class="p">,</span> <span class="n">left_index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">right_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">full_country_stats</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># 1인당 GDP 기준으로 정렬</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>1인당 GDP 기준 하위 2개 국가는 브라질과 멕시코이다.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">full_country_stats</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">left</span><span class="o">=</span><span class="n">oecd_bli</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="n">gdp_per_capita</span><span class="p">,</span> <span class="n">left_index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">right_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">full_country_stats</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">full_country_stats</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">full_country_stats</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14279,1062 +14064,132 @@ Name: Life satisfaction, dtype: float64</pre>
       <td>9009.280</td>
       <td>2015.0</td>
     </tr>
-    <tr>
-      <th>Russia</th>
-      <td>15.0</td>
-      <td>3.8</td>
-      <td>2.5</td>
-      <td>15.1</td>
-      <td>94.0</td>
-      <td>0.16</td>
-      <td>69.0</td>
-      <td>12.8</td>
-      <td>19292.0</td>
-      <td>3412.0</td>
-      <td>11.0</td>
-      <td>4.0</td>
-      <td>70.2</td>
-      <td>6.0</td>
-      <td>1.70</td>
-      <td>20885.0</td>
-      <td>90.0</td>
-      <td>0.9</td>
-      <td>37.0</td>
-      <td>481.0</td>
-      <td>14.97</td>
-      <td>65.0</td>
-      <td>56.0</td>
-      <td>16.0</td>
-      <td>Gross domestic product per capita, current prices</td>
-      <td>U.S. dollars</td>
-      <td>Units</td>
-      <td>See notes for:  Gross domestic product, curren...</td>
-      <td>9054.914</td>
-      <td>2015.0</td>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>1인당 GDP 기준 상위 2개 룩셈부르크와 스위스이다.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">full_country_stats</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[14]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Air pollution</th>
+      <th>Assault rate</th>
+      <th>Consultation on rule-making</th>
+      <th>Dwellings without basic facilities</th>
+      <th>Educational attainment</th>
+      <th>Employees working very long hours</th>
+      <th>Employment rate</th>
+      <th>Homicide rate</th>
+      <th>Household net adjusted disposable income</th>
+      <th>Household net financial wealth</th>
+      <th>Housing expenditure</th>
+      <th>Job security</th>
+      <th>Life expectancy</th>
+      <th>Life satisfaction</th>
+      <th>Long-term unemployment rate</th>
+      <th>Personal earnings</th>
+      <th>Quality of support network</th>
+      <th>Rooms per person</th>
+      <th>Self-reported health</th>
+      <th>Student skills</th>
+      <th>Time devoted to leisure and personal care</th>
+      <th>Voter turnout</th>
+      <th>Water quality</th>
+      <th>Years in education</th>
+      <th>Subject Descriptor</th>
+      <th>Units</th>
+      <th>Scale</th>
+      <th>Country/Series-specific Notes</th>
+      <th>GDP per capita</th>
+      <th>Estimates Start After</th>
     </tr>
     <tr>
-      <th>Turkey</th>
-      <td>35.0</td>
-      <td>5.0</td>
-      <td>5.5</td>
-      <td>12.7</td>
-      <td>34.0</td>
-      <td>40.86</td>
-      <td>50.0</td>
-      <td>1.2</td>
-      <td>14095.0</td>
-      <td>3251.0</td>
-      <td>21.0</td>
-      <td>8.1</td>
-      <td>74.6</td>
-      <td>5.6</td>
-      <td>2.37</td>
-      <td>16919.0</td>
-      <td>86.0</td>
-      <td>1.1</td>
-      <td>68.0</td>
-      <td>462.0</td>
-      <td>13.42</td>
-      <td>88.0</td>
-      <td>62.0</td>
-      <td>16.4</td>
-      <td>Gross domestic product per capita, current prices</td>
-      <td>U.S. dollars</td>
-      <td>Units</td>
-      <td>See notes for:  Gross domestic product, curren...</td>
-      <td>9437.372</td>
-      <td>2013.0</td>
+      <th>Country</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
     </tr>
-    <tr>
-      <th>Hungary</th>
-      <td>15.0</td>
-      <td>3.6</td>
-      <td>7.9</td>
-      <td>4.8</td>
-      <td>82.0</td>
-      <td>3.19</td>
-      <td>58.0</td>
-      <td>1.3</td>
-      <td>15442.0</td>
-      <td>13277.0</td>
-      <td>20.0</td>
-      <td>5.7</td>
-      <td>75.2</td>
-      <td>4.9</td>
-      <td>5.10</td>
-      <td>20948.0</td>
-      <td>87.0</td>
-      <td>1.1</td>
-      <td>57.0</td>
-      <td>487.0</td>
-      <td>15.04</td>
-      <td>62.0</td>
-      <td>77.0</td>
-      <td>17.6</td>
-      <td>Gross domestic product per capita, current prices</td>
-      <td>U.S. dollars</td>
-      <td>Units</td>
-      <td>See notes for:  Gross domestic product, curren...</td>
-      <td>12239.894</td>
-      <td>2015.0</td>
-    </tr>
-    <tr>
-      <th>Poland</th>
-      <td>33.0</td>
-      <td>1.4</td>
-      <td>10.8</td>
-      <td>3.2</td>
-      <td>90.0</td>
-      <td>7.41</td>
-      <td>60.0</td>
-      <td>0.9</td>
-      <td>17852.0</td>
-      <td>10919.0</td>
-      <td>21.0</td>
-      <td>7.3</td>
-      <td>76.9</td>
-      <td>5.8</td>
-      <td>3.77</td>
-      <td>22655.0</td>
-      <td>91.0</td>
-      <td>1.1</td>
-      <td>58.0</td>
-      <td>521.0</td>
-      <td>14.20</td>
-      <td>55.0</td>
-      <td>79.0</td>
-      <td>18.4</td>
-      <td>Gross domestic product per capita, current prices</td>
-      <td>U.S. dollars</td>
-      <td>Units</td>
-      <td>See notes for:  Gross domestic product, curren...</td>
-      <td>12495.334</td>
-      <td>2014.0</td>
-    </tr>
-    <tr>
-      <th>Chile</th>
-      <td>46.0</td>
-      <td>6.9</td>
-      <td>2.0</td>
-      <td>9.4</td>
-      <td>57.0</td>
-      <td>15.42</td>
-      <td>62.0</td>
-      <td>4.4</td>
-      <td>14533.0</td>
-      <td>17733.0</td>
-      <td>18.0</td>
-      <td>4.4</td>
-      <td>78.9</td>
-      <td>6.7</td>
-      <td>1.59</td>
-      <td>22101.0</td>
-      <td>86.0</td>
-      <td>1.2</td>
-      <td>59.0</td>
-      <td>436.0</td>
-      <td>14.41</td>
-      <td>49.0</td>
-      <td>73.0</td>
-      <td>16.5</td>
-      <td>Gross domestic product per capita, current prices</td>
-      <td>U.S. dollars</td>
-      <td>Units</td>
-      <td>See notes for:  Gross domestic product, curren...</td>
-      <td>13340.905</td>
-      <td>2014.0</td>
-    </tr>
-    <tr>
-      <th>Slovak Republic</th>
-      <td>13.0</td>
-      <td>3.0</td>
-      <td>6.6</td>
-      <td>0.6</td>
-      <td>92.0</td>
-      <td>7.02</td>
-      <td>60.0</td>
-      <td>1.2</td>
-      <td>17503.0</td>
-      <td>8663.0</td>
-      <td>26.0</td>
-      <td>5.5</td>
-      <td>76.2</td>
-      <td>6.1</td>
-      <td>9.46</td>
-      <td>20307.0</td>
-      <td>90.0</td>
-      <td>1.1</td>
-      <td>66.0</td>
-      <td>472.0</td>
-      <td>14.99</td>
-      <td>59.0</td>
-      <td>81.0</td>
-      <td>16.3</td>
-      <td>Gross domestic product per capita, current prices</td>
-      <td>U.S. dollars</td>
-      <td>Units</td>
-      <td>See notes for:  Gross domestic product, curren...</td>
-      <td>15991.736</td>
-      <td>2015.0</td>
-    </tr>
-    <tr>
-      <th>Czech Republic</th>
-      <td>16.0</td>
-      <td>2.8</td>
-      <td>6.8</td>
-      <td>0.9</td>
-      <td>92.0</td>
-      <td>6.98</td>
-      <td>68.0</td>
-      <td>0.8</td>
-      <td>18404.0</td>
-      <td>17299.0</td>
-      <td>26.0</td>
-      <td>4.1</td>
-      <td>78.2</td>
-      <td>6.5</td>
-      <td>3.12</td>
-      <td>20338.0</td>
-      <td>85.0</td>
-      <td>1.4</td>
-      <td>60.0</td>
-      <td>500.0</td>
-      <td>14.98</td>
-      <td>59.0</td>
-      <td>85.0</td>
-      <td>18.1</td>
-      <td>Gross domestic product per capita, current prices</td>
-      <td>U.S. dollars</td>
-      <td>Units</td>
-      <td>See notes for:  Gross domestic product, curren...</td>
-      <td>17256.918</td>
-      <td>2015.0</td>
-    </tr>
-    <tr>
-      <th>Estonia</th>
-      <td>9.0</td>
-      <td>5.5</td>
-      <td>3.3</td>
-      <td>8.1</td>
-      <td>90.0</td>
-      <td>3.30</td>
-      <td>68.0</td>
-      <td>4.8</td>
-      <td>15167.0</td>
-      <td>7680.0</td>
-      <td>19.0</td>
-      <td>5.2</td>
-      <td>76.5</td>
-      <td>5.6</td>
-      <td>3.82</td>
-      <td>18944.0</td>
-      <td>89.0</td>
-      <td>1.5</td>
-      <td>54.0</td>
-      <td>526.0</td>
-      <td>14.90</td>
-      <td>64.0</td>
-      <td>79.0</td>
-      <td>17.5</td>
-      <td>Gross domestic product per capita, current prices</td>
-      <td>U.S. dollars</td>
-      <td>Units</td>
-      <td>See notes for:  Gross domestic product, curren...</td>
-      <td>17288.083</td>
-      <td>2014.0</td>
-    </tr>
-    <tr>
-      <th>Greece</th>
-      <td>27.0</td>
-      <td>3.7</td>
-      <td>6.5</td>
-      <td>0.7</td>
-      <td>68.0</td>
-      <td>6.16</td>
-      <td>49.0</td>
-      <td>1.6</td>
-      <td>18575.0</td>
-      <td>14579.0</td>
-      <td>25.0</td>
-      <td>12.2</td>
-      <td>80.7</td>
-      <td>4.8</td>
-      <td>18.39</td>
-      <td>25503.0</td>
-      <td>83.0</td>
-      <td>1.2</td>
-      <td>74.0</td>
-      <td>466.0</td>
-      <td>14.91</td>
-      <td>64.0</td>
-      <td>69.0</td>
-      <td>18.6</td>
-      <td>Gross domestic product per capita, current prices</td>
-      <td>U.S. dollars</td>
-      <td>Units</td>
-      <td>See notes for:  Gross domestic product, curren...</td>
-      <td>18064.288</td>
-      <td>2014.0</td>
-    </tr>
-    <tr>
-      <th>Portugal</th>
-      <td>18.0</td>
-      <td>5.7</td>
-      <td>6.5</td>
-      <td>0.9</td>
-      <td>38.0</td>
-      <td>9.62</td>
-      <td>61.0</td>
-      <td>1.1</td>
-      <td>20086.0</td>
-      <td>31245.0</td>
-      <td>19.0</td>
-      <td>8.6</td>
-      <td>80.5</td>
-      <td>5.1</td>
-      <td>9.11</td>
-      <td>23688.0</td>
-      <td>86.0</td>
-      <td>1.6</td>
-      <td>46.0</td>
-      <td>488.0</td>
-      <td>14.95</td>
-      <td>58.0</td>
-      <td>86.0</td>
-      <td>17.6</td>
-      <td>Gross domestic product per capita, current prices</td>
-      <td>U.S. dollars</td>
-      <td>Units</td>
-      <td>See notes for:  Gross domestic product, curren...</td>
-      <td>19121.592</td>
-      <td>2014.0</td>
-    </tr>
-    <tr>
-      <th>Slovenia</th>
-      <td>26.0</td>
-      <td>3.9</td>
-      <td>10.3</td>
-      <td>0.5</td>
-      <td>85.0</td>
-      <td>5.63</td>
-      <td>63.0</td>
-      <td>0.4</td>
-      <td>19326.0</td>
-      <td>18465.0</td>
-      <td>20.0</td>
-      <td>5.5</td>
-      <td>80.2</td>
-      <td>5.7</td>
-      <td>5.15</td>
-      <td>32037.0</td>
-      <td>90.0</td>
-      <td>1.5</td>
-      <td>65.0</td>
-      <td>499.0</td>
-      <td>14.62</td>
-      <td>52.0</td>
-      <td>88.0</td>
-      <td>18.4</td>
-      <td>Gross domestic product per capita, current prices</td>
-      <td>U.S. dollars</td>
-      <td>Units</td>
-      <td>See notes for:  Gross domestic product, curren...</td>
-      <td>20732.482</td>
-      <td>2015.0</td>
-    </tr>
-    <tr>
-      <th>Spain</th>
-      <td>24.0</td>
-      <td>4.2</td>
-      <td>7.3</td>
-      <td>0.1</td>
-      <td>55.0</td>
-      <td>5.89</td>
-      <td>56.0</td>
-      <td>0.6</td>
-      <td>22477.0</td>
-      <td>24774.0</td>
-      <td>22.0</td>
-      <td>17.8</td>
-      <td>82.5</td>
-      <td>6.5</td>
-      <td>12.96</td>
-      <td>34824.0</td>
-      <td>95.0</td>
-      <td>1.9</td>
-      <td>72.0</td>
-      <td>490.0</td>
-      <td>16.06</td>
-      <td>69.0</td>
-      <td>71.0</td>
-      <td>17.6</td>
-      <td>Gross domestic product per capita, current prices</td>
-      <td>U.S. dollars</td>
-      <td>Units</td>
-      <td>See notes for:  Gross domestic product, curren...</td>
-      <td>25864.721</td>
-      <td>2014.0</td>
-    </tr>
-    <tr>
-      <th>Korea</th>
-      <td>30.0</td>
-      <td>2.1</td>
-      <td>10.4</td>
-      <td>4.2</td>
-      <td>82.0</td>
-      <td>18.72</td>
-      <td>64.0</td>
-      <td>1.1</td>
-      <td>19510.0</td>
-      <td>29091.0</td>
-      <td>16.0</td>
-      <td>3.2</td>
-      <td>81.3</td>
-      <td>5.8</td>
-      <td>0.01</td>
-      <td>36354.0</td>
-      <td>72.0</td>
-      <td>1.4</td>
-      <td>35.0</td>
-      <td>542.0</td>
-      <td>14.63</td>
-      <td>76.0</td>
-      <td>78.0</td>
-      <td>17.5</td>
-      <td>Gross domestic product per capita, current prices</td>
-      <td>U.S. dollars</td>
-      <td>Units</td>
-      <td>See notes for:  Gross domestic product, curren...</td>
-      <td>27195.197</td>
-      <td>2014.0</td>
-    </tr>
-    <tr>
-      <th>Italy</th>
-      <td>21.0</td>
-      <td>4.7</td>
-      <td>5.0</td>
-      <td>1.1</td>
-      <td>57.0</td>
-      <td>3.66</td>
-      <td>56.0</td>
-      <td>0.7</td>
-      <td>25166.0</td>
-      <td>54987.0</td>
-      <td>24.0</td>
-      <td>5.9</td>
-      <td>82.3</td>
-      <td>6.0</td>
-      <td>6.94</td>
-      <td>34561.0</td>
-      <td>90.0</td>
-      <td>1.4</td>
-      <td>66.0</td>
-      <td>490.0</td>
-      <td>14.98</td>
-      <td>75.0</td>
-      <td>71.0</td>
-      <td>16.8</td>
-      <td>Gross domestic product per capita, current prices</td>
-      <td>U.S. dollars</td>
-      <td>Units</td>
-      <td>See notes for:  Gross domestic product, curren...</td>
-      <td>29866.581</td>
-      <td>2015.0</td>
-    </tr>
-    <tr>
-      <th>Japan</th>
-      <td>24.0</td>
-      <td>1.4</td>
-      <td>7.3</td>
-      <td>6.4</td>
-      <td>94.0</td>
-      <td>22.26</td>
-      <td>72.0</td>
-      <td>0.3</td>
-      <td>26111.0</td>
-      <td>86764.0</td>
-      <td>22.0</td>
-      <td>2.4</td>
-      <td>83.2</td>
-      <td>5.9</td>
-      <td>1.67</td>
-      <td>35405.0</td>
-      <td>89.0</td>
-      <td>1.8</td>
-      <td>30.0</td>
-      <td>540.0</td>
-      <td>14.93</td>
-      <td>53.0</td>
-      <td>85.0</td>
-      <td>16.3</td>
-      <td>Gross domestic product per capita, current prices</td>
-      <td>U.S. dollars</td>
-      <td>Units</td>
-      <td>See notes for:  Gross domestic product, curren...</td>
-      <td>32485.545</td>
-      <td>2015.0</td>
-    </tr>
-    <tr>
-      <th>Israel</th>
-      <td>21.0</td>
-      <td>6.4</td>
-      <td>2.5</td>
-      <td>3.7</td>
-      <td>85.0</td>
-      <td>16.03</td>
-      <td>67.0</td>
-      <td>2.3</td>
-      <td>22104.0</td>
-      <td>52933.0</td>
-      <td>21.0</td>
-      <td>5.0</td>
-      <td>81.8</td>
-      <td>7.4</td>
-      <td>0.79</td>
-      <td>28817.0</td>
-      <td>87.0</td>
-      <td>1.2</td>
-      <td>80.0</td>
-      <td>474.0</td>
-      <td>14.48</td>
-      <td>68.0</td>
-      <td>68.0</td>
-      <td>15.8</td>
-      <td>Gross domestic product per capita, current prices</td>
-      <td>U.S. dollars</td>
-      <td>Units</td>
-      <td>See notes for:  Gross domestic product, curren...</td>
-      <td>35343.336</td>
-      <td>2015.0</td>
-    </tr>
-    <tr>
-      <th>New Zealand</th>
-      <td>11.0</td>
-      <td>2.2</td>
-      <td>10.3</td>
-      <td>0.2</td>
-      <td>74.0</td>
-      <td>13.87</td>
-      <td>73.0</td>
-      <td>1.2</td>
-      <td>23815.0</td>
-      <td>28290.0</td>
-      <td>23.0</td>
-      <td>5.1</td>
-      <td>81.5</td>
-      <td>7.3</td>
-      <td>0.75</td>
-      <td>35609.0</td>
-      <td>94.0</td>
-      <td>2.4</td>
-      <td>90.0</td>
-      <td>509.0</td>
-      <td>14.87</td>
-      <td>77.0</td>
-      <td>89.0</td>
-      <td>18.1</td>
-      <td>Gross domestic product per capita, current prices</td>
-      <td>U.S. dollars</td>
-      <td>Units</td>
-      <td>See notes for:  Gross domestic product, curren...</td>
-      <td>37044.891</td>
-      <td>2015.0</td>
-    </tr>
-    <tr>
-      <th>France</th>
-      <td>12.0</td>
-      <td>5.0</td>
-      <td>3.5</td>
-      <td>0.5</td>
-      <td>73.0</td>
-      <td>8.15</td>
-      <td>64.0</td>
-      <td>0.6</td>
-      <td>28799.0</td>
-      <td>48741.0</td>
-      <td>21.0</td>
-      <td>6.5</td>
-      <td>82.1</td>
-      <td>6.5</td>
-      <td>3.99</td>
-      <td>40242.0</td>
-      <td>87.0</td>
-      <td>1.8</td>
-      <td>67.0</td>
-      <td>500.0</td>
-      <td>15.33</td>
-      <td>80.0</td>
-      <td>82.0</td>
-      <td>16.4</td>
-      <td>Gross domestic product per capita, current prices</td>
-      <td>U.S. dollars</td>
-      <td>Units</td>
-      <td>See notes for:  Gross domestic product, curren...</td>
-      <td>37675.006</td>
-      <td>2015.0</td>
-    </tr>
-    <tr>
-      <th>Belgium</th>
-      <td>21.0</td>
-      <td>6.6</td>
-      <td>4.5</td>
-      <td>2.0</td>
-      <td>72.0</td>
-      <td>4.57</td>
-      <td>62.0</td>
-      <td>1.1</td>
-      <td>28307.0</td>
-      <td>83876.0</td>
-      <td>21.0</td>
-      <td>5.0</td>
-      <td>80.5</td>
-      <td>6.9</td>
-      <td>3.88</td>
-      <td>48082.0</td>
-      <td>94.0</td>
-      <td>2.2</td>
-      <td>74.0</td>
-      <td>509.0</td>
-      <td>15.71</td>
-      <td>89.0</td>
-      <td>87.0</td>
-      <td>18.9</td>
-      <td>Gross domestic product per capita, current prices</td>
-      <td>U.S. dollars</td>
-      <td>Units</td>
-      <td>See notes for:  Gross domestic product, curren...</td>
-      <td>40106.632</td>
-      <td>2014.0</td>
-    </tr>
-    <tr>
-      <th>Germany</th>
-      <td>16.0</td>
-      <td>3.6</td>
-      <td>4.5</td>
-      <td>0.1</td>
-      <td>86.0</td>
-      <td>5.25</td>
-      <td>73.0</td>
-      <td>0.5</td>
-      <td>31252.0</td>
-      <td>50394.0</td>
-      <td>21.0</td>
-      <td>3.1</td>
-      <td>81.0</td>
-      <td>7.0</td>
-      <td>2.37</td>
-      <td>43682.0</td>
-      <td>94.0</td>
-      <td>1.8</td>
-      <td>65.0</td>
-      <td>515.0</td>
-      <td>15.31</td>
-      <td>72.0</td>
-      <td>95.0</td>
-      <td>18.2</td>
-      <td>Gross domestic product per capita, current prices</td>
-      <td>U.S. dollars</td>
-      <td>Units</td>
-      <td>See notes for:  Gross domestic product, curren...</td>
-      <td>40996.511</td>
-      <td>2014.0</td>
-    </tr>
-    <tr>
-      <th>Finland</th>
-      <td>15.0</td>
-      <td>2.4</td>
-      <td>9.0</td>
-      <td>0.6</td>
-      <td>85.0</td>
-      <td>3.58</td>
-      <td>69.0</td>
-      <td>1.4</td>
-      <td>27927.0</td>
-      <td>18761.0</td>
-      <td>22.0</td>
-      <td>6.9</td>
-      <td>80.7</td>
-      <td>7.4</td>
-      <td>1.73</td>
-      <td>40060.0</td>
-      <td>95.0</td>
-      <td>1.9</td>
-      <td>65.0</td>
-      <td>529.0</td>
-      <td>14.89</td>
-      <td>69.0</td>
-      <td>94.0</td>
-      <td>19.7</td>
-      <td>Gross domestic product per capita, current prices</td>
-      <td>U.S. dollars</td>
-      <td>Units</td>
-      <td>See notes for:  Gross domestic product, curren...</td>
-      <td>41973.988</td>
-      <td>2014.0</td>
-    </tr>
-    <tr>
-      <th>Canada</th>
-      <td>15.0</td>
-      <td>1.3</td>
-      <td>10.5</td>
-      <td>0.2</td>
-      <td>89.0</td>
-      <td>3.94</td>
-      <td>72.0</td>
-      <td>1.5</td>
-      <td>29365.0</td>
-      <td>67913.0</td>
-      <td>21.0</td>
-      <td>6.4</td>
-      <td>81.5</td>
-      <td>7.3</td>
-      <td>0.90</td>
-      <td>46911.0</td>
-      <td>92.0</td>
-      <td>2.5</td>
-      <td>89.0</td>
-      <td>522.0</td>
-      <td>14.25</td>
-      <td>61.0</td>
-      <td>91.0</td>
-      <td>17.2</td>
-      <td>Gross domestic product per capita, current prices</td>
-      <td>U.S. dollars</td>
-      <td>Units</td>
-      <td>See notes for:  Gross domestic product, curren...</td>
-      <td>43331.961</td>
-      <td>2015.0</td>
-    </tr>
-    <tr>
-      <th>Netherlands</th>
-      <td>30.0</td>
-      <td>4.9</td>
-      <td>6.1</td>
-      <td>0.0</td>
-      <td>73.0</td>
-      <td>0.45</td>
-      <td>74.0</td>
-      <td>0.9</td>
-      <td>27888.0</td>
-      <td>77961.0</td>
-      <td>19.0</td>
-      <td>4.5</td>
-      <td>81.2</td>
-      <td>7.3</td>
-      <td>2.40</td>
-      <td>47590.0</td>
-      <td>90.0</td>
-      <td>2.0</td>
-      <td>76.0</td>
-      <td>519.0</td>
-      <td>15.44</td>
-      <td>75.0</td>
-      <td>92.0</td>
-      <td>18.7</td>
-      <td>Gross domestic product per capita, current prices</td>
-      <td>U.S. dollars</td>
-      <td>Units</td>
-      <td>See notes for:  Gross domestic product, curren...</td>
-      <td>43603.115</td>
-      <td>2014.0</td>
-    </tr>
-    <tr>
-      <th>Austria</th>
-      <td>27.0</td>
-      <td>3.4</td>
-      <td>7.1</td>
-      <td>1.0</td>
-      <td>83.0</td>
-      <td>7.61</td>
-      <td>72.0</td>
-      <td>0.4</td>
-      <td>31173.0</td>
-      <td>49887.0</td>
-      <td>21.0</td>
-      <td>3.9</td>
-      <td>81.0</td>
-      <td>6.9</td>
-      <td>1.19</td>
-      <td>45199.0</td>
-      <td>89.0</td>
-      <td>1.6</td>
-      <td>69.0</td>
-      <td>500.0</td>
-      <td>14.46</td>
-      <td>75.0</td>
-      <td>94.0</td>
-      <td>17.0</td>
-      <td>Gross domestic product per capita, current prices</td>
-      <td>U.S. dollars</td>
-      <td>Units</td>
-      <td>See notes for:  Gross domestic product, curren...</td>
-      <td>43724.031</td>
-      <td>2015.0</td>
-    </tr>
-    <tr>
-      <th>United Kingdom</th>
-      <td>13.0</td>
-      <td>1.9</td>
-      <td>11.5</td>
-      <td>0.2</td>
-      <td>78.0</td>
-      <td>12.70</td>
-      <td>71.0</td>
-      <td>0.3</td>
-      <td>27029.0</td>
-      <td>60778.0</td>
-      <td>23.0</td>
-      <td>5.2</td>
-      <td>81.0</td>
-      <td>6.8</td>
-      <td>2.77</td>
-      <td>41192.0</td>
-      <td>91.0</td>
-      <td>1.9</td>
-      <td>74.0</td>
-      <td>502.0</td>
-      <td>14.83</td>
-      <td>66.0</td>
-      <td>88.0</td>
-      <td>16.4</td>
-      <td>Gross domestic product per capita, current prices</td>
-      <td>U.S. dollars</td>
-      <td>Units</td>
-      <td>See notes for:  Gross domestic product, curren...</td>
-      <td>43770.688</td>
-      <td>2015.0</td>
-    </tr>
-    <tr>
-      <th>Sweden</th>
-      <td>10.0</td>
-      <td>5.1</td>
-      <td>10.9</td>
-      <td>0.0</td>
-      <td>88.0</td>
-      <td>1.13</td>
-      <td>74.0</td>
-      <td>0.7</td>
-      <td>29185.0</td>
-      <td>60328.0</td>
-      <td>20.0</td>
-      <td>6.5</td>
-      <td>81.8</td>
-      <td>7.2</td>
-      <td>1.37</td>
-      <td>40818.0</td>
-      <td>92.0</td>
-      <td>1.7</td>
-      <td>81.0</td>
-      <td>482.0</td>
-      <td>15.11</td>
-      <td>86.0</td>
-      <td>95.0</td>
-      <td>19.3</td>
-      <td>Gross domestic product per capita, current prices</td>
-      <td>U.S. dollars</td>
-      <td>Units</td>
-      <td>See notes for:  Gross domestic product, curren...</td>
-      <td>49866.266</td>
-      <td>2014.0</td>
-    </tr>
-    <tr>
-      <th>Iceland</th>
-      <td>18.0</td>
-      <td>2.7</td>
-      <td>5.1</td>
-      <td>0.4</td>
-      <td>71.0</td>
-      <td>12.25</td>
-      <td>82.0</td>
-      <td>0.3</td>
-      <td>23965.0</td>
-      <td>43045.0</td>
-      <td>24.0</td>
-      <td>4.1</td>
-      <td>83.0</td>
-      <td>7.5</td>
-      <td>1.18</td>
-      <td>55716.0</td>
-      <td>96.0</td>
-      <td>1.5</td>
-      <td>77.0</td>
-      <td>484.0</td>
-      <td>14.61</td>
-      <td>81.0</td>
-      <td>97.0</td>
-      <td>19.8</td>
-      <td>Gross domestic product per capita, current prices</td>
-      <td>U.S. dollars</td>
-      <td>Units</td>
-      <td>See notes for:  Gross domestic product, curren...</td>
-      <td>50854.583</td>
-      <td>2014.0</td>
-    </tr>
-    <tr>
-      <th>Australia</th>
-      <td>13.0</td>
-      <td>2.1</td>
-      <td>10.5</td>
-      <td>1.1</td>
-      <td>76.0</td>
-      <td>14.02</td>
-      <td>72.0</td>
-      <td>0.8</td>
-      <td>31588.0</td>
-      <td>47657.0</td>
-      <td>20.0</td>
-      <td>4.8</td>
-      <td>82.1</td>
-      <td>7.3</td>
-      <td>1.08</td>
-      <td>50449.0</td>
-      <td>92.0</td>
-      <td>2.3</td>
-      <td>85.0</td>
-      <td>512.0</td>
-      <td>14.41</td>
-      <td>93.0</td>
-      <td>91.0</td>
-      <td>19.4</td>
-      <td>Gross domestic product per capita, current prices</td>
-      <td>U.S. dollars</td>
-      <td>Units</td>
-      <td>See notes for:  Gross domestic product, curren...</td>
-      <td>50961.865</td>
-      <td>2014.0</td>
-    </tr>
-    <tr>
-      <th>Ireland</th>
-      <td>13.0</td>
-      <td>2.6</td>
-      <td>9.0</td>
-      <td>0.2</td>
-      <td>75.0</td>
-      <td>4.20</td>
-      <td>60.0</td>
-      <td>0.8</td>
-      <td>23917.0</td>
-      <td>31580.0</td>
-      <td>19.0</td>
-      <td>5.9</td>
-      <td>81.0</td>
-      <td>7.0</td>
-      <td>8.39</td>
-      <td>49506.0</td>
-      <td>96.0</td>
-      <td>2.1</td>
-      <td>82.0</td>
-      <td>516.0</td>
-      <td>15.19</td>
-      <td>70.0</td>
-      <td>80.0</td>
-      <td>17.6</td>
-      <td>Gross domestic product per capita, current prices</td>
-      <td>U.S. dollars</td>
-      <td>Units</td>
-      <td>See notes for:  Gross domestic product, curren...</td>
-      <td>51350.744</td>
-      <td>2014.0</td>
-    </tr>
-    <tr>
-      <th>Denmark</th>
-      <td>15.0</td>
-      <td>3.9</td>
-      <td>7.0</td>
-      <td>0.9</td>
-      <td>78.0</td>
-      <td>2.03</td>
-      <td>73.0</td>
-      <td>0.3</td>
-      <td>26491.0</td>
-      <td>44488.0</td>
-      <td>24.0</td>
-      <td>5.6</td>
-      <td>80.1</td>
-      <td>7.5</td>
-      <td>1.78</td>
-      <td>48347.0</td>
-      <td>95.0</td>
-      <td>1.9</td>
-      <td>72.0</td>
-      <td>498.0</td>
-      <td>16.06</td>
-      <td>88.0</td>
-      <td>94.0</td>
-      <td>19.4</td>
-      <td>Gross domestic product per capita, current prices</td>
-      <td>U.S. dollars</td>
-      <td>Units</td>
-      <td>See notes for:  Gross domestic product, curren...</td>
-      <td>52114.165</td>
-      <td>2015.0</td>
-    </tr>
-    <tr>
-      <th>United States</th>
-      <td>18.0</td>
-      <td>1.5</td>
-      <td>8.3</td>
-      <td>0.1</td>
-      <td>89.0</td>
-      <td>11.30</td>
-      <td>67.0</td>
-      <td>5.2</td>
-      <td>41355.0</td>
-      <td>145769.0</td>
-      <td>18.0</td>
-      <td>5.9</td>
-      <td>78.7</td>
-      <td>7.2</td>
-      <td>1.91</td>
-      <td>56340.0</td>
-      <td>90.0</td>
-      <td>2.4</td>
-      <td>88.0</td>
-      <td>492.0</td>
-      <td>14.27</td>
-      <td>68.0</td>
-      <td>85.0</td>
-      <td>17.2</td>
-      <td>Gross domestic product per capita, current prices</td>
-      <td>U.S. dollars</td>
-      <td>Units</td>
-      <td>See notes for:  Gross domestic product, curren...</td>
-      <td>55805.204</td>
-      <td>2015.0</td>
-    </tr>
-    <tr>
-      <th>Norway</th>
-      <td>16.0</td>
-      <td>3.3</td>
-      <td>8.1</td>
-      <td>0.3</td>
-      <td>82.0</td>
-      <td>2.82</td>
-      <td>75.0</td>
-      <td>0.6</td>
-      <td>33492.0</td>
-      <td>8797.0</td>
-      <td>17.0</td>
-      <td>3.1</td>
-      <td>81.5</td>
-      <td>7.4</td>
-      <td>0.32</td>
-      <td>50282.0</td>
-      <td>94.0</td>
-      <td>2.0</td>
-      <td>76.0</td>
-      <td>496.0</td>
-      <td>15.56</td>
-      <td>78.0</td>
-      <td>94.0</td>
-      <td>17.9</td>
-      <td>Gross domestic product per capita, current prices</td>
-      <td>U.S. dollars</td>
-      <td>Units</td>
-      <td>See notes for:  Gross domestic product, curren...</td>
-      <td>74822.106</td>
-      <td>2015.0</td>
-    </tr>
+  </thead>
+  <tbody>
     <tr>
       <th>Switzerland</th>
       <td>20.0</td>
@@ -15412,51 +14267,29 @@ Name: Life satisfaction, dtype: float64</pre>
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">full_country_stats</span><span class="p">[[</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">,</span> <span class="s1">&#39;Life satisfaction&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;United States&quot;</span><span class="p">]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[14]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>GDP per capita       55805.204
-Life satisfaction        7.200
-Name: United States, dtype: float64</pre>
-</div>
-
-</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>아래 코드는 잠시 뒤에 선형회귀 모델의 적합도를 설명하기 위해 
+고의로 7개의 국가의 데이터를 데이터셋에서 제외킨다. 
+제외된 일곱 국가명은 잠시 뒤에 확인한다.</p>
+<p><strong>참고:</strong> 제외된 7개 국가는 앞서 언급된 5개 국가와 전혀 겹치지 않는다.</p>
 
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">remove_indices</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">35</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 7개 국가의 행 인덱스를 전체 인덱스 집합에서 제거</span>
+<span class="n">remove_indices</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">35</span><span class="p">]</span>
 <span class="n">keep_indices</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">36</span><span class="p">))</span> <span class="o">-</span> <span class="nb">set</span><span class="p">(</span><span class="n">remove_indices</span><span class="p">))</span>
 
-<span class="n">sample_data</span> <span class="o">=</span> <span class="n">full_country_stats</span><span class="p">[[</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">,</span> <span class="s1">&#39;Life satisfaction&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">keep_indices</span><span class="p">]</span>
-<span class="n">missing_data</span> <span class="o">=</span> <span class="n">full_country_stats</span><span class="p">[[</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">,</span> <span class="s1">&#39;Life satisfaction&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">remove_indices</span><span class="p">]</span>
+<span class="c1"># 제외된 7개 국가의 행과 나머지 국가의 행을 구분하여 두 개의 데이터프레임 지정</span>
+<span class="n">sample_data</span> <span class="o">=</span> <span class="n">full_country_stats</span><span class="p">[[</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">,</span> <span class="s1">&#39;Life satisfaction&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">keep_indices</span><span class="p">]</span> <span class="c1"># 7개 국가를 제외한 국가들의 1인당 GDP와 삶의 만족도 데이터</span>
+<span class="n">missing_data</span> <span class="o">=</span> <span class="n">full_country_stats</span><span class="p">[[</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">,</span> <span class="s1">&#39;Life satisfaction&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">remove_indices</span><span class="p">]</span> <span class="c1"># 제외된 7개 국가의 1인당 GGP와 삶의 만족도 데이터</span>
 </pre></div>
 
     </div>
@@ -15464,13 +14297,32 @@ Name: United States, dtype: float64</pre>
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>제외된 7개 국가의 데이터를 제외한 국가들의 1인당 GDP와 삶의 만족도 사이의 관계를 산점도로 나타낸다.
+다만 아래에 언급된 5개 국가는 빨간색 점으로 표시된다.</p>
+<ul>
+<li>헝가리(Hungary)</li>
+<li>대한민국(Korea)</li>
+<li>프랑스(France)</li>
+<li>호주(Australia)</li>
+<li>미국(United States)</li>
+</ul>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sample_data</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;scatter&#39;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Life satisfaction&#39;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 7개 국가를 제외한 국가들의 데이터 산점도</span>
+<span class="n">sample_data</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;scatter&#39;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Life satisfaction&#39;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">60000</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
+
+<span class="c1"># 언급된 5개 국가명 명기 좌표</span>
 <span class="n">position_text</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">&quot;Hungary&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">5000</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
     <span class="s2">&quot;Korea&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">18000</span><span class="p">,</span> <span class="mf">1.7</span><span class="p">),</span>
@@ -15478,11 +14330,15 @@ Name: United States, dtype: float64</pre>
     <span class="s2">&quot;Australia&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">40000</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">),</span>
     <span class="s2">&quot;United States&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">52000</span><span class="p">,</span> <span class="mf">3.8</span><span class="p">),</span>
 <span class="p">}</span>
+
+<span class="c1"># 5개 국가는 좌표를 이용하여 빨강색 점으로 표기</span>
 <span class="k">for</span> <span class="n">country</span><span class="p">,</span> <span class="n">pos_text</span> <span class="ow">in</span> <span class="n">position_text</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
     <span class="n">pos_data_x</span><span class="p">,</span> <span class="n">pos_data_y</span> <span class="o">=</span> <span class="n">sample_data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">country</span><span class="p">]</span>
+    <span class="c1"># 5개 국가명 표기</span>
     <span class="n">country</span> <span class="o">=</span> <span class="s2">&quot;U.S.&quot;</span> <span class="k">if</span> <span class="n">country</span> <span class="o">==</span> <span class="s2">&quot;United States&quot;</span> <span class="k">else</span> <span class="n">country</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">country</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">pos_data_x</span><span class="p">,</span> <span class="n">pos_data_y</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="n">pos_text</span><span class="p">,</span>
             <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">headwidth</span><span class="o">=</span><span class="mi">5</span><span class="p">))</span>
+    <span class="c1"># 5개 국가 산점도 그리기</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pos_data_x</span><span class="p">,</span> <span class="n">pos_data_y</span><span class="p">,</span> <span class="s2">&quot;ro&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;GDP per capita (USD)&quot;</span><span class="p">)</span>
 <span class="n">save_fig</span><span class="p">(</span><span class="s1">&#39;money_happy_scatterplot&#39;</span><span class="p">)</span>
@@ -15527,22 +14383,17 @@ Name: United States, dtype: float64</pre>
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>언급된 5개 국가의 1인당 GDP와 삶의 만족도를 데이터에서 직접 확인하면 다음과 같다.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[17]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sample_data</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;datasets&quot;</span><span class="p">,</span> <span class="s2">&quot;lifesat&quot;</span><span class="p">,</span> <span class="s2">&quot;lifesat.csv&quot;</span><span class="p">))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sample_data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="n">position_text</span><span class="o">.</span><span class="n">keys</span><span class="p">())]</span>
@@ -15558,7 +14409,7 @@ Name: United States, dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[18]:</div>
+    <div class="prompt output_prompt">Out[17]:</div>
 
 
 
@@ -15627,9 +14478,37 @@ Name: United States, dtype: float64</pre>
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#49440;&#54805;&#54924;&#44480;-&#47784;&#45944;-&#54984;&#47144;">&#49440;&#54805;&#54924;&#44480; &#47784;&#45944; &#54984;&#47144;<a class="anchor-link" href="#&#49440;&#54805;&#54924;&#44480;-&#47784;&#45944;-&#54984;&#47144;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>위 산점도에 따르면 1인당 GDP와 삶의 만족도가 어느 정도 선형관계에 있음을 알 수 있다. 
+아래 도표에서 그려진 세 개의 직선은 추정되는 선형관계를 세 개의 선형 모델로 표현한 것이다.</p>
+<p>선형모델은 절편과 기울기 두 개의 모델 파라미터(model parameters)에 의해 결정된다.
+예를 덜어, 1인당 GDP와 삶의 만족도는 아래 선형 모델로 표현할 수 있다.</p>
+$$
+\text{lift_satisfaction} = \theta_0 + \theta_1 \times \text{GDP_per_capita}
+$$<p>아래 세 선형 모델은 각기 다른 절편과 기울기를 사용한다.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -15689,17 +14568,40 @@ Name: United States, dtype: float64</pre>
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>위 도표에 그려진 세 선형 모델은 모두 그렇게 적합해 보이지 않는다.</p>
+<p>아래 코드는 선형회귀 모델을 훈련시킨 후 훈련된 모델이 예측한 최적의 선형 모델의 절편과 기울기를 알아내며, 
+훈련된 모델의 아래 두 속성에 저장한다.</p>
+<ul>
+<li><code>intercept_[0]</code>: 직선의 절편</li>
+<li><code>coef_[0]</code>: 직선의 기울기</li>
+</ul>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">linear_model</span>
+
+<span class="c1"># 선형회귀 모델 지정</span>
 <span class="n">lin1</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()</span>
+
+<span class="c1"># 훈련 데이터셋</span>
 <span class="n">Xsample</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">sample_data</span><span class="p">[</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">]]</span>
 <span class="n">ysample</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">sample_data</span><span class="p">[</span><span class="s2">&quot;Life satisfaction&quot;</span><span class="p">]]</span>
+
+<span class="c1"># 모델 훈련</span>
 <span class="n">lin1</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">Xsample</span><span class="p">,</span> <span class="n">ysample</span><span class="p">)</span>
+
+<span class="c1"># 예측된 최적의 직선에 대한 정보: 절편과 기울기</span>
 <span class="n">t0</span><span class="p">,</span> <span class="n">t1</span> <span class="o">=</span> <span class="n">lin1</span><span class="o">.</span><span class="n">intercept_</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">lin1</span><span class="o">.</span><span class="n">coef_</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+
 <span class="n">t0</span><span class="p">,</span> <span class="n">t1</span>
 </pre></div>
 
@@ -15713,7 +14615,7 @@ Name: United States, dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[20]:</div>
+    <div class="prompt output_prompt">Out[19]:</div>
 
 
 
@@ -15728,18 +14630,31 @@ Name: United States, dtype: float64</pre>
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>구해진 기울기와 절편을 이용하여 산점도와 함께 직선을 그리면 다음과 같다.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sample_data</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;scatter&#39;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Life satisfaction&#39;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 산점도</span>
+<span class="n">sample_data</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;scatter&#39;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Life satisfaction&#39;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;GDP per capita (USD)&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">60000</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
+
+<span class="c1"># 직선 그리기</span>
 <span class="n">X</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">60000</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">t0</span> <span class="o">+</span> <span class="n">t1</span><span class="o">*</span><span class="n">X</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="c1"># 직선의 절편과 기울기 정보 명시</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">5000</span><span class="p">,</span> <span class="mf">3.1</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot;$\theta_0 = 4.85$&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">5000</span><span class="p">,</span> <span class="mf">2.2</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot;$\theta_1 = 4.91 \times 10^{-5}$&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+
 <span class="n">save_fig</span><span class="p">(</span><span class="s1">&#39;best_fit_model_plot&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
@@ -15782,15 +14697,32 @@ Name: United States, dtype: float64</pre>
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#54984;&#47144;&#46108;-&#47784;&#45944;-&#54876;&#50857;">&#54984;&#47144;&#46108; &#47784;&#45944; &#54876;&#50857;<a class="anchor-link" href="#&#54984;&#47144;&#46108;-&#47784;&#45944;-&#54876;&#50857;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>훈련된 모델을 이용하여 한 국가의 삶의 만족도를 1인당 GDP를 이용하여 예측한다. 
+예를 들어, 키프러스(Cyprus) 1인당 GDP만 다음과 같이 알려져 있을 때 키프러스 국민의 삶의 만족도를 예측한다.</p>
+<ul>
+<li>키프러스 1인당 GDP: 22587</li>
+</ul>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">cyprus_gdp_per_capita</span> <span class="o">=</span> <span class="n">gdp_per_capita</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Cyprus&quot;</span><span class="p">][</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">cyprus_gdp_per_capita</span><span class="p">)</span>
-<span class="n">cyprus_predicted_life_satisfaction</span> <span class="o">=</span> <span class="n">lin1</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span><span class="n">cyprus_gdp_per_capita</span><span class="p">]])[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">cyprus_predicted_life_satisfaction</span>
 </pre></div>
 
     </div>
@@ -15812,6 +14744,35 @@ Name: United States, dtype: float64</pre>
 </div>
 </div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>키프러스 국민의 삶의 만족도는 5.96 정도로 예측된다.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cyprus_predicted_life_satisfaction</span> <span class="o">=</span> <span class="n">lin1</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span><span class="n">cyprus_gdp_per_capita</span><span class="p">]])[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">cyprus_predicted_life_satisfaction</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
 <div class="output_area">
 
     <div class="prompt output_prompt">Out[22]:</div>
@@ -15829,6 +14790,14 @@ Name: United States, dtype: float64</pre>
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>아래 도표에서 확인할 수 있듯이 예측값은 정확하게 앞서 확인한 최적의 직선 위에 위치한다.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[23]:</div>
@@ -15836,13 +14805,21 @@ Name: United States, dtype: float64</pre>
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sample_data</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;scatter&#39;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Life satisfaction&#39;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="n">s</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;GDP per capita (USD)&quot;</span><span class="p">)</span>
+
+<span class="c1"># 예측된 최적의 직선</span>
 <span class="n">X</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">60000</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">t0</span> <span class="o">+</span> <span class="n">t1</span><span class="o">*</span><span class="n">X</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">60000</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">5000</span><span class="p">,</span> <span class="mf">7.5</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot;$\theta_0 = 4.85$&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">5000</span><span class="p">,</span> <span class="mf">6.6</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot;$\theta_1 = 4.91 \times 10^{-5}$&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+
+<span class="c1"># 키프러스에 대한 삶의 만족도 예측값</span>
+
+<span class="c1"># 빨간 점선 그리기</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">cyprus_gdp_per_capita</span><span class="p">,</span> <span class="n">cyprus_gdp_per_capita</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">cyprus_predicted_life_satisfaction</span><span class="p">],</span> <span class="s2">&quot;r--&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">25000</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot;Prediction = 5.96&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+
+<span class="c1"># 예측 지점 좌표 찍기(빨강생)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cyprus_gdp_per_capita</span><span class="p">,</span> <span class="n">cyprus_predicted_life_satisfaction</span><span class="p">,</span> <span class="s2">&quot;ro&quot;</span><span class="p">)</span>
 <span class="n">save_fig</span><span class="p">(</span><span class="s1">&#39;cyprus_prediction_plot&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -15886,231 +14863,43 @@ Name: United States, dtype: float64</pre>
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#47672;&#49888;&#47084;&#45789;&#51032;-&#51452;&#50836;-&#46020;&#51204;-&#44284;&#51228;">&#47672;&#49888;&#47084;&#45789;&#51032; &#51452;&#50836; &#46020;&#51204; &#44284;&#51228;<a class="anchor-link" href="#&#47672;&#49888;&#47084;&#45789;&#51032;-&#51452;&#50836;-&#46020;&#51204;-&#44284;&#51228;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3>대표성 없는 훈련 데이터</h3>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>앞서 7개 국가의 데이터를 훈련에서 제외시킨 후에 선형회귀 모델을 훈련시켰다.
+이제 7개 국가를 포함해서 훈련시켜 보자.
+제외된 7개 국가의 데이터는 다음과 같다.</p>
+<ul>
+<li>브라질(Brazil)</li>
+<li>멕시코(Mexico)</li>
+<li>칠레(Chile)</li>
+<li>체코(Czech Repulic)</li>
+<li>노르웨이(Norway)</li>
+<li>스위스(Switzerland)</li>
+<li>룩셈부르크(Luxembourg)</li>
+</ul>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[24]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sample_data</span><span class="p">[</span><span class="mi">7</span><span class="p">:</span><span class="mi">10</span><span class="p">]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[24]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>GDP per capita</th>
-      <th>Life satisfaction</th>
-    </tr>
-    <tr>
-      <th>Country</th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Portugal</th>
-      <td>19121.592</td>
-      <td>5.1</td>
-    </tr>
-    <tr>
-      <th>Slovenia</th>
-      <td>20732.482</td>
-      <td>5.7</td>
-    </tr>
-    <tr>
-      <th>Spain</th>
-      <td>25864.721</td>
-      <td>6.5</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="p">(</span><span class="mf">5.1</span><span class="o">+</span><span class="mf">5.7</span><span class="o">+</span><span class="mf">6.5</span><span class="p">)</span><span class="o">/</span><span class="mi">3</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[25]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>5.766666666666667</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">backup</span> <span class="o">=</span> <span class="n">oecd_bli</span><span class="p">,</span> <span class="n">gdp_per_capita</span>
-
-<span class="k">def</span> <span class="nf">prepare_country_stats</span><span class="p">(</span><span class="n">oecd_bli</span><span class="p">,</span> <span class="n">gdp_per_capita</span><span class="p">):</span>
-    <span class="n">oecd_bli</span> <span class="o">=</span> <span class="n">oecd_bli</span><span class="p">[</span><span class="n">oecd_bli</span><span class="p">[</span><span class="s2">&quot;INEQUALITY&quot;</span><span class="p">]</span><span class="o">==</span><span class="s2">&quot;TOT&quot;</span><span class="p">]</span>
-    <span class="n">oecd_bli</span> <span class="o">=</span> <span class="n">oecd_bli</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s2">&quot;Country&quot;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s2">&quot;Indicator&quot;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s2">&quot;Value&quot;</span><span class="p">)</span>
-    <span class="n">gdp_per_capita</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;2015&quot;</span><span class="p">:</span> <span class="s2">&quot;GDP per capita&quot;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-    <span class="n">gdp_per_capita</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;Country&quot;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-    <span class="n">full_country_stats</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">left</span><span class="o">=</span><span class="n">oecd_bli</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="n">gdp_per_capita</span><span class="p">,</span>
-                                  <span class="n">left_index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">right_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-    <span class="n">full_country_stats</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-    <span class="n">remove_indices</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">35</span><span class="p">]</span>
-    <span class="n">keep_indices</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">36</span><span class="p">))</span> <span class="o">-</span> <span class="nb">set</span><span class="p">(</span><span class="n">remove_indices</span><span class="p">))</span>
-    <span class="k">return</span> <span class="n">full_country_stats</span><span class="p">[[</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">,</span> <span class="s1">&#39;Life satisfaction&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">keep_indices</span><span class="p">]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 예제 코드</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">sklearn.linear_model</span>
-
-<span class="c1"># 데이터 적내</span>
-<span class="n">oecd_bli</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">datapath</span> <span class="o">+</span> <span class="s2">&quot;oecd_bli_2015.csv&quot;</span><span class="p">,</span> <span class="n">thousands</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
-<span class="n">gdp_per_capita</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">datapath</span> <span class="o">+</span> <span class="s2">&quot;gdp_per_capita.csv&quot;</span><span class="p">,</span><span class="n">thousands</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span><span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span>
-                             <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;latin1&#39;</span><span class="p">,</span> <span class="n">na_values</span><span class="o">=</span><span class="s2">&quot;n/a&quot;</span><span class="p">)</span>
-
-<span class="c1"># 데이터 준비</span>
-<span class="n">country_stats</span> <span class="o">=</span> <span class="n">prepare_country_stats</span><span class="p">(</span><span class="n">oecd_bli</span><span class="p">,</span> <span class="n">gdp_per_capita</span><span class="p">)</span>
-<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">country_stats</span><span class="p">[</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">]]</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">country_stats</span><span class="p">[</span><span class="s2">&quot;Life satisfaction&quot;</span><span class="p">]]</span>
-
-<span class="c1"># 데이터 시작화</span>
-<span class="n">country_stats</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;scatter&#39;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Life satisfaction&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
-<span class="c1"># 선형 모델 선택</span>
-<span class="n">model</span> <span class="o">=</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">linear_model</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()</span>
-
-<span class="c1"># 모델 훈련</span>
-<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-
-<span class="c1"># 키프러그 국가에 대한 예측하기</span>
-<span class="n">X_new</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">22587</span><span class="p">]]</span>  <span class="c1"># Cyprus&#39; GDP per capita</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_new</span><span class="p">))</span> <span class="c1"># outputs [[ 5.96242338]]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-
-<div class="output_png output_subarea ">
-<img src="data:image/png;base64,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
-"
->
-</div>
-
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[[5.96242338]]
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">oecd_bli</span><span class="p">,</span> <span class="n">gdp_per_capita</span> <span class="o">=</span> <span class="n">backup</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">missing_data</span>
@@ -16126,7 +14915,7 @@ Name: United States, dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[29]:</div>
+    <div class="prompt output_prompt">Out[24]:</div>
 
 
 
@@ -16205,9 +14994,17 @@ Name: United States, dtype: float64</pre>
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>아래 좌표는 7개 국가명을 아래 도표에서 표기할 때 사용할 좌표이다.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">position_text2</span> <span class="o">=</span> <span class="p">{</span>
@@ -16226,28 +15023,48 @@ Name: United States, dtype: float64</pre>
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>7개 국가를 포함한 전체 훈련 데이터셋을 이용하여 훈련한 결과를
+7개 국가를 제외했을 때의 훈련 결과와 비교한다.</p>
+<ul>
+<li>검정 실선: 7개 국가 포함 예측 선형 모델</li>
+<li>파랑 점선: 7개 국가 제외 예측 선형 모델</li>
+</ul>
+<p><strong>결론:</strong> 선형회귀 모델은 1인당 GDP와 삶의 만족도 사이의 관계를 모델링 하기에 부적합하다.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sample_data</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;scatter&#39;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Life satisfaction&#39;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 7개 국가를 제외한 국가들의 산점도 (파랑색 점)</span>
+<span class="n">sample_data</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;scatter&#39;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Life satisfaction&#39;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">110000</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
 
+<span class="c1"># 7개 국가 산점도(빨강 점)</span>
 <span class="k">for</span> <span class="n">country</span><span class="p">,</span> <span class="n">pos_text</span> <span class="ow">in</span> <span class="n">position_text2</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
     <span class="n">pos_data_x</span><span class="p">,</span> <span class="n">pos_data_y</span> <span class="o">=</span> <span class="n">missing_data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">country</span><span class="p">]</span>
+    <span class="c1"># 7개 국가명 표기</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">country</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">pos_data_x</span><span class="p">,</span> <span class="n">pos_data_y</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="n">pos_text</span><span class="p">,</span>
             <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">headwidth</span><span class="o">=</span><span class="mi">5</span><span class="p">))</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pos_data_x</span><span class="p">,</span> <span class="n">pos_data_y</span><span class="p">,</span> <span class="s2">&quot;rs&quot;</span><span class="p">)</span>
 
+<span class="c1"># 7개 국가 제외 예측 선형 모델 그래프 (파랑 점선)</span>
 <span class="n">X</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">110000</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">t0</span> <span class="o">+</span> <span class="n">t1</span><span class="o">*</span><span class="n">X</span><span class="p">,</span> <span class="s2">&quot;b:&quot;</span><span class="p">)</span>
 
+<span class="c1"># 7개 국가 포함 선형회귀 모델 훈련 및 예측</span>
 <span class="n">lin_reg_full</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()</span>
 <span class="n">Xfull</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">full_country_stats</span><span class="p">[</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">]]</span>
 <span class="n">yfull</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">full_country_stats</span><span class="p">[</span><span class="s2">&quot;Life satisfaction&quot;</span><span class="p">]]</span>
 <span class="n">lin_reg_full</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">Xfull</span><span class="p">,</span> <span class="n">yfull</span><span class="p">)</span>
 
+<span class="c1"># 7개 국가 포함 예측 선형 모델 그래프(검정 실선)</span>
 <span class="n">t0full</span><span class="p">,</span> <span class="n">t1full</span> <span class="o">=</span> <span class="n">lin_reg_full</span><span class="o">.</span><span class="n">intercept_</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">lin_reg_full</span><span class="o">.</span><span class="n">coef_</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
 <span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">110000</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">t0full</span> <span class="o">+</span> <span class="n">t1full</span> <span class="o">*</span> <span class="n">X</span><span class="p">,</span> <span class="s2">&quot;k&quot;</span><span class="p">)</span>
@@ -16295,9 +15112,36 @@ Name: United States, dtype: float64</pre>
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#44284;&#45824;&#51201;&#54633;&#44284;-&#47784;&#45944;-&#44508;&#51228;">&#44284;&#45824;&#51201;&#54633;&#44284; &#47784;&#45944; &#44508;&#51228;<a class="anchor-link" href="#&#44284;&#45824;&#51201;&#54633;&#44284;-&#47784;&#45944;-&#44508;&#51228;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#44284;&#45824;&#51201;&#54633;">&#44284;&#45824;&#51201;&#54633;<a class="anchor-link" href="#&#44284;&#45824;&#51201;&#54633;">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>훈련된 모델이 훈련데이터에는 너무나도 잘 맞지만 새로운 데이터에 대해서는 잘 작동하지 않을 때 해당 모델이 훈련데이터에 <strong>과대적합</strong>되었다고 말한다.</p>
+<p>예를 들어, 
+아래 코드는 4장에서 다룰 고차항 다항회귀를 이용하여 선형이 아니라 60차 다항식의 그래프로 모델을 예측한다.
+결과는 훈련데이터셋에 매우 잘 들어맞지만, 새루운 데이터에 대해 훈련된 모델이 제대로된 예측을 할 수 있을 
+거라고 믿기는 어렵다. 이런 모델은 <strong>일반화가 어렵다</strong>라고 말한다.</p>
+<p><strong>주의사항:</strong> 아래 코드를 지금 당장 이해하려고 시도할 필요는 없다.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">full_country_stats</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;scatter&#39;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Life satisfaction&#39;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
@@ -16371,9 +15215,18 @@ Name: United States, dtype: float64</pre>
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>훈련세트에 잡음이 많이 있거나 데이터셋이 너무 작으면 훈련 과정에서 별로 상관 없는 특성을 이용하려고 시도할 수도 있다. 
+예를 들어, 아래 코드에서 확인할 수 있듯이 OECD에 속하는 국가 중에서 나라 이름에 영어 알파벳 W가 포함된 아래의 나라의 삶의 만족도가 매우 높은 편이다.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">full_country_stats</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">full_country_stats</span><span class="o">.</span><span class="n">index</span> <span class="k">if</span> <span class="s2">&quot;W&quot;</span> <span class="ow">in</span> <span class="n">c</span><span class="o">.</span><span class="n">upper</span><span class="p">()]][</span><span class="s2">&quot;Life satisfaction&quot;</span><span class="p">]</span>
@@ -16389,7 +15242,7 @@ Name: United States, dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[33]:</div>
+    <div class="prompt output_prompt">Out[28]:</div>
 
 
 
@@ -16409,9 +15262,19 @@ Name: Life satisfaction, dtype: float64</pre>
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>하지만 그렇다해서 나라명에 영어 알파벳 W가 포함된 모든 나라의 삶의 만족도가 높다고 결론 지을 수는 없다.
+실제로 영어 알파벳 W를 포함한 국가 중에 여러 국가의 1인당 GDP가 아래 코드에서 볼 수 있듯이 매우 낮은데,
+예를 들어, 루완다(Rwanda), 짐바브웨(Zimbabwe) 등의 국가의 삶의 만족도를 그럼에도 불구하고 매우 높다고 말할 수는 없다.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">gdp_per_capita</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">gdp_per_capita</span><span class="o">.</span><span class="n">index</span> <span class="k">if</span> <span class="s2">&quot;W&quot;</span> <span class="ow">in</span> <span class="n">c</span><span class="o">.</span><span class="n">upper</span><span class="p">()]]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -16427,7 +15290,7 @@ Name: Life satisfaction, dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[34]:</div>
+    <div class="prompt output_prompt">Out[29]:</div>
 
 
 
@@ -16524,9 +15387,33 @@ Name: Life satisfaction, dtype: float64</pre>
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#47784;&#45944;-&#44508;&#51228;">&#47784;&#45944; &#44508;&#51228;<a class="anchor-link" href="#&#47784;&#45944;-&#44508;&#51228;">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>4장에서 다루는 '규제가 있는 선형 모델'에서 다루는 이용하면 과대적합의 위험을 줄일 수 있다.
+이렇게 과대적합의 위험을 감소시키기 위에 훈련 모델에 제약을 가하는 것을 <strong>규제</strong>(regularization)라고 한다.</p>
+<p>아래 코드는 세 개의 모델을 비교한다.</p>
+<ul>
+<li>빨강 파선: 7개 국가 포함 예측 선형 모델</li>
+<li>파랑 점선: 7개 국가 제외 예측 선형 모델</li>
+<li>파랑 실선: 7개 국가 제외 규제 적용 예측 선형 모델</li>
+</ul>
+<p>7개 국가를 제외하더라도 모델에 규제를 적용하면 데이터에 덜 과대적합한 모델을 얻게 됨을 
+세 개의 그래프를 비교해서 알 수 있다.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
@@ -16534,17 +15421,23 @@ Name: Life satisfaction, dtype: float64</pre>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Life satisfaction&#39;</span><span class="p">)</span>
 
+<span class="c1"># 7개 국가 제외 데이터 산점도(파랑 동그라미)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">sample_data</span><span class="p">[</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">]),</span> <span class="nb">list</span><span class="p">(</span><span class="n">sample_data</span><span class="p">[</span><span class="s2">&quot;Life satisfaction&quot;</span><span class="p">]),</span> <span class="s2">&quot;bo&quot;</span><span class="p">)</span>
+<span class="c1"># 제외된 7개 국가 산점도(빨강 네모)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">missing_data</span><span class="p">[</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">]),</span> <span class="nb">list</span><span class="p">(</span><span class="n">missing_data</span><span class="p">[</span><span class="s2">&quot;Life satisfaction&quot;</span><span class="p">]),</span> <span class="s2">&quot;rs&quot;</span><span class="p">)</span>
 
+<span class="c1"># 7개 국가 포함 예측 선형 모델 그래프(빨강 파선)</span>
 <span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">110000</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">t0full</span> <span class="o">+</span> <span class="n">t1full</span> <span class="o">*</span> <span class="n">X</span><span class="p">,</span> <span class="s2">&quot;r--&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Linear model on all data&quot;</span><span class="p">)</span>
+<span class="c1"># 7개 국가 제외 예측 선형 모델 그래프(파랑 점선)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">t0</span> <span class="o">+</span> <span class="n">t1</span><span class="o">*</span><span class="n">X</span><span class="p">,</span> <span class="s2">&quot;b:&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Linear model on partial data&quot;</span><span class="p">)</span>
 
+<span class="c1"># 릿지(Ridge) 규제 적용 훈련: 7개 국가 제외 데이터 대상</span>
 <span class="n">ridge</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">Ridge</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mi">10</span><span class="o">**</span><span class="mf">9.5</span><span class="p">)</span>
 <span class="n">Xsample</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">sample_data</span><span class="p">[</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">]]</span>
 <span class="n">ysample</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">sample_data</span><span class="p">[</span><span class="s2">&quot;Life satisfaction&quot;</span><span class="p">]]</span>
 <span class="n">ridge</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">Xsample</span><span class="p">,</span> <span class="n">ysample</span><span class="p">)</span>
+<span class="c1"># 릿지 규제 적용 예측 선형 모델 그래프(파랑 실선)</span>
 <span class="n">t0ridge</span><span class="p">,</span> <span class="n">t1ridge</span> <span class="o">=</span> <span class="n">ridge</span><span class="o">.</span><span class="n">intercept_</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">ridge</span><span class="o">.</span><span class="n">coef_</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">t0ridge</span> <span class="o">+</span> <span class="n">t1ridge</span> <span class="o">*</span> <span class="n">X</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Regularized linear model on partial data&quot;</span><span class="p">)</span>
 
@@ -16593,18 +15486,101 @@ Name: Life satisfaction, dtype: float64</pre>
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#49324;&#47168;-&#44592;&#48152;-&#54617;&#49845;">&#49324;&#47168; &#44592;&#48152; &#54617;&#49845;<a class="anchor-link" href="#&#49324;&#47168;-&#44592;&#48152;-&#54617;&#49845;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>키프러스의 삶의 만족도를 사례 기반 학습으로 예측하기 위해
+1인당 GDP가 키프러스의 경우가 가장 가까운 국가들의 삶의 만족도의 평균값을 활용할 수 있다.</p>
+<p>예를 들어, 키프러스의 1인당 GDP와 가장 가까운 세 나라는 다음과 같다.</p>
+<ul>
+<li>포루투갈(Portugal)</li>
+<li>슬로베니아(Slovenia)</li>
+<li>스페인(Spain)</li>
+</ul>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">backup</span> <span class="o">=</span> <span class="n">oecd_bli</span><span class="p">,</span> <span class="n">gdp_per_capita</span>
-
-<span class="k">def</span> <span class="nf">prepare_country_stats</span><span class="p">(</span><span class="n">oecd_bli</span><span class="p">,</span> <span class="n">gdp_per_capita</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">sample_data</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sample_data</span><span class="p">[</span><span class="mi">7</span><span class="p">:</span><span class="mi">10</span><span class="p">]</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[31]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>GDP per capita</th>
+      <th>Life satisfaction</th>
+    </tr>
+    <tr>
+      <th>Country</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Portugal</th>
+      <td>19121.592</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>Slovenia</th>
+      <td>20732.482</td>
+      <td>5.7</td>
+    </tr>
+    <tr>
+      <th>Spain</th>
+      <td>25864.721</td>
+      <td>6.5</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -16612,17 +15588,60 @@ Name: Life satisfaction, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>다음 선형 모델 대신 k-최근접 이웃 회귀 모델 사용</p>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sklearn.linear_model</span>
-<span class="n">model</span> <span class="o">=</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">linear_model</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()</span>
-</pre></div>
+<p>위 세 나라의 삶의 만족도의 평균값은 다음과 같다.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">(</span><span class="mf">5.1</span> <span class="o">+</span> <span class="mf">5.7</span> <span class="o">+</span> <span class="mf">6.5</span><span class="p">)</span><span class="o">/</span><span class="mi">3</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[32]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>5.766666666666667</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>앞서 설명한 알고리즘을 <strong>k-최근접 이웃</strong> 회귀라고 하며,
+위 예제에서 사용된 k는 3이다.</p>
+<p>사이킷런에서 지원하는 k-최근접 이웃 회귀모델을 적용하면 동일한 결과를 얻게 된다.</p>
+<ul>
+<li><code>n_neighbors = 3</code>: 예측할 데이터와 가장 가까운 3개의 훈련 데이터 정보를 활용한다는 의미임.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sklearn.neighbors</span>
@@ -16636,11 +15655,11 @@ Name: Life satisfaction, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">country_stats</span><span class="p">[</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">]]</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">country_stats</span><span class="p">[</span><span class="s2">&quot;Life satisfaction&quot;</span><span class="p">]]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">sample_data</span><span class="p">[</span><span class="s2">&quot;GDP per capita&quot;</span><span class="p">]]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">sample_data</span><span class="p">[</span><span class="s2">&quot;Life satisfaction&quot;</span><span class="p">]]</span>
 
 <span class="c1"># 모델 훈련</span>
 <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
