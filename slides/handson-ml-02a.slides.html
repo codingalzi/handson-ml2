@@ -13428,6 +13428,13 @@ a.anchor-link {
 <h4 id="&#54217;&#44512;-&#51228;&#44273;&#44540;-&#50724;&#52264;(root-mean-square-error,-RMSE)">&#54217;&#44512; &#51228;&#44273;&#44540; &#50724;&#52264;(root mean square error, RMSE)<a class="anchor-link" href="#&#54217;&#44512;-&#51228;&#44273;&#44540;-&#50724;&#52264;(root-mean-square-error,-RMSE)">&#182;</a></h4><ul>
 <li>유클리디안 노름 또는 $\ell_2$ 노름으로도 불림</li>
 </ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 $$\text{RMSE}(\mathbf X, h) = \sqrt{\frac 1 m \sum_{i=1}^{m} (h(\mathbf x^{(i)}) - y^{(i)})^2}$$
 </div>
 </div>
@@ -13455,6 +13462,13 @@ $$\text{RMSE}(\mathbf X, h) = \sqrt{\frac 1 m \sum_{i=1}^{m} (h(\mathbf x^{(i)})
 <h4 id="&#54217;&#44512;-&#51208;&#45824;-&#50724;&#52264;(mean-absolute-error,-MAE)">&#54217;&#44512; &#51208;&#45824; &#50724;&#52264;(mean absolute error, MAE)<a class="anchor-link" href="#&#54217;&#44512;-&#51208;&#45824;-&#50724;&#52264;(mean-absolute-error,-MAE)">&#182;</a></h4><ul>
 <li>MAE는 맨해튼 노름 또는 $\ell_1$ 노름으로도 불림</li>
 </ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 $$\text{MAE}(\mathbf X, h) = \frac 1 m \sum_{i=1}^{m} \mid h(\mathbf x^{(i)}) - y^{(i)} \mid$$
 </div>
 </div>
@@ -13618,15 +13632,44 @@ $$\text{MAE}(\mathbf X, h) = \frac 1 m \sum_{i=1}^{m} \mid h(\mathbf x^{(i)}) - 
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="&#48276;&#51452;&#54805;-&#45936;&#51060;&#53552;-&#53456;&#49353;">&#48276;&#51452;&#54805; &#45936;&#51060;&#53552; &#53456;&#49353;<a class="anchor-link" href="#&#48276;&#51452;&#54805;-&#45936;&#51060;&#53552;-&#53456;&#49353;">&#182;</a></h4><ul>
-<li>'해안 근접도'는 5개의 범주로 구분<ul>
-<li>&lt;1H OCEAN: 해안에서 1시간 이내</li>
-<li>INLAND: 내륙</li>
-<li>NEAR OCEAN: 해안 근처</li>
-<li>NEAR BAY: Bay Area라 불리는 샌프란시스코 도시 중심 지역</li>
-<li>ISLAND: 섬  </li>
+<li>'해안 근접도'는 5개의 범주로 구분</li>
 </ul>
-</li>
-</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<table>
+<thead><tr>
+<th>특성값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lt;1H OCEAN</td>
+<td>해안에서 1시간 이내</td>
+</tr>
+<tr>
+<td>INLAND</td>
+<td>내륙</td>
+</tr>
+<tr>
+<td>NEAR OCEAN</td>
+<td>해안 근처</td>
+</tr>
+<tr>
+<td>NEAR BAY</td>
+<td>샌프란시스코의 Bay Area 지역</td>
+</tr>
+<tr>
+<td>ISLAND</td>
+<td>섬</td>
+</tr>
+</tbody>
+</table>
 
 </div>
 </div>
@@ -13921,37 +13964,14 @@ $$\text{MAE}(\mathbf X, h) = \frac 1 m \sum_{i=1}^{m} \mid h(\mathbf x^{(i)}) - 
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>상관계수: $[-1, 1]$ 구간의 값</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>1에 가까울 수록: 강한 양의 선형 상관관계</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>-1에 가까울 수록: 강한 음의 선형 상관관계</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>0에 가까울 수록: 매우 약한 선형 상관관계</li>
+<li><p>상관계수: $[-1, 1]$ 구간의 값</p>
+</li>
+<li><p>1에 가까울 수록: 강한 양의 선형 상관관계</p>
+</li>
+<li><p>-1에 가까울 수록: 강한 음의 선형 상관관계</p>
+</li>
+<li><p>0에 가까울 수록: 매우 약한 선형 상관관계</p>
+</li>
 </ul>
 
 </div>

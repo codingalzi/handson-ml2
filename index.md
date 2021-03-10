@@ -17,7 +17,7 @@
     [[pdf]](./slides/handson-ml-01-slides.pdf)
     * 주피터 노트북: [[html]](./notebooks/handson-ml-01.html), 
     [[colab]](https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/notebooks/handson-ml-01.ipynb)
-1. 머신러닝 프로젝트 처음부터 끝까지 1부 (준비중)
+1. 머신러닝 프로젝트 처음부터 끝까지 1부
     * 슬라이드: [[html]](./slides/handson-ml-02a.slides.html), 
     [[pdf]](./slides/handson-ml-02a-slides.pdf)
     * 주피터 노트북: [[html]](./notebooks/handson-ml-02a.html), 
@@ -61,10 +61,11 @@ $ cd handson-ml
 ```
 
 아래 두 가지 방식 중에 하나를 선택하여 주피터 노트북과 소스코드를 실행할 수 있습니다.
-자세한 내용은 [프로그래밍 환경설정 안내](./INSTALL.md)를 참조하세요.
 
-* 아나콘다(Anaconda) 활용
+* 윈도우 10 + 아나콘다(Anaconda) + Tensorflow 2(GPU 지원) 활용
+    * 참고: [프로그래밍 환경설정 안내](./INSTALL.md)
 * 도커(docker) 활용
+    * 참고: [저자의 도커 이미지 활용](https://github.com/ageron/handson-ml2/tree/master/docker)
 
 ### 추가 자료
 
