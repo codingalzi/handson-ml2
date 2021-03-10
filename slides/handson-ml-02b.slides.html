@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 
-<title>handson-ml2-02 slides</title>
+<title>handson-ml-02b slides</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13209,427 +13209,7 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="&#44048;&#49324;&#51032;-&#44544;">&#44048;&#49324;&#51032; &#44544;<a class="anchor-link" href="#&#44048;&#49324;&#51032;-&#44544;">&#182;</a></h4><p>자료를 공개한 저자 오렐리앙 제롱에게 깊은 감사를 드립니다. 이와 더불어 한빛미디어로부터 강의준비에 필요한 자료를 지원받았음을 밝히며, 이에 대해 진심어린 감사를 전합니다.</p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>주택 가격을 예측하는 회귀 작업을 살펴보면서 선형 회귀, 결정 트리, 랜덤 포레스트 등 여러 알고리즘 학습</li>
-</ul>
-
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<div align="center"><img src="images/homl02-01d.png" width="800"></div>
-</div>
-</div>
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="2.1-&#49892;&#51228;-&#45936;&#51060;&#53552;&#47196;-&#51089;&#50629;&#54616;&#44592;">2.1 &#49892;&#51228; &#45936;&#51060;&#53552;&#47196; &#51089;&#50629;&#54616;&#44592;<a class="anchor-link" href="#2.1-&#49892;&#51228;-&#45936;&#51060;&#53552;&#47196;-&#51089;&#50629;&#54616;&#44592;">&#182;</a></h2>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>유명한 공개 데이터 저장소<ul>
-<li>UC 얼바인Irvine 머신러닝 저장소(<a href="http://archive.ics.uci.edu/ml">http://archive.ics.uci.edu/ml</a>)</li>
-<li>캐글Kaggle 데이터셋(<a href="http://www.kaggle.com/datasets">http://www.kaggle.com/datasets</a>)</li>
-<li>아마존 AWS 데이터셋(<a href="https://registry.opendata.aws">https://registry.opendata.aws</a>)</li>
-</ul>
-</li>
-<li>메타 포털(공개 데이터 저장소가 나열)<ul>
-<li>데이터 포털Data Portals(<a href="http://dataportals.org">http://dataportals.org</a>)</li>
-<li>오픈 데이터 모니터Open Data Monitor(<a href="http://opendatamonitor.eu">http://opendatamonitor.eu</a>)</li>
-<li>퀀들Quandl(<a href="http://quandl.com">http://quandl.com</a>)</li>
-</ul>
-</li>
-<li>인기 있는 공개 데이터 저장소가 나열되어 있는 다른 페이지<ul>
-<li>위키백과 머신러닝 데이터셋 목록(<a href="https://goo.gl/SJHN2k">https://goo.gl/SJHN2k</a>)</li>
-<li>Quora.com(<a href="https://homl.info/10">https://homl.info/10</a>)</li>
-<li>데이터셋 서브레딧subreddit(<a href="http://www.reddit.com/r/datasets">http://www.reddit.com/r/datasets</a>)</li>
-</ul>
-</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="2.2-&#53360;-&#44536;&#47548;-&#48372;&#44592;">2.2 &#53360; &#44536;&#47548; &#48372;&#44592;<a class="anchor-link" href="#2.2-&#53360;-&#44536;&#47548;-&#48372;&#44592;">&#182;</a></h2>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>주어진 데이터: 미국 캘리포니아 인구조사 데이터<ul>
-<li>특성: 구역(block)별 인구, 중간 소득, 경도, 위도 등</li>
-<li>레이블: 중간 주택 가격</li>
-</ul>
-</li>
-<li>목표: 캘리포니아 주택가격 모델 구현</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#47928;&#51228;-&#51221;&#51032;">&#47928;&#51228; &#51221;&#51032;<a class="anchor-link" href="#&#47928;&#51228;-&#51221;&#51032;">&#182;</a></h3>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>지도 학습(supervised learning): 조사된 주택가격 레이블 활용 훈련</li>
-<li>회귀(regression): 중간 주택 가격 예측<ul>
-<li>다중 회귀(multiple regression): 여러 특성을 활용한 예측</li>
-<li>단변량 회귀(univariate regression): 구역마다 하나의 가격만 예측</li>
-</ul>
-</li>
-<li>배치 학습(batch learning): 빠르게 변하는 데이터에 적응할 필요가 없음</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-<table cellspacing="20">
-<tr>
-<td>
-<img src="images/homl02-02.png">
-</td>
-<td>
-<img src="images/homl02-03.jpg">
-</td>
-</tr>
-</table>
-</p>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="2.3-&#45936;&#51060;&#53552;-&#44396;&#54616;&#44592;">2.3 &#45936;&#51060;&#53552; &#44396;&#54616;&#44592;<a class="anchor-link" href="#2.3-&#45936;&#51060;&#53552;-&#44396;&#54616;&#44592;">&#182;</a></h2>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#51089;&#50629;&#54872;&#44221;-&#47564;&#46308;&#44592;">&#51089;&#50629;&#54872;&#44221; &#47564;&#46308;&#44592;<a class="anchor-link" href="#&#51089;&#50629;&#54872;&#44221;-&#47564;&#46308;&#44592;">&#182;</a></h3><ul>
-<li>추천: 구글 코랩, Docker 등 활용</li>
-<li>직접 개발환경 설정하기는 교재 2.3.1절 참조</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#45936;&#51060;&#53552;-&#45796;&#50868;&#47196;&#46300;">&#45936;&#51060;&#53552; &#45796;&#50868;&#47196;&#46300;<a class="anchor-link" href="#&#45936;&#51060;&#53552;-&#45796;&#50868;&#47196;&#46300;">&#182;</a></h3><ul>
-<li>StaLib 저장소에 있는 데이터 활용</li>
-<li>저자가 교육 목적으로 일부 특성 제외 및 범주형 특성 추가</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#45936;&#51060;&#53552;-&#44396;&#51312;-&#54993;&#50612;&#48372;&#44592;">&#45936;&#51060;&#53552; &#44396;&#51312; &#54993;&#50612;&#48372;&#44592;<a class="anchor-link" href="#&#45936;&#51060;&#53552;-&#44396;&#51312;-&#54993;&#50612;&#48372;&#44592;">&#182;</a></h3>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="pandas&#51032;-&#45936;&#51060;&#53552;&#54532;&#47112;&#51076;-&#54876;&#50857;">pandas&#51032; &#45936;&#51060;&#53552;&#54532;&#47112;&#51076; &#54876;&#50857;<a class="anchor-link" href="#pandas&#51032;-&#45936;&#51060;&#53552;&#54532;&#47112;&#51076;-&#54876;&#50857;">&#182;</a></h4><ul>
-<li><code>head()</code>, <code>info()</code>, <code>describe()</code>, <code>hist()</code> 등을 사용하여 데이터 구조 훑어보기</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="head()-&#47700;&#49436;&#46300;-&#54876;&#50857;-&#44208;&#44284;"><code>head()</code> &#47700;&#49436;&#46300; &#54876;&#50857; &#44208;&#44284;<a class="anchor-link" href="#head()-&#47700;&#49436;&#46300;-&#54876;&#50857;-&#44208;&#44284;">&#182;</a></h4><div align="center"><img src="images/homl02-05.png" width="600"></div>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="info()-&#47700;&#49436;&#46300;-&#54876;&#50857;-&#44208;&#44284;"><code>info()</code> &#47700;&#49436;&#46300; &#54876;&#50857; &#44208;&#44284;<a class="anchor-link" href="#info()-&#47700;&#49436;&#46300;-&#54876;&#50857;-&#44208;&#44284;">&#182;</a></h4><ol>
-<li>총 <strong>샘플링 개수</strong>: 20,640<ul>
-<li>캘리포니아를 20,640구역으로 나위어 조사한 인구조사</li>
-<li>구역 크기:8 600 ~ 3,000명</li>
-</ul>
-</li>
-<li>구역별로 경도, 위도, 중간 주택 연도, 해안 근접도 등 총 10개의 조사 항목</li>
-<li>'해안 근접도'는 범주형 데이터이고 나머지는 수치형 데이터.</li>
-<li>'방의 총 개수'의 경우 누락된 데이터인 207개의 null 값 존재</li>
-</ol>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="&#48276;&#51452;&#54805;-&#45936;&#51060;&#53552;-&#53456;&#49353;">&#48276;&#51452;&#54805; &#45936;&#51060;&#53552; &#53456;&#49353;<a class="anchor-link" href="#&#48276;&#51452;&#54805;-&#45936;&#51060;&#53552;-&#53456;&#49353;">&#182;</a></h4><ul>
-<li>'해안 근접도'는 5개의 범주로 구분<ul>
-<li>&lt;1H OCEAN: 해안에서 1시간 이내</li>
-<li>INLAND: 내륙</li>
-<li>NEAR OCEAN: 해안 근처</li>
-<li>NEAR BAY: Bay Area라 불리는 샌프란시스코 도시 중심 지역</li>
-<li>ISLAND: 섬  </li>
-</ul>
-</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#53580;&#49828;&#53944;-&#49464;&#53944;-&#47564;&#46308;&#44592;">&#53580;&#49828;&#53944; &#49464;&#53944; &#47564;&#46308;&#44592;<a class="anchor-link" href="#&#53580;&#49828;&#53944;-&#49464;&#53944;-&#47564;&#46308;&#44592;">&#182;</a></h3>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li><p>모델 학습 시작 이전</p>
-<ul>
-<li>준비된 데이터셋을 훈련 세트과 테스트 세트로 구분</li>
-</ul>
-</li>
-<li><p>테스트 세트에 포함된 데이터는 미리 분석하지 말 것.</p>
-<ul>
-<li>미리 분석 시 <strong>데이터 스누핑 편향</strong>을 범할 가능성이 높아짐</li>
-<li>미리 보면서 알아낸 직관이 학습 모델 설정에 영향을 미칠 수 있음 </li>
-<li>테스트 세트 크기: 전체 데이터 셋의 20%</li>
-</ul>
-</li>
-<li><p>훈련 세트와 데이터 세트를 구분하는 방식에 따라 결과가 조금씩 달라짐</p>
-<ul>
-<li>무작위 샘플링 vs. 계층적 샘플링</li>
-</ul>
-</li>
-<li><p>여기서는 계층적 샘플링 활용</p>
-</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="&#44228;&#52789;&#51201;-&#49368;&#54540;&#47553;">&#44228;&#52789;&#51201; &#49368;&#54540;&#47553;<a class="anchor-link" href="#&#44228;&#52789;&#51201;-&#49368;&#54540;&#47553;">&#182;</a></h4><ul>
-<li><p>계층: 동질 그룹</p>
-</li>
-<li><p>테스트 세트: 전체 계층을 대표하도록 각 계층별로 적절한 샘플 추출</p>
-<ul>
-<li>계층 기준 예제: 소득</li>
-</ul>
-</li>
-<li><p>소득의 범주:  계층별로 충분한 크기의 샘플이 포함되도록 지정</p>
-<ul>
-<li>학습 과정에서 편향이 발생하지 않도록 하기 위해</li>
-<li>특정 소득 구간에 포함된 샘플이 과하게 적거나 많으면 해당 계층의 중요도가 과대 혹은 과소 평가될 것</li>
-</ul>
-</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>전체 데이터셋의 중간 소득 히스토그램 활용</li>
-</ul>
-<div align="center"><img src="images/homl02-08.png" width="500"></div>
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li><p>대부분 구역의 중간 소득이 <strong>1.5~6.0</strong>(15,000~60,000$) 사이</p>
-</li>
-<li><p>소득 구간을 아래 숫자를 기준으로 5개로 구분</p>
-
-<pre><code>  [0, 1.5, 3.0, 4.6, 6.0, np,inf]</code></pre>
-</li>
-</ul>
-
-</div>
-</div>
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="&#44228;&#52789;-&#49368;&#54540;&#47553;&#44284;-&#47924;&#51089;&#50948;-&#49368;&#54540;&#47553;-&#48708;&#44368;">&#44228;&#52789; &#49368;&#54540;&#47553;&#44284; &#47924;&#51089;&#50948; &#49368;&#54540;&#47553; &#48708;&#44368;<a class="anchor-link" href="#&#44228;&#52789;-&#49368;&#54540;&#47553;&#44284;-&#47924;&#51089;&#50948;-&#49368;&#54540;&#47553;-&#48708;&#44368;">&#182;</a></h4><div align="center"><img src="images/homl02-07.png" width="700"></div>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="2.4-&#45936;&#51060;&#53552;-&#51060;&#54644;&#47484;-&#50948;&#54620;-&#53456;&#49353;&#44284;-&#49884;&#44033;&#54868;">2.4 &#45936;&#51060;&#53552; &#51060;&#54644;&#47484; &#50948;&#54620; &#53456;&#49353;&#44284; &#49884;&#44033;&#54868;<a class="anchor-link" href="#2.4-&#45936;&#51060;&#53552;-&#51060;&#54644;&#47484;-&#50948;&#54620;-&#53456;&#49353;&#44284;-&#49884;&#44033;&#54868;">&#182;</a></h2><ul>
-<li>테스트 세트를 제외한 훈련 세트에 대해서만 시각화를 이용하여 탐색</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#51648;&#47532;&#51201;-&#45936;&#51060;&#53552;-&#49884;&#44033;&#54868;">&#51648;&#47532;&#51201; &#45936;&#51060;&#53552; &#49884;&#44033;&#54868;<a class="anchor-link" href="#&#51648;&#47532;&#51201;-&#45936;&#51060;&#53552;-&#49884;&#44033;&#54868;">&#182;</a></h3><ul>
-<li><p>구역이 집결된 지역과 그렇지 않은 지역 구분 가능</p>
-</li>
-<li><p>샌프란시스코의 베이 에어리어, LA, 샌디에고 등 밀집된 지역 확인 가능</p>
-</li>
-</ul>
-<div align="center"><img src="images/homl02-09.png" width="500"></div>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>주택 가격이 해안 근접도, 인구 밀도와 관련이 큼</li>
-<li>해안 근접도: 위치에 따라 다르게 작용<ul>
-<li>대도시 근처: 해안 근처 주택 가격이 상대적 높음</li>
-<li>북부 캘리포니아 지역: 높지 않음</li>
-</ul>
-</li>
-</ul>
-<div align="center"><img src="images/homl02-11.png" width="500"></div>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#49345;&#44288;&#44288;&#44228;-&#51312;&#49324;">&#49345;&#44288;&#44288;&#44228; &#51312;&#49324;<a class="anchor-link" href="#&#49345;&#44288;&#44288;&#44228;-&#51312;&#49324;">&#182;</a></h3><ul>
-<li>중간 주택 가격 특성과 다른 특성 사이의 상관관계: 상관계수 활용</li>
-</ul>
-<div align="center"><img src="images/homl02-12.png" width="600"></div>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="&#49345;&#44288;&#44228;&#49688;&#51032;-&#53945;&#51669;">&#49345;&#44288;&#44228;&#49688;&#51032; &#53945;&#51669;<a class="anchor-link" href="#&#49345;&#44288;&#44228;&#49688;&#51032;-&#53945;&#51669;">&#182;</a></h4><ul>
-<li>상관계수: $[-1, 1]$ 구간의 값</li>
-<li>1에 가까울 수록: 강한 양의 선형 상관관계</li>
-<li>-1에 가까울 수록: 강한 음의 선형 상관관계</li>
-<li>0에 가까울 수록: 매우 약한 선형 상관관계</li>
-</ul>
-<div align="center"><img src="images/homl02-14.png" width="500"></div>
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="&#51452;&#51032;&#49324;&#54637;">&#51452;&#51032;&#49324;&#54637;<a class="anchor-link" href="#&#51452;&#51032;&#49324;&#54637;">&#182;</a></h4><ul>
-<li>상관계수가 0에 가까울 때: 선형 관계가 거의 없다는 의미이지, 아무런 관계가 없다는 의미는 아님</li>
-<li>상관계수는 기울기와 아무 연관 없음</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="&#49345;&#44288;&#44228;&#49688;&#47484;-&#53685;&#54644;-&#54869;&#51064;&#54624;-&#49688;-&#51080;&#45716;-&#51221;&#48372;">&#49345;&#44288;&#44228;&#49688;&#47484; &#53685;&#54644; &#54869;&#51064;&#54624; &#49688; &#51080;&#45716; &#51221;&#48372;<a class="anchor-link" href="#&#49345;&#44288;&#44228;&#49688;&#47484;-&#53685;&#54644;-&#54869;&#51064;&#54624;-&#49688;-&#51080;&#45716;-&#51221;&#48372;">&#182;</a></h4><ul>
-<li>중간 주택 가격과 중간 소득의 상관계수가 0.68로 가장 높음<ul>
-<li>중간 소득이 올라가면 중간 주택 가격도 상승하는 경향이 있음</li>
-</ul>
-</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="&#51473;&#44036;-&#51452;&#53469;-&#44032;&#44201;&#44284;-&#51473;&#44036;-&#49548;&#46301;&#51032;-&#44288;&#44228;">&#51473;&#44036; &#51452;&#53469; &#44032;&#44201;&#44284; &#51473;&#44036; &#49548;&#46301;&#51032; &#44288;&#44228;<a class="anchor-link" href="#&#51473;&#44036;-&#51452;&#53469;-&#44032;&#44201;&#44284;-&#51473;&#44036;-&#49548;&#46301;&#51032;-&#44288;&#44228;">&#182;</a></h4><ul>
-<li>산점도 활용<ul>
-<li>점들이 너무 넓게 퍼져 있음. 완벽한 선형관계와 거리 멂.</li>
-<li>50만 달러 수평선: 가격 제한</li>
-<li>35만, 28만, 그 아래 정도에서도 수평선 존재</li>
-<li>이상한 형태를 학습하지 않도록 해당 구역을 제거하는 것이 좋음.</li>
-</ul>
-</li>
-</ul>
-<div align="center"><img src="images/homl02-13.png" width="500"></div>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#53945;&#49457;-&#51312;&#54633;-&#49892;&#54744;">&#53945;&#49457; &#51312;&#54633; &#49892;&#54744;<a class="anchor-link" href="#&#53945;&#49457;-&#51312;&#54633;-&#49892;&#54744;">&#182;</a></h3><ul>
-<li>구역별 방의 총 개수와 침실의 총 개수 대신 아래 특성이 보다 유용함<ul>
-<li>'가구당 방 수'(rooms for household)</li>
-<li>'방 하나당 침실 수'(bedrooms for room)</li>
-<li>'가구당 인원'(population per household)</li>
-</ul>
-</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>특성별 상관계수 다시 확인<ul>
-<li>중간 주택 가격과 방 하나당 침실 개수: -0.26</li>
-<li>방 하나당 침실 개수가 적을 수록 주택 가격이 상승하는 경향</li>
-</ul>
-</li>
-</ul>
+<h4 id="&#44048;&#49324;&#51032;-&#44544;">&#44048;&#49324;&#51032; &#44544;<a class="anchor-link" href="#&#44048;&#49324;&#51032;-&#44544;">&#182;</a></h4><p>자료를 공개한 저자 오렐리앙 제롱과 강의자료를 지원한 한빛아카데미에게 진심어린 감사를 전합니다.</p>
 
 </div>
 </div>
@@ -13646,12 +13226,21 @@ a.anchor-link {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="&#45936;&#51060;&#53552;-&#51204;&#52824;&#47532;&#50752;-&#48320;&#54872;-&#54028;&#51060;&#54532;&#46972;&#51064;">&#45936;&#51060;&#53552; &#51204;&#52824;&#47532;&#50752; &#48320;&#54872; &#54028;&#51060;&#54532;&#46972;&#51064;<a class="anchor-link" href="#&#45936;&#51060;&#53552;-&#51204;&#52824;&#47532;&#50752;-&#48320;&#54872;-&#54028;&#51060;&#54532;&#46972;&#51064;">&#182;</a></h3><ul>
 <li>데이터 전처리(data preprocessing): 모델 학습을 효율적으로 진행하기 위해 주어진 데이터를 변환시키는 것</li>
+</ul>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
 <li>수치형 데이터와 범주형 데이터에 대해 다른 변환과정을 사용</li>
 </ul>
 
 </div>
 </div>
-</div></section><section>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13666,7 +13255,7 @@ a.anchor-link {
 
 </div>
 </div>
-</div><div class="fragment">
+</div></div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13684,17 +13273,11 @@ a.anchor-link {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>수치형 데이터 전처리 과정에 사용된 세 가지 변환과정은 파이프라인을 이용하여 자동화</li>
+<li>자동화<ul>
+<li><strong>파이프라인</strong> 활용: 수치형 데이터 전처리 과정에 사용된 세 가지 변환 과정 자동화</li>
+<li>각각 변환된 수치형 데이터와 범주형 데이터 결합</li>
 </ul>
-
-</div>
-</div>
-</div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>이후 원-핫-인코딩 변화과정으로 변환된 범주형 데이터와 결합하면서 전처리 과정이 완료됨</li>
+</li>
 </ul>
 
 </div>
@@ -13706,22 +13289,47 @@ a.anchor-link {
 <h3 id="&#49324;&#51060;&#53431;&#47088;-API-&#54876;&#50857;">&#49324;&#51060;&#53431;&#47088; API &#54876;&#50857;<a class="anchor-link" href="#&#49324;&#51060;&#53431;&#47088;-API-&#54876;&#50857;">&#182;</a></h3>
 </div>
 </div>
-</div></section></section><section><section>
+</div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li>변환과정 중에서 '조합 특성 추가' 과정을 제외한 나머지 과정은 사이킷런에서 제공하는 관련 API를 활용</li>
-<li><p>'조합 특성 추가' 과정도 다른 사이킷런 API와 호환이 되는 방식으로 사용자가 직접 구현하는 방법을 설명</p>
-</li>
-<li><p>사이킷런에서 제공하는 API는 일관되고 단순한 인터페이스를 제공</p>
-</li>
+</ul>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>'조합 특성 추가' 과정도 다른 사이킷런 API와 호환이 되는 방식으로 사용자가 직접 구현하는 방법을 설명</li>
+</ul>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>사이킷런에서 제공하는 API는 일관되고 단순한 인터페이스를 제공</li>
+</ul>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
 <li>이 성질을 이용하여 '조합 특성 추가' 과정을 지원하는 API를 구현하면 사이킷런의 다른 API와 자동으로 호환</li>
 </ul>
 
 </div>
 </div>
-</div></section></section><section><section>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13741,7 +13349,7 @@ a.anchor-link {
 
 </div>
 </div>
-</div></div></section><section>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13758,7 +13366,7 @@ a.anchor-link {
 
 </div>
 </div>
-</div></section><section>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13776,7 +13384,7 @@ a.anchor-link {
 
 </div>
 </div>
-</div></section><section>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13836,10 +13444,10 @@ a.anchor-link {
 <h3 id="&#53581;&#49828;&#53944;&#50752;-&#48276;&#51452;&#54805;-&#53945;&#49457;-&#45796;&#47336;&#44592;:-&#50896;-&#54635;-&#51064;&#53076;&#46377;">&#53581;&#49828;&#53944;&#50752; &#48276;&#51452;&#54805; &#53945;&#49457; &#45796;&#47336;&#44592;: &#50896;-&#54635; &#51064;&#53076;&#46377;<a class="anchor-link" href="#&#53581;&#49828;&#53944;&#50752;-&#48276;&#51452;&#54805;-&#53945;&#49457;-&#45796;&#47336;&#44592;:-&#50896;-&#54635;-&#51064;&#53076;&#46377;">&#182;</a></h3><ul>
 <li>범주형 입력 특성인 해안 근접도(ocean_proximity)를 수치형 데이터로 변환</li>
 </ul>
-<div align="center"><img src="images/homl02-15.png" width="600"></div>
+<div align="center"><img src="images/ch02/homl02-15.png" width="600"></div>
 </div>
 </div>
-</div></section><section>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13847,12 +13455,12 @@ a.anchor-link {
 <li>해안 근접도는 단순히 구분을 위해 사용</li>
 <li>해안에 근접하고 있다 해서 주택 가격이 기본적으로 더 비싼 것은 아니라는 의미</li>
 <li>반면에 수치화된 값들은 크기를 비교할 수 있는 숫자</li>
-<li>따라서 모델 학습 과정에서 숫자들의 크기 때문에 잘못된 학습이 이루어질 수 있다.</li>
+<li>따라서 모델 학습 과정에서 숫자들의 크기 때문에 잘못된 학습이 이루어질 수 있음.</li>
 </ul>
 
 </div>
 </div>
-</div></section><section>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13870,11 +13478,11 @@ a.anchor-link {
 
 </div>
 </div>
-</div></section><section>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div align="center"><img src="images/homl02-16.png" width="600"></div>
+<div align="center"><img src="images/ch02/homl02-16.png" width="600"></div>
 </div>
 </div>
 </div></section></section><section><section>
@@ -14129,7 +13737,7 @@ $$
 
 </div>
 </div>
-</div></div></section><section>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14195,7 +13803,7 @@ $$
 
 </div>
 </div>
-</div></section><section>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14210,7 +13818,7 @@ $$
 
 </div>
 </div>
-</div></section><section>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14233,7 +13841,7 @@ $$
 
 </div>
 </div>
-</div></section><section>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14248,7 +13856,7 @@ $$
 
 </div>
 </div>
-</div></section><section>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">

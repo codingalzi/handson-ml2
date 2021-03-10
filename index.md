@@ -7,8 +7,8 @@
 
 ### 강의소개
 
-* [슬라이드 [html]](./slides/handson-ml-00.slides.html)
-* [슬라이드 [pdf]](./slides/handson-ml-00-slides.pdf)
+* 슬라이드 [[html]](./slides/handson-ml-00.slides.html), 
+    [[pdf]](./slides/handson-ml-00-slides.pdf)
 
 ### 목차
 
