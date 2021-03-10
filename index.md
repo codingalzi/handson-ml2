@@ -5,12 +5,12 @@
 
 자료를 공개한 저자 오렐리앙 제롱(Aur&eacute;lien G&eacute;ron)과 강의자료를 지원한 한빛아카데미에게 진심어린 감사를 전합니다.
 
+### 강의소개
+
+* [슬라이드 [html]](./slides/handson-ml-00.slides.html)
+* [슬라이드 [pdf]](./slides/handson-ml-00-slides.pdf)
+
 ### 목차
-
-강의소개
-
-* 슬라이드: [[html]](./slides/handson-ml-00.slides.html), 
-[[pdf]](./slides/handson-ml-00-slides.pdf)
 
 1. 한 눈에 보는 머신러닝
     * 슬라이드: [[html]](./slides/handson-ml-01.slides.html), 
