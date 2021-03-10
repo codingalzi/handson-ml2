@@ -7,9 +7,11 @@
 
 ### 목차
 
-1. 강의소개
-    * 슬라이드: [[html]](./slides/handson-ml-00.slides.html), 
-    [[pdf]](./slides/handson-ml-00-slides.pdf)
+강의소개
+
+* 슬라이드: [[html]](./slides/handson-ml-00.slides.html), 
+[[pdf]](./slides/handson-ml-00-slides.pdf)
+
 1. 한 눈에 보는 머신러닝
     * 슬라이드: [[html]](./slides/handson-ml-01.slides.html), 
     [[pdf]](./slides/handson-ml-01-slides.pdf)
