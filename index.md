@@ -1,5 +1,5 @@
-[&lt;핸즈온 머신러닝(2판)&gt;](https://m.hanbit.co.kr/store/books/book_view.html?p_code=B7033438574)의 
-소스코드와 예제 및 연습문제를 담은 주피터 노트북을 바탕으로 머신러닝/딥러닝의 기초를 소개합니다.
+[&lt;핸즈온 머신러닝(2판)&gt;의 소스코드](https://github.com/ageron/handson-ml2)를 
+담은 주피터 노트북을 바탕으로 머신러닝/딥러닝의 기초를 소개합니다.
 
 ### 감사의 글
 
