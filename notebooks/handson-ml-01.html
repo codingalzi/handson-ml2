@@ -13017,6 +13017,25 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
+<style type="text/css">
+    
+
+<script>
+    MathJax.Hub.Config({
+        "HTML-CSS": {
+            /*preferredFont: "TeX",*/
+            /*availableFonts: ["TeX", "STIX"],*/
+            styles: {
+                scale: 100,
+                ".MathJax_Display": {
+                    "font-size": "100%",
+                }
+            }
+        }
+    });
+</script>
+    
+    </style>
 
 
 <style type="text/css">
@@ -13402,7 +13421,9 @@ div#notebook {
 이런 과정을 <strong>데이터 적재</strong>(data loading)라 한다.
 데이터 적재 후 필요한 데이터만 추출해서 선형 회귀 모델 훈련을 위해 데이터를 준비시킨다.
 아래 코드는 <code>"INEQUALITY"</code> 특성이 <code>"TOT"</code>로 정해진 데이터만 가져온 후에
-<code>pivot()</code> 메서드를 이용하여 국가별 삶의 만족도 정보만 데이터프레임으로 저장한다.</p>
+<code>pivot()</code> 메서드를 이용하여 국가별 삶의 질을 평가하는 데에 사용되는 지표(<code>"Indicator"</code>)를
+열(columns)로 사용하는 데이터프레임으로 저장한다.
+지표에는 삶의 만족도(<code>Life satisfaction</code>)도 포함된다.</p>
 <p><strong>참고:</strong> 특성 포함 코드 관련 설명은 <a href="https://www.kaggle.com/danyfang/gdp-and-life-satisfactory-analysis/notebook">GDP and Life Satisfactory Analysis</a>에서 찾아볼 수 있다.</p>
 
 </div>
@@ -14059,7 +14080,7 @@ Name: Life satisfaction, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>1인당 GDP 기준 상위 3개 룩셈부르크, 스위스, 노르웨이이다.</p>
+<p>1인당 GDP 기준 상위 3개 국가는 룩셈부르크, 스위스, 노르웨이이다.</p>
 
 </div>
 </div>
