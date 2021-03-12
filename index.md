@@ -72,6 +72,7 @@ $ cd handson-ml
 머신러닝/딥러닝 학습에 도움을 주는 자료를 소개합니다.
 
 #### 딥러닝 학습 참고 동영상
+- [SVM with polynomial kernel visualization](https://www.youtube.com/watch?v=OdlNM96sHio&t=0s)
 - [수학자가 설명하는 심층 신경망](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi)
 - 딥러닝 옵티마이저 선택 문제
    - [Tom Goldstein: "An empirical look at generalization in neural nets"](https://youtu.be/kcVWAKf7UAg?t=1304)
