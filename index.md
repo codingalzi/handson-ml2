@@ -17,16 +17,13 @@
     [[pdf]](./slides/handson-ml-01-slides.pdf)
     * 주피터 노트북: [[html]](./notebooks/handson-ml-01.html), 
     [[colab]](https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/notebooks/handson-ml-01.ipynb)
-1. 머신러닝 프로젝트 처음부터 끝까지 1부
-    * 슬라이드: [[html]](./slides/handson-ml-02a.slides.html), 
+1. 머신러닝 프로젝트 처음부터 끝까지
+    * 1부 슬라이드: [[html]](./slides/handson-ml-02a.slides.html), 
     [[pdf]](./slides/handson-ml-02a-slides.pdf)
-    * 주피터 노트북: [[html]](./notebooks/handson-ml-02a.html), 
-    [[colab]](https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/notebooks/handson-ml-02a.ipynb)
-1. 머신러닝 프로젝트 처음부터 끝까지 2부 (준비중)
-    * 슬라이드: [[html]](./slides/handson-ml-02b.slides.html), 
-    [[pdf]](./slides/handson-ml-02b-slides.pdf)
-    * 주피터 노트북: [[html]](./notebooks/handson-ml-02b.html), 
-    [[colab]](https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/notebooks/handson-ml-02b.ipynb)
+    * 2부 슬라이드: [[html]](./slides/handson-ml-02b.slides.html), 
+    [[pdf]](./slides/handson-ml-02b-slides.pdf) (준비중)
+    * 주피터 노트북: [[html]](./notebooks/handson-ml-02.html), 
+    [[colab]](https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/notebooks/handson-ml-02.ipynb)
 1. ...
 
 **링크 활용법**

@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>handson-ml-02a</title>
+<title>handson-ml-02</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -12947,13 +12947,8 @@ ul.typeahead-list  > li > a.pull-right {
 /*# sourceMappingURL=style.min.css.map */
     </style>
 <style type="text/css">
-    pre { line-height: 125%; margin: 0; }
-td.linenos pre { color: #000000; background-color: #f0f0f0; padding-left: 5px; padding-right: 5px; }
-span.linenos { color: #000000; background-color: #f0f0f0; padding-left: 5px; padding-right: 5px; }
-td.linenos pre.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
-span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
-.highlight .hll { background-color: #ffffcc }
-.highlight { background: #f8f8f8; }
+    .highlight .hll { background-color: #ffffcc }
+.highlight  { background: #f8f8f8; }
 .highlight .c { color: #408080; font-style: italic } /* Comment */
 .highlight .err { border: 1px solid #FF0000 } /* Error */
 .highlight .k { color: #008000; font-weight: bold } /* Keyword */
@@ -13022,6 +13017,25 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
+<style type="text/css">
+    
+
+<script>
+    MathJax.Hub.Config({
+        "HTML-CSS": {
+            /*preferredFont: "TeX",*/
+            /*availableFonts: ["TeX", "STIX"],*/
+            styles: {
+                scale: 100,
+                ".MathJax_Display": {
+                    "font-size": "100%",
+                }
+            }
+        }
+    });
+</script>
+    
+    </style>
 
 
 <style type="text/css">
@@ -13082,7 +13096,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="2&#51109;-&#47672;&#49888;&#47084;&#45789;-&#54532;&#47196;&#51229;&#53944;-&#52376;&#51020;&#48512;&#53552;-&#45149;&#44620;&#51648;-(1&#48512;)">2&#51109; &#47672;&#49888;&#47084;&#45789; &#54532;&#47196;&#51229;&#53944; &#52376;&#51020;&#48512;&#53552; &#45149;&#44620;&#51648; (1&#48512;)<a class="anchor-link" href="#2&#51109;-&#47672;&#49888;&#47084;&#45789;-&#54532;&#47196;&#51229;&#53944;-&#52376;&#51020;&#48512;&#53552;-&#45149;&#44620;&#51648;-(1&#48512;)">&#182;</a></h1><p>캘리포니아 지역 주택의 여러 특성을 사용하여 지역별 주택 중간 가격 예측한다.</p>
+<h1 id="2&#51109;-&#47672;&#49888;&#47084;&#45789;-&#54532;&#47196;&#51229;&#53944;-&#52376;&#51020;&#48512;&#53552;-&#45149;&#44620;&#51648;">2&#51109; &#47672;&#49888;&#47084;&#45789; &#54532;&#47196;&#51229;&#53944; &#52376;&#51020;&#48512;&#53552; &#45149;&#44620;&#51648;<a class="anchor-link" href="#2&#51109;-&#47672;&#49888;&#47084;&#45789;-&#54532;&#47196;&#51229;&#53944;-&#52376;&#51020;&#48512;&#53552;-&#45149;&#44620;&#51648;">&#182;</a></h1><p>캘리포니아 지역 주택의 여러 특성을 사용하여 지역별 주택 중간 가격 예측한다.</p>
 
 </div>
 </div>
@@ -13145,6 +13159,13 @@ div#notebook {
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="1&#48512;">1&#48512;<a class="anchor-link" href="#1&#48512;">&#182;</a></h1>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13885,7 +13906,7 @@ Name: ocean_proximity, dtype: int64</pre>
 <li>&#x270b; <code>split_train_test_by_id()</code> 함수<ul>
 <li>식별자의 체크섬을 기준으로 체크섬 값이 일정 백분율 이하인 
   샘플을 테스트 세트에 저장</li>
-<li>체크섬(checksum): 파일 전송 과정에서 손실 발생여부를 판단하기 위해 사용되는 값으로
+<li>체크섬(checksum): 파일 전송 과정에서 발생할 수 있는 손실 여부를 판단하기 위해 사용되는 값으로
   파일이 달라지면 체크섬 값이 달라짐.<ul>
 <li>참고: <a href="https://ko.wikipedia.org/wiki/체크섬">위키백과: 체크섬</a></li>
 </ul>
@@ -13900,9 +13921,11 @@ Name: ocean_proximity, dtype: int64</pre>
 <li><code>&amp;</code>: <strong>이진 논리곱</strong>(binary AND)이라는 비트 연산자.<ul>
 <li>이진법으로 표현된 두 숫자의 논리곱 연산자</li>
 <li>동일한 위치의 수가 둘 모두 1일 때만 1로 계산됨.</li>
-<li>참고: <a href="https://wikidocs.net/20704">위키독스: 비트 연산자</a></li>
+<li>여기서는 <code>0xffffffff</code>와의 비트 연산을 통해 <code>2**32</code> 보다 작은 값으로 제한하기 위해 사용됨. 
+  하지만 <code>zlib.crc32()</code> 함수가 32비트 정수를 반환하기에 굳이 사용할 필요 없음.</li>
 </ul>
 </li>
+<li>참고: <a href="https://wikidocs.net/20704">위키독스: 비트 연산자</a></li>
 </ul>
 </li>
 </ul>
@@ -14323,7 +14346,7 @@ Name: ocean_proximity, dtype: int64</pre>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x2c951d9ddc0&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1e796a92850&gt;</pre>
 </div>
 
 </div>
@@ -14462,7 +14485,7 @@ Name: income_cat, dtype: int64</pre>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x2c9514829d0&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1e79d2d07f0&gt;</pre>
 </div>
 
 </div>
@@ -15028,7 +15051,7 @@ Name: income_cat, dtype: float64</pre>
 
 <div class="output_text output_subarea output_execute_result">
 <pre>(&#39;.\\images\\end_to_end_project\\california.png&#39;,
- &lt;http.client.HTTPMessage at 0x2c958564040&gt;)</pre>
+ &lt;http.client.HTTPMessage at 0x1e796b4f700&gt;)</pre>
 </div>
 
 </div>
@@ -15677,6 +15700,4365 @@ Name: median_house_value, dtype: float64</pre>
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="2&#48512;">2&#48512;<a class="anchor-link" href="#2&#48512;">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="2.5-&#47672;&#49888;&#47084;&#45789;-&#50508;&#44256;&#47532;&#51608;&#51012;-&#50948;&#54620;-&#45936;&#51060;&#53552;-&#51456;&#48708;-(p.-99)">2.5 &#47672;&#49888;&#47084;&#45789; &#50508;&#44256;&#47532;&#51608;&#51012; &#50948;&#54620; &#45936;&#51060;&#53552; &#51456;&#48708; (p. 99)<a class="anchor-link" href="#2.5-&#47672;&#49888;&#47084;&#45789;-&#50508;&#44256;&#47532;&#51608;&#51012;-&#50948;&#54620;-&#45936;&#51060;&#53552;-&#51456;&#48708;-(p.-99)">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">housing</span> <span class="o">=</span> <span class="n">strat_train_set</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&quot;median_house_value&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># 훈련 세트를 위해 레이블 삭제</span>
+<span class="n">housing_labels</span> <span class="o">=</span> <span class="n">strat_train_set</span><span class="p">[</span><span class="s2">&quot;median_house_value&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="2.5.1-&#45936;&#51060;&#53552;-&#51221;&#51228;-(p.-99)">2.5.1 &#45936;&#51060;&#53552; &#51221;&#51228; (p. 99)<a class="anchor-link" href="#2.5.1-&#45936;&#51060;&#53552;-&#51221;&#51228;-(p.-99)">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sample_incomplete_rows</span> <span class="o">=</span> <span class="n">housing</span><span class="p">[</span><span class="n">housing</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="n">sample_incomplete_rows</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[46]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>longitude</th>
+      <th>latitude</th>
+      <th>housing_median_age</th>
+      <th>total_rooms</th>
+      <th>total_bedrooms</th>
+      <th>population</th>
+      <th>households</th>
+      <th>median_income</th>
+      <th>ocean_proximity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>4629</th>
+      <td>-118.30</td>
+      <td>34.07</td>
+      <td>18.0</td>
+      <td>3759.0</td>
+      <td>NaN</td>
+      <td>3296.0</td>
+      <td>1462.0</td>
+      <td>2.2708</td>
+      <td>&lt;1H OCEAN</td>
+    </tr>
+    <tr>
+      <th>6068</th>
+      <td>-117.86</td>
+      <td>34.01</td>
+      <td>16.0</td>
+      <td>4632.0</td>
+      <td>NaN</td>
+      <td>3038.0</td>
+      <td>727.0</td>
+      <td>5.1762</td>
+      <td>&lt;1H OCEAN</td>
+    </tr>
+    <tr>
+      <th>17923</th>
+      <td>-121.97</td>
+      <td>37.35</td>
+      <td>30.0</td>
+      <td>1955.0</td>
+      <td>NaN</td>
+      <td>999.0</td>
+      <td>386.0</td>
+      <td>4.6328</td>
+      <td>&lt;1H OCEAN</td>
+    </tr>
+    <tr>
+      <th>13656</th>
+      <td>-117.30</td>
+      <td>34.05</td>
+      <td>6.0</td>
+      <td>2155.0</td>
+      <td>NaN</td>
+      <td>1039.0</td>
+      <td>391.0</td>
+      <td>1.6675</td>
+      <td>INLAND</td>
+    </tr>
+    <tr>
+      <th>19252</th>
+      <td>-122.79</td>
+      <td>38.48</td>
+      <td>7.0</td>
+      <td>6837.0</td>
+      <td>NaN</td>
+      <td>3468.0</td>
+      <td>1405.0</td>
+      <td>3.1662</td>
+      <td>&lt;1H OCEAN</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sample_incomplete_rows</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;total_bedrooms&quot;</span><span class="p">])</span>    <span class="c1"># 옵션 1</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[47]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>longitude</th>
+      <th>latitude</th>
+      <th>housing_median_age</th>
+      <th>total_rooms</th>
+      <th>total_bedrooms</th>
+      <th>population</th>
+      <th>households</th>
+      <th>median_income</th>
+      <th>ocean_proximity</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sample_incomplete_rows</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&quot;total_bedrooms&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>       <span class="c1"># 옵션 2</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[48]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>longitude</th>
+      <th>latitude</th>
+      <th>housing_median_age</th>
+      <th>total_rooms</th>
+      <th>population</th>
+      <th>households</th>
+      <th>median_income</th>
+      <th>ocean_proximity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>4629</th>
+      <td>-118.30</td>
+      <td>34.07</td>
+      <td>18.0</td>
+      <td>3759.0</td>
+      <td>3296.0</td>
+      <td>1462.0</td>
+      <td>2.2708</td>
+      <td>&lt;1H OCEAN</td>
+    </tr>
+    <tr>
+      <th>6068</th>
+      <td>-117.86</td>
+      <td>34.01</td>
+      <td>16.0</td>
+      <td>4632.0</td>
+      <td>3038.0</td>
+      <td>727.0</td>
+      <td>5.1762</td>
+      <td>&lt;1H OCEAN</td>
+    </tr>
+    <tr>
+      <th>17923</th>
+      <td>-121.97</td>
+      <td>37.35</td>
+      <td>30.0</td>
+      <td>1955.0</td>
+      <td>999.0</td>
+      <td>386.0</td>
+      <td>4.6328</td>
+      <td>&lt;1H OCEAN</td>
+    </tr>
+    <tr>
+      <th>13656</th>
+      <td>-117.30</td>
+      <td>34.05</td>
+      <td>6.0</td>
+      <td>2155.0</td>
+      <td>1039.0</td>
+      <td>391.0</td>
+      <td>1.6675</td>
+      <td>INLAND</td>
+    </tr>
+    <tr>
+      <th>19252</th>
+      <td>-122.79</td>
+      <td>38.48</td>
+      <td>7.0</td>
+      <td>6837.0</td>
+      <td>3468.0</td>
+      <td>1405.0</td>
+      <td>3.1662</td>
+      <td>&lt;1H OCEAN</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">median</span> <span class="o">=</span> <span class="n">housing</span><span class="p">[</span><span class="s2">&quot;total_bedrooms&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+<span class="n">sample_incomplete_rows</span><span class="p">[</span><span class="s2">&quot;total_bedrooms&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">median</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># 옵션 3</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sample_incomplete_rows</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[50]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>longitude</th>
+      <th>latitude</th>
+      <th>housing_median_age</th>
+      <th>total_rooms</th>
+      <th>total_bedrooms</th>
+      <th>population</th>
+      <th>households</th>
+      <th>median_income</th>
+      <th>ocean_proximity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>4629</th>
+      <td>-118.30</td>
+      <td>34.07</td>
+      <td>18.0</td>
+      <td>3759.0</td>
+      <td>433.0</td>
+      <td>3296.0</td>
+      <td>1462.0</td>
+      <td>2.2708</td>
+      <td>&lt;1H OCEAN</td>
+    </tr>
+    <tr>
+      <th>6068</th>
+      <td>-117.86</td>
+      <td>34.01</td>
+      <td>16.0</td>
+      <td>4632.0</td>
+      <td>433.0</td>
+      <td>3038.0</td>
+      <td>727.0</td>
+      <td>5.1762</td>
+      <td>&lt;1H OCEAN</td>
+    </tr>
+    <tr>
+      <th>17923</th>
+      <td>-121.97</td>
+      <td>37.35</td>
+      <td>30.0</td>
+      <td>1955.0</td>
+      <td>433.0</td>
+      <td>999.0</td>
+      <td>386.0</td>
+      <td>4.6328</td>
+      <td>&lt;1H OCEAN</td>
+    </tr>
+    <tr>
+      <th>13656</th>
+      <td>-117.30</td>
+      <td>34.05</td>
+      <td>6.0</td>
+      <td>2155.0</td>
+      <td>433.0</td>
+      <td>1039.0</td>
+      <td>391.0</td>
+      <td>1.6675</td>
+      <td>INLAND</td>
+    </tr>
+    <tr>
+      <th>19252</th>
+      <td>-122.79</td>
+      <td>38.48</td>
+      <td>7.0</td>
+      <td>6837.0</td>
+      <td>433.0</td>
+      <td>3468.0</td>
+      <td>1405.0</td>
+      <td>3.1662</td>
+      <td>&lt;1H OCEAN</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.impute</span> <span class="kn">import</span> <span class="n">SimpleImputer</span>
+<span class="n">imputer</span> <span class="o">=</span> <span class="n">SimpleImputer</span><span class="p">(</span><span class="n">strategy</span><span class="o">=</span><span class="s2">&quot;median&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>중간값이 수치형 특성에서만 계산될 수 있기 때문에 텍스트 특성을 삭제합니다:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">housing_num</span> <span class="o">=</span> <span class="n">housing</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&quot;ocean_proximity&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1"># 다른 방법: housing_num = housing.select_dtypes(include=[np.number])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">imputer</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">housing_num</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[53]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>SimpleImputer(strategy=&#39;median&#39;)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">imputer</span><span class="o">.</span><span class="n">statistics_</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[54]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([-118.51  ,   34.26  ,   29.    , 2119.5   ,  433.    , 1164.    ,
+        408.    ,    3.5409])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>각 특성의 중간 값이 수동으로 계산한 것과 같은지 확인해 보세요:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">housing_num</span><span class="o">.</span><span class="n">median</span><span class="p">()</span><span class="o">.</span><span class="n">values</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[55]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([-118.51  ,   34.26  ,   29.    , 2119.5   ,  433.    , 1164.    ,
+        408.    ,    3.5409])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>훈련 세트를 변환합니다:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">imputer</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">housing_num</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">housing_tr</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">housing_num</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span>
+                          <span class="n">index</span><span class="o">=</span><span class="n">housing_num</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[58]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">housing_tr</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">sample_incomplete_rows</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">values</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[58]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>longitude</th>
+      <th>latitude</th>
+      <th>housing_median_age</th>
+      <th>total_rooms</th>
+      <th>total_bedrooms</th>
+      <th>population</th>
+      <th>households</th>
+      <th>median_income</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>4629</th>
+      <td>-118.30</td>
+      <td>34.07</td>
+      <td>18.0</td>
+      <td>3759.0</td>
+      <td>433.0</td>
+      <td>3296.0</td>
+      <td>1462.0</td>
+      <td>2.2708</td>
+    </tr>
+    <tr>
+      <th>6068</th>
+      <td>-117.86</td>
+      <td>34.01</td>
+      <td>16.0</td>
+      <td>4632.0</td>
+      <td>433.0</td>
+      <td>3038.0</td>
+      <td>727.0</td>
+      <td>5.1762</td>
+    </tr>
+    <tr>
+      <th>17923</th>
+      <td>-121.97</td>
+      <td>37.35</td>
+      <td>30.0</td>
+      <td>1955.0</td>
+      <td>433.0</td>
+      <td>999.0</td>
+      <td>386.0</td>
+      <td>4.6328</td>
+    </tr>
+    <tr>
+      <th>13656</th>
+      <td>-117.30</td>
+      <td>34.05</td>
+      <td>6.0</td>
+      <td>2155.0</td>
+      <td>433.0</td>
+      <td>1039.0</td>
+      <td>391.0</td>
+      <td>1.6675</td>
+    </tr>
+    <tr>
+      <th>19252</th>
+      <td>-122.79</td>
+      <td>38.48</td>
+      <td>7.0</td>
+      <td>6837.0</td>
+      <td>433.0</td>
+      <td>3468.0</td>
+      <td>1405.0</td>
+      <td>3.1662</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">imputer</span><span class="o">.</span><span class="n">strategy</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[59]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;median&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">housing_tr</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[60]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>longitude</th>
+      <th>latitude</th>
+      <th>housing_median_age</th>
+      <th>total_rooms</th>
+      <th>total_bedrooms</th>
+      <th>population</th>
+      <th>households</th>
+      <th>median_income</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>17606</th>
+      <td>-121.89</td>
+      <td>37.29</td>
+      <td>38.0</td>
+      <td>1568.0</td>
+      <td>351.0</td>
+      <td>710.0</td>
+      <td>339.0</td>
+      <td>2.7042</td>
+    </tr>
+    <tr>
+      <th>18632</th>
+      <td>-121.93</td>
+      <td>37.05</td>
+      <td>14.0</td>
+      <td>679.0</td>
+      <td>108.0</td>
+      <td>306.0</td>
+      <td>113.0</td>
+      <td>6.4214</td>
+    </tr>
+    <tr>
+      <th>14650</th>
+      <td>-117.20</td>
+      <td>32.77</td>
+      <td>31.0</td>
+      <td>1952.0</td>
+      <td>471.0</td>
+      <td>936.0</td>
+      <td>462.0</td>
+      <td>2.8621</td>
+    </tr>
+    <tr>
+      <th>3230</th>
+      <td>-119.61</td>
+      <td>36.31</td>
+      <td>25.0</td>
+      <td>1847.0</td>
+      <td>371.0</td>
+      <td>1460.0</td>
+      <td>353.0</td>
+      <td>1.8839</td>
+    </tr>
+    <tr>
+      <th>3555</th>
+      <td>-118.59</td>
+      <td>34.23</td>
+      <td>17.0</td>
+      <td>6592.0</td>
+      <td>1525.0</td>
+      <td>4459.0</td>
+      <td>1463.0</td>
+      <td>3.0347</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="2.5.2-&#53581;&#49828;&#53944;&#50752;-&#48276;&#51452;&#54805;-&#53945;&#49457;-&#45796;&#47336;&#44592;-(p.102)">2.5.2 &#53581;&#49828;&#53944;&#50752; &#48276;&#51452;&#54805; &#53945;&#49457; &#45796;&#47336;&#44592; (p.102)<a class="anchor-link" href="#2.5.2-&#53581;&#49828;&#53944;&#50752;-&#48276;&#51452;&#54805;-&#53945;&#49457;-&#45796;&#47336;&#44592;-(p.102)">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>이제 범주형 입력 특성인 <code>ocean_proximity</code>을 전처리합니다:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">housing_cat</span> <span class="o">=</span> <span class="n">housing</span><span class="p">[[</span><span class="s2">&quot;ocean_proximity&quot;</span><span class="p">]]</span>
+<span class="n">housing_cat</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[61]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ocean_proximity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>17606</th>
+      <td>&lt;1H OCEAN</td>
+    </tr>
+    <tr>
+      <th>18632</th>
+      <td>&lt;1H OCEAN</td>
+    </tr>
+    <tr>
+      <th>14650</th>
+      <td>NEAR OCEAN</td>
+    </tr>
+    <tr>
+      <th>3230</th>
+      <td>INLAND</td>
+    </tr>
+    <tr>
+      <th>3555</th>
+      <td>&lt;1H OCEAN</td>
+    </tr>
+    <tr>
+      <th>19480</th>
+      <td>INLAND</td>
+    </tr>
+    <tr>
+      <th>8879</th>
+      <td>&lt;1H OCEAN</td>
+    </tr>
+    <tr>
+      <th>13685</th>
+      <td>INLAND</td>
+    </tr>
+    <tr>
+      <th>4937</th>
+      <td>&lt;1H OCEAN</td>
+    </tr>
+    <tr>
+      <th>4861</th>
+      <td>&lt;1H OCEAN</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[62]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">OrdinalEncoder</span>
+
+<span class="n">ordinal_encoder</span> <span class="o">=</span> <span class="n">OrdinalEncoder</span><span class="p">()</span>
+<span class="n">housing_cat_encoded</span> <span class="o">=</span> <span class="n">ordinal_encoder</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">housing_cat</span><span class="p">)</span>
+<span class="n">housing_cat_encoded</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[62]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([[0.],
+       [0.],
+       [4.],
+       [1.],
+       [0.],
+       [1.],
+       [0.],
+       [1.],
+       [0.],
+       [0.]])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[63]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ordinal_encoder</span><span class="o">.</span><span class="n">categories_</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[63]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[array([&#39;&lt;1H OCEAN&#39;, &#39;INLAND&#39;, &#39;ISLAND&#39;, &#39;NEAR BAY&#39;, &#39;NEAR OCEAN&#39;],
+       dtype=object)]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[64]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">OneHotEncoder</span>
+
+<span class="n">cat_encoder</span> <span class="o">=</span> <span class="n">OneHotEncoder</span><span class="p">()</span>
+<span class="n">housing_cat_1hot</span> <span class="o">=</span> <span class="n">cat_encoder</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">housing_cat</span><span class="p">)</span>
+<span class="n">housing_cat_1hot</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[64]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;16512x5 sparse matrix of type &#39;&lt;class &#39;numpy.float64&#39;&gt;&#39;
+	with 16512 stored elements in Compressed Sparse Row format&gt;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>OneHotEncoder</code>는 기본적으로 희소 행렬을 반환합니다. 필요하면 <code>toarray()</code> 메서드를 사용해 밀집 배열로 변환할 수 있습니다:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[65]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">housing_cat_1hot</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[65]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([[1., 0., 0., 0., 0.],
+       [1., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 1.],
+       ...,
+       [0., 1., 0., 0., 0.],
+       [1., 0., 0., 0., 0.],
+       [0., 0., 0., 1., 0.]])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>또는 <code>OneHotEncoder</code>를 만들 때 <code>sparse=False</code>로 지정할 수 있습니다:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[66]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cat_encoder</span> <span class="o">=</span> <span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">sparse</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">housing_cat_1hot</span> <span class="o">=</span> <span class="n">cat_encoder</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">housing_cat</span><span class="p">)</span>
+<span class="n">housing_cat_1hot</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[66]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([[1., 0., 0., 0., 0.],
+       [1., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 1.],
+       ...,
+       [0., 1., 0., 0., 0.],
+       [1., 0., 0., 0., 0.],
+       [0., 0., 0., 1., 0.]])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[67]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cat_encoder</span><span class="o">.</span><span class="n">categories_</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[67]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[array([&#39;&lt;1H OCEAN&#39;, &#39;INLAND&#39;, &#39;ISLAND&#39;, &#39;NEAR BAY&#39;, &#39;NEAR OCEAN&#39;],
+       dtype=object)]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="2.5.3-&#45208;&#47564;&#51032;-&#48320;&#54872;&#44592;-(p.105)">2.5.3 &#45208;&#47564;&#51032; &#48320;&#54872;&#44592; (p.105)<a class="anchor-link" href="#2.5.3-&#45208;&#47564;&#51032;-&#48320;&#54872;&#44592;-(p.105)">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>추가 특성을 위해 사용자 정의 변환기를 만들어보죠:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[68]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.base</span> <span class="kn">import</span> <span class="n">BaseEstimator</span><span class="p">,</span> <span class="n">TransformerMixin</span>
+
+<span class="c1"># 열 인덱스</span>
+<span class="n">rooms_ix</span><span class="p">,</span> <span class="n">bedrooms_ix</span><span class="p">,</span> <span class="n">population_ix</span><span class="p">,</span> <span class="n">households_ix</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span>
+
+<span class="k">class</span> <span class="nc">CombinedAttributesAdder</span><span class="p">(</span><span class="n">BaseEstimator</span><span class="p">,</span> <span class="n">TransformerMixin</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">add_bedrooms_per_room</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span> <span class="c1"># *args 또는 **kargs 없음</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_bedrooms_per_room</span> <span class="o">=</span> <span class="n">add_bedrooms_per_room</span>
+    <span class="k">def</span> <span class="nf">fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span>  <span class="c1"># 아무것도 하지 않습니다</span>
+    <span class="k">def</span> <span class="nf">transform</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">):</span>
+        <span class="n">rooms_per_household</span> <span class="o">=</span> <span class="n">X</span><span class="p">[:,</span> <span class="n">rooms_ix</span><span class="p">]</span> <span class="o">/</span> <span class="n">X</span><span class="p">[:,</span> <span class="n">households_ix</span><span class="p">]</span>
+        <span class="n">population_per_household</span> <span class="o">=</span> <span class="n">X</span><span class="p">[:,</span> <span class="n">population_ix</span><span class="p">]</span> <span class="o">/</span> <span class="n">X</span><span class="p">[:,</span> <span class="n">households_ix</span><span class="p">]</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">add_bedrooms_per_room</span><span class="p">:</span>
+            <span class="n">bedrooms_per_room</span> <span class="o">=</span> <span class="n">X</span><span class="p">[:,</span> <span class="n">bedrooms_ix</span><span class="p">]</span> <span class="o">/</span> <span class="n">X</span><span class="p">[:,</span> <span class="n">rooms_ix</span><span class="p">]</span>
+            <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">X</span><span class="p">,</span> <span class="n">rooms_per_household</span><span class="p">,</span> <span class="n">population_per_household</span><span class="p">,</span>
+                         <span class="n">bedrooms_per_room</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">X</span><span class="p">,</span> <span class="n">rooms_per_household</span><span class="p">,</span> <span class="n">population_per_household</span><span class="p">]</span>
+
+<span class="n">attr_adder</span> <span class="o">=</span> <span class="n">CombinedAttributesAdder</span><span class="p">(</span><span class="n">add_bedrooms_per_room</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">housing_extra_attribs</span> <span class="o">=</span> <span class="n">attr_adder</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">housing</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>책에서는 간단하게 인덱스 (3, 4, 5, 6)을 하드코딩했지만 다음처럼 동적으로 처리하는 것이 더 좋습니다:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[69]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">col_names</span> <span class="o">=</span> <span class="s2">&quot;total_rooms&quot;</span><span class="p">,</span> <span class="s2">&quot;total_bedrooms&quot;</span><span class="p">,</span> <span class="s2">&quot;population&quot;</span><span class="p">,</span> <span class="s2">&quot;households&quot;</span>
+<span class="n">rooms_ix</span><span class="p">,</span> <span class="n">bedrooms_ix</span><span class="p">,</span> <span class="n">population_ix</span><span class="p">,</span> <span class="n">households_ix</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">housing</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">col_names</span><span class="p">]</span> <span class="c1"># 열 인덱스 구하기</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>또한 <code>housing_extra_attribs</code>는 넘파이 배열이기 때문에 열 이름이 없습니다(안타깝지만 사이킷런을 사용할 때 생기는 문제입니다). <code>DataFrame</code>으로 복원하려면 다음과 같이 할 수 있습니다:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[70]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">housing_extra_attribs</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="n">housing_extra_attribs</span><span class="p">,</span>
+    <span class="n">columns</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">housing</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span><span class="o">+</span><span class="p">[</span><span class="s2">&quot;rooms_per_household&quot;</span><span class="p">,</span> <span class="s2">&quot;population_per_household&quot;</span><span class="p">],</span>
+    <span class="n">index</span><span class="o">=</span><span class="n">housing</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+<span class="n">housing_extra_attribs</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[70]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>longitude</th>
+      <th>latitude</th>
+      <th>housing_median_age</th>
+      <th>total_rooms</th>
+      <th>total_bedrooms</th>
+      <th>population</th>
+      <th>households</th>
+      <th>median_income</th>
+      <th>ocean_proximity</th>
+      <th>rooms_per_household</th>
+      <th>population_per_household</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>17606</th>
+      <td>-121.89</td>
+      <td>37.29</td>
+      <td>38</td>
+      <td>1568</td>
+      <td>351</td>
+      <td>710</td>
+      <td>339</td>
+      <td>2.7042</td>
+      <td>&lt;1H OCEAN</td>
+      <td>4.62537</td>
+      <td>2.0944</td>
+    </tr>
+    <tr>
+      <th>18632</th>
+      <td>-121.93</td>
+      <td>37.05</td>
+      <td>14</td>
+      <td>679</td>
+      <td>108</td>
+      <td>306</td>
+      <td>113</td>
+      <td>6.4214</td>
+      <td>&lt;1H OCEAN</td>
+      <td>6.00885</td>
+      <td>2.70796</td>
+    </tr>
+    <tr>
+      <th>14650</th>
+      <td>-117.2</td>
+      <td>32.77</td>
+      <td>31</td>
+      <td>1952</td>
+      <td>471</td>
+      <td>936</td>
+      <td>462</td>
+      <td>2.8621</td>
+      <td>NEAR OCEAN</td>
+      <td>4.22511</td>
+      <td>2.02597</td>
+    </tr>
+    <tr>
+      <th>3230</th>
+      <td>-119.61</td>
+      <td>36.31</td>
+      <td>25</td>
+      <td>1847</td>
+      <td>371</td>
+      <td>1460</td>
+      <td>353</td>
+      <td>1.8839</td>
+      <td>INLAND</td>
+      <td>5.23229</td>
+      <td>4.13598</td>
+    </tr>
+    <tr>
+      <th>3555</th>
+      <td>-118.59</td>
+      <td>34.23</td>
+      <td>17</td>
+      <td>6592</td>
+      <td>1525</td>
+      <td>4459</td>
+      <td>1463</td>
+      <td>3.0347</td>
+      <td>&lt;1H OCEAN</td>
+      <td>4.50581</td>
+      <td>3.04785</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="2.5.5-&#48320;&#54872;-&#54028;&#51060;&#54532;&#46972;&#51064;-(p.108)">2.5.5 &#48320;&#54872; &#54028;&#51060;&#54532;&#46972;&#51064; (p.108)<a class="anchor-link" href="#2.5.5-&#48320;&#54872;-&#54028;&#51060;&#54532;&#46972;&#51064;-(p.108)">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>수치형 특성을 전처리하기 위해 파이프라인을 만듭니다:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[71]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.pipeline</span> <span class="kn">import</span> <span class="n">Pipeline</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>
+
+<span class="n">num_pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
+        <span class="p">(</span><span class="s1">&#39;imputer&#39;</span><span class="p">,</span> <span class="n">SimpleImputer</span><span class="p">(</span><span class="n">strategy</span><span class="o">=</span><span class="s2">&quot;median&quot;</span><span class="p">)),</span>
+        <span class="p">(</span><span class="s1">&#39;attribs_adder&#39;</span><span class="p">,</span> <span class="n">CombinedAttributesAdder</span><span class="p">()),</span>
+        <span class="p">(</span><span class="s1">&#39;std_scaler&#39;</span><span class="p">,</span> <span class="n">StandardScaler</span><span class="p">()),</span>
+    <span class="p">])</span>
+
+<span class="n">housing_num_tr</span> <span class="o">=</span> <span class="n">num_pipeline</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">housing_num</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[72]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">housing_num_tr</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[72]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([[-1.15604281,  0.77194962,  0.74333089, ..., -0.31205452,
+        -0.08649871,  0.15531753],
+       [-1.17602483,  0.6596948 , -1.1653172 , ...,  0.21768338,
+        -0.03353391, -0.83628902],
+       [ 1.18684903, -1.34218285,  0.18664186, ..., -0.46531516,
+        -0.09240499,  0.4222004 ],
+       ...,
+       [ 1.58648943, -0.72478134, -1.56295222, ...,  0.3469342 ,
+        -0.03055414, -0.52177644],
+       [ 0.78221312, -0.85106801,  0.18664186, ...,  0.02499488,
+         0.06150916, -0.30340741],
+       [-1.43579109,  0.99645926,  1.85670895, ..., -0.22852947,
+        -0.09586294,  0.10180567]])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[73]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.compose</span> <span class="kn">import</span> <span class="n">ColumnTransformer</span>
+
+<span class="n">num_attribs</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">housing_num</span><span class="p">)</span>
+<span class="n">cat_attribs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;ocean_proximity&quot;</span><span class="p">]</span>
+
+<span class="n">full_pipeline</span> <span class="o">=</span> <span class="n">ColumnTransformer</span><span class="p">([</span>
+        <span class="p">(</span><span class="s2">&quot;num&quot;</span><span class="p">,</span> <span class="n">num_pipeline</span><span class="p">,</span> <span class="n">num_attribs</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="n">OneHotEncoder</span><span class="p">(),</span> <span class="n">cat_attribs</span><span class="p">),</span>
+    <span class="p">])</span>
+
+<span class="n">housing_prepared</span> <span class="o">=</span> <span class="n">full_pipeline</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">housing</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[74]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">housing_prepared</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[74]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([[-1.15604281,  0.77194962,  0.74333089, ...,  0.        ,
+         0.        ,  0.        ],
+       [-1.17602483,  0.6596948 , -1.1653172 , ...,  0.        ,
+         0.        ,  0.        ],
+       [ 1.18684903, -1.34218285,  0.18664186, ...,  0.        ,
+         0.        ,  1.        ],
+       ...,
+       [ 1.58648943, -0.72478134, -1.56295222, ...,  0.        ,
+         0.        ,  0.        ],
+       [ 0.78221312, -0.85106801,  0.18664186, ...,  0.        ,
+         0.        ,  0.        ],
+       [-1.43579109,  0.99645926,  1.85670895, ...,  0.        ,
+         1.        ,  0.        ]])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[75]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">housing_prepared</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[75]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(16512, 16)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>다음은 (판다스 <code>DataFrame</code> 열의 일부를 선택하기 위해) <code>DataFrameSelector</code> 변환기와 <code>FeatureUnion</code>를 사용한 예전 방식입니다:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[76]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.base</span> <span class="kn">import</span> <span class="n">BaseEstimator</span><span class="p">,</span> <span class="n">TransformerMixin</span>
+
+<span class="c1"># 수치형 열과 범주형 열을 선택하기 위한 클래스</span>
+<span class="k">class</span> <span class="nc">OldDataFrameSelector</span><span class="p">(</span><span class="n">BaseEstimator</span><span class="p">,</span> <span class="n">TransformerMixin</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attribute_names</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">attribute_names</span> <span class="o">=</span> <span class="n">attribute_names</span>
+    <span class="k">def</span> <span class="nf">fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span>
+    <span class="k">def</span> <span class="nf">transform</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">X</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_names</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>하나의 큰 파이프라인에 이들을 모두 결합하여 수치형과 범주형 특성을 전처리합니다:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[77]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">num_attribs</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">housing_num</span><span class="p">)</span>
+<span class="n">cat_attribs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;ocean_proximity&quot;</span><span class="p">]</span>
+
+<span class="n">old_num_pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
+        <span class="p">(</span><span class="s1">&#39;selector&#39;</span><span class="p">,</span> <span class="n">OldDataFrameSelector</span><span class="p">(</span><span class="n">num_attribs</span><span class="p">)),</span>
+        <span class="p">(</span><span class="s1">&#39;imputer&#39;</span><span class="p">,</span> <span class="n">SimpleImputer</span><span class="p">(</span><span class="n">strategy</span><span class="o">=</span><span class="s2">&quot;median&quot;</span><span class="p">)),</span>
+        <span class="p">(</span><span class="s1">&#39;attribs_adder&#39;</span><span class="p">,</span> <span class="n">CombinedAttributesAdder</span><span class="p">()),</span>
+        <span class="p">(</span><span class="s1">&#39;std_scaler&#39;</span><span class="p">,</span> <span class="n">StandardScaler</span><span class="p">()),</span>
+    <span class="p">])</span>
+
+<span class="n">old_cat_pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
+        <span class="p">(</span><span class="s1">&#39;selector&#39;</span><span class="p">,</span> <span class="n">OldDataFrameSelector</span><span class="p">(</span><span class="n">cat_attribs</span><span class="p">)),</span>
+        <span class="p">(</span><span class="s1">&#39;cat_encoder&#39;</span><span class="p">,</span> <span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">sparse</span><span class="o">=</span><span class="kc">False</span><span class="p">)),</span>
+    <span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[78]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.pipeline</span> <span class="kn">import</span> <span class="n">FeatureUnion</span>
+
+<span class="n">old_full_pipeline</span> <span class="o">=</span> <span class="n">FeatureUnion</span><span class="p">(</span><span class="n">transformer_list</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">(</span><span class="s2">&quot;num_pipeline&quot;</span><span class="p">,</span> <span class="n">old_num_pipeline</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;cat_pipeline&quot;</span><span class="p">,</span> <span class="n">old_cat_pipeline</span><span class="p">),</span>
+    <span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[79]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">old_housing_prepared</span> <span class="o">=</span> <span class="n">old_full_pipeline</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">housing</span><span class="p">)</span>
+<span class="n">old_housing_prepared</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[79]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([[-1.15604281,  0.77194962,  0.74333089, ...,  0.        ,
+         0.        ,  0.        ],
+       [-1.17602483,  0.6596948 , -1.1653172 , ...,  0.        ,
+         0.        ,  0.        ],
+       [ 1.18684903, -1.34218285,  0.18664186, ...,  0.        ,
+         0.        ,  1.        ],
+       ...,
+       [ 1.58648943, -0.72478134, -1.56295222, ...,  0.        ,
+         0.        ,  0.        ],
+       [ 0.78221312, -0.85106801,  0.18664186, ...,  0.        ,
+         0.        ,  0.        ],
+       [-1.43579109,  0.99645926,  1.85670895, ...,  0.        ,
+         1.        ,  0.        ]])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>ColumnTransformer</code>의 결과와 동일합니다:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[80]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">housing_prepared</span><span class="p">,</span> <span class="n">old_housing_prepared</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[80]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="2.6-&#47784;&#45944;-&#49440;&#53469;&#44284;-&#54984;&#47144;-(p.-110)">2.6 &#47784;&#45944; &#49440;&#53469;&#44284; &#54984;&#47144; (p. 110)<a class="anchor-link" href="#2.6-&#47784;&#45944;-&#49440;&#53469;&#44284;-&#54984;&#47144;-(p.-110)">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="2.6.1-&#54984;&#47144;-&#49464;&#53944;&#50640;&#49436;-&#54984;&#47144;&#54616;&#44256;-&#54217;&#44032;&#54616;&#44592;-(p.-110)">2.6.1 &#54984;&#47144; &#49464;&#53944;&#50640;&#49436; &#54984;&#47144;&#54616;&#44256; &#54217;&#44032;&#54616;&#44592; (p. 110)<a class="anchor-link" href="#2.6.1-&#54984;&#47144;-&#49464;&#53944;&#50640;&#49436;-&#54984;&#47144;&#54616;&#44256;-&#54217;&#44032;&#54616;&#44592;-(p.-110)">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[81]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
+
+<span class="n">lin_reg</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
+<span class="n">lin_reg</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">housing_prepared</span><span class="p">,</span> <span class="n">housing_labels</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[81]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>LinearRegression()</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[82]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 훈련 샘플 몇 개를 사용해 전체 파이프라인을 적용해 보겠습니다</span>
+<span class="n">some_data</span> <span class="o">=</span> <span class="n">housing</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span>
+<span class="n">some_labels</span> <span class="o">=</span> <span class="n">housing_labels</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span>
+<span class="n">some_data_prepared</span> <span class="o">=</span> <span class="n">full_pipeline</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">some_data</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;예측:&quot;</span><span class="p">,</span> <span class="n">lin_reg</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">some_data_prepared</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>예측: [210644.60459286 317768.80697211 210956.43331178  59218.98886849
+ 189747.55849879]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>실제 값과 비교합니다:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[83]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;레이블:&quot;</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="n">some_labels</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>레이블: [286600.0, 340600.0, 196900.0, 46300.0, 254500.0]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[84]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">some_data_prepared</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[84]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([[-1.15604281,  0.77194962,  0.74333089, -0.49323393, -0.44543821,
+        -0.63621141, -0.42069842, -0.61493744, -0.31205452, -0.08649871,
+         0.15531753,  1.        ,  0.        ,  0.        ,  0.        ,
+         0.        ],
+       [-1.17602483,  0.6596948 , -1.1653172 , -0.90896655, -1.0369278 ,
+        -0.99833135, -1.02222705,  1.33645936,  0.21768338, -0.03353391,
+        -0.83628902,  1.        ,  0.        ,  0.        ,  0.        ,
+         0.        ],
+       [ 1.18684903, -1.34218285,  0.18664186, -0.31365989, -0.15334458,
+        -0.43363936, -0.0933178 , -0.5320456 , -0.46531516, -0.09240499,
+         0.4222004 ,  0.        ,  0.        ,  0.        ,  0.        ,
+         1.        ],
+       [-0.01706767,  0.31357576, -0.29052016, -0.36276217, -0.39675594,
+         0.03604096, -0.38343559, -1.04556555, -0.07966124,  0.08973561,
+        -0.19645314,  0.        ,  1.        ,  0.        ,  0.        ,
+         0.        ],
+       [ 0.49247384, -0.65929936, -0.92673619,  1.85619316,  2.41221109,
+         2.72415407,  2.57097492, -0.44143679, -0.35783383, -0.00419445,
+         0.2699277 ,  1.        ,  0.        ,  0.        ,  0.        ,
+         0.        ]])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[85]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_squared_error</span>
+
+<span class="n">housing_predictions</span> <span class="o">=</span> <span class="n">lin_reg</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">housing_prepared</span><span class="p">)</span>
+<span class="n">lin_mse</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">housing_labels</span><span class="p">,</span> <span class="n">housing_predictions</span><span class="p">)</span>
+<span class="n">lin_rmse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">lin_mse</span><span class="p">)</span>
+<span class="n">lin_rmse</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[85]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>68628.19819848922</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>노트</strong>: 사이킷런 0.22 버전부터는 <code>squared=False</code> 매개변수로 <code>mean_squared_error()</code> 함수를 호출하면 RMSE를 바로 얻을 수 있습니다.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[86]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_absolute_error</span>
+
+<span class="n">lin_mae</span> <span class="o">=</span> <span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">housing_labels</span><span class="p">,</span> <span class="n">housing_predictions</span><span class="p">)</span>
+<span class="n">lin_mae</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[86]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>49439.89599001897</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[87]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">DecisionTreeRegressor</span>
+
+<span class="n">tree_reg</span> <span class="o">=</span> <span class="n">DecisionTreeRegressor</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">tree_reg</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">housing_prepared</span><span class="p">,</span> <span class="n">housing_labels</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[87]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>DecisionTreeRegressor(random_state=42)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[88]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">housing_predictions</span> <span class="o">=</span> <span class="n">tree_reg</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">housing_prepared</span><span class="p">)</span>
+<span class="n">tree_mse</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">housing_labels</span><span class="p">,</span> <span class="n">housing_predictions</span><span class="p">)</span>
+<span class="n">tree_rmse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">tree_mse</span><span class="p">)</span>
+<span class="n">tree_rmse</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[88]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0.0</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="2.6.2-&#44368;&#52264;-&#44160;&#51613;&#51012;-&#49324;&#50857;&#54620;-&#54217;&#44032;-(p.-112)">2.6.2 &#44368;&#52264; &#44160;&#51613;&#51012; &#49324;&#50857;&#54620; &#54217;&#44032; (p. 112)<a class="anchor-link" href="#2.6.2-&#44368;&#52264;-&#44160;&#51613;&#51012;-&#49324;&#50857;&#54620;-&#54217;&#44032;-(p.-112)">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[89]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">cross_val_score</span>
+
+<span class="n">scores</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">tree_reg</span><span class="p">,</span> <span class="n">housing_prepared</span><span class="p">,</span> <span class="n">housing_labels</span><span class="p">,</span>
+                         <span class="n">scoring</span><span class="o">=</span><span class="s2">&quot;neg_mean_squared_error&quot;</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">tree_rmse_scores</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="o">-</span><span class="n">scores</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[90]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">display_scores</span><span class="p">(</span><span class="n">scores</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;점수:&quot;</span><span class="p">,</span> <span class="n">scores</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;평균:&quot;</span><span class="p">,</span> <span class="n">scores</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;표준 편차:&quot;</span><span class="p">,</span> <span class="n">scores</span><span class="o">.</span><span class="n">std</span><span class="p">())</span>
+
+<span class="n">display_scores</span><span class="p">(</span><span class="n">tree_rmse_scores</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>점수: [70194.33680785 66855.16363941 72432.58244769 70758.73896782
+ 71115.88230639 75585.14172901 70262.86139133 70273.6325285
+ 75366.87952553 71231.65726027]
+평균: 71407.68766037929
+표준 편차: 2439.4345041191004
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[91]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lin_scores</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">lin_reg</span><span class="p">,</span> <span class="n">housing_prepared</span><span class="p">,</span> <span class="n">housing_labels</span><span class="p">,</span>
+                             <span class="n">scoring</span><span class="o">=</span><span class="s2">&quot;neg_mean_squared_error&quot;</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">lin_rmse_scores</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="o">-</span><span class="n">lin_scores</span><span class="p">)</span>
+<span class="n">display_scores</span><span class="p">(</span><span class="n">lin_rmse_scores</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>점수: [66782.73843989 66960.118071   70347.95244419 74739.57052552
+ 68031.13388938 71193.84183426 64969.63056405 68281.61137997
+ 71552.91566558 67665.10082067]
+평균: 69052.46136345083
+표준 편차: 2731.6740017983457
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>노트</strong>: 사이킷런 0.22 버전에서 <code>n_estimators</code>의 기본값이 100으로 바뀌기 때문에 향후를 위해 <code>n_estimators=100</code>로 지정합니다(책에는 등장하지 않습니다).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[92]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestRegressor</span>
+
+<span class="n">forest_reg</span> <span class="o">=</span> <span class="n">RandomForestRegressor</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">forest_reg</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">housing_prepared</span><span class="p">,</span> <span class="n">housing_labels</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[92]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>RandomForestRegressor(random_state=42)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[93]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">housing_predictions</span> <span class="o">=</span> <span class="n">forest_reg</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">housing_prepared</span><span class="p">)</span>
+<span class="n">forest_mse</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">housing_labels</span><span class="p">,</span> <span class="n">housing_predictions</span><span class="p">)</span>
+<span class="n">forest_rmse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">forest_mse</span><span class="p">)</span>
+<span class="n">forest_rmse</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[93]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>18603.515021376355</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[94]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">cross_val_score</span>
+
+<span class="n">forest_scores</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">forest_reg</span><span class="p">,</span> <span class="n">housing_prepared</span><span class="p">,</span> <span class="n">housing_labels</span><span class="p">,</span>
+                                <span class="n">scoring</span><span class="o">=</span><span class="s2">&quot;neg_mean_squared_error&quot;</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">forest_rmse_scores</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="o">-</span><span class="n">forest_scores</span><span class="p">)</span>
+<span class="n">display_scores</span><span class="p">(</span><span class="n">forest_rmse_scores</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>점수: [49519.80364233 47461.9115823  50029.02762854 52325.28068953
+ 49308.39426421 53446.37892622 48634.8036574  47585.73832311
+ 53490.10699751 50021.5852922 ]
+평균: 50182.303100336096
+표준 편차: 2097.0810550985693
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[95]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">lin_reg</span><span class="p">,</span> <span class="n">housing_prepared</span><span class="p">,</span> <span class="n">housing_labels</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="s2">&quot;neg_mean_squared_error&quot;</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="o">-</span><span class="n">scores</span><span class="p">))</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[95]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>count       10.000000
+mean     69052.461363
+std       2879.437224
+min      64969.630564
+25%      67136.363758
+50%      68156.372635
+75%      70982.369487
+max      74739.570526
+dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[96]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">SVR</span>
+
+<span class="n">svm_reg</span> <span class="o">=</span> <span class="n">SVR</span><span class="p">(</span><span class="n">kernel</span><span class="o">=</span><span class="s2">&quot;linear&quot;</span><span class="p">)</span>
+<span class="n">svm_reg</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">housing_prepared</span><span class="p">,</span> <span class="n">housing_labels</span><span class="p">)</span>
+<span class="n">housing_predictions</span> <span class="o">=</span> <span class="n">svm_reg</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">housing_prepared</span><span class="p">)</span>
+<span class="n">svm_mse</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">housing_labels</span><span class="p">,</span> <span class="n">housing_predictions</span><span class="p">)</span>
+<span class="n">svm_rmse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">svm_mse</span><span class="p">)</span>
+<span class="n">svm_rmse</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[96]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>111094.6308539982</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="2.7-&#47784;&#45944;-&#49464;&#48512;-&#53916;&#54021;-(p.-115)">2.7 &#47784;&#45944; &#49464;&#48512; &#53916;&#54021; (p. 115)<a class="anchor-link" href="#2.7-&#47784;&#45944;-&#49464;&#48512;-&#53916;&#54021;-(p.-115)">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="2.7.1-&#44536;&#47532;&#46020;-&#53456;&#49353;-(p.115)">2.7.1 &#44536;&#47532;&#46020; &#53456;&#49353; (p.115)<a class="anchor-link" href="#2.7.1-&#44536;&#47532;&#46020;-&#53456;&#49353;-(p.115)">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[97]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">GridSearchCV</span>
+
+<span class="n">param_grid</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="c1"># 12(=3×4)개의 하이퍼파라미터 조합을 시도합니다.</span>
+    <span class="p">{</span><span class="s1">&#39;n_estimators&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">30</span><span class="p">],</span> <span class="s1">&#39;max_features&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">]},</span>
+    <span class="c1"># bootstrap은 False로 하고 6(=2×3)개의 조합을 시도합니다.</span>
+    <span class="p">{</span><span class="s1">&#39;bootstrap&#39;</span><span class="p">:</span> <span class="p">[</span><span class="kc">False</span><span class="p">],</span> <span class="s1">&#39;n_estimators&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="s1">&#39;max_features&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]},</span>
+  <span class="p">]</span>
+
+<span class="n">forest_reg</span> <span class="o">=</span> <span class="n">RandomForestRegressor</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="c1"># 다섯 개의 폴드로 훈련하면 총 (12+6)*5=90번의 훈련이 일어납니다.</span>
+<span class="n">grid_search</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">forest_reg</span><span class="p">,</span> <span class="n">param_grid</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+                           <span class="n">scoring</span><span class="o">=</span><span class="s1">&#39;neg_mean_squared_error&#39;</span><span class="p">,</span>
+                           <span class="n">return_train_score</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">grid_search</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">housing_prepared</span><span class="p">,</span> <span class="n">housing_labels</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[97]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>GridSearchCV(cv=5, estimator=RandomForestRegressor(random_state=42),
+             param_grid=[{&#39;max_features&#39;: [2, 4, 6, 8],
+                          &#39;n_estimators&#39;: [3, 10, 30]},
+                         {&#39;bootstrap&#39;: [False], &#39;max_features&#39;: [2, 3, 4],
+                          &#39;n_estimators&#39;: [3, 10]}],
+             return_train_score=True, scoring=&#39;neg_mean_squared_error&#39;)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>최상의 파라미터 조합은 다음과 같습니다:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[98]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">grid_search</span><span class="o">.</span><span class="n">best_params_</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[98]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;max_features&#39;: 8, &#39;n_estimators&#39;: 30}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[99]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">grid_search</span><span class="o">.</span><span class="n">best_estimator_</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[99]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>RandomForestRegressor(max_features=8, n_estimators=30, random_state=42)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>그리드서치에서 테스트한 하이퍼파라미터 조합의 점수를 확인합니다:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[100]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cvres</span> <span class="o">=</span> <span class="n">grid_search</span><span class="o">.</span><span class="n">cv_results_</span>
+<span class="k">for</span> <span class="n">mean_score</span><span class="p">,</span> <span class="n">params</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">cvres</span><span class="p">[</span><span class="s2">&quot;mean_test_score&quot;</span><span class="p">],</span> <span class="n">cvres</span><span class="p">[</span><span class="s2">&quot;params&quot;</span><span class="p">]):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="o">-</span><span class="n">mean_score</span><span class="p">),</span> <span class="n">params</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>63669.11631261028 {&#39;max_features&#39;: 2, &#39;n_estimators&#39;: 3}
+55627.099719926795 {&#39;max_features&#39;: 2, &#39;n_estimators&#39;: 10}
+53384.57275149205 {&#39;max_features&#39;: 2, &#39;n_estimators&#39;: 30}
+60965.950449450494 {&#39;max_features&#39;: 4, &#39;n_estimators&#39;: 3}
+52741.04704299915 {&#39;max_features&#39;: 4, &#39;n_estimators&#39;: 10}
+50377.40461678399 {&#39;max_features&#39;: 4, &#39;n_estimators&#39;: 30}
+58663.93866579625 {&#39;max_features&#39;: 6, &#39;n_estimators&#39;: 3}
+52006.19873526564 {&#39;max_features&#39;: 6, &#39;n_estimators&#39;: 10}
+50146.51167415009 {&#39;max_features&#39;: 6, &#39;n_estimators&#39;: 30}
+57869.25276169646 {&#39;max_features&#39;: 8, &#39;n_estimators&#39;: 3}
+51711.127883959234 {&#39;max_features&#39;: 8, &#39;n_estimators&#39;: 10}
+49682.273345071546 {&#39;max_features&#39;: 8, &#39;n_estimators&#39;: 30}
+62895.06951262424 {&#39;bootstrap&#39;: False, &#39;max_features&#39;: 2, &#39;n_estimators&#39;: 3}
+54658.176157539405 {&#39;bootstrap&#39;: False, &#39;max_features&#39;: 2, &#39;n_estimators&#39;: 10}
+59470.40652318466 {&#39;bootstrap&#39;: False, &#39;max_features&#39;: 3, &#39;n_estimators&#39;: 3}
+52724.9822587892 {&#39;bootstrap&#39;: False, &#39;max_features&#39;: 3, &#39;n_estimators&#39;: 10}
+57490.5691951261 {&#39;bootstrap&#39;: False, &#39;max_features&#39;: 4, &#39;n_estimators&#39;: 3}
+51009.495668875716 {&#39;bootstrap&#39;: False, &#39;max_features&#39;: 4, &#39;n_estimators&#39;: 10}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[101]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">grid_search</span><span class="o">.</span><span class="n">cv_results_</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[101]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>mean_fit_time</th>
+      <th>std_fit_time</th>
+      <th>mean_score_time</th>
+      <th>std_score_time</th>
+      <th>param_max_features</th>
+      <th>param_n_estimators</th>
+      <th>param_bootstrap</th>
+      <th>params</th>
+      <th>split0_test_score</th>
+      <th>split1_test_score</th>
+      <th>...</th>
+      <th>mean_test_score</th>
+      <th>std_test_score</th>
+      <th>rank_test_score</th>
+      <th>split0_train_score</th>
+      <th>split1_train_score</th>
+      <th>split2_train_score</th>
+      <th>split3_train_score</th>
+      <th>split4_train_score</th>
+      <th>mean_train_score</th>
+      <th>std_train_score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.045799</td>
+      <td>0.001167</td>
+      <td>0.002799</td>
+      <td>0.000399</td>
+      <td>2</td>
+      <td>3</td>
+      <td>NaN</td>
+      <td>{'max_features': 2, 'n_estimators': 3}</td>
+      <td>-3.837622e+09</td>
+      <td>-4.147108e+09</td>
+      <td>...</td>
+      <td>-4.053756e+09</td>
+      <td>1.519591e+08</td>
+      <td>18</td>
+      <td>-1.064113e+09</td>
+      <td>-1.105142e+09</td>
+      <td>-1.116550e+09</td>
+      <td>-1.112342e+09</td>
+      <td>-1.129650e+09</td>
+      <td>-1.105559e+09</td>
+      <td>2.220402e+07</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.148492</td>
+      <td>0.001102</td>
+      <td>0.007799</td>
+      <td>0.000399</td>
+      <td>2</td>
+      <td>10</td>
+      <td>NaN</td>
+      <td>{'max_features': 2, 'n_estimators': 10}</td>
+      <td>-3.047771e+09</td>
+      <td>-3.254861e+09</td>
+      <td>...</td>
+      <td>-3.094374e+09</td>
+      <td>1.327062e+08</td>
+      <td>11</td>
+      <td>-5.927175e+08</td>
+      <td>-5.870952e+08</td>
+      <td>-5.776964e+08</td>
+      <td>-5.716332e+08</td>
+      <td>-5.802501e+08</td>
+      <td>-5.818785e+08</td>
+      <td>7.345821e+06</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.444753</td>
+      <td>0.001768</td>
+      <td>0.022003</td>
+      <td>0.000004</td>
+      <td>2</td>
+      <td>30</td>
+      <td>NaN</td>
+      <td>{'max_features': 2, 'n_estimators': 30}</td>
+      <td>-2.689185e+09</td>
+      <td>-3.021086e+09</td>
+      <td>...</td>
+      <td>-2.849913e+09</td>
+      <td>1.626875e+08</td>
+      <td>9</td>
+      <td>-4.381089e+08</td>
+      <td>-4.391272e+08</td>
+      <td>-4.371702e+08</td>
+      <td>-4.376955e+08</td>
+      <td>-4.452654e+08</td>
+      <td>-4.394734e+08</td>
+      <td>2.966320e+06</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.071179</td>
+      <td>0.000752</td>
+      <td>0.002601</td>
+      <td>0.000491</td>
+      <td>4</td>
+      <td>3</td>
+      <td>NaN</td>
+      <td>{'max_features': 4, 'n_estimators': 3}</td>
+      <td>-3.730181e+09</td>
+      <td>-3.786886e+09</td>
+      <td>...</td>
+      <td>-3.716847e+09</td>
+      <td>1.631510e+08</td>
+      <td>16</td>
+      <td>-9.865163e+08</td>
+      <td>-1.012565e+09</td>
+      <td>-9.169425e+08</td>
+      <td>-1.037400e+09</td>
+      <td>-9.707739e+08</td>
+      <td>-9.848396e+08</td>
+      <td>4.084607e+07</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.233305</td>
+      <td>0.001822</td>
+      <td>0.008200</td>
+      <td>0.000400</td>
+      <td>4</td>
+      <td>10</td>
+      <td>NaN</td>
+      <td>{'max_features': 4, 'n_estimators': 10}</td>
+      <td>-2.666283e+09</td>
+      <td>-2.784511e+09</td>
+      <td>...</td>
+      <td>-2.781618e+09</td>
+      <td>1.268607e+08</td>
+      <td>8</td>
+      <td>-5.097115e+08</td>
+      <td>-5.162820e+08</td>
+      <td>-4.962893e+08</td>
+      <td>-5.436192e+08</td>
+      <td>-5.160297e+08</td>
+      <td>-5.163863e+08</td>
+      <td>1.542862e+07</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>0.699912</td>
+      <td>0.007022</td>
+      <td>0.022185</td>
+      <td>0.000951</td>
+      <td>4</td>
+      <td>30</td>
+      <td>NaN</td>
+      <td>{'max_features': 4, 'n_estimators': 30}</td>
+      <td>-2.387153e+09</td>
+      <td>-2.588448e+09</td>
+      <td>...</td>
+      <td>-2.537883e+09</td>
+      <td>1.214614e+08</td>
+      <td>3</td>
+      <td>-3.838835e+08</td>
+      <td>-3.880268e+08</td>
+      <td>-3.790867e+08</td>
+      <td>-4.040957e+08</td>
+      <td>-3.845520e+08</td>
+      <td>-3.879289e+08</td>
+      <td>8.571233e+06</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>0.093401</td>
+      <td>0.002571</td>
+      <td>0.002802</td>
+      <td>0.000397</td>
+      <td>6</td>
+      <td>3</td>
+      <td>NaN</td>
+      <td>{'max_features': 6, 'n_estimators': 3}</td>
+      <td>-3.119657e+09</td>
+      <td>-3.586319e+09</td>
+      <td>...</td>
+      <td>-3.441458e+09</td>
+      <td>1.893056e+08</td>
+      <td>14</td>
+      <td>-9.245343e+08</td>
+      <td>-8.886939e+08</td>
+      <td>-9.353135e+08</td>
+      <td>-9.009801e+08</td>
+      <td>-8.624664e+08</td>
+      <td>-9.023976e+08</td>
+      <td>2.591445e+07</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>0.311978</td>
+      <td>0.002440</td>
+      <td>0.007620</td>
+      <td>0.000467</td>
+      <td>6</td>
+      <td>10</td>
+      <td>NaN</td>
+      <td>{'max_features': 6, 'n_estimators': 10}</td>
+      <td>-2.549663e+09</td>
+      <td>-2.782039e+09</td>
+      <td>...</td>
+      <td>-2.704645e+09</td>
+      <td>1.471569e+08</td>
+      <td>6</td>
+      <td>-4.980344e+08</td>
+      <td>-5.045869e+08</td>
+      <td>-4.994664e+08</td>
+      <td>-4.990325e+08</td>
+      <td>-5.055542e+08</td>
+      <td>-5.013349e+08</td>
+      <td>3.100456e+06</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>0.948464</td>
+      <td>0.004349</td>
+      <td>0.021599</td>
+      <td>0.000490</td>
+      <td>6</td>
+      <td>30</td>
+      <td>NaN</td>
+      <td>{'max_features': 6, 'n_estimators': 30}</td>
+      <td>-2.370010e+09</td>
+      <td>-2.583638e+09</td>
+      <td>...</td>
+      <td>-2.514673e+09</td>
+      <td>1.285080e+08</td>
+      <td>2</td>
+      <td>-3.838538e+08</td>
+      <td>-3.804711e+08</td>
+      <td>-3.805218e+08</td>
+      <td>-3.856095e+08</td>
+      <td>-3.901917e+08</td>
+      <td>-3.841296e+08</td>
+      <td>3.617057e+06</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>0.119575</td>
+      <td>0.001753</td>
+      <td>0.002999</td>
+      <td>0.000002</td>
+      <td>8</td>
+      <td>3</td>
+      <td>NaN</td>
+      <td>{'max_features': 8, 'n_estimators': 3}</td>
+      <td>-3.353504e+09</td>
+      <td>-3.348552e+09</td>
+      <td>...</td>
+      <td>-3.348850e+09</td>
+      <td>1.241939e+08</td>
+      <td>13</td>
+      <td>-9.228123e+08</td>
+      <td>-8.553031e+08</td>
+      <td>-8.603321e+08</td>
+      <td>-8.881964e+08</td>
+      <td>-9.151287e+08</td>
+      <td>-8.883545e+08</td>
+      <td>2.750227e+07</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>0.395974</td>
+      <td>0.002562</td>
+      <td>0.007598</td>
+      <td>0.000491</td>
+      <td>8</td>
+      <td>10</td>
+      <td>NaN</td>
+      <td>{'max_features': 8, 'n_estimators': 10}</td>
+      <td>-2.571970e+09</td>
+      <td>-2.718994e+09</td>
+      <td>...</td>
+      <td>-2.674041e+09</td>
+      <td>1.392777e+08</td>
+      <td>5</td>
+      <td>-4.932416e+08</td>
+      <td>-4.815238e+08</td>
+      <td>-4.730979e+08</td>
+      <td>-5.155367e+08</td>
+      <td>-4.985555e+08</td>
+      <td>-4.923911e+08</td>
+      <td>1.459294e+07</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>1.199012</td>
+      <td>0.011311</td>
+      <td>0.021747</td>
+      <td>0.000388</td>
+      <td>8</td>
+      <td>30</td>
+      <td>NaN</td>
+      <td>{'max_features': 8, 'n_estimators': 30}</td>
+      <td>-2.357390e+09</td>
+      <td>-2.546640e+09</td>
+      <td>...</td>
+      <td>-2.468328e+09</td>
+      <td>1.091662e+08</td>
+      <td>1</td>
+      <td>-3.841658e+08</td>
+      <td>-3.744500e+08</td>
+      <td>-3.773239e+08</td>
+      <td>-3.882250e+08</td>
+      <td>-3.810005e+08</td>
+      <td>-3.810330e+08</td>
+      <td>4.871017e+06</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>0.069553</td>
+      <td>0.000856</td>
+      <td>0.002999</td>
+      <td>0.000004</td>
+      <td>2</td>
+      <td>3</td>
+      <td>False</td>
+      <td>{'bootstrap': False, 'max_features': 2, 'n_est...</td>
+      <td>-3.785816e+09</td>
+      <td>-4.166012e+09</td>
+      <td>...</td>
+      <td>-3.955790e+09</td>
+      <td>1.900964e+08</td>
+      <td>17</td>
+      <td>-0.000000e+00</td>
+      <td>-0.000000e+00</td>
+      <td>-0.000000e+00</td>
+      <td>-0.000000e+00</td>
+      <td>-0.000000e+00</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>0.228657</td>
+      <td>0.001526</td>
+      <td>0.009000</td>
+      <td>0.000001</td>
+      <td>2</td>
+      <td>10</td>
+      <td>False</td>
+      <td>{'bootstrap': False, 'max_features': 2, 'n_est...</td>
+      <td>-2.810721e+09</td>
+      <td>-3.107789e+09</td>
+      <td>...</td>
+      <td>-2.987516e+09</td>
+      <td>1.539234e+08</td>
+      <td>10</td>
+      <td>-6.056477e-02</td>
+      <td>-0.000000e+00</td>
+      <td>-0.000000e+00</td>
+      <td>-0.000000e+00</td>
+      <td>-2.967449e+00</td>
+      <td>-6.056027e-01</td>
+      <td>1.181156e+00</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>0.089840</td>
+      <td>0.001578</td>
+      <td>0.003083</td>
+      <td>0.000168</td>
+      <td>3</td>
+      <td>3</td>
+      <td>False</td>
+      <td>{'bootstrap': False, 'max_features': 3, 'n_est...</td>
+      <td>-3.618324e+09</td>
+      <td>-3.441527e+09</td>
+      <td>...</td>
+      <td>-3.536729e+09</td>
+      <td>7.795057e+07</td>
+      <td>15</td>
+      <td>-0.000000e+00</td>
+      <td>-0.000000e+00</td>
+      <td>-0.000000e+00</td>
+      <td>-0.000000e+00</td>
+      <td>-6.072840e+01</td>
+      <td>-1.214568e+01</td>
+      <td>2.429136e+01</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>0.296183</td>
+      <td>0.002884</td>
+      <td>0.008801</td>
+      <td>0.000403</td>
+      <td>3</td>
+      <td>10</td>
+      <td>False</td>
+      <td>{'bootstrap': False, 'max_features': 3, 'n_est...</td>
+      <td>-2.757999e+09</td>
+      <td>-2.851737e+09</td>
+      <td>...</td>
+      <td>-2.779924e+09</td>
+      <td>6.286720e+07</td>
+      <td>7</td>
+      <td>-2.089484e+01</td>
+      <td>-0.000000e+00</td>
+      <td>-0.000000e+00</td>
+      <td>-0.000000e+00</td>
+      <td>-5.465556e+00</td>
+      <td>-5.272080e+00</td>
+      <td>8.093117e+00</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>0.109992</td>
+      <td>0.001413</td>
+      <td>0.003401</td>
+      <td>0.000486</td>
+      <td>4</td>
+      <td>3</td>
+      <td>False</td>
+      <td>{'bootstrap': False, 'max_features': 4, 'n_est...</td>
+      <td>-3.134040e+09</td>
+      <td>-3.559375e+09</td>
+      <td>...</td>
+      <td>-3.305166e+09</td>
+      <td>1.879165e+08</td>
+      <td>12</td>
+      <td>-0.000000e+00</td>
+      <td>-0.000000e+00</td>
+      <td>-0.000000e+00</td>
+      <td>-0.000000e+00</td>
+      <td>-0.000000e+00</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>0.364407</td>
+      <td>0.001807</td>
+      <td>0.008729</td>
+      <td>0.000393</td>
+      <td>4</td>
+      <td>10</td>
+      <td>False</td>
+      <td>{'bootstrap': False, 'max_features': 4, 'n_est...</td>
+      <td>-2.525578e+09</td>
+      <td>-2.710011e+09</td>
+      <td>...</td>
+      <td>-2.601969e+09</td>
+      <td>1.088048e+08</td>
+      <td>4</td>
+      <td>-0.000000e+00</td>
+      <td>-1.514119e-02</td>
+      <td>-0.000000e+00</td>
+      <td>-0.000000e+00</td>
+      <td>-0.000000e+00</td>
+      <td>-3.028238e-03</td>
+      <td>6.056477e-03</td>
+    </tr>
+  </tbody>
+</table>
+<p>18 rows × 23 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="2.7.2-&#47004;&#45924;-&#53456;&#49353;-(p.-118)">2.7.2 &#47004;&#45924; &#53456;&#49353; (p. 118)<a class="anchor-link" href="#2.7.2-&#47004;&#45924;-&#53456;&#49353;-(p.-118)">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[102]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">RandomizedSearchCV</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">randint</span>
+
+<span class="n">param_distribs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;n_estimators&#39;</span><span class="p">:</span> <span class="n">randint</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mi">200</span><span class="p">),</span>
+        <span class="s1">&#39;max_features&#39;</span><span class="p">:</span> <span class="n">randint</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mi">8</span><span class="p">),</span>
+    <span class="p">}</span>
+
+<span class="n">forest_reg</span> <span class="o">=</span> <span class="n">RandomForestRegressor</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">rnd_search</span> <span class="o">=</span> <span class="n">RandomizedSearchCV</span><span class="p">(</span><span class="n">forest_reg</span><span class="p">,</span> <span class="n">param_distributions</span><span class="o">=</span><span class="n">param_distribs</span><span class="p">,</span>
+                                <span class="n">n_iter</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="s1">&#39;neg_mean_squared_error&#39;</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">rnd_search</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">housing_prepared</span><span class="p">,</span> <span class="n">housing_labels</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[102]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>RandomizedSearchCV(cv=5, estimator=RandomForestRegressor(random_state=42),
+                   param_distributions={&#39;max_features&#39;: &lt;scipy.stats._distn_infrastructure.rv_frozen object at 0x000001E7987CFEB0&gt;,
+                                        &#39;n_estimators&#39;: &lt;scipy.stats._distn_infrastructure.rv_frozen object at 0x000001E798801910&gt;},
+                   random_state=42, scoring=&#39;neg_mean_squared_error&#39;)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[103]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cvres</span> <span class="o">=</span> <span class="n">rnd_search</span><span class="o">.</span><span class="n">cv_results_</span>
+<span class="k">for</span> <span class="n">mean_score</span><span class="p">,</span> <span class="n">params</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">cvres</span><span class="p">[</span><span class="s2">&quot;mean_test_score&quot;</span><span class="p">],</span> <span class="n">cvres</span><span class="p">[</span><span class="s2">&quot;params&quot;</span><span class="p">]):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="o">-</span><span class="n">mean_score</span><span class="p">),</span> <span class="n">params</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>49150.70756927707 {&#39;max_features&#39;: 7, &#39;n_estimators&#39;: 180}
+51389.889203389284 {&#39;max_features&#39;: 5, &#39;n_estimators&#39;: 15}
+50796.155224308866 {&#39;max_features&#39;: 3, &#39;n_estimators&#39;: 72}
+50835.13360315349 {&#39;max_features&#39;: 5, &#39;n_estimators&#39;: 21}
+49280.9449827171 {&#39;max_features&#39;: 7, &#39;n_estimators&#39;: 122}
+50774.90662363929 {&#39;max_features&#39;: 3, &#39;n_estimators&#39;: 75}
+50682.78888164288 {&#39;max_features&#39;: 3, &#39;n_estimators&#39;: 88}
+49608.99608105296 {&#39;max_features&#39;: 5, &#39;n_estimators&#39;: 100}
+50473.61930350219 {&#39;max_features&#39;: 3, &#39;n_estimators&#39;: 150}
+64429.84143294435 {&#39;max_features&#39;: 5, &#39;n_estimators&#39;: 2}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="2.7.4-&#52572;&#49345;&#51032;-&#47784;&#45944;&#44284;-&#50724;&#52264;-&#48516;&#49437;-(p.118)">2.7.4 &#52572;&#49345;&#51032; &#47784;&#45944;&#44284; &#50724;&#52264; &#48516;&#49437; (p.118)<a class="anchor-link" href="#2.7.4-&#52572;&#49345;&#51032;-&#47784;&#45944;&#44284;-&#50724;&#52264;-&#48516;&#49437;-(p.118)">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[104]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">feature_importances</span> <span class="o">=</span> <span class="n">grid_search</span><span class="o">.</span><span class="n">best_estimator_</span><span class="o">.</span><span class="n">feature_importances_</span>
+<span class="n">feature_importances</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[104]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([7.33442355e-02, 6.29090705e-02, 4.11437985e-02, 1.46726854e-02,
+       1.41064835e-02, 1.48742809e-02, 1.42575993e-02, 3.66158981e-01,
+       5.64191792e-02, 1.08792957e-01, 5.33510773e-02, 1.03114883e-02,
+       1.64780994e-01, 6.02803867e-05, 1.96041560e-03, 2.85647464e-03])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[105]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">extra_attribs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;rooms_per_hhold&quot;</span><span class="p">,</span> <span class="s2">&quot;pop_per_hhold&quot;</span><span class="p">,</span> <span class="s2">&quot;bedrooms_per_room&quot;</span><span class="p">]</span>
+<span class="c1">#cat_encoder = cat_pipeline.named_steps[&quot;cat_encoder&quot;] # 예전 방식</span>
+<span class="n">cat_encoder</span> <span class="o">=</span> <span class="n">full_pipeline</span><span class="o">.</span><span class="n">named_transformers_</span><span class="p">[</span><span class="s2">&quot;cat&quot;</span><span class="p">]</span>
+<span class="n">cat_one_hot_attribs</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">cat_encoder</span><span class="o">.</span><span class="n">categories_</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">attributes</span> <span class="o">=</span> <span class="n">num_attribs</span> <span class="o">+</span> <span class="n">extra_attribs</span> <span class="o">+</span> <span class="n">cat_one_hot_attribs</span>
+<span class="nb">sorted</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">feature_importances</span><span class="p">,</span> <span class="n">attributes</span><span class="p">),</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[105]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[(0.36615898061813423, &#39;median_income&#39;),
+ (0.16478099356159054, &#39;INLAND&#39;),
+ (0.10879295677551575, &#39;pop_per_hhold&#39;),
+ (0.07334423551601243, &#39;longitude&#39;),
+ (0.06290907048262032, &#39;latitude&#39;),
+ (0.056419179181954014, &#39;rooms_per_hhold&#39;),
+ (0.053351077347675815, &#39;bedrooms_per_room&#39;),
+ (0.04114379847872964, &#39;housing_median_age&#39;),
+ (0.014874280890402769, &#39;population&#39;),
+ (0.014672685420543239, &#39;total_rooms&#39;),
+ (0.014257599323407808, &#39;households&#39;),
+ (0.014106483453584104, &#39;total_bedrooms&#39;),
+ (0.010311488326303788, &#39;&lt;1H OCEAN&#39;),
+ (0.0028564746373201584, &#39;NEAR OCEAN&#39;),
+ (0.0019604155994780706, &#39;NEAR BAY&#39;),
+ (6.0280386727366e-05, &#39;ISLAND&#39;)]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="2.7.5-&#53580;&#49828;&#53944;-&#49464;&#53944;&#47196;-&#49884;&#49828;&#53596;-&#54217;&#44032;&#54616;&#44592;-(p.-119)">2.7.5 &#53580;&#49828;&#53944; &#49464;&#53944;&#47196; &#49884;&#49828;&#53596; &#54217;&#44032;&#54616;&#44592; (p. 119)<a class="anchor-link" href="#2.7.5-&#53580;&#49828;&#53944;-&#49464;&#53944;&#47196;-&#49884;&#49828;&#53596;-&#54217;&#44032;&#54616;&#44592;-(p.-119)">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[106]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">final_model</span> <span class="o">=</span> <span class="n">grid_search</span><span class="o">.</span><span class="n">best_estimator_</span>
+
+<span class="n">X_test</span> <span class="o">=</span> <span class="n">strat_test_set</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&quot;median_house_value&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">y_test</span> <span class="o">=</span> <span class="n">strat_test_set</span><span class="p">[</span><span class="s2">&quot;median_house_value&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="n">X_test_prepared</span> <span class="o">=</span> <span class="n">full_pipeline</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">final_predictions</span> <span class="o">=</span> <span class="n">final_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test_prepared</span><span class="p">)</span>
+
+<span class="n">final_mse</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">final_predictions</span><span class="p">)</span>
+<span class="n">final_rmse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">final_mse</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[107]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">final_rmse</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[107]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>47730.22690385927</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>테스트 RMSE에 대한 95% 신뢰 구간을 계산할 수 있습니다:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[108]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+
+<span class="n">confidence</span> <span class="o">=</span> <span class="mf">0.95</span>
+<span class="n">squared_errors</span> <span class="o">=</span> <span class="p">(</span><span class="n">final_predictions</span> <span class="o">-</span> <span class="n">y_test</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span>
+<span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">interval</span><span class="p">(</span><span class="n">confidence</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">squared_errors</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span>
+                         <span class="n">loc</span><span class="o">=</span><span class="n">squared_errors</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
+                         <span class="n">scale</span><span class="o">=</span><span class="n">stats</span><span class="o">.</span><span class="n">sem</span><span class="p">(</span><span class="n">squared_errors</span><span class="p">)))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[108]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([45685.10470776, 49691.25001878])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>다음과 같이 수동으로 계산할 수도 있습니다:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[109]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">squared_errors</span><span class="p">)</span>
+<span class="n">mean</span> <span class="o">=</span> <span class="n">squared_errors</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">tscore</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">ppf</span><span class="p">((</span><span class="mi">1</span> <span class="o">+</span> <span class="n">confidence</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">df</span><span class="o">=</span><span class="n">m</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">tmargin</span> <span class="o">=</span> <span class="n">tscore</span> <span class="o">*</span> <span class="n">squared_errors</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mean</span> <span class="o">-</span> <span class="n">tmargin</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mean</span> <span class="o">+</span> <span class="n">tmargin</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[109]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(45685.10470776, 49691.25001877858)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>또는 t-점수 대신 z-점수를 사용할 수도 있습니다:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[110]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">zscore</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">ppf</span><span class="p">((</span><span class="mi">1</span> <span class="o">+</span> <span class="n">confidence</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">zmargin</span> <span class="o">=</span> <span class="n">zscore</span> <span class="o">*</span> <span class="n">squared_errors</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mean</span> <span class="o">-</span> <span class="n">zmargin</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mean</span> <span class="o">+</span> <span class="n">zmargin</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[110]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(45685.717918136455, 49690.68623889413)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#48512;&#47197;:-&#52628;&#44032;-&#45236;&#50857;">&#48512;&#47197;: &#52628;&#44032; &#45236;&#50857;<a class="anchor-link" href="#&#48512;&#47197;:-&#52628;&#44032;-&#45236;&#50857;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#51204;&#52376;&#47532;&#50752;-&#50696;&#52769;&#51012;-&#54252;&#54632;&#54620;-&#51204;&#52404;-&#54028;&#51060;&#54532;&#46972;&#51064;">&#51204;&#52376;&#47532;&#50752; &#50696;&#52769;&#51012; &#54252;&#54632;&#54620; &#51204;&#52404; &#54028;&#51060;&#54532;&#46972;&#51064;<a class="anchor-link" href="#&#51204;&#52376;&#47532;&#50752;-&#50696;&#52769;&#51012;-&#54252;&#54632;&#54620;-&#51204;&#52404;-&#54028;&#51060;&#54532;&#46972;&#51064;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[111]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">full_pipeline_with_predictor</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
+        <span class="p">(</span><span class="s2">&quot;preparation&quot;</span><span class="p">,</span> <span class="n">full_pipeline</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;linear&quot;</span><span class="p">,</span> <span class="n">LinearRegression</span><span class="p">())</span>
+    <span class="p">])</span>
+
+<span class="n">full_pipeline_with_predictor</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">housing</span><span class="p">,</span> <span class="n">housing_labels</span><span class="p">)</span>
+<span class="n">full_pipeline_with_predictor</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">some_data</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[111]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([210644.60459286, 317768.80697211, 210956.43331178,  59218.98886849,
+       189747.55849879])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="joblib&#47484;-&#49324;&#50857;&#54620;-&#47784;&#45944;-&#51200;&#51109;">joblib&#47484; &#49324;&#50857;&#54620; &#47784;&#45944; &#51200;&#51109;<a class="anchor-link" href="#joblib&#47484;-&#49324;&#50857;&#54620;-&#47784;&#45944;-&#51200;&#51109;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[112]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_model</span> <span class="o">=</span> <span class="n">full_pipeline_with_predictor</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[113]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">joblib</span>
+<span class="n">joblib</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">my_model</span><span class="p">,</span> <span class="s2">&quot;my_model.pkl&quot;</span><span class="p">)</span> <span class="c1"># DIFF</span>
+<span class="c1">#...</span>
+<span class="n">my_model_loaded</span> <span class="o">=</span> <span class="n">joblib</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;my_model.pkl&quot;</span><span class="p">)</span> <span class="c1"># DIFF</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="RandomizedSearchCV&#47484;-&#50948;&#54620;-Scipy-&#48516;&#54252;-&#54632;&#49688;"><code>RandomizedSearchCV</code>&#47484; &#50948;&#54620; Scipy &#48516;&#54252; &#54632;&#49688;<a class="anchor-link" href="#RandomizedSearchCV&#47484;-&#50948;&#54620;-Scipy-&#48516;&#54252;-&#54632;&#49688;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[114]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">geom</span><span class="p">,</span> <span class="n">expon</span>
+<span class="n">geom_distrib</span><span class="o">=</span><span class="n">geom</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="mi">10000</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">expon_distrib</span><span class="o">=</span><span class="n">expon</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="mi">10000</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">geom_distrib</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">expon_distrib</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYIAAAD+CAYAAAA3bQKHAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAADh0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uMy4yLjIsIGh0dHA6Ly9tYXRwbG90bGliLm9yZy+WH4yJAAAXZUlEQVR4nO3dfZBddZ3n8ffHhJoonV7F9FAShQysDG5YwzhdpbuWShWoqzIrGrYqO7rC1GooLWbXhS1kVh6C4g6wlZmaERCyohFxLUEeahUfSmYYR2dX13Y1YGqylDyIQalpMtimCQnofPePe3q8XrrhhnvTt8N5v6pOec/ve87tb3ewP/0759xzUlVIktrrOaNuQJI0WgaBJLWcQSBJLWcQSFLLGQSS1HIGgSS1nEEgSS3XVxAkOSvJVJJ9Sbb21J6X5KokDyeZSfLXXbUkuSzJrma5PEm66muS3JFkT5IdSU4e2ncmSerL8j63+wlwCfBG4Lk9tS3N+7wM+HvghK7aRuBUYB1QwNeAe4Grm/pngf8NvLlZPp/kpVU1/VTNrFq1qtasWdNn65IkgO9+97sPV9VE73j255PFSS4BXlxVZzTrvw18pxn7+Tzb/y9ga1Vtadb/PfCeqnpVkmOBu4BVVbW7qX8D+ExVXd37Xt0mJydramqq774lSZDku1U12Ts+6DmCVwI/Ai5uDg3dlWR9V30tsK1rfVszNle7dy4E5qlLkhbBoEHwYuB4YAY4AjgL+FSSlzX1saY2ZwYYa84T9Nbm6ivn+0JJNjbnKaamp5/yyJEkaT8MGgSPAU8Al1TV41X1deAO4A1NfRYY79p+HJitzvGo3tpcfTfzqKotVTVZVZMTE086xCVJeoYGDYI7n6a+nc6J4jnrmrG52tFJVi5QlyQtgn4vH12eZAWwDFiWZEWS5cBfAw8Af9Rs82rgROCrza7XAWcnWZ3kCOAcYCtAVd0NfB+4qHm/twEvB24a2ncnSXpa/c4IzqdzGOg84J3N6/Or6gngrXQu/ZwB/jvwrqra0ex3DfAFOlcH/QC4rRmbswGYBB4BLgVOe7pLRyVJw7Vfl48uFV4+Kkn770BdPipJOsgZBJLUcv3eYuJZY815t807fv+lb1nkTiRpaXBGIEktZxBIUssZBJLUcgaBJLWcQSBJLWcQSFLLGQSS1HIGgSS1nEEgSS1nEEhSyxkEktRyBoEktZxBIEktZxBIUsv1+8zis5JMJdmXZOsC21yUpJKc3DWWJJcl2dUslydJV31NkjuS7Emyo3tfSdLi6HdG8BPgEuAT8xWTHAOcBvy0p7QROBVYR+fB9KcAZ3bVPwt8D3gh8EHg80km+m1ekjS4voKgqm6uqluBXQtscgXwAeDxnvHTgc1VtbOqHgQ2A2cAJDkWeAVwUVU9VlU30XnI/fr9/i4kSc/YwOcIkvwb4PGq+tI85bXAtq71bc3YXO3eqtq9QF2StAgGelRlkjHgvwJvWGCTMWCma30GGGvOE/TW5uqrF/haG+kcauLII48coGtJUrdBZwQXA5+uqvsWqM8C413r48BsVdU8tbn6buZRVVuqarKqJicmPI0gScMyaBCcBPyHJA8leQh4CXBDkg809e10ThTPWdeMzdWOTrJygbokaRH0dWgoyfJm22XAsiQrgF/QCYJDujb9DnA28OVm/Trg7CRfAgo4B/goQFXdneT7wEVJzgfeROfKIk8WS9Ii6vccwfnARV3r7wQurqpN3Rsl+SXwSFXNNkPXAEfTuRoI4OPN2JwNwFbgEeAB4LSqmt6P/iVJA+orCJpf+Jv62G5Nz3oB5zbLfNvfD5zYTw+SpAPDW0xIUssZBJLUcgaBJLWcQSBJLWcQSFLLGQSS1HID3Wvo2WTNebfNO37/pW9Z5E4kaXE5I5CkljMIJKnlDAJJajmDQJJaziCQpJYzCCSp5QwCSWo5g0CSWs4gkKSWMwgkqeX6CoIkZyWZSrIvydau8Vcl+VqSv08yneTGJC/qqifJZUl2NcvlSdJVX5PkjiR7kuxIcvJQvztJ0tPqd0bwE+AS4BM94y8AtgBrgKOA3cAnu+obgVOBdXQeTH8KcGZX/bPA94AXAh8EPp9kYr++A0nSQPoKgqq6uapuBXb1jH+5qm6sqp9X1R7gCuDVXZucDmyuqp1V9SCwGTgDIMmxwCuAi6rqsaq6ic5D7tcP+k1Jkvo37HMErwW2d62vBbZ1rW9rxuZq91bV7gXqkqRFMLTbUCd5OXAh8Nau4TFgpmt9BhhrzhP01ubqqxd4/410DjVx5JFHDqlrSdJQZgRJ/inwZeA/VtU3ukqzwHjX+jgwW1U1T22uvpt5VNWWqpqsqsmJCU8jSNKwDBwESY4Cbgc+XFWf7ilvp3OieM46fnXoaDtwdJKVC9QlSYug38tHlydZASwDliVZ0YytBv4SuLKqrp5n1+uAs5OsTnIEcA6wFaCq7ga+D1zUvN/b6FxZdNPA35UkqW/9niM4H7ioa/2dwMVAAUfT+WX+j/WqGmteXtPU72rWP96MzdlAJxgeAR4ATquq6f37FiRJg+grCKpqE7BpgfLFT7FfAec2y3z1+4ET++lBknRgeIsJSWo5g0CSWs4gkKSWMwgkqeUMAklqOYNAklrOIJCkljMIJKnlDAJJajmDQJJabmjPI3i2WnPebfOO33/pWxa5E0k6MJwRSFLLGQSS1HIGgSS1nEEgSS1nEEhSyxkEktRy/T6z+KwkU0n2JdnaUzspyY4ke5Lc0TzMfq6WJJcl2dUslydJV31Ns8+e5j1OHtp3JknqS78zgp8AlwCf6B5Msgq4GbgAOAyYAj7XtclG4FRgHZ0H058CnNlV/yzwPeCFwAeBzyeZ2O/vQpL0jPUVBFV1c1XdCuzqKb0d2F5VN1bVXjrPNV6X5Limfjqwuap2VtWDwGbgDIAkxwKvAC6qqseq6iY6D7lfP+D3JEnaD4OeI1gLbJtbqapHgXua8SfVm9fdtXuravcC9V+TZGNzeGpqenp6wLYlSXMGDYIxYKZnbAZYuUB9BhhrzhM83b6/pqq2VNVkVU1OTHj0SJKGZdAgmAXGe8bGgd0L1MeB2aqqPvaVJC2CQYNgO50TwQAkORQ4phl/Ur153V07OsnKBeqSpEXQ7+Wjy5OsAJYBy5KsSLIcuAU4Psn6pn4hcGdV7Wh2vQ44O8nqJEcA5wBbAarqbuD7wEXN+72NzpVFNw3x+5MkPY1+ZwTnA48B5wHvbF6fX1XTdK7y+QjwCPBKYEPXftcAX6BzNdAPgNuasTkbgMlm30uB05r3lCQtkr6eR1BVm+hcGjpf7XbguAVqBZzbLPPV7wdO7KcHSdKB4S0mJKnlfELZM+STyyQ9WzgjkKSWMwgkqeUMAklqOYNAklrOIJCkljMIJKnlDAJJajmDQJJaziCQpJYzCCSp5QwCSWo5g0CSWs4gkKSWMwgkqeUMAklquaE8jyDJGuAq4F8A+4DPA++vql8kOQm4EjgS+DZwRlX9qNkvdB5R+e7mra4FPtA82eyg5HMKJB1shjUjuAr4O+BFwAnA64D3JVkF3AxcABwGTAGf69pvI3AqsI7Og+tPAc4cUk+SpD4MKwh+C7ihqvZW1UPAV4C1wNuB7VV1Y1XtpfPc43VJ5p5xfDqwuap2VtWDwGbgjCH1JEnqw7CC4M+ADUmel2Q18CZ+FQbb5jaqqkeBe5pxeuvN67XMI8nGJFNJpqanp4fUtiRpWEHwdTq/wH8O7KRzCOhWYAyY6dl2BljZvO6tzwBjzbmDX1NVW6pqsqomJyYmhtS2JGngIEjyHOCrdM4FHAqsAl4AXAbMAuM9u4wDu5vXvfVxYPZgPlksSQebYcwIDgNeAlxRVfuqahfwSeDNwHY6J4IBSHIocEwzTm+9eb0dSdKiGTgIquph4D7gvUmWJ3k+nZPA24BbgOOTrE+yArgQuLOqdjS7XwecnWR1kiOAc4Ctg/YkSerfsM4RvB34V8A08EPgF8B/qqppYD3wEeAR4JXAhq79rgG+ANwF/AC4rRmTJC2SoXygrKq+D5y4QO124LgFagWc2yySpBHwFhOS1HIGgSS1nEEgSS1nEEhSyxkEktRyBoEktZxBIEktZxBIUssZBJLUcgaBJLWcQSBJLTeUew3p6flQe0lLlTMCSWo5g0CSWs4gkKSWMwgkqeUMAklquaEFQZINSf42yaNJ7knymmb8pCQ7kuxJckeSo7r2SZLLkuxqlsuTZFg9SZKe3lCCIMnrgcuAPwBWAq8F7k2yCrgZuAA4DJgCPte160bgVGAd8HLgFODMYfQkSerPsGYEFwMfqqpvVdU/VNWDVfUgnYfab6+qG6tqL7AJWJdk7hnGpwObq2pns/1m4Iwh9SRJ6sPAQZBkGTAJTCT5YZKdSa5I8lxgLbBtbtuqehS4pxmnt968Xss8kmxMMpVkanp6etC2JUmNYcwIDgcOAU4DXgOcAPwOcD4wBsz0bD9D5/AR89RngLH5zhNU1ZaqmqyqyYmJiSG0LUmC4QTBY83/frSqflpVDwN/ArwZmAXGe7YfB3Y3r3vr48BsVdUQ+pIk9WHgIKiqR4CdwHy/vLfTOREMQJJDgWOa8SfVm9fbkSQtmmHddO6TwB8m+QrwBPB+4IvALcB/S7IeuA24ELizqnY0+10HnJ3kS3SC5Bzgo0Pq6aCw0M3owBvSSVocwwqCDwOrgLuBvcANwEeqam8TAlcA1wPfBjZ07XcNcDRwV7P+8WZMkrRIhhIEVfUE8L5m6a3dDhz3pJ06tQLObRZJ0gh4iwlJajmDQJJaziCQpJYzCCSp5QwCSWo5g0CSWs4gkKSWMwgkqeUMAklqOYNAklrOIJCklhvWTed0ACx0Z1LvSippmJwRSFLLGQSS1HIGgSS1nEEgSS03tCBI8tIke5Nc3zV2UpIdSfYkuSPJUV21JLksya5muTxJhtWPJKk/w5wRXAl8Z24lySrgZuAC4DBgCvhc1/YbgVPpPLD+5cApwJlD7EeS1IehBEGSDcDPgL/oGn47sL2qbqyqvcAmYF2SucdWng5srqqdVfUgsBk4Yxj9SJL6N3AQJBkHPgSc01NaC2ybW6mqR4F7mvEn1ZvXa5EkLaphzAg+DFxbVT/uGR8DZnrGZoCVC9RngLGFzhMk2ZhkKsnU9PT0ENqWJMGAQZDkBOBk4E/nKc8C4z1j48DuBerjwGxV1Xxfq6q2VNVkVU1OTEwM0rYkqcugt5g4EVgDPND8IT8GLEvyz4Cr6ZwHACDJocAxwPZmaDudE8X/p1lf11XTU/DWE5KGadBDQ1vo/HI/oVmuBm4D3gjcAhyfZH2SFcCFwJ1VtaPZ9zrg7CSrkxxB5xzD1gH7kSTtp4FmBFW1B9gzt55kFthbVdPN+nrgCuB64NvAhq7drwGOBu5q1j/ejEmSFtFQ7z5aVZt61m8Hjltg2wLObRZJ0oh4iwlJajmDQJJaziCQpJYzCCSp5XxU5bOIny+Q9Ew4I5CklnNG0ALOFCQ9FWcEktRyBoEktZxBIEktZxBIUssZBJLUcgaBJLWcQSBJLWcQSFLLGQSS1HIGgSS13MC3mEjyG8BVwMnAYcAPgf9SVV9u6icBVwJH0nlc5RlV9aOmFuBS4N3N210LfKB5epkOMG89IQmGc6+h5cCPgdcBDwBvBm5I8s+BWeBmOr/ovwB8GPgc8Kpm343AqcA6oICvAfcCVw+hLz1DBoTULgMHQVU9CmzqGvpikvuA3wVeCGyvqhsBkmwCHk5yXFXtAE4HNlfVzqa+GXgPBoEkLZqhnyNIcjhwLLAdWAtsm6s1oXFPM05vvXm9FknSohlqECQ5BPgM8KnmL/4xYKZnsxlgZfO6tz4DjDXnDnrfe2OSqSRT09PTw2xbklptaEGQ5DnAp4HHgbOa4VlgvGfTcWD3AvVxYHa+k8VVtaWqJqtqcmJiYlhtS1LrDSUImr/grwUOB9ZX1RNNaTudE8Fz2x0KHNOMP6nevN6OJGnRDGtG8DHgZcDvVdVjXeO3AMcnWZ9kBXAhcGdz2AjgOuDsJKuTHAGcA2wdUk+SpD4M43MERwFnAvuAh7oO759ZVZ9Jsh64AriezucINnTtfg1wNHBXs/7xZkxLkJeVSs9Ow7h89EfAk07udtVvB45boFbAuc0iSRoBbzEhSS1nEEhSyw3jFhNqOc8dSAc3ZwSS1HLOCLTonEFIS4szAklqOWcEWjKcKUijYRDogFnoF7ukpcVDQ5LUcgaBJLWch4a05D3VISbPH0iDc0YgSS3njEAHtf09Ie0MQnoyZwSS1HLOCNQqflZBejKDQMKAULt5aEiSWm7kM4Ikh9F58P0bgIeBP6qq/zHarqSOYZ2MdsahpWzkQQBcCTwOHA6cANyWZFtVbR9tW9L+87YaOhiNNAiSHAqsB46vqlngm0n+J/DvgPNG2Zu0GIYZHM4u9EyNekZwLPDLqrq7a2wb8LoR9SMdtA722ciwgsxPou+/UQfBGDDTMzYDrOzdMMlGYGOzOpvk/z3Dr7mKzrmIpcSe+rcU+7Kn/jxlT7nswDewwNc46H5WAzhqvsFRB8EsMN4zNg7s7t2wqrYAWwb9gkmmqmpy0PcZJnvq31Lsy576sxR7gqXZ12L3NOrLR+8Glid5adfYOsATxZK0SEYaBFX1KHAz8KEkhyZ5NfBW4NOj7EuS2mTUMwKA9wHPBf4O+Czw3gN86ejAh5cOAHvq31Lsy576sxR7gqXZ16L2lKpazK8nSVpilsKMQJI0QgaBJLVca4IgyWFJbknyaJIfJfn9JdDTWUmmkuxLsnUJ9PMbSa5tfj67k3wvyZtG3RdAkuuT/DTJz5PcneTdo+5pTpKXJtmb5Pol0MtfNb3MNssz/bzNUCXZkORvm///3ZPkNSPuZ7Zn+WWSj46yp6avNUm+lOSRJA8luSLJAb/MvzVBwK/f0+gdwMeSrB1tS/wEuAT4xIj7mLMc+DGdT3b/E+AC4IYka0bY05w/BtZU1Tjwr4FLkvzuiHuacyXwnVE30eWsqhprlt8edTNJXg9cBvwBnQ+Lvha4d5Q9df18xuj8TngMuHGUPTWuonPhzIvo3HvtdXQuqDmgWhEEXfc0uqCqZqvqm8DcPY1GpqpurqpbgV2j7GNOVT1aVZuq6v6q+oeq+iJwHzDyX7hVtb2q9s2tNssxI2wJ6PylC/wM+ItR97KEXQx8qKq+1fx39WBVPTjqprqcRueX7zdG3QjwW8ANVbW3qh4CvgIc8D9YWxEELHxPo1HPCJa0JIfT+dktiQ/4JbkqyR5gB/BT4Esj7mcc+BBwzij7mMcfJ3k4yd8kOXGUjSRZBkwCE0l+mGRnc7jjuaPsq8fpwHW1NC6h/DNgQ5LnJVkNvIlOGBxQbQmCvu9ppI4khwCfAT5VVTtG3Q9AVb2Pzr/Za+h8EHHfU+9xwH0YuLaqfjziPrp9ADgaWE3nWvQvJBnlzOlw4BA6f3W/hs7hjt8Bzh9hT/8oyZF0Dr98atS9NL5O5w/UnwM7gSng1gP9RdsSBH3f00iQ5Dl0Pt39OHDWiNv5NVX1y+bQ3ouB946qjyQnACcDfzqqHuZTVd+uqt1Vta+qPgX8DfDmEbb0WPO/H62qn1bVw8CfjLinbu8CvllV9426keb/d1+l80fOoXRuPPcCOudXDqi2BIH3NOpTktB5YtzhwPqqemLELS1kOaM9R3AisAZ4IMlDwH8G1if5vyPsaT4FZGRfvOoROn/ZLoXDLvN5F0tnNnAY8BLgiibIdwGfZBFCsxVBsFTvaZRkeZIVwDJgWZIVi3Gp2NP4GPAy4Peq6rGn23gxJPnN5vLDsSTLkrwR+LfAX46wrS10guiEZrkauA1446gaSvL8JG+c++8oyTvoXKHz1VH11Pgk8IfNv+MLgPcDXxxxTyT5l3QOoS2Fq4VoZkv3Ae9t/v2eT+f8xbbF+OKtWOik7a3Ao8ADwO8vgZ428asrYOaWTSPs56imh710DqfNLe8Y8c9pgs6x05/ROXZ6F/CeUf/7zfNvef0S+Dl9h84hz58B3wJevwR+NofQuSzyZ8BDwJ8DK5ZAX9cAnx51Hz09nQD8FfAInecR3Aj85oH+ut5rSJJarhWHhiRJCzMIJKnlDAJJajmDQJJaziCQpJYzCCSp5QwCSWo5g0CSWs4gkKSW+/+2S8ruDnhPhQAAAABJRU5ErkJggg==
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#50672;&#49845;&#47928;&#51228;-&#54644;&#45813;">&#50672;&#49845;&#47928;&#51228; &#54644;&#45813;<a class="anchor-link" href="#&#50672;&#49845;&#47928;&#51228;-&#54644;&#45813;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="1.">1.<a class="anchor-link" href="#1.">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>질문: 서포트 벡터 머신 회귀(<code>sklearn.svm.SVR</code>)를 <code>kernel=“linear”</code>(하이퍼파라미터 <code>C</code>를 바꿔가며)나 <code>kernel=“rbf”</code>(하이퍼파라미터 <code>C</code>와 <code>gamma</code>를 바꿔가며) 등의 다양한 하이퍼파라미터 설정으로 시도해보세요. 지금은 이 하이퍼파라미터가 무엇을 의미하는지 너무 신경 쓰지 마세요. 최상의 <code>SVR</code> 모델은 무엇인가요?</p>
+<p><strong>경고</strong>: 사용하는 하드웨어에 따라 다음 셀을 실행하는데 30분 또는 그 이상 걸릴 수 있습니다.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">GridSearchCV</span>
+
+<span class="n">param_grid</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">{</span><span class="s1">&#39;kernel&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;linear&#39;</span><span class="p">],</span> <span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">10.</span><span class="p">,</span> <span class="mf">30.</span><span class="p">,</span> <span class="mf">100.</span><span class="p">,</span> <span class="mf">300.</span><span class="p">,</span> <span class="mf">1000.</span><span class="p">,</span> <span class="mf">3000.</span><span class="p">,</span> <span class="mf">10000.</span><span class="p">,</span> <span class="mf">30000.0</span><span class="p">]},</span>
+        <span class="p">{</span><span class="s1">&#39;kernel&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;rbf&#39;</span><span class="p">],</span> <span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">10.</span><span class="p">,</span> <span class="mf">30.</span><span class="p">,</span> <span class="mf">100.</span><span class="p">,</span> <span class="mf">300.</span><span class="p">,</span> <span class="mf">1000.0</span><span class="p">],</span>
+         <span class="s1">&#39;gamma&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.03</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">]},</span>
+    <span class="p">]</span>
+
+<span class="n">svm_reg</span> <span class="o">=</span> <span class="n">SVR</span><span class="p">()</span>
+<span class="n">grid_search</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">svm_reg</span><span class="p">,</span> <span class="n">param_grid</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="s1">&#39;neg_mean_squared_error&#39;</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">grid_search</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">housing_prepared</span><span class="p">,</span> <span class="n">housing_labels</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>최상 모델의 (5-폴드 교차 검증으로 평가한) 점수는 다음과 같습니다:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">negative_mse</span> <span class="o">=</span> <span class="n">grid_search</span><span class="o">.</span><span class="n">best_score_</span>
+<span class="n">rmse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="o">-</span><span class="n">negative_mse</span><span class="p">)</span>
+<span class="n">rmse</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>RandomForestRegressor</code>보다 훨씬 좋지 않네요. 최상의 하이퍼파라미터를 확인해 보겠습니다:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">grid_search</span><span class="o">.</span><span class="n">best_params_</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>선형 커널이 RBF 커널보다 성능이 나은 것 같습니다. <code>C</code>는 테스트한 것 중에 최대값이 선택되었습니다. 따라서 (작은 값들은 지우고) 더 큰 값의 <code>C</code>로 그리드서치를 다시 실행해 보아야 합니다. 아마도 더 큰 값의 <code>C</code>에서 성능이 높아질 것입니다.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="2.">2.<a class="anchor-link" href="#2.">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>질문: <code>GridSearchCV</code>를 <code>RandomizedSearchCV</code>로 바꿔보세요.</p>
+<p><strong>경고</strong>: 사용하는 하드웨어에 따라 다음 셀을 실행하는데 45분 또는 그 이상 걸릴 수 있습니다.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">RandomizedSearchCV</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">expon</span><span class="p">,</span> <span class="n">reciprocal</span>
+
+<span class="c1"># expon(), reciprocal()와 그외 다른 확률 분포 함수에 대해서는</span>
+<span class="c1"># https://docs.scipy.org/doc/scipy/reference/stats.html를 참고하세요.</span>
+
+<span class="c1"># 노트: kernel 매개변수가 &quot;linear&quot;일 때는 gamma가 무시됩니다.</span>
+<span class="n">param_distribs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;kernel&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;linear&#39;</span><span class="p">,</span> <span class="s1">&#39;rbf&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="n">reciprocal</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">200000</span><span class="p">),</span>
+        <span class="s1">&#39;gamma&#39;</span><span class="p">:</span> <span class="n">expon</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="mf">1.0</span><span class="p">),</span>
+    <span class="p">}</span>
+
+<span class="n">svm_reg</span> <span class="o">=</span> <span class="n">SVR</span><span class="p">()</span>
+<span class="n">rnd_search</span> <span class="o">=</span> <span class="n">RandomizedSearchCV</span><span class="p">(</span><span class="n">svm_reg</span><span class="p">,</span> <span class="n">param_distributions</span><span class="o">=</span><span class="n">param_distribs</span><span class="p">,</span>
+                                <span class="n">n_iter</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="s1">&#39;neg_mean_squared_error&#39;</span><span class="p">,</span>
+                                <span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">rnd_search</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">housing_prepared</span><span class="p">,</span> <span class="n">housing_labels</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>최상 모델의 (5-폴드 교차 검증으로 평가한) 점수는 다음과 같습니다:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">negative_mse</span> <span class="o">=</span> <span class="n">rnd_search</span><span class="o">.</span><span class="n">best_score_</span>
+<span class="n">rmse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="o">-</span><span class="n">negative_mse</span><span class="p">)</span>
+<span class="n">rmse</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>이제 <code>RandomForestRegressor</code>의 성능에 훨씬 가까워졌습니다(하지만 아직 차이가 납니다). 최상의 하이퍼파라미터를 확인해 보겠습니다:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rnd_search</span><span class="o">.</span><span class="n">best_params_</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>이번에는 RBF 커널에 대해 최적의 하이퍼파라미터 조합을 찾았습니다. 보통 랜덤서치가 같은 시간안에 그리드서치보다 더 좋은 하이퍼파라미터를 찾습니다.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>여기서 사용된 <code>scale=1.0</code>인 지수 분포를 살펴보겠습니다. 일부 샘플은 1.0보다 아주 크거나 작습니다. 하지만 로그 분포를 보면 대부분의 값이 exp(-2)와 exp(+2), 즉 0.1과 7.4 사이에 집중되어 있음을 알 수 있습니다.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">expon_distrib</span> <span class="o">=</span> <span class="n">expon</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="mf">1.</span><span class="p">)</span>
+<span class="n">samples</span> <span class="o">=</span> <span class="n">expon_distrib</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="mi">10000</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">121</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Exponential distribution (scale=1.0)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">samples</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">122</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Log of this distribution&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">samples</span><span class="p">),</span> <span class="n">bins</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>C</code>에 사용된 분포는 매우 다릅니다. 주어진 범위안에서 균등 분포로 샘플링됩니다. 그래서 오른쪽 로그 분포가 거의 일정하게 나타납니다. 이런 분포는 원하는 스케일이 정확이 무엇인지 모를 때 사용하면 좋습니다:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">reciprocal_distrib</span> <span class="o">=</span> <span class="n">reciprocal</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">200000</span><span class="p">)</span>
+<span class="n">samples</span> <span class="o">=</span> <span class="n">reciprocal_distrib</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="mi">10000</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">121</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Reciprocal distribution (scale=1.0)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">samples</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">122</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Log of this distribution&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">samples</span><span class="p">),</span> <span class="n">bins</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>reciprocal()</code> 함수는 하이퍼파라미터의 스케일에 대해 전혀 감을 잡을 수 없을 때 사용합니다(오른쪽 그래프에서 볼 수 있듯이 주어진 범위안에서 모든 값이 균등합니다). 반면 지수 분포는 하이퍼파라미터의 스케일을 (어느정도) 알고 있을 때 사용하는 것이 좋습니다.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="3.">3.<a class="anchor-link" href="#3.">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>질문: 가장 중요한 특성을 선택하는 변환기를 준비 파이프라인에 추가해보세요.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.base</span> <span class="kn">import</span> <span class="n">BaseEstimator</span><span class="p">,</span> <span class="n">TransformerMixin</span>
+
+<span class="k">def</span> <span class="nf">indices_of_top_k</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">argpartition</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">arr</span><span class="p">),</span> <span class="o">-</span><span class="n">k</span><span class="p">)[</span><span class="o">-</span><span class="n">k</span><span class="p">:])</span>
+
+<span class="k">class</span> <span class="nc">TopFeatureSelector</span><span class="p">(</span><span class="n">BaseEstimator</span><span class="p">,</span> <span class="n">TransformerMixin</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">feature_importances</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">feature_importances</span> <span class="o">=</span> <span class="n">feature_importances</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">k</span> <span class="o">=</span> <span class="n">k</span>
+    <span class="k">def</span> <span class="nf">fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">feature_indices_</span> <span class="o">=</span> <span class="n">indices_of_top_k</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">feature_importances</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">k</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span>
+    <span class="k">def</span> <span class="nf">transform</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">X</span><span class="p">[:,</span> <span class="bp">self</span><span class="o">.</span><span class="n">feature_indices_</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>노트: 이 특성 선택 클래스는 이미 어떤 식으로든 특성 중요도를 계산했다고 가정합니다(가령 <code>RandomForestRegressor</code>을 사용하여). <code>TopFeatureSelector</code>의 <code>fit()</code> 메서드에서 직접 계산할 수도 있지만 (캐싱을 사용하지 않을 경우) 그리드서치나 랜덤서치의 모든 하이퍼파라미터 조합에 대해 계산이 일어나기 때문에 매우 느려집니다.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>선택할 특성의 개수를 지정합니다:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">k</span> <span class="o">=</span> <span class="mi">5</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>최상의 k개 특성의 인덱스를 확인해 보겠습니다:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">top_k_feature_indices</span> <span class="o">=</span> <span class="n">indices_of_top_k</span><span class="p">(</span><span class="n">feature_importances</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
+<span class="n">top_k_feature_indices</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">attributes</span><span class="p">)[</span><span class="n">top_k_feature_indices</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>최상의 k개 특성이 맞는지 다시 확인합니다:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">sorted</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">feature_importances</span><span class="p">,</span> <span class="n">attributes</span><span class="p">),</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)[:</span><span class="n">k</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>좋습니다. 이제 이전에 정의한 준비 파이프라인과 특성 선택기를 추가한 새로운 파이프라인을 만듭니다:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">preparation_and_feature_selection_pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
+    <span class="p">(</span><span class="s1">&#39;preparation&#39;</span><span class="p">,</span> <span class="n">full_pipeline</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;feature_selection&#39;</span><span class="p">,</span> <span class="n">TopFeatureSelector</span><span class="p">(</span><span class="n">feature_importances</span><span class="p">,</span> <span class="n">k</span><span class="p">))</span>
+<span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">housing_prepared_top_k_features</span> <span class="o">=</span> <span class="n">preparation_and_feature_selection_pipeline</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">housing</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>처음 3개 샘플의 특성을 확인해 보겠습니다:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">housing_prepared_top_k_features</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>최상의 k개 특성이 맞는지 다시 확인합니다:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">housing_prepared</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="n">top_k_feature_indices</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>성공입니다!  :)</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="4.">4.<a class="anchor-link" href="#4.">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>질문: 전체 데이터 준비 과정과 최종 예측을 하나의 파이프라인으로 만들어보세요.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">prepare_select_and_predict_pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
+    <span class="p">(</span><span class="s1">&#39;preparation&#39;</span><span class="p">,</span> <span class="n">full_pipeline</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;feature_selection&#39;</span><span class="p">,</span> <span class="n">TopFeatureSelector</span><span class="p">(</span><span class="n">feature_importances</span><span class="p">,</span> <span class="n">k</span><span class="p">)),</span>
+    <span class="p">(</span><span class="s1">&#39;svm_reg&#39;</span><span class="p">,</span> <span class="n">SVR</span><span class="p">(</span><span class="o">**</span><span class="n">rnd_search</span><span class="o">.</span><span class="n">best_params_</span><span class="p">))</span>
+<span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">prepare_select_and_predict_pipeline</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">housing</span><span class="p">,</span> <span class="n">housing_labels</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>몇 개의 샘플에 전체 파이프라인을 적용해 보겠습니다:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">some_data</span> <span class="o">=</span> <span class="n">housing</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">some_labels</span> <span class="o">=</span> <span class="n">housing_labels</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Predictions:</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">prepare_select_and_predict_pipeline</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">some_data</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Labels:</span><span class="se">\t\t</span><span class="s2">&quot;</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="n">some_labels</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>전체 파이프라인이 잘 작동하는 것 같습니다. 물론 예측 성능이 아주 좋지는 않습니다. <code>SVR</code>보다 <code>RandomForestRegressor</code>가 더 나은 것 같습니다.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="5.">5.<a class="anchor-link" href="#5.">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>질문: <code>GridSearchCV</code>를 사용해 준비 단계의 옵션을 자동으로 탐색해보세요.</p>
+<p><strong>경고</strong>: 사용하는 하드웨어에 따라 다음 셀을 실행하는데 45분 또는 그 이상 걸릴 수 있습니다.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">param_grid</span> <span class="o">=</span> <span class="p">[{</span>
+    <span class="s1">&#39;preparation__num__imputer__strategy&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span> <span class="s1">&#39;median&#39;</span><span class="p">,</span> <span class="s1">&#39;most_frequent&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;feature_selection__k&#39;</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">feature_importances</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+<span class="p">}]</span>
+
+<span class="n">grid_search_prep</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">prepare_select_and_predict_pipeline</span><span class="p">,</span> <span class="n">param_grid</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+                                <span class="n">scoring</span><span class="o">=</span><span class="s1">&#39;neg_mean_squared_error&#39;</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">grid_search_prep</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">housing</span><span class="p">,</span> <span class="n">housing_labels</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">grid_search_prep</span><span class="o">.</span><span class="n">best_params_</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>최상의 <code>Imputer</code> 정책은 <code>most_frequent</code>이고 거의 모든 특성이 유용합니다(16개 중 15개). 마지막 특성(<code>ISLAND</code>)은 잡음이 추가될 뿐입니다.</p>
+
+</div>
+</div>
 </div>
     </div>
   </div>
