@@ -73,7 +73,7 @@ $ cd handson-ml
 
 #### 추천 강의동영상
 - [Stanford CS229: Machine Learning (Autumn 2018)](https://www.youtube.com/watch?v=jGwO_UgTS7I&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU)
-- 
+- [Deep Learning with PyTorch](https://atcold.github.io/pytorch-Deep-Learning/)
 
 #### 딥러닝 학습 참고 동영상
 - [SVM with polynomial kernel visualization](https://www.youtube.com/watch?v=OdlNM96sHio&t=0s)
