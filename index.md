@@ -35,7 +35,7 @@
   <tr>
     <td rowspan="2">한 눈에 보는 머신러닝</td>
     <td>슬라이드</td>
-    <td>[[html]](./slides/handson-ml-01.slides.html), [pdf]](./slides/handson-ml-01-slides.pdf)</td>
+      <td><a href="./slides/handson-ml-01.slides.html">[html]</a>, <a href="./slides/handson-ml-01-slides.pdf">[pdf]</a></td>
   </tr>
   <tr>
     <td>주피터 노트북</td>
