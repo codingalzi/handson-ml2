@@ -26,10 +26,6 @@
     [[colab]](https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/notebooks/handson-ml-02.ipynb)
 1. ...
 
-<!-- embedme @include README.md -->
-## partial content goes here
-<!-- embedme @includeEnd -->
-
 <table>
   <tr>
     <th>주제</th>
@@ -39,7 +35,7 @@
   <tr>
     <td rowspan="2">한 눈에 보는 머신러닝</td>
     <td>슬라이드</td>
-    <td>[html]</td>
+    <td>[[html]](./slides/handson-ml-01.slides.html), [pdf]](./slides/handson-ml-01-slides.pdf)</td>
   </tr>
   <tr>
     <td>주피터 노트북</td>
