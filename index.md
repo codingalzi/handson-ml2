@@ -26,7 +26,9 @@
     [[colab]](https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/notebooks/handson-ml-02.ipynb)
 1. ...
 
-{{md .. README.md}}
+<!-- embedme @include README.md -->
+## partial content goes here
+<!-- embedme @includeEnd -->
 
 <table>
   <tr>
