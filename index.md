@@ -21,7 +21,7 @@
     * 1부 슬라이드: [[html]](./slides/handson-ml-02a.slides.html), 
     [[pdf]](./slides/handson-ml-02a-slides.pdf)
     * 2부 슬라이드: [[html]](./slides/handson-ml-02b.slides.html), 
-    [[pdf]](./slides/handson-ml-02b-slides.pdf) (준비중)
+    [[pdf]](./slides/handson-ml-02b-slides.pdf)
     * 주피터 노트북 (1부, 2부 통합): [[html]](./notebooks/handson-ml-02.html), 
     [[colab]](https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/notebooks/handson-ml-02.ipynb)
 1. ...
