@@ -27,15 +27,12 @@
 1. ...
 
 <table>
-  <tr>
-    <th>주제</th>
-    <th>구분</th>
-    <th>링크</th>
-  </tr>
+  <tr> <th>주제</th> <th>구분</th> <th>링크</th> </tr>
   <tr>
     <td rowspan="2">한 눈에 보는 머신러닝</td>
     <td>슬라이드</td>
-      <td><a href="./slides/handson-ml-01.slides.html">[html]</a>, <a href="./slides/handson-ml-01-slides.pdf">[pdf]</a></td>
+      <td><a href="./slides/handson-ml-01.slides.html">[html]</a>, 
+          <a href="./slides/handson-ml-01-slides.pdf">[pdf]</a></td>
   </tr>
   <tr>
     <td>주피터 노트북</td>
@@ -43,30 +40,21 @@
         <a href="https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/notebooks/handson-ml-01.ipynb">[colab]</a></td>
   </tr>
   <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
+    <td rowspan="2">머신러닝 프로젝트 처음부터 끝까지</td>
+    <td>슬라이드</td>
+      <td><a href="./slides/handson-ml-01.slides.html">[html]</a>, 
+          <a href="./slides/handson-ml-01-slides.pdf">[pdf]</a></td> <br>
+      <td><a href="./slides/handson-ml-01.slides.html">[html]</a>, 
+          <a href="./slides/handson-ml-01-slides.pdf">[pdf]</a></td> <br>
+      <td><a href="./slides/handson-ml-01.slides.html">[html]</a>, 
+          <a href="./slides/handson-ml-01-slides.pdf">[pdf]</a></td>      
   </tr>
   <tr>
-    <td>Ernst Handel</td>
-    <td>Roland Mendel</td>
-    <td>Austria</td>
+    <td>주피터 노트북</td>
+    <td><a href="./notebooks/handson-ml-02.html">[html]</a>,  
+        <a href="https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/notebooks/handson-ml-02.ipynb">[colab]</a></td>
   </tr>
-  <tr>
-    <td>Island Trading</td>
-    <td>Helen Bennett</td>
-    <td>UK</td>
-  </tr>
-  <tr>
-    <td>Laughing Bacchus Winecellars</td>
-    <td>Yoshi Tannamuri</td>
-    <td>Canada</td>
-  </tr>
-  <tr>
-    <td>Magazzini Alimentari Riuniti</td>
-    <td>Giovanni Rovelli</td>
-    <td>Italy</td>
-  </tr>
+
 </table>
 
 **링크 활용법**
