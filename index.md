@@ -41,13 +41,13 @@
   </tr>
   <tr>
     <td rowspan="2">머신러닝 프로젝트 처음부터 끝까지</td>
-    <td>슬라이드</td>
-      <td><a href="./slides/handson-ml-01.slides.html">[html]</a>, 
-          <a href="./slides/handson-ml-01-slides.pdf">[pdf]</a> <br>
-      <a href="./slides/handson-ml-01.slides.html">[html]</a>, 
-          <a href="./slides/handson-ml-01-slides.pdf">[pdf]</a> <br>
-      <a href="./slides/handson-ml-01.slides.html">[html]</a>, 
-          <a href="./slides/handson-ml-01-slides.pdf">[pdf]</a></td>      
+    <td>1부 슬라이드 <br>2부 슬라이드<br>3부 슬라이드<br></td>
+      <td><a href="./slides/handson-ml-02a.slides.html">[html]</a>, 
+          <a href="./slides/handson-ml-02a-slides.pdf">[pdf]</a> <br>
+      <a href="./slides/handson-ml-02b.slides.html">[html]</a>, 
+          <a href="./slides/handson-ml-02b-slides.pdf">[pdf]</a> <br>
+      <a href="./slides/handson-ml-02c.slides.html">[html]</a>, 
+          <a href="./slides/handson-ml-02c-slides.pdf">[pdf]</a></td>      
   </tr>
   <tr>
     <td>주피터 노트북</td>
