@@ -28,14 +28,18 @@
 
 <table>
   <tr>
-    <th>한 눈에 보는 </th>
-    <th>Contact</th>
-    <th>Country</th>
+    <th>주제</th>
+    <th>구분</th>
+    <th>링크</th>
   </tr>
   <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
+    <td rowspan="2">한 눈에 보는 머신러닝</td>
+    <td>슬라이드</td>
+    <td>[html]</td>
+  </tr>
+  <tr>
+    <td>주피터 노트북</td>
+    <td>[colab]</td>
   </tr>
   <tr>
     <td>Centro comercial Moctezuma</td>
