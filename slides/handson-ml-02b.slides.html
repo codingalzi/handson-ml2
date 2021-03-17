@@ -13202,7 +13202,7 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="2&#51109;-&#47672;&#49888;&#47084;&#45789;-&#54532;&#47196;&#51229;&#53944;-&#52376;&#51020;&#48512;&#53552;-&#45149;&#44620;&#51648;">2&#51109; &#47672;&#49888;&#47084;&#45789; &#54532;&#47196;&#51229;&#53944; &#52376;&#51020;&#48512;&#53552; &#45149;&#44620;&#51648;<a class="anchor-link" href="#2&#51109;-&#47672;&#49888;&#47084;&#45789;-&#54532;&#47196;&#51229;&#53944;-&#52376;&#51020;&#48512;&#53552;-&#45149;&#44620;&#51648;">&#182;</a></h1>
+<h1 id="2&#51109;-&#47672;&#49888;&#47084;&#45789;-&#54532;&#47196;&#51229;&#53944;-&#52376;&#51020;&#48512;&#53552;-&#45149;&#44620;&#51648;-(2&#48512;)">2&#51109; &#47672;&#49888;&#47084;&#45789; &#54532;&#47196;&#51229;&#53944; &#52376;&#51020;&#48512;&#53552; &#45149;&#44620;&#51648; (2&#48512;)<a class="anchor-link" href="#2&#51109;-&#47672;&#49888;&#47084;&#45789;-&#54532;&#47196;&#51229;&#53944;-&#52376;&#51020;&#48512;&#53552;-&#45149;&#44620;&#51648;-(2&#48512;)">&#182;</a></h1>
 </div>
 </div>
 </div></section></section><section><section>
@@ -13224,8 +13224,25 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#45936;&#51060;&#53552;-&#51204;&#52824;&#47532;&#50752;-&#48320;&#54872;-&#54028;&#51060;&#54532;&#46972;&#51064;">&#45936;&#51060;&#53552; &#51204;&#52824;&#47532;&#50752; &#48320;&#54872; &#54028;&#51060;&#54532;&#46972;&#51064;<a class="anchor-link" href="#&#45936;&#51060;&#53552;-&#51204;&#52824;&#47532;&#50752;-&#48320;&#54872;-&#54028;&#51060;&#54532;&#46972;&#51064;">&#182;</a></h3><ul>
-<li>데이터 전처리(data preprocessing): 모델 학습을 효율적으로 진행하기 위해 주어진 데이터를 변환시키는 것</li>
+<h3 id="&#45936;&#51060;&#53552;-&#51456;&#48708;-&#51088;&#46041;&#54868;">&#45936;&#51060;&#53552; &#51456;&#48708; &#51088;&#46041;&#54868;<a class="anchor-link" href="#&#45936;&#51060;&#53552;-&#51456;&#48708;-&#51088;&#46041;&#54868;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>모든 전처리 과정의 자동화. 언제든지 재활용 가능.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>자동화는 <strong>파이프라인</strong>(pipeline)으로 구현</li>
 </ul>
 
 </div>
@@ -13235,12 +13252,59 @@ a.anchor-link {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
+<li>훈련 세트 준비: 훈련에 사용되는 특성과 타깃 특성(레이블) 구분하여 복사본 생성</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="n">housing</span> <span class="o">=</span> <span class="n">strat_train_set</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&quot;median_house_value&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">housing_labels</span> <span class="o">=</span> <span class="n">strat_train_set</span><span class="p">[</span><span class="s2">&quot;median_house_value&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>테스트 세트는 훈련이 완성된 후에 성능 측정 용도로만 사용.</li>
+</ul>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#45936;&#51060;&#53552;-&#51204;&#52376;&#47532;">&#45936;&#51060;&#53552; &#51204;&#52376;&#47532;<a class="anchor-link" href="#&#45936;&#51060;&#53552;-&#51204;&#52376;&#47532;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>데이터 전처리(data preprocessing): 효율적인 모델 훈련을 위한 데이터 변환</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
 <li>수치형 데이터와 범주형 데이터에 대해 다른 변환과정을 사용</li>
 </ul>
 
 </div>
 </div>
-</div></div><div class="fragment">
+</div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13268,21 +13332,42 @@ a.anchor-link {
 
 </div>
 </div>
-</div></div><div class="fragment">
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#48320;&#54872;-&#54028;&#51060;&#54532;&#46972;&#51064;">&#48320;&#54872; &#54028;&#51060;&#54532;&#46972;&#51064;<a class="anchor-link" href="#&#48320;&#54872;-&#54028;&#51060;&#54532;&#46972;&#51064;">&#182;</a></h3>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>자동화<ul>
-<li><strong>파이프라인</strong> 활용: 수치형 데이터 전처리 과정에 사용된 세 가지 변환 과정 자동화</li>
-<li>각각 변환된 수치형 데이터와 범주형 데이터 결합</li>
+<li><strong>파이프라인</strong>(pipeline)<ul>
+<li>여러 과정을 한 번에 수행하는 기능을 지원하는 도구</li>
+<li>여러 사이킷런 API를 묶어 순차적으로 처리하는 사이킷런 API</li>
 </ul>
 </li>
 </ul>
 
 </div>
 </div>
-</div></div></section></section><section><section>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>파이프라인 적용 과정<ul>
+<li>수치형 데이터 전처리 과정에 사용된 세 가지 변환 과정의 자동화 파이프라인 구현</li>
+<li>수치형 데이터 파이프라인과 범주형 데이터 전처리 과정을 결합한 파이프라인 구현</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13294,7 +13379,7 @@ a.anchor-link {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>변환과정 중에서 '조합 특성 추가' 과정을 제외한 나머지 과정은 사이킷런에서 제공하는 관련 API를 활용</li>
+<li>'조합 특성 추가' 과정을 제외한 나머지 변환은 사이킷런에서 제공하는 관련 API 직접 활용 가능</li>
 </ul>
 
 </div>
@@ -13304,7 +13389,7 @@ a.anchor-link {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>'조합 특성 추가' 과정도 다른 사이킷런 API와 호환이 되는 방식으로 사용자가 직접 구현하는 방법을 설명</li>
+<li>'조합 특성 추가' 과정도 다른 사이킷런 API와 호환이 되는 방식으로 사용자가 직접 구현 가능</li>
 </ul>
 
 </div>
@@ -13319,22 +13404,197 @@ a.anchor-link {
 
 </div>
 </div>
-</div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>이 성질을 이용하여 '조합 특성 추가' 과정을 지원하는 API를 구현하면 사이킷런의 다른 API와 자동으로 호환</li>
-</ul>
-
-</div>
-</div>
 </div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="&#51068;&#44288;&#49457;">&#51068;&#44288;&#49457;<a class="anchor-link" href="#&#51068;&#44288;&#49457;">&#182;</a></h4><ul>
-<li>모든 사이킷런의 API는 일관되고 단순한 인터페이스를 제공</li>
+<h3 id="&#49324;&#51060;&#53431;&#47088;-API&#51032;-&#49464;-&#44032;&#51648;-&#50976;&#54805;">&#49324;&#51060;&#53431;&#47088; API&#51032; &#49464; &#44032;&#51648; &#50976;&#54805;<a class="anchor-link" href="#&#49324;&#51060;&#53431;&#47088;-API&#51032;-&#49464;-&#44032;&#51648;-&#50976;&#54805;">&#182;</a></h3>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#52628;&#51221;&#44592;(estimator)">&#52628;&#51221;&#44592;(estimator)<a class="anchor-link" href="#&#52628;&#51221;&#44592;(estimator)">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>주어진 데이터셋과 관련된 특정 파라미터 값들을 추정하는 객체</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><code>fit()</code> 메서드 활용: 특정 파라미터 값을 저장한 속성이 업데이트된 객체 자신 반환</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#48320;&#54872;&#44592;(transformer):">&#48320;&#54872;&#44592;(transformer):<a class="anchor-link" href="#&#48320;&#54872;&#44592;(transformer):">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>fit() 메서드에 의해 학습된 파라미터를 이용하여 주어진 데이터셋 변환</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><code>transform()</code> 메서드 활용</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><code>fit()</code> 메서드와 <code>transform()</code> 메서드를 연속해서 호출하는 <code>fit_transform()</code> 메서드 활용 가능</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#50696;&#52769;&#44592;(predictor)">&#50696;&#52769;&#44592;(predictor)<a class="anchor-link" href="#&#50696;&#52769;&#44592;(predictor)">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>주어진 데이터셋과 관련된 값을 예측하는 기능을 제공하는 추정기</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><code>predict()</code> 메서드 활용</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><code>fit()</code>과 <code>predict()</code> 메서드가 포함되어 있어야 함</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><code>predict()</code> 메서드가 추정한 값의 성능을 측정하는 <code>score()</code> 메서드도 포함</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>일부 예측기는 추정치의 신뢰도를 평가하는 기능도 제공</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div align="center"><img src="images/ch02/scikit-learn-flow01.png" width="700"></div><p>&lt;그림 출처: <a href="https://medium.com/analytics-vidhya/scikit-learn-a-silver-bullet-for-basic-machine-learning-13c7d8b248ee">Scikit-Learn: A silver bullet for basic machine learning</a>&gt;</p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div align="center"><img src="images/ch02/scikit-learn-flow02.png" width="700"></div><p>&lt;그림 출처: <a href="https://scikit-learn.org/stable/tutorial/machine_learning_map/index.html">Scikit-Learn: Choosing the right estimator</a>&gt;</p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="2.5.1-&#45936;&#51060;&#53552;-&#51221;&#51228;:-&#49688;&#52824;&#54805;-&#45936;&#51060;&#53552;-&#51204;&#52824;&#47084;-&#44284;&#51221;-1">2.5.1 &#45936;&#51060;&#53552; &#51221;&#51228;: &#49688;&#52824;&#54805; &#45936;&#51060;&#53552; &#51204;&#52824;&#47084; &#44284;&#51221; 1<a class="anchor-link" href="#2.5.1-&#45936;&#51060;&#53552;-&#51221;&#51228;:-&#49688;&#52824;&#54805;-&#45936;&#51060;&#53552;-&#51204;&#52824;&#47084;-&#44284;&#51221;-1">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>누락된 특성값이 존재 경우, 해당 값 또는 특성을 먼저 처리해야 함.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><code>total_bedrooms</code> 특성에 207개 구역에 대한 값이 null로 채워져 있음, 즉, 일부 구역에 대한 정보가 누락됨.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div align="center"><img src="images/ch02/null-value01.png" width="800"></div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="null-&#44050;-&#52376;&#47532;-&#50741;&#49496;">null &#44050; &#52376;&#47532; &#50741;&#49496;<a class="anchor-link" href="#null-&#44050;-&#52376;&#47532;-&#50741;&#49496;">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>옵션 1: 해당 구역 제거</li>
 </ul>
 
 </div>
@@ -13344,7 +13604,17 @@ a.anchor-link {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>대표적인 API는 세 가지</li>
+<li>옵션 2: 전체 특성 삭제</li>
+</ul>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>옵션 3: 평균값, 중앙값, 0, 주변에 위치한 값 등 특정 값으로 채우기. 책에서는 중앙값으로 채움.</li>
 </ul>
 
 </div>
@@ -13353,16 +13623,78 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<table>
+<thead><tr>
+<th>옵션</th>
+<th style="text-align:left">코드</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>옵션 1</td>
+<td style="text-align:left"><code>housing.dropna(subset=["total_bedrooms"])</code></td>
+</tr>
+<tr>
+<td>옵션 2</td>
+<td style="text-align:left"><code>housing.drop("total_bedrooms", axis=1)</code></td>
+</tr>
+<tr>
+<td>옵션 3</td>
+<td style="text-align:left"><code>median = housing["total_bedrooms"].median()</code></td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:left"><code>housing["total_bedrooms"].fillna(median, inplace=True)</code></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>&lt;옵션 3 활용&gt;</p>
+<div align="center"><img src="images/ch02/null-value02.png" width="800"></div>
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="SimpleImputer-&#48320;&#54872;&#44592;">SimpleImputer &#48320;&#54872;&#44592;<a class="anchor-link" href="#SimpleImputer-&#48320;&#54872;&#44592;">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>추정기(estimator)<ul>
-<li>데이터셋을 기반으로 특정 모델 파라미터들을 추정하는 클래스의 객체이며, fit() 메서드가 이 기능을 수행</li>
-<li>fit()메서드의 리턴값: 생성된 모델 파라미터를 인스턴스 속성으로 갖는 self<ul>
-<li>특정 속성이 업데이트된 객체 자신이 리턴값</li>
+<li>옵션 3를 지원하는 사이킷런 변환기</li>
 </ul>
-</li>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>중앙값 등 통계 요소를 활용하여 누락 데이터를 특정 값으로 채움</li>
 </ul>
-</li>
-</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.impute</span> <span class="kn">import</span> <span class="n">SimpleImputer</span>
+<span class="n">imputer</span> <span class="o">=</span> <span class="n">SimpleImputer</span><span class="p">(</span><span class="n">strategy</span><span class="o">=</span><span class="s2">&quot;median&quot;</span><span class="p">)</span>
+<span class="n">housing_num</span> <span class="o">=</span> <span class="n">housing</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&quot;ocean_proximity&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">imputer</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">housing_num</span><span class="p">)</span>
+</pre></div>
 
 </div>
 </div>
@@ -13370,91 +13702,83 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>변환기(transformer):<ul>
-<li>데이터셋을 변환하는 추정기이며, transform()이 이 기능을 수행<ul>
-<li>변환기는 fit()과 transform() 모두 포함되어 있어야 함</li>
-</ul>
-</li>
-<li>fit() 메서드에 의해 학습된 파라미터를 이용하여 데이터셋을 변환한다.</li>
-<li>모든 변화기는 fit() 메서드와 transform() 메서드를 연속해서 호출하는 fit_transform() 메서드를 함께 제공</li>
-</ul>
-</li>
-</ul>
-
+<h3 id="2.5.2-&#53581;&#49828;&#53944;&#50752;-&#48276;&#51452;&#54805;-&#53945;&#49457;-&#45796;&#47336;&#44592;:-&#50896;-&#54635;-&#51064;&#53076;&#46377;">2.5.2 &#53581;&#49828;&#53944;&#50752; &#48276;&#51452;&#54805; &#53945;&#49457; &#45796;&#47336;&#44592;: &#50896;-&#54635; &#51064;&#53076;&#46377;<a class="anchor-link" href="#2.5.2-&#53581;&#49828;&#53944;&#50752;-&#48276;&#51452;&#54805;-&#53945;&#49457;-&#45796;&#47336;&#44592;:-&#50896;-&#54635;-&#51064;&#53076;&#46377;">&#182;</a></h3>
 </div>
 </div>
-</div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>예측기(predictor): 데이터셋의 특정 특성에 대한 예측을 하는 추정기<ul>
-<li>주어진 데이터셋과 관련된 값을 예측하는 기능을 제공하는 추정기이며, predict() 메서드가 이 기능을 수행<ul>
-<li>fit()과 predict() 메서드가 포함되어 있어야 함</li>
-</ul>
-</li>
-<li>predict() 메서드가 추정한 값의 성능을 측정하는 score() 메서드도 포함</li>
-<li>일부 예측기는 추정치의 신뢰도를 평가하는 기능도 제공</li>
-</ul>
-</li>
+<li>범주형 특성인 해안 근접도(ocean_proximity)를 수치형 데이터로 변환해야 함.</li>
 </ul>
 
 </div>
 </div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#49688;&#52824;&#54805;-&#45936;&#51060;&#53552;-&#51204;&#52824;&#47084;-&#44284;&#51221;-1:-&#45936;&#51060;&#53552;-&#51221;&#51228;">&#49688;&#52824;&#54805; &#45936;&#51060;&#53552; &#51204;&#52824;&#47084; &#44284;&#51221; 1: &#45936;&#51060;&#53552; &#51221;&#51228;<a class="anchor-link" href="#&#49688;&#52824;&#54805;-&#45936;&#51060;&#53552;-&#51204;&#52824;&#47084;-&#44284;&#51221;-1:-&#45936;&#51060;&#53552;-&#51221;&#51228;">&#182;</a></h3><ul>
-<li><p>누락된 특성값 존재 경우</p>
-<ul>
-<li>해당 값 또는 특성을 먼저 처리하고 모델 학습 진행</li>
-</ul>
-</li>
-<li><p><code>total_bedrooms</code> 특성에 207개 구역에 대한 값이 null로 채워져 있음, 즉, 일부 구역에 대한 정보가 누락됨.</p>
-</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
+</div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>null 값 처리 방법<ul>
-<li>해당 구역 제거</li>
-<li>전체 특성 삭제</li>
-<li>특정 값으로 채우기<ul>
-<li>0, 평균값, 중앙값 등</li>
-<li>책에서는 중앙값으로 채움.</li>
+<li>단순 수치화 적용 가능</li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
+<table>
+<thead><tr>
+<th>범주</th>
+<th>숫자</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lt;1H OCEAN</td>
+<td>0</td>
+</tr>
+<tr>
+<td>INLAND</td>
+<td>1</td>
+</tr>
+<tr>
+<td>ISLAND</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NEAR BAY</td>
+<td>3</td>
+</tr>
+<tr>
+<td>NEAR OCEAN</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
 
 </div>
 </div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#53581;&#49828;&#53944;&#50752;-&#48276;&#51452;&#54805;-&#53945;&#49457;-&#45796;&#47336;&#44592;:-&#50896;-&#54635;-&#51064;&#53076;&#46377;">&#53581;&#49828;&#53944;&#50752; &#48276;&#51452;&#54805; &#53945;&#49457; &#45796;&#47336;&#44592;: &#50896;-&#54635; &#51064;&#53076;&#46377;<a class="anchor-link" href="#&#53581;&#49828;&#53944;&#50752;-&#48276;&#51452;&#54805;-&#53945;&#49457;-&#45796;&#47336;&#44592;:-&#50896;-&#54635;-&#51064;&#53076;&#46377;">&#182;</a></h3><ul>
-<li>범주형 입력 특성인 해안 근접도(ocean_proximity)를 수치형 데이터로 변환</li>
-</ul>
-<div align="center"><img src="images/ch02/homl02-15.png" width="600"></div>
-</div>
-</div>
-</div></section></section><section><section>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="&#45800;&#49692;-&#49688;&#52824;&#54868;&#51032;-&#47928;&#51228;&#51216;">&#45800;&#49692; &#49688;&#52824;&#54868;&#51032; &#47928;&#51228;&#51216;<a class="anchor-link" href="#&#45800;&#49692;-&#49688;&#52824;&#54868;&#51032;-&#47928;&#51228;&#51216;">&#182;</a></h4><ul>
-<li>해안 근접도는 단순히 구분을 위해 사용</li>
-<li>해안에 근접하고 있다 해서 주택 가격이 기본적으로 더 비싼 것은 아니라는 의미</li>
+<li>해안 근접도는 단순히 구분을 위해 사용. 해안에 근접하고 있다 해서 주택 가격이 기본적으로 더 비싸지 않음.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
 <li>반면에 수치화된 값들은 크기를 비교할 수 있는 숫자</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
 <li>따라서 모델 학습 과정에서 숫자들의 크기 때문에 잘못된 학습이 이루어질 수 있음.</li>
 </ul>
 
@@ -13464,12 +13788,28 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="&#50896;-&#54635;-&#51064;&#53076;&#46377;(one-hot-encoding)">&#50896;-&#54635; &#51064;&#53076;&#46377;(one-hot encoding)<a class="anchor-link" href="#&#50896;-&#54635;-&#51064;&#53076;&#46377;(one-hot-encoding)">&#182;</a></h4><ul>
-<li>수치화된 범주들 사이의 크기 비교를 피하기 위해 더미(dummy) 특성을 추가하여 활용</li>
-<li><p>생성되는 더미 특성은 사용된 범주를 사용</p>
-</li>
-<li><p>예를 들어, 해안 근접도 특성 대신에 다섯 개의 범주 전부를 새로운 특성으로 추가 -&gt; 각각의 특성값을 아래와 같이 정함</p>
+<h4 id="&#50896;-&#54635;-&#51064;&#53076;&#46377;(one-hot-encoding)">&#50896;-&#54635; &#51064;&#53076;&#46377;(one-hot encoding)<a class="anchor-link" href="#&#50896;-&#54635;-&#51064;&#53076;&#46377;(one-hot-encoding)">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <ul>
+<li>수치화된 범주들 사이의 크기 비교를 피하기 위해 더미(dummy) 특성을 추가하여 활용<ul>
+<li>범주 수 만큼의 더미 특성 추가</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>예를 들어, 해안 근접도 특성 대신에 다섯 개의 범주 전부를 새로운 특성으로 추가한 후 각각의 특성값을 아래처럼 지정<ul>
 <li>해당 카테고리의 특성값: 1</li>
 <li>나머지 카테고리의 특성값: 0</li>
 </ul>
@@ -13482,6 +13822,38 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="OneHotEncoder--&#48320;&#54872;&#44592;">OneHotEncoder  &#48320;&#54872;&#44592;<a class="anchor-link" href="#OneHotEncoder--&#48320;&#54872;&#44592;">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>원-핫 인코딩 지원</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><code>sparse</code> 키워드 인자<ul>
+<li>기본값은 <code>True</code>. </li>
+<li>1의 위치만 기억하는 희소 행렬로 처리. 대용량 행렬 처리에 효과적임.</li>
+<li><code>False</code>로 지정할 경우 일반 행렬로 처리.</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <div align="center"><img src="images/ch02/homl02-16.png" width="600"></div>
 </div>
 </div>
@@ -13489,18 +13861,32 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#49688;&#52824;&#54805;-&#45936;&#51060;&#53552;-&#51204;&#52376;&#47532;-&#44284;&#51221;-2:-&#51312;&#54633;-&#53945;&#49457;-&#52628;&#44032;">&#49688;&#52824;&#54805; &#45936;&#51060;&#53552; &#51204;&#52376;&#47532; &#44284;&#51221; 2: &#51312;&#54633; &#53945;&#49457; &#52628;&#44032;<a class="anchor-link" href="#&#49688;&#52824;&#54805;-&#45936;&#51060;&#53552;-&#51204;&#52376;&#47532;-&#44284;&#51221;-2:-&#51312;&#54633;-&#53945;&#49457;-&#52628;&#44032;">&#182;</a></h3><ul>
-<li>특성 추가를 위해 변환기 클래스를 <strong>직접 정의</strong></li>
-<li><p>앞서 살펴본 다음 세 가지 특성을 자동으로 추가하는 변환기 클래스를 정의</p>
+<h3 id="2.5.3-&#45208;&#47564;&#51032;-&#48320;&#54872;&#44592;:-&#49688;&#52824;&#54805;-&#45936;&#51060;&#53552;-&#51204;&#52376;&#47532;-&#44284;&#51221;-2-(&#51312;&#54633;-&#53945;&#49457;-&#52628;&#44032;)">2.5.3 &#45208;&#47564;&#51032; &#48320;&#54872;&#44592;: &#49688;&#52824;&#54805; &#45936;&#51060;&#53552; &#51204;&#52376;&#47532; &#44284;&#51221; 2 (&#51312;&#54633; &#53945;&#49457; &#52628;&#44032;)<a class="anchor-link" href="#2.5.3-&#45208;&#47564;&#51032;-&#48320;&#54872;&#44592;:-&#49688;&#52824;&#54805;-&#45936;&#51060;&#53552;-&#51204;&#52376;&#47532;-&#44284;&#51221;-2-(&#51312;&#54633;-&#53945;&#49457;-&#52628;&#44032;)">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <ul>
+<li>아래 특성 추가 용도 변환기 클래스 직접 선언하기<ul>
 <li>가구당 방 개수(rooms for household)</li>
 <li>방 하나당 침실 개수(bedrooms for room)</li>
 <li>가구당 인원(population per household)</li>
 </ul>
 </li>
-<li><p>변환기 클래스를 선언하기 위해서는 fit() 메서드와 transform() 메서드만 정의하면 됨</p>
-</li>
-<li><p>주의: fit() 메서드의 리턴값은 self</p>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>변환기 클래스: <code>fit()</code>, <code>transform()</code> 메서드를 구현하면 됨.<ul>
+<li>주의: fit() 메서드의 리턴값은 self</li>
+</ul>
 </li>
 </ul>
 
@@ -13510,18 +13896,19 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="CombinedAttributesAdder-&#48320;&#54872;&#44592;-&#53364;&#47000;&#49828;-&#49440;&#50616;">CombinedAttributesAdder &#48320;&#54872;&#44592; &#53364;&#47000;&#49828; &#49440;&#50616;<a class="anchor-link" href="#CombinedAttributesAdder-&#48320;&#54872;&#44592;-&#53364;&#47000;&#49828;-&#49440;&#50616;">&#182;</a></h4><ul>
-<li><strong>init</strong>() 메서드: 방 하나당 침실 개수 속성을 추가할지 여부를 확인</li>
-<li>fit() 메서드: 계산해야 하는 파라미터가 없음<ul>
-<li>아무 일도 할 필요 없이 바로 self를 리턴</li>
+<h4 id="&#50696;&#51228;:-CombinedAttributesAdder-&#48320;&#54872;&#44592;-&#53364;&#47000;&#49828;-&#49440;&#50616;">&#50696;&#51228;: CombinedAttributesAdder &#48320;&#54872;&#44592; &#53364;&#47000;&#49828; &#49440;&#50616;<a class="anchor-link" href="#&#50696;&#51228;:-CombinedAttributesAdder-&#48320;&#54872;&#44592;-&#53364;&#47000;&#49828;-&#49440;&#50616;">&#182;</a></h4><ul>
+<li><code>__init__()</code> 메서드: 생성되는 모델의 <strong>하이퍼파라미터</strong> 지정 용도 <ul>
+<li>모델에 대한 적절한 하이퍼파라미터를 튜닝할 때 유용하게 활용됨.</li>
+<li>예제: 방 하나당 침실 개수 속성 추가 여부</li>
 </ul>
 </li>
-<li>transform() 메서드: 넘파이 어레이를 입력받아 속성을 추가한 어레이를 반환</li>
+<li><code>fit()</code> 메서드: 계산해야 하는 파라미터가 없음. 바로 <code>self</code> 리턴</li>
+<li><code>transform()</code> 메서드: 넘파이 어레이를 입력받아 속성을 추가한 어레이를 반환</li>
 </ul>
 
 </div>
 </div>
-</div><div class="fragment">
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13538,13 +13925,79 @@ a.anchor-link {
 
 </div>
 </div>
-</div></div></section></section><section><section>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#49688;&#52824;&#54805;-&#45936;&#51060;&#53552;-&#51204;&#52376;&#47532;-&#44284;&#51221;-3:-&#53945;&#49457;-&#49828;&#52992;&#51068;&#47553;">&#49688;&#52824;&#54805; &#45936;&#51060;&#53552; &#51204;&#52376;&#47532; &#44284;&#51221; 3: &#53945;&#49457; &#49828;&#52992;&#51068;&#47553;<a class="anchor-link" href="#&#49688;&#52824;&#54805;-&#45936;&#51060;&#53552;-&#51204;&#52376;&#47532;-&#44284;&#51221;-3:-&#53945;&#49457;-&#49828;&#52992;&#51068;&#47553;">&#182;</a></h3><ul>
+<h4 id="&#49345;&#49549;&#54616;&#47732;-&#51339;&#51008;-&#53364;&#47000;&#49828;">&#49345;&#49549;&#54616;&#47732; &#51339;&#51008; &#53364;&#47000;&#49828;<a class="anchor-link" href="#&#49345;&#49549;&#54616;&#47732;-&#51339;&#51008;-&#53364;&#47000;&#49828;">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><code>BaseEstimator</code> 상속: 하이퍼파라미터 튜닝 자동화에 필요한 <code>get_params()</code>, <code>set_params()</code> 메서드 제공 </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><code>TransformerMixin</code> 상속: <code>fit_transform()</code> 자동 생성</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="2.5.4-&#53945;&#49457;-&#49828;&#52992;&#51068;&#47553;:-&#49688;&#52824;&#54805;-&#45936;&#51060;&#53552;-&#51204;&#52376;&#47532;-&#44284;&#51221;-3">2.5.4 &#53945;&#49457; &#49828;&#52992;&#51068;&#47553;: &#49688;&#52824;&#54805; &#45936;&#51060;&#53552; &#51204;&#52376;&#47532; &#44284;&#51221; 3<a class="anchor-link" href="#2.5.4-&#53945;&#49457;-&#49828;&#52992;&#51068;&#47553;:-&#49688;&#52824;&#54805;-&#45936;&#51060;&#53552;-&#51204;&#52376;&#47532;-&#44284;&#51221;-3">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
 <li>머신러닝 알고리즘은 입력 데이터셋의 특성값들의 스케일(범위)이 다르면 제대로 작동하지 않음</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
 <li>특성에 따라 다루는 숫자의 크기가 다를 때 통일된 스케일링이 필요</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>아래 두 가지 방식이 일반적으로 사용됨.<ul>
+<li>min-max 스케일링</li>
+<li>표준화 (책에서 사용)</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
 <li><strong>주의</strong>: 타깃(레이블)에 대한 스케일링은 하지 않음</li>
 </ul>
 
@@ -13554,13 +14007,44 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="min-max-&#49828;&#52992;&#51068;&#47553;"><strong>min-max &#49828;&#52992;&#51068;&#47553;</strong><a class="anchor-link" href="#min-max-&#49828;&#52992;&#51068;&#47553;">&#182;</a></h4><ul>
-<li><p><strong>정규화</strong>(normalization)라고도 불림</p>
-</li>
-<li><p>특성값 $x$를 <strong>$\frac{x-min}{max-min}$</strong>로 변환</p>
-</li>
-<li><p>변환 결과: <strong>0에서 1</strong> 사이</p>
-</li>
+<h4 id="min-max-&#49828;&#52992;&#51068;&#47553;">min-max &#49828;&#52992;&#51068;&#47553;<a class="anchor-link" href="#min-max-&#49828;&#52992;&#51068;&#47553;">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><strong>정규화</strong>(normalization)라고도 불림</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>특성값 $x$를 <strong>$\frac{x-min}{max-min}$</strong>로 변환</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>변환 결과: <strong>0에서 1</strong> 사이</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
 <li>이상치에 매우 민감<ul>
 <li>이상치가 매우 <strong>크면 분모가 매우 커져서</strong> 변환된 값이 <strong>0 근처</strong>에 몰림</li>
 </ul>
@@ -13573,15 +14057,29 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="&#54364;&#51456;&#54868;(standardization)"><strong>&#54364;&#51456;&#54868;(standardization)</strong><a class="anchor-link" href="#&#54364;&#51456;&#54868;(standardization)">&#182;</a></h4><ul>
-<li><p>특성값 $x$ 를 <strong>$\frac{x-\mu}{\sigma}$</strong>로 변환</p>
+<h4 id="&#54364;&#51456;&#54868;(standardization)">&#54364;&#51456;&#54868;(standardization)<a class="anchor-link" href="#&#54364;&#51456;&#54868;(standardization)">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <ul>
+<li>특성값 $x$ 를 <strong>$\frac{x-\mu}{\sigma}$</strong>로 변환<ul>
 <li>$\mu$: 특성값들의 <strong>평균</strong>값</li>
 <li>$\sigma$: 특성값들의 <strong>표준편차</strong></li>
 </ul>
 </li>
-<li><p>결과: 변환된 데이터들이 <strong>표준정규분포</strong>를 이룸</p>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <ul>
+<li>결과: 변환된 데이터들이 <strong>표준정규분포</strong>를 이룸<ul>
 <li>이상치에 상대적으로 영향을 덜 받음.</li>
 </ul>
 </li>
@@ -13589,15 +14087,40 @@ a.anchor-link {
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>사이킷런의 <code>StandardScaler</code> 변환기 활용 가능 (책에서 사용)</li>
+</ul>
+
+</div>
+</div>
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="&#51452;&#51032;&#49324;&#54637;">&#51452;&#51032;&#49324;&#54637;<a class="anchor-link" href="#&#51452;&#51032;&#49324;&#54637;">&#182;</a></h4><ul>
-<li>모든 변환기의 fit() 메서드는 훈련 데이터에 대해서만 적용</li>
-<li>transform() 메서드는 모든 데이터에 대해 적용 <ul>
+<h4 id="&#48320;&#54872;&#44592;-&#44288;&#47144;-&#51452;&#51032;&#49324;&#54637;">&#48320;&#54872;&#44592; &#44288;&#47144; &#51452;&#51032;&#49324;&#54637;<a class="anchor-link" href="#&#48320;&#54872;&#44592;-&#44288;&#47144;-&#51452;&#51032;&#49324;&#54637;">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><code>fit()</code> 메서드: 훈련 세트에 대해서만 적용. 테스트 세트는 활용하지 않음.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><code>transform()</code> 메서드: 테스트 세트 포함 모든 데이터에 적용 <ul>
 <li>훈련 세트를 이용하여 필요한 파라미터를 확인한 후 그 값들을 이용하여 전체 데이터셋트를 변환</li>
-<li>예를 들어, 따로 떼어놓은 테스트 데이터들은 훈련 데이터를 이용하여 확인된 값들을 이용하여 특성 스케일링을 진행</li>
 </ul>
 </li>
 </ul>
@@ -13608,12 +14131,25 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#48320;&#54872;-&#54028;&#51060;&#54532;&#46972;&#51064;">&#48320;&#54872; &#54028;&#51060;&#54532;&#46972;&#51064;<a class="anchor-link" href="#&#48320;&#54872;-&#54028;&#51060;&#54532;&#46972;&#51064;">&#182;</a></h3><ul>
-<li>모든 전처리 단계를 정확한 순서대로 연속적으로 진행되어야 함</li>
-<li><p>사이킷런의 Pipeline 클래스가 이 기능을 지원</p>
-</li>
-<li><p>수치형 데이터 전처리 과정을 파이프라인으로 묶은 방법</p>
-</li>
+<h3 id="2.5.5-&#48320;&#54872;-&#54028;&#51060;&#54532;&#46972;&#51064;">2.5.5 &#48320;&#54872; &#54028;&#51060;&#54532;&#46972;&#51064;<a class="anchor-link" href="#2.5.5-&#48320;&#54872;-&#54028;&#51060;&#54532;&#46972;&#51064;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>모든 전처리 단계가 정확한 순서대로 진행되어야 함</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>사이킷런의 <code>Pipeline</code> 클래스를 이용하여 파이프라인 변환기 객체 생성 가능</li>
 </ul>
 
 </div>
@@ -13622,7 +14158,14 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="pipeline-&#53364;&#47000;&#49828;-&#54876;&#50857;"><code>pipeline</code> &#53364;&#47000;&#49828; &#54876;&#50857;<a class="anchor-link" href="#pipeline-&#53364;&#47000;&#49828;-&#54876;&#50857;">&#182;</a></h4><div class="highlight"><pre><span></span><span class="n">num_pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
+<h4 id="&#49688;&#52824;&#54805;-&#45936;&#51060;&#53552;-&#48320;&#54872;-&#54028;&#51060;&#54532;&#46972;&#51064;">&#49688;&#52824;&#54805; &#45936;&#51060;&#53552; &#48320;&#54872; &#54028;&#51060;&#54532;&#46972;&#51064;<a class="anchor-link" href="#&#49688;&#52824;&#54805;-&#45936;&#51060;&#53552;-&#48320;&#54872;-&#54028;&#51060;&#54532;&#46972;&#51064;">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="n">num_pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
         <span class="p">(</span><span class="s1">&#39;imputer&#39;</span><span class="p">,</span> <span class="n">SimpleImputer</span><span class="p">(</span><span class="n">strategy</span><span class="o">=</span><span class="s2">&quot;median&quot;</span><span class="p">)),</span>
         <span class="p">(</span><span class="s1">&#39;attribs_adder&#39;</span><span class="p">,</span> <span class="n">CombinedAttributesAdder</span><span class="p">()),</span>
         <span class="p">(</span><span class="s1">&#39;std_scaler&#39;</span><span class="p">,</span> <span class="n">StandardScaler</span><span class="p">()),</span>
@@ -13636,10 +14179,19 @@ a.anchor-link {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Pipeline의 인스턴스 생성에 필요한 인자는 추정기의 이름과 추정기의 쌍으로 이루어진 튜플들의 리스트</li>
-<li><p>마지막 추정기를 제외하면 모두 변환기 즉, fit_transform() 메서드를 포함하고 있어야 함</p>
-</li>
-<li><p>생성된 파이프라인 객체의 fit() 메서드를 호출하면, 마지막 단계 이전까지는 해당 변환기의 fit_transform() 메소드가 연속해서 호출되며, 최종적으로 마지막 추정기의 fit() 메서드가 호출</p>
+<li>인자: 이름과 추정기로 이루어진 쌍들의 리스트</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>마지막 추정기 제외 나머지 추정기는 모두 변환기이어야 함.<ul>
+<li><code>fit_transform()</code> 메서드 지원</li>
+</ul>
 </li>
 </ul>
 
@@ -13649,11 +14201,24 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="ColumnTransformer-&#53364;&#47000;&#49828;">ColumnTransformer &#53364;&#47000;&#49828;<a class="anchor-link" href="#ColumnTransformer-&#53364;&#47000;&#49828;">&#182;</a></h4><ul>
-<li><p>사이킷런의 <code>ColumnTransformer</code> 클래스를 이용하여 특성별로 지정된 전처리를 처리할 수 있도록 지정 가능</p>
 <ul>
-<li>수치형 특성: <code>num_pipeline</code> 변환기</li>
-<li>범주형 특성: <code>OneHotEncoder</code> 변환기</li>
+<li>파이프라인으로 정의된 추정기의 유형은 마지막 추정기의 유형과 동일<ul>
+<li><code>num_pipeline</code>는 변환기. 이유는 <code>std_scaler</code>가 변환기이기 때문임.</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><code>num_pipeline.fit()</code> 호출: <ul>
+<li>마지막 단계 이전 추정기: <code>fit_transform()</code> 메소드 연속 호출.
+  즉, 변환기가 실행될 때마다 변환도 동시에 진행.</li>
+<li>마지막 추정기: <code>fit()</code> 메서드 호출</li>
 </ul>
 </li>
 </ul>
@@ -13664,7 +14229,73 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div class="highlight"><pre><span></span><span class="n">full_pipeline</span> <span class="o">=</span> <span class="n">ColumnTransformer</span><span class="p">([</span>
+<h4 id="&#49688;&#52824;&#54805;-/-&#48276;&#51452;&#54805;-&#45936;&#51060;&#53552;-&#51204;&#52376;&#47532;-&#44284;&#51221;-&#53685;&#54633;-&#54028;&#51060;&#54532;&#46972;&#51064;">&#49688;&#52824;&#54805; / &#48276;&#51452;&#54805; &#45936;&#51060;&#53552; &#51204;&#52376;&#47532; &#44284;&#51221; &#53685;&#54633; &#54028;&#51060;&#54532;&#46972;&#51064;<a class="anchor-link" href="#&#49688;&#52824;&#54805;-/-&#48276;&#51452;&#54805;-&#45936;&#51060;&#53552;-&#51204;&#52376;&#47532;-&#44284;&#51221;-&#53685;&#54633;-&#54028;&#51060;&#54532;&#46972;&#51064;">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>사이킷런의 <code>ColumnTransformer</code> 클래스를 이용하여 특성별로 지정된 전처리를 처리할 수 있도록 지정 가능</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>인자: (이름, 추정기, 적용 대상 열(column) 리스트) 튜플로 이루어진 리스트</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><code>fit()</code> 메서드에 pandas의 데이터프레임을 직접 인자로 사용 가능</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>수치형 특성: <code>num_pipeline</code> 변환기<ul>
+<li>적용 대상 열(columns): <code>list(housing_num)</code></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>범주형 특성: <code>OneHotEncoder</code> 변환기<ul>
+<li>적용 대상 열(columns): <code>["ocean_proximity"]</code></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="n">num_attribs</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">housing_num</span><span class="p">)</span>
+<span class="n">cat_attribs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;ocean_proximity&quot;</span><span class="p">]</span>
+
+<span class="n">full_pipeline</span> <span class="o">=</span> <span class="n">ColumnTransformer</span><span class="p">([</span>
         <span class="p">(</span><span class="s2">&quot;num&quot;</span><span class="p">,</span> <span class="n">num_pipeline</span><span class="p">,</span> <span class="n">num_attribs</span><span class="p">),</span>
         <span class="p">(</span><span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="n">OneHotEncoder</span><span class="p">(),</span> <span class="n">cat_attribs</span><span class="p">),</span>
     <span class="p">])</span>
@@ -13674,7 +14305,7 @@ a.anchor-link {
 
 </div>
 </div>
-</div></section></section><section><section>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13686,38 +14317,13 @@ a.anchor-link {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li><p>전처리 후 두 요소를 결정해야함</p>
-<ul>
+<li>목표 달성에 필요한 두 요소를 결정해야함<ul>
 <li>학습 모델</li>
 <li>회귀 모델 성능 측정 지표</li>
 </ul>
 </li>
-<li><p>목표: 구역별 중간 주택 가격 예측 모델</p>
-</li>
-<li>학습 모델: 회귀 모델</li>
-<li>회귀 모델 성능 측정 지표: 평균 제곱근 오차(RMSE)</li>
 </ul>
 
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#54924;&#44480;-&#47784;&#45944;-&#49457;&#45733;-&#52769;&#51221;-&#51648;&#54364;">&#54924;&#44480; &#47784;&#45944; &#49457;&#45733; &#52769;&#51221; &#51648;&#54364;<a class="anchor-link" href="#&#54924;&#44480;-&#47784;&#45944;-&#49457;&#45733;-&#52769;&#51221;-&#51648;&#54364;">&#182;</a></h3><h4 id="&#54217;&#44512;-&#51228;&#44273;&#44540;-&#50724;&#52264;(root-mean-square-error,-RMSE):">&#54217;&#44512; &#51228;&#44273;&#44540; &#50724;&#52264;(root mean square error, RMSE):<a class="anchor-link" href="#&#54217;&#44512;-&#51228;&#44273;&#44540;-&#50724;&#52264;(root-mean-square-error,-RMSE):">&#182;</a></h4>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>RMSE는 유클리디안 노름 또는 $\ell_2$ 노름으로도 불림</li>
-</ul>
-$$
-\text{RMSE}(\mathbf X, h) 
-= \sqrt{\frac 1 m \sum_{i=0}^{m-1} (h(\mathbf x^{(i)}) - y^{(i)})^2}
-$$
 </div>
 </div>
 </div><div class="fragment">
@@ -13725,12 +14331,73 @@ $$
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>$\mathbf X$: (평가대상) 데이터셋 전체 샘플들의 특성값들로 구성된 행렬, 레이블(타겟) 제외<ul>
-<li>$m$: 데이터셋 $\mathbf X$의 크기</li>
-<li>$\mathbf x^{(i)}$: $i$ 번째 샘플의 전체 특성값 벡터. 레이블(타겟) 제외</li>
-<li>$y^{(i)}$: $i$ 번째 샘플의 레이블</li>
-<li>$h$: 예측 함수</li>
-<li>$\hat y^{(i)} = h(\mathbf x^{(i)})$: $i$번째 샘플에 대한 예측 값</li>
+<li>목표: 구역별 중간 주택 가격 예측 모델</li>
+</ul>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>학습 모델: 회귀 모델</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>회귀 모델 성능 측정 지표: 평균 제곱근 오차(RMSE)</li>
+</ul>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="2.6.1-&#54984;&#47144;-&#49464;&#53944;&#50640;&#49436;-&#54984;&#47144;&#54616;&#44256;-&#54217;&#44032;&#54616;&#44592;">2.6.1 &#54984;&#47144; &#49464;&#53944;&#50640;&#49436; &#54984;&#47144;&#54616;&#44256; &#54217;&#44032;&#54616;&#44592;<a class="anchor-link" href="#2.6.1-&#54984;&#47144;-&#49464;&#53944;&#50640;&#49436;-&#54984;&#47144;&#54616;&#44256;-&#54217;&#44032;&#54616;&#44592;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>지금까지 한 일<ul>
+<li>훈련 세트 / 테스트 세트 구분</li>
+<li>변환 파이프라인을 활용한 데이터 전처리</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>이제 할 일<ul>
+<li>예측기 모델 선택 후 훈련시키기</li>
+<li>예제: 선형 회귀, 결정트리 회귀</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>예측기 모델 선택 후 훈련과정은 매우 단순함.<ul>
+<li><code>fit()</code> 메서드를 전처리 처리가 된 훈련 데이터셋에 적용</li>
 </ul>
 </li>
 </ul>
@@ -13741,92 +14408,68 @@ $$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li><strong>주의</strong><ul>
-<li>인덱스 $i$가 책에서와는 달리 0부터 시작함.</li>
-<li>이유는 파이썬 넘파이 어레이, 데이터프레임에 사용되는 인덱스 개념과 통일시키기 위해서임.</li>
-</ul>
-</li>
-</ul>
-
+<h4 id="&#49440;&#54805;-&#54924;&#44480;-&#47784;&#45944;(4&#51109;)">&#49440;&#54805; &#54924;&#44480; &#47784;&#45944;(4&#51109;)<a class="anchor-link" href="#&#49440;&#54805;-&#54924;&#44480;-&#47784;&#45944;(4&#51109;)">&#182;</a></h4>
 </div>
 </div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="&#54217;&#44512;-&#51208;&#45824;-&#50724;&#52264;(mean-absolute-error,-MAE):">&#54217;&#44512; &#51208;&#45824; &#50724;&#52264;(mean absolute error, MAE):<a class="anchor-link" href="#&#54217;&#44512;-&#51208;&#45824;-&#50724;&#52264;(mean-absolute-error,-MAE):">&#182;</a></h4><ul>
-<li><p>MAE는 맨해튼 노름 또는 $\ell_1$ 노름으로도 불림</p>
-</li>
-<li><p>이상치가 많은 경우 활용</p>
-</li>
-</ul>
-$$
-\text{MAE}(\mathbf X, h) 
-= \frac 1 m \sum_{i=0}^{m-1} \mid h(\mathbf x^{(i)}) - y^{(i)} \mid
-$$
 </div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#54984;&#47144;-&#49464;&#53944;&#50640;&#49436;-&#54984;&#47144;&#54616;&#44256;-&#54217;&#44032;&#54616;&#44592;">&#54984;&#47144; &#49464;&#53944;&#50640;&#49436; &#54984;&#47144;&#54616;&#44256; &#54217;&#44032;&#54616;&#44592;<a class="anchor-link" href="#&#54984;&#47144;-&#49464;&#53944;&#50640;&#49436;-&#54984;&#47144;&#54616;&#44256;-&#54217;&#44032;&#54616;&#44592;">&#182;</a></h3>
-</div>
-</div>
-</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>지금까지 한 일<ul>
-<li>훈련 세트와 테스트 세트로 분류</li>
-<li>머신러닝 알고리즘에 주입할 데이터를 자동으로 정제하고 준비하기 위해 변환 파이프라인 작성</li>
-</ul>
-</li>
-<li>이제 할 일<ul>
-<li>모델 선택 후 훈련시키기</li>
-<li>예제: 선형 회귀, 결정트리 회귀</li>
-</ul>
-</li>
+<li>선형 회귀 모델 생성: 사이킷런의 <strong><code>LinearRegression</code></strong> 클래스 활용</li>
 </ul>
 
 </div>
 </div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="&#49440;&#54805;-&#54924;&#44480;-&#47784;&#45944;(4&#51109;)">&#49440;&#54805; &#54924;&#44480; &#47784;&#45944;(4&#51109;)<a class="anchor-link" href="#&#49440;&#54805;-&#54924;&#44480;-&#47784;&#45944;(4&#51109;)">&#182;</a></h4><ul>
-<li>사이킷런의 선형 회귀 모델은 <strong><code>LinearRegression</code></strong> 예측기 클래스가 제공</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
+</div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>훈련:</li>
+<li>훈련 및 예측<ul>
+<li>예측은 훈련 세트에 포함된 몇 개 데이터를 대상으로 예측 실행</li>
+</ul>
+</li>
 </ul>
 <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
 
 <span class="n">lin_reg</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
 <span class="n">lin_reg</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">housing_prepared</span><span class="p">,</span> <span class="n">housing_labels</span><span class="p">)</span>
+
+<span class="n">lin_reg</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">housing_prepared</span><span class="p">)</span>
 </pre></div>
 
 </div>
 </div>
-</div></section></section><section><section>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#49440;&#54805;-&#54924;&#44480;-&#47784;&#45944;&#51032;-&#54984;&#47144;-&#49464;&#53944;-&#45824;&#49345;-&#50696;&#52769;-&#49457;&#45733;">&#49440;&#54805; &#54924;&#44480; &#47784;&#45944;&#51032; &#54984;&#47144; &#49464;&#53944; &#45824;&#49345; &#50696;&#52769; &#49457;&#45733;<a class="anchor-link" href="#&#49440;&#54805;-&#54924;&#44480;-&#47784;&#45944;&#51032;-&#54984;&#47144;-&#49464;&#53944;-&#45824;&#49345;-&#50696;&#52769;-&#49457;&#45733;">&#182;</a></h4>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>예측</li>
+<li>RMSE(평균 제곱근 오차)가 68628.198 정도로 별로 좋지 않음.</li>
 </ul>
-<div class="highlight"><pre><span></span><span class="n">lin_reg</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">housing_prepared</span><span class="p">))</span>
-</pre></div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>훈련된 모델이 훈련 세트에 <strong>과소적합</strong> 됨.<ul>
+<li>보다 좋은 특성을 찾거나 더 강력한 모델을 적용해야 함.</li>
+<li>보다 좋은 특성 예제: 로그 함수를 적용한 인구수 등</li>
+<li>모델에 사용되는 규제(regulaization, 4장)를 완화할 수도 있지만 위 모델에선 어떤 규제도 적용하지 않았음.</li>
+</ul>
+</li>
+</ul>
 
 </div>
 </div>
@@ -13834,37 +14477,77 @@ $$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="&#44208;&#51221;&#53944;&#47532;-&#54924;&#44480;-&#47784;&#45944;(6&#51109;)">&#44208;&#51221;&#53944;&#47532; &#54924;&#44480; &#47784;&#45944;(6&#51109;)<a class="anchor-link" href="#&#44208;&#51221;&#53944;&#47532;-&#54924;&#44480;-&#47784;&#45944;(6&#51109;)">&#182;</a></h4><ul>
+<h4 id="&#44208;&#51221;&#53944;&#47532;-&#54924;&#44480;-&#47784;&#45944;(6&#51109;)">&#44208;&#51221;&#53944;&#47532; &#54924;&#44480; &#47784;&#45944;(6&#51109;)<a class="anchor-link" href="#&#44208;&#51221;&#53944;&#47532;-&#54924;&#44480;-&#47784;&#45944;(6&#51109;)">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
 <li>결정 트리 모델은 데이터에서 복잡한 비선형 관계를 학습할 때 사용</li>
-<li>사이킷런의 <strong><code>DecisionTreeRegressor</code></strong> 예측기가 결정 트리 회귀 모델을 생성</li>
 </ul>
 
 </div>
 </div>
-</div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>훈련:</li>
+<li>결정트리 회귀 모델 생성: 사이킷런의 <strong><code>DecisionTreeRegressor</code></strong> 클래스 활용</li>
+</ul>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>훈련 및 예측<ul>
+<li>예측은 훈련 세트에 포함된 몇 개 데이터를 대상으로 예측 실행</li>
+</ul>
+</li>
 </ul>
 <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">DecisionTreeRegressor</span>
 
 <span class="n">tree_reg</span> <span class="o">=</span> <span class="n">DecisionTreeRegressor</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
 <span class="n">tree_reg</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">housing_prepared</span><span class="p">,</span> <span class="n">housing_labels</span><span class="p">)</span>
+
+<span class="n">housing_predictions</span> <span class="o">=</span> <span class="n">tree_reg</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">housing_prepared</span><span class="p">)</span>
 </pre></div>
 
 </div>
 </div>
-</div></section></section><section><section>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#44208;&#51221;&#53944;&#47532;-&#54924;&#44480;-&#47784;&#45944;&#51032;-&#54984;&#47144;-&#49464;&#53944;-&#45824;&#49345;-&#50696;&#52769;-&#49457;&#45733;">&#44208;&#51221;&#53944;&#47532; &#54924;&#44480; &#47784;&#45944;&#51032; &#54984;&#47144; &#49464;&#53944; &#45824;&#49345; &#50696;&#52769; &#49457;&#45733;<a class="anchor-link" href="#&#44208;&#51221;&#53944;&#47532;-&#54924;&#44480;-&#47784;&#45944;&#51032;-&#54984;&#47144;-&#49464;&#53944;-&#45824;&#49345;-&#50696;&#52769;-&#49457;&#45733;">&#182;</a></h4>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>예측:</li>
+<li>RMSE(평균 제곱근 오차)가 0으로 완벽해 보임.</li>
 </ul>
-<div class="highlight"><pre><span></span><span class="n">housing_predictions</span> <span class="o">=</span> <span class="n">tree_reg</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">housing_prepared</span><span class="p">)</span>
-</pre></div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>훈련된 모델이 훈련 세트에 심각하게 <strong>과대적합</strong> 됨.<ul>
+<li>실전 상황에서 RMSE가 0이 되는 것은 불가능.</li>
+<li>훈련 세트가 아닌 테스트 세트에 적용할 경우 RMSE가 크게 나올 것임.</li>
+</ul>
+</li>
+</ul>
 
 </div>
 </div>
@@ -13872,7 +14555,27 @@ $$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#44368;&#52264;-&#44160;&#51613;&#51012;-&#49324;&#50857;&#54620;-&#54217;&#44032;">&#44368;&#52264; &#44160;&#51613;&#51012; &#49324;&#50857;&#54620; &#54217;&#44032;<a class="anchor-link" href="#&#44368;&#52264;-&#44160;&#51613;&#51012;-&#49324;&#50857;&#54620;-&#54217;&#44032;">&#182;</a></h3>
+<h3 id="2.6.2-&#44368;&#52264;-&#44160;&#51613;&#51012;-&#49324;&#50857;&#54620;-&#54217;&#44032;">2.6.2 &#44368;&#52264; &#44160;&#51613;&#51012; &#49324;&#50857;&#54620; &#54217;&#44032;<a class="anchor-link" href="#2.6.2-&#44368;&#52264;-&#44160;&#51613;&#51012;-&#49324;&#50857;&#54620;-&#54217;&#44032;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>테스트 세트를 사용하지 않으면서 훈련 과정을 평가할 수 있음.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><strong>교차 검증</strong> 활용</li>
+</ul>
+
 </div>
 </div>
 </div></section></section><section><section>
@@ -13882,17 +14585,36 @@ $$
 <h4 id="k-&#44217;-&#44368;&#52264;-&#44160;&#51613;">k-&#44217; &#44368;&#52264; &#44160;&#51613;<a class="anchor-link" href="#k-&#44217;-&#44368;&#52264;-&#44160;&#51613;">&#182;</a></h4>
 </div>
 </div>
-</div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li>훈련 세트를 <strong>폴드</strong>(fold)라 불리는 k-개의 부분 집합으로 무작위로 분할</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
 <li>총 k 번 지정된 모델을 훈련<ul>
-<li>훈련할 때마다 매번 다른 하나의 폴드를 평가에 사용</li>
+<li>훈련할 때마다 매번 다른 하나의 폴드 선택</li>
 <li>다른 (k-1) 개의 폴드를 이용해 훈련</li>
+<li>평가는 선택된 폴드 활용</li>
 </ul>
 </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
 <li>최종적으로 k 번의 평가 결과가 담긴 배열 생성</li>
 </ul>
 
@@ -13902,69 +14624,105 @@ $$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="&#50696;&#51228;:-&#44208;&#51221;-&#53944;&#47532;-&#47784;&#45944;-&#44368;&#52264;-&#44160;&#51613;">&#50696;&#51228;: &#44208;&#51221; &#53944;&#47532; &#47784;&#45944; &#44368;&#52264; &#44160;&#51613;<a class="anchor-link" href="#&#50696;&#51228;:-&#44208;&#51221;-&#53944;&#47532;-&#47784;&#45944;-&#44368;&#52264;-&#44160;&#51613;">&#182;</a></h4><ul>
-<li>k = 10으로 설정</li>
-</ul>
+<h4 id="&#50696;&#51228;:-&#44208;&#51221;-&#53944;&#47532;-&#47784;&#45944;-&#44368;&#52264;-&#44160;&#51613;-(k-=-10&#51064;-&#44221;&#50864;)">&#50696;&#51228;: &#44208;&#51221; &#53944;&#47532; &#47784;&#45944; &#44368;&#52264; &#44160;&#51613; (k = 10&#51064; &#44221;&#50864;)<a class="anchor-link" href="#&#50696;&#51228;:-&#44208;&#51221;-&#53944;&#47532;-&#47784;&#45944;-&#44368;&#52264;-&#44160;&#51613;-(k-=-10&#51064;-&#44221;&#50864;)">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">cross_val_score</span>
 
 <span class="n">scores</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">tree_reg</span><span class="p">,</span> <span class="n">housing_prepared</span><span class="p">,</span> <span class="n">housing_labels</span><span class="p">,</span>
                          <span class="n">scoring</span><span class="o">=</span><span class="s2">&quot;neg_mean_squared_error&quot;</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
 <span class="n">tree_rmse_scores</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="o">-</span><span class="n">scores</span><span class="p">)</span>
 </pre></div>
 
 </div>
 </div>
-</div></section></section><section><section>
+</div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li><p><strong>주의</strong></p>
-<ul>
-<li><p>효용함수: k-겹 교차 검증의 모델 학습 과정에서 성능을 측정할 때 높을 수록 좋은 효용함수 활용</p>
-</li>
-<li><p>RMSE의 음숫값을 이용하여 훈련되는 모델 평가</p>
-<ul>
+<li>k-겹 교차 검증의 모델 학습 과정에서 성능을 측정할 때 높을 수록 좋은 <strong>효용함수</strong> 활용<ul>
 <li><code>scoring="neg_mean_squared_error"</code></li>
-</ul>
-</li>
-<li><p>교차 검증 결과 평가를 위해 다시 음숫값(<code>-scores</code>)을 사용해야 함.</p>
-</li>
+<li>RMSE의 음숫값</li>
 </ul>
 </li>
 </ul>
 
 </div>
 </div>
-</div></section></section><section><section>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="&#50696;&#51228;:-&#49440;&#54805;-&#54924;&#44480;-&#47784;&#45944;-&#44368;&#52264;-&#44160;&#51613;">&#50696;&#51228;: &#49440;&#54805; &#54924;&#44480; &#47784;&#45944; &#44368;&#52264; &#44160;&#51613;<a class="anchor-link" href="#&#50696;&#51228;:-&#49440;&#54805;-&#54924;&#44480;-&#47784;&#45944;-&#44368;&#52264;-&#44160;&#51613;">&#182;</a></h4><ul>
-<li>k = 10으로 설정</li>
+<ul>
+<li>교차 검증의 RMSE: 다시 음숫값(<code>-scores</code>) 사용<ul>
+<li>평균 RMSE: 약 71407</li>
+<li>별로 좋지 않음.</li>
 </ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#50696;&#51228;:-&#49440;&#54805;-&#54924;&#44480;-&#47784;&#45944;-&#44368;&#52264;-&#44160;&#51613;-(k-=-10-&#51064;-&#44221;&#50864;)">&#50696;&#51228;: &#49440;&#54805; &#54924;&#44480; &#47784;&#45944; &#44368;&#52264; &#44160;&#51613; (k = 10 &#51064; &#44221;&#50864;)<a class="anchor-link" href="#&#50696;&#51228;:-&#49440;&#54805;-&#54924;&#44480;-&#47784;&#45944;-&#44368;&#52264;-&#44160;&#51613;-(k-=-10-&#51064;-&#44221;&#50864;)">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <div class="highlight"><pre><span></span><span class="n">lin_scores</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">lin_reg</span><span class="p">,</span> <span class="n">housing_prepared</span><span class="p">,</span> <span class="n">housing_labels</span><span class="p">,</span>
                              <span class="n">scoring</span><span class="o">=</span><span class="s2">&quot;neg_mean_squared_error&quot;</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
 <span class="n">lin_rmse_scores</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="o">-</span><span class="n">lin_scores</span><span class="p">)</span>
-<span class="n">display_scores</span><span class="p">(</span><span class="n">lin_rmse_scores</span><span class="p">)</span>
 </pre></div>
 
 </div>
 </div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#50521;&#49345;&#48660;-&#54617;&#49845;(7&#51109;)">&#50521;&#49345;&#48660; &#54617;&#49845;(7&#51109;)<a class="anchor-link" href="#&#50521;&#49345;&#48660;-&#54617;&#49845;(7&#51109;)">&#182;</a></h3>
 </div>
-</div>
-</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>여러 다른 모델을 모아서 하나의 모델을 만드는 기법</li>
-<li>즉, 교차 검증을 일반화 시킨 모델 학습법임.</li>
+<li>교차 검증의 RMSE 평균: 약 69052<ul>
+<li>결정트리 회귀 모델보다 좋음.</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#50521;&#49345;&#48660;-&#54617;&#49845;-(7&#51109;)">&#50521;&#49345;&#48660; &#54617;&#49845; (7&#51109;)<a class="anchor-link" href="#&#50521;&#49345;&#48660;-&#54617;&#49845;-(7&#51109;)">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>여러 개의 다른 모델을 모아서 하나의 모델을 만드는 기법</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
 <li>머신러닝 알고리즘의 성능을 극대화는 방법 중 하나</li>
 </ul>
 
@@ -13974,44 +14732,72 @@ $$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#47004;&#45924;-&#54252;&#47112;&#49828;&#53944;-&#54924;&#44480;-&#47784;&#45944;-(7&#51109;)">&#47004;&#45924; &#54252;&#47112;&#49828;&#53944; &#54924;&#44480; &#47784;&#45944; (7&#51109;)<a class="anchor-link" href="#&#47004;&#45924;-&#54252;&#47112;&#49828;&#53944;-&#54924;&#44480;-&#47784;&#45944;-(7&#51109;)">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>앙상블 학습 예제: 랜덤 포레스트<ul>
-<li>특성을 무작위로 선택해서 많은 결정 트리를 만들고 그 예측을 평균 내는 모델</li>
-<li>사이킷런의 <code>RandomForestRegressor</code> 사용법은 기본적으로 동일함.</li>
+<li>앙상블 학습에 사용되는 하나의 기법</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>특성을 무작위로 선택해서 생성한 여러 개의 결정 트리를 훈련 시킨 후 
+  각 모델의 예측 값의 평균값을 예측값으로 사용하는 모델</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>사이킷런의 <code>RandomForestRegressor</code> 클래스 활용</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>훈련 및 예측</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestRegressor</span>
+
+<span class="n">forest_reg</span> <span class="o">=</span> <span class="n">RandomForestRegressor</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">forest_reg</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">housing_prepared</span><span class="p">,</span> <span class="n">housing_labels</span><span class="p">)</span>
+
+<span class="n">housing_predictions</span> <span class="o">=</span> <span class="n">forest_reg</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">housing_prepared</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>랜덤 포레스트 모델의 RMSE: 약 50182<ul>
+<li>지금까지 사용해본 모델 중 최고</li>
+<li>하지만 여전히 과대적합되어 있음. </li>
 </ul>
 </li>
 </ul>
 
 </div>
 </div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>훈련</li>
-</ul>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestRegressor</span>
-
-<span class="n">forest_reg</span> <span class="o">=</span> <span class="n">RandomForestRegressor</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
-<span class="n">forest_reg</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">housing_prepared</span><span class="p">,</span> <span class="n">housing_labels</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>예측</li>
-</ul>
-<div class="highlight"><pre><span></span><span class="n">housing_predictions</span> <span class="o">=</span> <span class="n">forest_reg</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">housing_prepared</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div></section></section><section><section>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14024,7 +14810,25 @@ $$
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li>살펴 본 모델 중에서 <strong>랜덤 포레스트</strong> 모델의 성능이 가장 좋았음</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
 <li>가능성이 높은 모델을 선정한 후에 <strong>모델 세부 설정을 튜닝</strong>해야함</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
 <li>튜닝을 위한 세 가지 방식<ul>
 <li><strong>그리드 탐색</strong></li>
 <li><strong>랜덤 탐색</strong></li>
@@ -14039,8 +14843,24 @@ $$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#44536;&#47532;&#46300;-&#53456;&#49353;">&#44536;&#47532;&#46300; &#53456;&#49353;<a class="anchor-link" href="#&#44536;&#47532;&#46300;-&#53456;&#49353;">&#182;</a></h3><ul>
+<h3 id="2.7.1-&#44536;&#47532;&#46300;-&#53456;&#49353;">2.7.1 &#44536;&#47532;&#46300; &#53456;&#49353;<a class="anchor-link" href="#2.7.1-&#44536;&#47532;&#46300;-&#53456;&#49353;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
 <li>지정한 하이퍼파라미터의 모든 조합을 교차검증하여 최선의 하이퍼파라미터 조합 찾기</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
 <li>사이킷런의 <code>GridSearchCV</code> 활용</li>
 </ul>
 
@@ -14050,13 +14870,13 @@ $$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>예제: <strong>랜덤 포레스트 모델에 대한 최적 조합</strong>을 찾기<ul>
-<li>총 ($3\times 4 + 2\times 3 = 18$) 가지 조합 확인</li>
-<li>5-겹 교차검증(<code>cv=5</code>)이므로, 총 ($18 \times 5 = 90$)번 훈련함.</li>
-</ul>
-</li>
-</ul>
+<h4 id="&#50696;&#51228;:-&#44536;&#47532;&#46300;-&#53456;&#49353;&#51004;&#47196;-&#47004;&#45924;-&#54252;&#47112;&#49828;&#53944;-&#47784;&#45944;&#50640;-&#45824;&#54620;-&#52572;&#51201;-&#51312;&#54633;-&#52286;&#44592;">&#50696;&#51228;: &#44536;&#47532;&#46300; &#53456;&#49353;&#51004;&#47196; &#47004;&#45924; &#54252;&#47112;&#49828;&#53944; &#47784;&#45944;&#50640; &#45824;&#54620; &#52572;&#51201; &#51312;&#54633; &#52286;&#44592;<a class="anchor-link" href="#&#50696;&#51228;:-&#44536;&#47532;&#46300;-&#53456;&#49353;&#51004;&#47196;-&#47004;&#45924;-&#54252;&#47112;&#49828;&#53944;-&#47784;&#45944;&#50640;-&#45824;&#54620;-&#52572;&#51201;-&#51312;&#54633;-&#52286;&#44592;">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">GridSearchCV</span>
 
 <span class="n">param_grid</span> <span class="o">=</span> <span class="p">[</span>
@@ -14073,18 +14893,56 @@ $$
 
 </div>
 </div>
-</div></section></section><section><section>
+</div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#47004;&#45924;-&#53456;&#49353;">&#47004;&#45924; &#53456;&#49353;<a class="anchor-link" href="#&#47004;&#45924;-&#53456;&#49353;">&#182;</a></h3><ul>
-<li>그리드 탐색은 적은 수의 조합을 실험해볼 때 유용</li>
-<li><p>조합의 수가 커지거나, 설정된 탐색 공간이 커지면 랜덤 탐색이 효율적</p>
 <ul>
-<li>설정값이 연속적인 값을 다루는 경우 랜덤 탐색이 유용</li>
+<li>총 (3x4 + 2x3 = 18) 가지의 경우 확인</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>5-겹 교차검증(<code>cv=5</code>)이므로, 총 (18x5 = 90)번 훈련함.</li>
+</ul>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#44536;&#47532;&#46300;-&#53456;&#49353;-&#44208;&#44284;">&#44536;&#47532;&#46300; &#53456;&#49353; &#44208;&#44284;<a class="anchor-link" href="#&#44536;&#47532;&#46300;-&#53456;&#49353;-&#44208;&#44284;">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>최고 성능의 랜덤 포레스트 하이퍼파라미터가 다음과 같음. <ul>
+<li><code>max_features</code>: 8</li>
+<li><code>n_estimators</code>: 30</li>
+<li>지정된 구간의 최고값들이기에 구간을 좀 더 넓히는 게 좋아 보임</li>
 </ul>
 </li>
-<li><p>사이킷런의 <code>RandomizedSearchCV</code> 추정기가 랜덤 탐색을 지원</p>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>최고 성능의 랜덤 포레스트에 대한 교차검증 RMSE: 49682<ul>
+<li>하나의 랜덤 포레스트보다 좀 더 좋아졌음.</li>
+</ul>
 </li>
 </ul>
 
@@ -14094,16 +14952,53 @@ $$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="2.7.2-&#47004;&#45924;-&#53456;&#49353;">2.7.2 &#47004;&#45924; &#53456;&#49353;<a class="anchor-link" href="#2.7.2-&#47004;&#45924;-&#53456;&#49353;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>예제<ul>
-<li><code>n_iter=10</code>: 랜덤 탐색이 총 10회 진행<ul>
-<li><code>n_estimators</code>와 <code>max_features</code> 값을 지정된 구간에서 무작위 선택</li>
+<li>그리드 탐색은 적은 수의 조합을 실험해볼 때 유용</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>조합의 수가 커지거나, 설정된 탐색 공간이 커지면 랜덤 탐색이 효율적<ul>
+<li>설정값이 연속적인 값을 다루는 경우 랜덤 탐색이 유용</li>
 </ul>
 </li>
-<li><code>cv=5</code>: 5-겹 교차검증. 따라서 랜덤 포레스트 학습이 ($10 \times 5=50$)번 이루어짐</li>
 </ul>
-</li>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>사이킷런의 <code>RandomizedSearchCV</code> 추정기가 랜덤 탐색을 지원</li>
 </ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#50696;&#51228;:-&#47004;&#45924;-&#53456;&#49353;&#51004;&#47196;-&#47004;&#45924;-&#54252;&#47112;&#49828;&#53944;-&#47784;&#45944;&#50640;-&#45824;&#54620;-&#52572;&#51201;-&#51312;&#54633;-&#52286;&#44592;">&#50696;&#51228;: &#47004;&#45924; &#53456;&#49353;&#51004;&#47196; &#47004;&#45924; &#54252;&#47112;&#49828;&#53944; &#47784;&#45944;&#50640; &#45824;&#54620; &#52572;&#51201; &#51312;&#54633; &#52286;&#44592;<a class="anchor-link" href="#&#50696;&#51228;:-&#47004;&#45924;-&#53456;&#49353;&#51004;&#47196;-&#47004;&#45924;-&#54252;&#47112;&#49828;&#53944;-&#47784;&#45944;&#50640;-&#45824;&#54620;-&#52572;&#51201;-&#51312;&#54633;-&#52286;&#44592;">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">RandomizedSearchCV</span>
 <span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">randint</span>
 
@@ -14120,13 +15015,92 @@ $$
 
 </div>
 </div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><code>n_iter=10</code>: 랜덤 탐색이 총 10회 진행<ul>
+<li><code>n_estimators</code>와 <code>max_features</code> 값을 지정된 구간에서 무작위 선택</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><code>cv=5</code>: 5-겹 교차검증. 따라서 랜덤 포레스트 학습이 (10x5=50)번 이루어짐.</li>
+</ul>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#47004;&#45924;-&#53456;&#49353;-&#44208;&#44284;">&#47004;&#45924; &#53456;&#49353; &#44208;&#44284;<a class="anchor-link" href="#&#47004;&#45924;-&#53456;&#49353;-&#44208;&#44284;">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>최고 성능의 랜덤 포레스트 하이퍼파라미터가 다음과 같음. <ul>
+<li><code>max_features</code>: 7</li>
+<li><code>n_estimators</code>: 180</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>최고 성능의 랜덤 포레스트에 대한 교차검증 RMSE: 49150</li>
+</ul>
+
+</div>
+</div>
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#50521;&#49345;&#48660;-&#48169;&#48277;">&#50521;&#49345;&#48660; &#48169;&#48277;<a class="anchor-link" href="#&#50521;&#49345;&#48660;-&#48169;&#48277;">&#182;</a></h3><ul>
-<li>결정 트리 모델 하나보다 랜덤 포레스트처럼 모델의 그룹이 보다 좋은 성능을 낼 수 있음.</li>
+<h3 id="2.7.3-&#50521;&#49345;&#48660;-&#48169;&#48277;">2.7.3 &#50521;&#49345;&#48660; &#48169;&#48277;<a class="anchor-link" href="#2.7.3-&#50521;&#49345;&#48660;-&#48169;&#48277;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>결정 트리 모델 하나보다 랜덤 포레스트처럼 여러 모델로 이루어진 모델이 보다 좋은 성능을 낼 수 있음.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
 <li>또한 최고 성능을 보이는 서로 다른 개별 모델을 조합하면 보다 좋은 성능을 얻을 수 있음</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
 <li>7장에서 자세히 다룸</li>
 </ul>
 
@@ -14136,11 +15110,25 @@ $$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#52572;&#49345;&#51032;-&#47784;&#45944;&#44284;-&#50724;&#52264;-&#48516;&#49437;">&#52572;&#49345;&#51032; &#47784;&#45944;&#44284; &#50724;&#52264; &#48516;&#49437;<a class="anchor-link" href="#&#52572;&#49345;&#51032;-&#47784;&#45944;&#44284;-&#50724;&#52264;-&#48516;&#49437;">&#182;</a></h3><ul>
-<li><p>그리드 탐색과 랜덤 탐색 등을 통해 얻어진 최상의 모델을 분석해서 문제에 대한 좋은 통창을 얻을 수 있음</p>
-</li>
-<li><p>예를 들어, 최상의 랜덤 포레스트 모델에서 사용된 특성들의 중요도를 확인하여 일부 특성을 제외핳 수 있음.</p>
+<h3 id="2.7.4-&#52572;&#49345;&#51032;-&#47784;&#45944;&#44284;-&#50724;&#52264;-&#48516;&#49437;">2.7.4 &#52572;&#49345;&#51032; &#47784;&#45944;&#44284; &#50724;&#52264; &#48516;&#49437;<a class="anchor-link" href="#2.7.4-&#52572;&#49345;&#51032;-&#47784;&#45944;&#44284;-&#50724;&#52264;-&#48516;&#49437;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <ul>
+<li>그리드 탐색과 랜덤 탐색 등을 통해 얻어진 최상의 모델을 분석해서 문제에 대한 좋은 통창을 얻을 수 있음</li>
+</ul>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>예를 들어, 최상의 랜덤 포레스트 모델에서 사용된 특성들의 중요도를 확인하여 일부 특성을 제외할 수 있음.<ul>
 <li>중간 소득(median income)과 INLAND(내륙, 해안 근접도)가 가장 중요한 특성으로 확인됨</li>
 <li>해안 근접도의 다른 네 가지 특성은 별로 중요하지 않음</li>
 </ul>
@@ -14149,25 +15137,127 @@ $$
 
 </div>
 </div>
-</div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#53580;&#49828;&#53944;-&#49483;&#51004;&#47196;-&#52572;&#49345;&#51032;-&#47784;&#45944;-&#54217;&#44032;&#54616;&#44592;">&#53580;&#49828;&#53944; &#49483;&#51004;&#47196; &#52572;&#49345;&#51032; &#47784;&#45944; &#54217;&#44032;&#54616;&#44592;<a class="anchor-link" href="#&#53580;&#49828;&#53944;-&#49483;&#51004;&#47196;-&#52572;&#49345;&#51032;-&#47784;&#45944;-&#54217;&#44032;&#54616;&#44592;">&#182;</a></h3><ol>
-<li>최상의 모델 확인<div class="highlight"><pre><span></span><span class="n">final_model</span> <span class="o">=</span> <span class="n">grid_search</span><span class="o">.</span><span class="n">best_estimator_</span>
+<div align="center"><img src="images/ch02/feature-importance.png" width="400"></div>
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="2.7.5-&#53580;&#49828;&#53944;-&#49483;&#51004;&#47196;-&#49884;&#49828;&#53596;-&#54217;&#44032;&#54616;&#44592;">2.7.5 &#53580;&#49828;&#53944; &#49483;&#51004;&#47196; &#49884;&#49828;&#53596; &#54217;&#44032;&#54616;&#44592;<a class="anchor-link" href="#2.7.5-&#53580;&#49828;&#53944;-&#49483;&#51004;&#47196;-&#49884;&#49828;&#53596;-&#54217;&#44032;&#54616;&#44592;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>최고 성능 모델 확인</li>
+</ol>
+<div class="highlight"><pre><span></span><span class="n">final_model</span> <span class="o">=</span> <span class="n">grid_search</span><span class="o">.</span><span class="n">best_estimator_</span>
 </pre></div>
-</li>
-<li><p>테스트 세트 전처리</p>
-<ul>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>테스트 세트 전처리<ul>
 <li>전처리 파이프라인의 <code>transform()</code> 메서드를 직접 활용</li>
 <li><strong>주의</strong>: <code>fit()</code> 메서드는 전혀 사용하지 않음</li>
 </ul>
 </li>
-<li><p>최상의 모델을 이용하여 예측하기</p>
-</li>
-<li><p>최상의 모델 평가 및 론칭</p>
-</li>
 </ol>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>최고 성능 모델을 이용하여 예측하기</li>
+</ol>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>최고 성능 모델 평가 및 론칭</li>
+</ol>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#52572;&#49345;&#51032;-&#47784;&#45944;-&#49457;&#45733;-&#54217;&#44032;">&#52572;&#49345;&#51032; &#47784;&#45944; &#49457;&#45733; &#54217;&#44032;<a class="anchor-link" href="#&#52572;&#49345;&#51032;-&#47784;&#45944;-&#49457;&#45733;-&#54217;&#44032;">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>테스트 세트에 대한 최고 성능 모델의 RMSE: 47730</li>
+</ul>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#52572;&#49345;&#51032;-&#47784;&#45944;-&#49457;&#45733;-&#48176;&#54252;">&#52572;&#49345;&#51032; &#47784;&#45944; &#49457;&#45733; &#48176;&#54252;<a class="anchor-link" href="#&#52572;&#49345;&#51032;-&#47784;&#45944;-&#49457;&#45733;-&#48176;&#54252;">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div align="center"><img src="images/ch02/model-launching01.png" width="600"></div>
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#45936;&#51060;&#53552;&#49483;-&#48143;-&#47784;&#45944;-&#48177;&#50629;">&#45936;&#51060;&#53552;&#49483; &#48143; &#47784;&#45944; &#48177;&#50629;<a class="anchor-link" href="#&#45936;&#51060;&#53552;&#49483;-&#48143;-&#47784;&#45944;-&#48177;&#50629;">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>완성된 모델은 항상 백업해 두어야 함. 업데이트된 모델이 적절하지 않은 경우 이전 모델로 되돌려야 할 수도 있음.<ul>
+<li>백업된 모델과 새 모델을 쉽게 비교할 수 있음.</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>동일한 이유로 모든 버전의 데이터셋을 백업해 두어야 함.<ul>
+<li>업데이트 과정에서 데이터셋이 오염될 수 있기 때문임.</li>
+</ul>
+</li>
+</ul>
 
 </div>
 </div>
