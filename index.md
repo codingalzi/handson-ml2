@@ -39,7 +39,8 @@
   </tr>
   <tr>
     <td>주피터 노트북</td>
-    <td>[colab]</td>
+    <td><a href="./notebooks/handson-ml-01.html">[html]</a>,  
+        <a href="https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/notebooks/handson-ml-01.ipynb">[colab]</a></td>
   </tr>
   <tr>
     <td>Centro comercial Moctezuma</td>
