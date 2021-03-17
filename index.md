@@ -28,7 +28,7 @@
 
 <table>
   <tr>
-    <th>Company</th>
+    <th>한 눈에 보는 </th>
     <th>Contact</th>
     <th>Country</th>
   </tr>
