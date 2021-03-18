@@ -13,7 +13,7 @@
 ### 목차
 
 | 주제 | 구분 | 링크 |
-| :-- | :--: | :-- |
+| :--: | :--: | :--: |
 | 한 눈에 보는 머신러닝 | 슬라이드 | [&#x1F4F1;](./slides/handson-ml-01.slides.html) &nbsp; [&#128421;](./slides/handson-ml-01-slides.pdf) |
 |                  | 주피터 노트북 | [&#x1F4D6;](./notebooks/handson-ml-01.html) &nbsp; [&#x1F4D8;](https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/notebooks/handson-ml-01.ipynb) |
 | 머신러닝 프로젝트 처음부터 끝까지 | 1부 슬라이드 | [&#x1F4F1;](./slides/handson-ml-02a.slides.html) &nbsp; [&#128421;](./slides/handson-ml-02a-slides.pdf) |
