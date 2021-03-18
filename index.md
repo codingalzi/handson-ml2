@@ -20,43 +20,8 @@
 |                           | 2부 슬라이드 | [&#x1F4F1;](./slides/handson-ml-02b.slides.html) &nbsp; [&#128421;](./slides/handson-ml-02b-slides.pdf) |
 |                           | 2부 슬라이드 | [&#x1F4F1;](./slides/handson-ml-02c.slides.html) &nbsp; [&#128421;](./slides/handson-ml-02c-slides.pdf) |
 |                  | 주피터 노트북 | [&#x1F4D6;](./notebooks/handson-ml-02.html) &nbsp; [&#x1F4D8;](https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/notebooks/handson-ml-02.ipynb) |
-
-
-<style>
-table, th, td {
-  border: 2px solid black;
-}
-</style>
-
-<table>
-  <tr>
-    <td rowspan="2">머신러닝 프로젝트 처음부터 끝까지</td>
-    <td>1부 슬라이드 <br>2부 슬라이드<br>3부 슬라이드<br></td>
-      <td><a href="./slides/handson-ml-02a.slides.html">[html]</a>, 
-          <a href="./slides/handson-ml-02a-slides.pdf">[pdf]</a> <br>
-      <a href="./slides/handson-ml-02b.slides.html">[html]</a>, 
-          <a href="./slides/handson-ml-02b-slides.pdf">[pdf]</a> <br>
-      <a href="./slides/handson-ml-02c.slides.html">[html]</a>, 
-          <a href="./slides/handson-ml-02c-slides.pdf">[pdf]</a></td>      
-  </tr>
-  <tr>
-    <td>주피터 노트북</td>
-    <td><a href="./notebooks/handson-ml-02.html">[html]</a>,  
-        <a href="https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/notebooks/handson-ml-02.ipynb">[colab]</a></td>
-  </tr>
-  <tr>
-    <td rowspan="2">분류(준비중)</td>
-    <td>슬라이드</td>
-      <td><a href="./slides/handson-ml-03.slides.html">[html]</a>, 
-          <a href="./slides/handson-ml-03-slides.pdf">[pdf]</a></td>
-  </tr>
-  <tr>
-    <td>주피터 노트북</td>
-    <td><a href="./notebooks/handson-ml-03.html">[html]</a>,  
-        <a href="https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/notebooks/handson-ml-03.ipynb">[colab]</a></td>
-  </tr>
-
-</table>
+| 분류 (준비중) | 슬라이드 | [&#x1F4F1;](./slides/handson-ml-03.slides.html) &nbsp; [&#128421;](./slides/handson-ml-03-slides.pdf) |
+|                  | 주피터 노트북 | [&#x1F4D6;](./notebooks/handson-ml-03.html) &nbsp; [&#x1F4D8;](https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/notebooks/handson-ml-03.ipynb) |
 
 **링크 활용법**
 * 슬라이드
