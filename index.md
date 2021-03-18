@@ -12,7 +12,7 @@
 
 ### 목차
 
-<table style="width:100%" border="1px solid black">
+<table style="width:100%; border:1px solid black;">
   <tr> <th>주제</th> <th>구분</th> <th>링크</th> </tr>
   <tr>
     <td rowspan="2">한 눈에 보는 머신러닝</td>
