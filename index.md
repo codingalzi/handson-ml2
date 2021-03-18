@@ -12,7 +12,14 @@
 
 ### 목차
 
-<table style="border:2px solid black;">
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+
+<table>
   <tr> <th>주제</th> <th>구분</th> <th>링크</th> </tr>
   <tr>
     <td rowspan="2">한 눈에 보는 머신러닝</td>
