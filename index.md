@@ -5,15 +5,11 @@
 
 자료를 공개한 저자 오렐리앙 제롱(Aur&eacute;lien G&eacute;ron)과 강의자료를 지원한 한빛아카데미에게 진심어린 감사를 전합니다.
 
-### 강의소개
-
-* 슬라이드 [[html]](./slides/handson-ml-00.slides.html), 
-    [[pdf]](./slides/handson-ml-00-slides.pdf)
-
 ### 목차
 
 | 주제 | 구분 | 링크 |
 | :--: | :--: | :--: |
+| 강의소개 | 슬라이드 | [&#x1F4F1;](./slides/handson-ml-00.slides.html) &nbsp; [&#128421;](./slides/handson-ml-00-slides.pdf) |
 | 한 눈에 보는 머신러닝 | 슬라이드 | [&#x1F4F1;](./slides/handson-ml-01.slides.html) &nbsp; [&#128421;](./slides/handson-ml-01-slides.pdf) |
 |                  | 주피터 노트북 | [&#x1F4D6;](./notebooks/handson-ml-01.html) &nbsp; [&#x1F4D8;](https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/notebooks/handson-ml-01.ipynb) |
 | 머신러닝 프로젝트 처음부터 끝까지 | 1부 슬라이드 | [&#x1F4F1;](./slides/handson-ml-02a.slides.html) &nbsp; [&#128421;](./slides/handson-ml-02a-slides.pdf) |
