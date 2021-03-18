@@ -15,7 +15,7 @@
 <table width="100%" border="1px solid black;">
   <tr border="1px solid black;"> <th>주제</th> <th>구분</th> <th>링크</th> </tr>
   <tr border="1px solid black;">
-    <td rowspan="2">한 눈에 보는 머신러닝</td>
+    <td rowspan="2" border="1px solid black;">한 눈에 보는 머신러닝</td>
     <td>슬라이드</td>
       <td><a href="./slides/handson-ml-01.slides.html">[html]</a>, 
           <a href="./slides/handson-ml-01-slides.pdf">[pdf]</a></td>
