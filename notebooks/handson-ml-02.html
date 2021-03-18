@@ -19527,7 +19527,7 @@ dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -19627,6 +19627,80 @@ dtype: float64</pre>
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#54532;&#47196;&#51229;&#53944;">&#54532;&#47196;&#51229;&#53944;<a class="anchor-link" href="#&#54532;&#47196;&#51229;&#53944;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#54532;&#47196;&#51229;&#53944;-&#44284;&#51228;">&#54532;&#47196;&#51229;&#53944; &#44284;&#51228;<a class="anchor-link" href="#&#54532;&#47196;&#51229;&#53944;-&#44284;&#51228;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>아래의 세 가지 변환을 전처리 과정에 추가하면 훈련된 모델의 성능이 어떻게 얼마나 달라지는지 이전 모델과 비교하라.</p>
+<p><strong>변환 1</strong></p>
+<p>중간 소득과 중간 주택 가격 사이의 상관관계 그래프에서 확인할 수 있는 수평선에 위치한 데이터를 삭제한다.</p>
+<p><strong>변환 2</strong></p>
+<p>회귀 모델 훈련에 사용되는 12개의 특성 중에 세 개는 기존 9개의 특성을 조합하여 생성하였다. 12개의 특성 중에 중간 주택 가격과의 상관계수의 절댓값이 0.2 보다 작은 특성을 삭제한다.</p>
+<p><strong>변환 3</strong></p>
+<p>범주형 특성을 제외한 9개 특성별 히스토그램을 보면 일부 특성의 히스토그램이 좌우 비대칭이다. 
+(전문 용어로 <strong>왜도</strong>(skewness)가 0이 아닐 때 이런 분포가 발생한다.)
+대표적으로 방의 총 개수(total_rooms), 침실 총 개수(total_bedrooms), 인구(population), 가구수(households), 중간소득(median_income) 등 다섯 개의 특성이 그렇다.
+앞서 언급된 5개 특성 또는 일부에 대해 <strong>로그 변환</strong>을 적용한다.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#54532;&#47196;&#51229;&#53944;-&#51652;&#54665;-&#50836;&#47161;-&#48143;-&#55180;&#53944;">&#54532;&#47196;&#51229;&#53944; &#51652;&#54665; &#50836;&#47161; &#48143; &#55180;&#53944;<a class="anchor-link" href="#&#54532;&#47196;&#51229;&#53944;-&#51652;&#54665;-&#50836;&#47161;-&#48143;-&#55180;&#53944;">&#182;</a></h3><ol>
+<li>언급된 세 가지 변환을 우선 하나씩 구현하고 구현 가능한 변환만 접목할 것.</li>
+<li>California Housing Price Prediction 프로젝트 관련 사이트를 살펴보고 비슷하게 진행할 것.<ul>
+<li><a href="https://www.kaggle.com/khushboon/california-housing-price-prediction">캐글(kaggle) 참고 페이지 1</a></li>
+<li><a href="https://www.kaggle.com/suprabhatsk/california-housing-prices-prediction">캐글(kaggle) 참고 페이지 2</a></li>
+<li><a href="https://www.kaggle.com/subashdump/california-housing-price-prediction">캐글(kaggle) 참고 페이지 3</a></li>
+</ul>
+</li>
+<li>지정된 특성값을 갖는 데이터 샘플 삭제 요령 참고 문서<ul>
+<li><a href="https://www.codegrepper.com/code-examples/python/how+to+drop+specific+values+in+pandas">참고 1</a></li>
+<li><a href="https://chrisalbon.com/python/data_wrangling/pandas_dropping_column_and_rows/">참고 2</a></li>
+</ul>
+</li>
+<li>상관관계 도표에서 수평선 위치 찾기<ul>
+<li>방식 1: 중간 주택 가격의 히스토 그램에서 50만을 제외한 45만, 35만, 28만 근처에서의 수평선의 정확한 위치를 알아내기 위해 히스토그램을 언급된 값 근처의 구간으로 제한해서 히스토그램을 그리면 확인할 수 있을 것임. 다른 보다 편한 방식은 잘 모르겠음. 히스토그램을 제한하는 방식은 앞서 언급한 참고1, 2에서 소개한 방식 활용 가능</li>
+<li><a href="https://www.w3resource.com/pandas/series/series-value_counts.php">valut_count() 메서드 활용</a></li>
+</ul>
+</li>
+<li>로그 변환: 넘파이의 log() 함수를 데이터프레임에 적용. 데이터프레임의 apply() 메서드 활용.<ul>
+<li><a href="https://nbviewer.jupyter.org/github/justmarkham/pandas-videos/blob/master/pandas.ipynb#30.-How-do-I-apply-a-function-to-a-pandas-Series-or-DataFrame%3F-%28video%29">참고 코드</a>, 
+<a href="https://www.youtube.com/watch?v=P_q0tkYqvSk&amp;list=PL5-da3qGB5ICCsgW1MxlZ0Hq8LL5U3u9y&amp;index=30">참고 코드 설명 동영상</a></li>
+<li>로그 변환 실전 활용 예제: <a href="https://github.com/atsigman/putb_nycdsa_kaggle/blob/master/kaggle_eda_version11_modeling.ipynb">Housing Price Predictions Using Advanced Regression Techniques</a>, <code>In [465]</code>, 즉 465번째 코드 셀(Testing if fixing Skewed Features Help) 참조</li>
+</ul>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#52280;&#44256;:-&#47196;&#44536;-&#48320;&#54872;">&#52280;&#44256;: &#47196;&#44536; &#48320;&#54872;<a class="anchor-link" href="#&#52280;&#44256;:-&#47196;&#44536;-&#48320;&#54872;">&#182;</a></h3><p><strong>로그 변환</strong>(log transformation)은 수치 데이터에 로그(log) 함수를 적용하는 변환이며, 로그 변환이 이루어진 데이터의 분포는 보다 정규 분포에 가까워진다. 
+아래 그림은 왜도가 0이 아닌 분포(상단)에 로그 변환을 가했을 때 생성된 분포(하단)의 왜도가 훨씬 약화되어 정규분포에 가까워지는 것을 보여준다. 
+<img src="https://i.stack.imgur.com/7iSYs.png"></p>
+<p>&lt;그림 출처: <a href="https://stats.stackexchange.com/questions/107610/what-is-the-reason-the-log-transformation-is-used-with-right-skewed-distribution">StackExchange</a>&gt;</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
