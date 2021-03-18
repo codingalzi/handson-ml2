@@ -12,6 +12,11 @@
 
 ### 목차
 
+| 주제 | 구분 | 링크 |
+| :-- | :--: | :-- |
+| 한 눈에 보는 머신러닝 | 슬라이드 | html, pdf |
+
+
 <style>
 table, th, td {
   border: 2px solid black;
