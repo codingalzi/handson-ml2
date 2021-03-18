@@ -20,15 +20,15 @@
       <td><a href="./slides/handson-ml-01.slides.html">[html]</a>, 
           <a href="./slides/handson-ml-01-slides.pdf">[pdf]</a></td>
   </tr>
-  <tr>
-    <td>주피터 노트북</td>
-    <td><a href="./notebooks/handson-ml-01.html">[html]</a>,  
+  <tr border="1px solid black;">
+    <td border="1px solid black;">주피터 노트북</td>
+    <td border="1px solid black;"><a href="./notebooks/handson-ml-01.html">[html]</a>,  
         <a href="https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/notebooks/handson-ml-01.ipynb">[colab]</a></td>
   </tr>
-  <tr>
-    <td rowspan="2">머신러닝 프로젝트 처음부터 끝까지</td>
-    <td>1부 슬라이드 <br>2부 슬라이드<br>3부 슬라이드<br></td>
-      <td><a href="./slides/handson-ml-02a.slides.html">[html]</a>, 
+  <tr border="1px solid black;">
+    <td rowspan="2" border="1px solid black;">머신러닝 프로젝트 처음부터 끝까지</td>
+    <td border="1px solid black;">1부 슬라이드 <br>2부 슬라이드<br>3부 슬라이드<br></td>
+      <td border="1px solid black;"><a href="./slides/handson-ml-02a.slides.html">[html]</a>, 
           <a href="./slides/handson-ml-02a-slides.pdf">[pdf]</a> <br>
       <a href="./slides/handson-ml-02b.slides.html">[html]</a>, 
           <a href="./slides/handson-ml-02b-slides.pdf">[pdf]</a> <br>
@@ -46,9 +46,9 @@
       <td><a href="./slides/handson-ml-03.slides.html">[html]</a>, 
           <a href="./slides/handson-ml-03-slides.pdf">[pdf]</a></td>
   </tr>
-  <tr>
-    <td>주피터 노트북</td>
-    <td><a href="./notebooks/handson-ml-03.html">[html]</a>,  
+  <tr border="1px solid black;">
+    <td border="1px solid black;">주피터 노트북</td>
+    <td border="1px solid black;"><a href="./notebooks/handson-ml-03.html">[html]</a>,  
         <a href="https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/notebooks/handson-ml-03.ipynb">[colab]</a></td>
   </tr>
 
