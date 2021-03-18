@@ -24,12 +24,10 @@
 |                  | 주피터 노트북 | [&#x1F4D6;](./notebooks/handson-ml-03.html) &nbsp; [&#x1F4D8;](https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/notebooks/handson-ml-03.ipynb) |
 
 **링크 활용법**
-* 슬라이드
-   * &#x1F4F1;: 스마트폰/태블릿 등에서 좌우방향 터치 사용 가능 
-   * &#128421;: pdf 버전
-* 주피터 노트북
-   * &#x1F4D6;: 읽기 전용 주피터 노트북
-   * &#x1F4D8;: 구글 코랩(colab)에서 직접 실행 가능한 주피터 노트북
+* &#x1F4F1;: 좌우방향 터치 지원 슬라이드
+* &#128421;: pdf 슬라이드
+* &#x1F4D6;: 읽기 전용 주피터 노트북
+* &#x1F4D8;: 구글 코랩(colab) 주피터 노트북
 
 ### QnA
 
