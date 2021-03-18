@@ -14,9 +14,9 @@
 
 <style>
 table, th, td {
-  border: 1px solid red;
+  border: 2px solid black;
   border-collapse: collapse;
-  width: 100%;
+  width: 80%;
 }
 </style>
 
