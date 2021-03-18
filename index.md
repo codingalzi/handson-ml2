@@ -18,7 +18,7 @@
 |                  | 주피터 노트북 | [&#x1F4D6;](./notebooks/handson-ml-01.html) &nbsp; [&#x1F4D8;](https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/notebooks/handson-ml-01.ipynb) |
 | 머신러닝 프로젝트 처음부터 끝까지 | 1부 슬라이드 | [&#x1F4F1;](./slides/handson-ml-02a.slides.html) &nbsp; [&#128421;](./slides/handson-ml-02a-slides.pdf) |
 |                           | 2부 슬라이드 | [&#x1F4F1;](./slides/handson-ml-02b.slides.html) &nbsp; [&#128421;](./slides/handson-ml-02b-slides.pdf) |
-|                           | 2부 슬라이드 | [&#x1F4F1;](./slides/handson-ml-02c.slides.html) &nbsp; [&#128421;](./slides/handson-ml-02c-slides.pdf) |
+|                           | 3부 슬라이드 | [&#x1F4F1;](./slides/handson-ml-02c.slides.html) &nbsp; [&#128421;](./slides/handson-ml-02c-slides.pdf) |
 |                  | 주피터 노트북 | [&#x1F4D6;](./notebooks/handson-ml-02.html) &nbsp; [&#x1F4D8;](https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/notebooks/handson-ml-02.ipynb) |
 | 분류 (준비중) | 슬라이드 | [&#x1F4F1;](./slides/handson-ml-03.slides.html) &nbsp; [&#128421;](./slides/handson-ml-03-slides.pdf) |
 |                  | 주피터 노트북 | [&#x1F4D6;](./notebooks/handson-ml-03.html) &nbsp; [&#x1F4D8;](https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/notebooks/handson-ml-03.ipynb) |
