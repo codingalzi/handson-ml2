@@ -14,8 +14,8 @@
 
 | 주제 | 구분 | 링크 |
 | :-- | :--: | :-- |
-| 한 눈에 보는 머신러닝 | 슬라이드 | &#x1F4F1; &#128421; |
-|                  | 주피터 노트북 | &#x1F4D6; &#x1F4D8; |
+| 한 눈에 보는 머신러닝 | 슬라이드 | [&#x1F4F1;](./slides/handson-ml-01-slides.html) &nbsp; [&#128421;](./slides/handson-ml-01-slides.pdf) |
+|                  | 주피터 노트북 | [&#x1F4D6;](./notebooks/handson-ml-01.html) &nbsp; [&#x1F4D8;](https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/notebooks/handson-ml-01.ipynb) |
 
 
 <style>
