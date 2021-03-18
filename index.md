@@ -48,7 +48,7 @@ table, th, td {
         <a href="https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/notebooks/handson-ml-02.ipynb">[colab]</a></td>
   </tr>
   <tr>
-    <td rowspan="2">분류 (준비중)</td>
+    <td rowspan="2">분류(준비중)</td>
     <td>슬라이드</td>
       <td><a href="./slides/handson-ml-03.slides.html">[html]</a>, 
           <a href="./slides/handson-ml-03-slides.pdf">[pdf]</a></td>
