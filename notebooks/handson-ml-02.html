@@ -13077,7 +13077,14 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="2&#51109;-&#47672;&#49888;&#47084;&#45789;-&#54532;&#47196;&#51229;&#53944;-&#52376;&#51020;&#48512;&#53552;-&#45149;&#44620;&#51648;">2&#51109; &#47672;&#49888;&#47084;&#45789; &#54532;&#47196;&#51229;&#53944; &#52376;&#51020;&#48512;&#53552; &#45149;&#44620;&#51648;<a class="anchor-link" href="#2&#51109;-&#47672;&#49888;&#47084;&#45789;-&#54532;&#47196;&#51229;&#53944;-&#52376;&#51020;&#48512;&#53552;-&#45149;&#44620;&#51648;">&#182;</a></h1><p>캘리포니아 지역 주택의 여러 특성을 사용하여 지역별 주택 중간 가격 예측한다.</p>
+<h1 id="2&#51109;-&#47672;&#49888;&#47084;&#45789;-&#54532;&#47196;&#51229;&#53944;-&#52376;&#51020;&#48512;&#53552;-&#45149;&#44620;&#51648;">2&#51109; &#47672;&#49888;&#47084;&#45789; &#54532;&#47196;&#51229;&#53944; &#52376;&#51020;&#48512;&#53552; &#45149;&#44620;&#51648;<a class="anchor-link" href="#2&#51109;-&#47672;&#49888;&#47084;&#45789;-&#54532;&#47196;&#51229;&#53944;-&#52376;&#51020;&#48512;&#53552;-&#45149;&#44620;&#51648;">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>캘리포니아 지역 주택의 여러 특성을 사용하여 지역별 주택 중간 가격 예측하기</p>
 
 </div>
 </div>
@@ -13092,7 +13099,10 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>필수 모듈을 불러오고 그래프 출력 관련 기본 설정을 정한다.</p>
+<ul>
+<li>필수 모듈 불러오기</li>
+<li>그래프 출력 관련 기본 설정 지정</li>
+</ul>
 
 </div>
 </div>
@@ -13426,7 +13436,7 @@ memory usage: 1.6+ MB
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>범주형 데이터 탐색</li>
+<li>범주형 특성 탐색</li>
 </ul>
 
 </div>
@@ -13474,7 +13484,7 @@ Name: ocean_proximity, dtype: int64</pre>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>수치형 데이터 탐색</li>
+<li>수치형 특성 탐색</li>
 </ul>
 
 </div>
@@ -13644,7 +13654,7 @@ Name: ocean_proximity, dtype: int64</pre>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>수치형 데이터 특성별 히스토그램</li>
+<li>수치형 특성별 히스토그램</li>
 </ul>
 
 </div>
@@ -14862,7 +14872,10 @@ Name: income_cat, dtype: float64</pre>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li><code>alpha</code> 키워드 인자 활용</li>
+<li><code>alpha</code> 키워드 인자 활용<ul>
+<li>구역이 밀집되어 모여있는 정도를 보다 선명하게 보여줌.</li>
+</ul>
+</li>
 </ul>
 
 </div>
@@ -15334,7 +15347,7 @@ Name: median_house_value, dtype: float64</pre>
 <li>특징<ul>
 <li>점들이 너무 넓게 퍼져 있음. 완벽한 선형관계와 거리 멂.</li>
 <li>50만 달러 수평선: 가격 제한<ul>
-<li>35만, 28만, 그 아래 정도에서도 수평선 존재</li>
+<li>45만, 35만, 28만, 그 아래 정도에서도 수평선 존재</li>
 <li>이상한 형태를 학습하지 않도록 해당 구역을 제거하는 것이 좋음.</li>
 </ul>
 </li>
@@ -15359,7 +15372,7 @@ Name: median_house_value, dtype: float64</pre>
 <li>구역별 방의 총 개수와 침실의 총 개수 대신 아래 특성이 보다 유용함<ul>
 <li>가구당 방의 개수</li>
 <li>방당 침실 개수</li>
-<li>가구당 인원</li>
+<li>가구당 인원 수</li>
 </ul>
 </li>
 </ul>
@@ -15489,7 +15502,7 @@ Name: median_house_value, dtype: float64</pre>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>전체 수치형 데이터 다시 확인</li>
+<li>전체 수치형 특성 다시 확인</li>
 </ul>
 
 </div>
@@ -15696,12 +15709,24 @@ Name: median_house_value, dtype: float64</pre>
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>훈련세트를 대상으로 중간 주택 가격을 타깃값(레이블)로 사용하기 위해 다른 특성으로 분리.</p>
+<ul>
+<li><code>housing</code>: 훈련에 사용되는 특성 9개 (중간 주택 가격 제외)</li>
+<li><code>housing_labels</code>: 중간 주택 가격</li>
+</ul>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">housing</span> <span class="o">=</span> <span class="n">strat_train_set</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&quot;median_house_value&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># 훈련 세트를 위해 레이블 삭제</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">housing</span> <span class="o">=</span> <span class="n">strat_train_set</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&quot;median_house_value&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">housing_labels</span> <span class="o">=</span> <span class="n">strat_train_set</span><span class="p">[</span><span class="s2">&quot;median_house_value&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 </pre></div>
 
@@ -15714,6 +15739,16 @@ Name: median_house_value, dtype: float64</pre>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="2.5.1-&#45936;&#51060;&#53552;-&#51221;&#51228;-(p.-99)">2.5.1 &#45936;&#51060;&#53552; &#51221;&#51228; (p. 99)<a class="anchor-link" href="#2.5.1-&#45936;&#51060;&#53552;-&#51221;&#51228;-(p.-99)">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#49688;&#52824;&#54805;-&#53945;&#49457;-&#51204;&#52376;&#47532;-&#44284;&#51221;-1:-total_bedrooms-&#53945;&#49457;&#50640;-&#51316;&#51116;&#54616;&#45716;-&#45572;&#46973;&#52824;-&#52376;&#47532;&#48277;-&#44208;&#51221;">&#49688;&#52824;&#54805; &#53945;&#49457; &#51204;&#52376;&#47532; &#44284;&#51221; 1: <code>total_bedrooms</code> &#53945;&#49457;&#50640; &#51316;&#51116;&#54616;&#45716; &#45572;&#46973;&#52824; &#52376;&#47532;&#48277; &#44208;&#51221;<a class="anchor-link" href="#&#49688;&#52824;&#54805;-&#53945;&#49457;-&#51204;&#52376;&#47532;-&#44284;&#51221;-1:-total_bedrooms-&#53945;&#49457;&#50640;-&#51316;&#51116;&#54616;&#45716;-&#45572;&#46973;&#52824;-&#52376;&#47532;&#48277;-&#44208;&#51221;">&#182;</a></h4><ul>
+<li>누락치가 있는 샘플 데이터 확인하기</li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -15841,6 +15876,21 @@ Name: median_house_value, dtype: float64</pre>
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>누락치 처리 방법 세 가지<ul>
+<li>옵션 1: 누락치가 있는 샘플 삭제</li>
+<li>옵션 2: 누락치가 있는 특성 삭제</li>
+<li>옵션 3: 누락치를 특성 중앙값 등으로 채우기</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -16038,6 +16088,14 @@ Name: median_house_value, dtype: float64</pre>
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>여기서는 옵션 3 활용. 즉, 누락치를 특성 중앙값으로 채웠음.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
@@ -16162,6 +16220,14 @@ Name: median_house_value, dtype: float64</pre>
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="SimpleImputer-&#48320;&#54872;&#44592;"><code>SimpleImputer</code> &#48320;&#54872;&#44592;<a class="anchor-link" href="#SimpleImputer-&#48320;&#54872;&#44592;">&#182;</a></h5><p><code>SimpleImputer</code> 변환기를 활용하면 옵션 3을 쉽게 처리할 수 있음.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
@@ -16179,7 +16245,7 @@ Name: median_house_value, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>중간값이 수치형 특성에서만 계산될 수 있기 때문에 텍스트 특성을 삭제합니다:</p>
+<p>중앙값이 수치형 특성에서만 계산될 수 있기 때문에 범주형 특성을 제거한 후에 <code>SimpleImputer</code> 변환기를 적용해야 함.</p>
 
 </div>
 </div>
@@ -16197,6 +16263,17 @@ Name: median_house_value, dtype: float64</pre>
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>SimpleImputer</code> 변환기의 <code>fit()</code> 메서드는 지정된 통계 특성값을 계산하여 저장해 둠.</p>
+<ul>
+<li><code>statistics_</code> 속성에 저장됨.</li>
+</ul>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -16269,7 +16346,7 @@ Name: median_house_value, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>각 특성의 중간 값이 수동으로 계산한 것과 같은지 확인해 보세요:</p>
+<p>각 특성의 중앙값이 수동으로 계산한 것 동일함.</p>
 
 </div>
 </div>
@@ -16311,7 +16388,14 @@ Name: median_house_value, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>훈련 세트를 변환합니다:</p>
+<p><code>transform()</code> 메서드를 실행하여 수치형 특성 변환하기.</p>
+<ul>
+<li>반환값은 넘파이 어레이 자료형임. </li>
+<li>팬다스의 데이터프레임으로 형변환시켜야 함.<ul>
+<li><code>housing_tr</code>: 수치형 특성의 누락치가 채워진 (훈련) 데이터셋</li>
+</ul>
+</li>
+</ul>
 
 </div>
 </div>
@@ -16342,6 +16426,14 @@ Name: median_house_value, dtype: float64</pre>
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>앞서 누락치를 수동으로 채운 결과와 동일함을 확인할 수 있음.</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -16460,6 +16552,14 @@ Name: median_house_value, dtype: float64</pre>
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>누락치를 채우는데 사용한 전략이 중앙값(median)임을 다시 확인 가능.</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -16622,7 +16722,14 @@ Name: median_house_value, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>이제 범주형 입력 특성인 <code>ocean_proximity</code>을 전처리합니다:</p>
+<h4 id="&#48276;&#51452;&#54805;-&#51077;&#47141;-&#53945;&#49457;&#51064;-ocean_proximity-&#51204;&#52376;&#47532;-&#54616;&#44592;:-&#50896;-&#54635;-&#51064;&#53076;&#46377;-&#54876;&#50857;">&#48276;&#51452;&#54805; &#51077;&#47141; &#53945;&#49457;&#51064; <code>ocean_proximity</code> &#51204;&#52376;&#47532; &#54616;&#44592;: &#50896;-&#54635; &#51064;&#53076;&#46377; &#54876;&#50857;<a class="anchor-link" href="#&#48276;&#51452;&#54805;-&#51077;&#47141;-&#53945;&#49457;&#51064;-ocean_proximity-&#51204;&#52376;&#47532;-&#54616;&#44592;:-&#50896;-&#54635;-&#51064;&#53076;&#46377;-&#54876;&#50857;">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>해안 근접도(<code>ocean_proximity</code>) 다시 확인</p>
 
 </div>
 </div>
@@ -16724,6 +16831,14 @@ Name: median_house_value, dtype: float64</pre>
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>범주형 특성값을 단순 수치화 할 수 있음.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
@@ -16770,6 +16885,15 @@ Name: median_house_value, dtype: float64</pre>
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>수치화된 번호는 범주들의 인덱스에 해당. 
+하지만 숫자의 크기가 모델 훈련 과정에 잘못된 영향을 줄 수 있음.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
@@ -16803,6 +16927,18 @@ Name: median_house_value, dtype: float64</pre>
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>대신에 원-핫-인코딩 활용</p>
+<ul>
+<li>범주 수 만큼의 새로운 특성 추가</li>
+<li>해당되는 범주와 관련된 특성값은 1, 나머지 특성값은 0.</li>
+</ul>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -16845,7 +16981,11 @@ Name: median_house_value, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><code>OneHotEncoder</code>는 기본적으로 희소 행렬을 반환합니다. 필요하면 <code>toarray()</code> 메서드를 사용해 밀집 배열로 변환할 수 있습니다:</p>
+<p><code>OneHotEncoder</code> 변환기</p>
+<ul>
+<li>기본적으로 희소 행렬 반환</li>
+<li><code>toarray()</code> 메서드: 희소 행렬을 밀집 배열로 변환</li>
+</ul>
 
 </div>
 </div>
@@ -16892,7 +17032,7 @@ Name: median_house_value, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>또는 <code>OneHotEncoder</code>를 만들 때 <code>sparse=False</code>로 지정할 수 있습니다:</p>
+<p><code>OneHotEncoder</code> 변환기의 <code>sparse=False</code> 하이퍼파라미터로 지정하면 밀집 행렬 생성</p>
 
 </div>
 </div>
@@ -16938,6 +17078,14 @@ Name: median_house_value, dtype: float64</pre>
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>사용된 범주 어레이는 <code>categories_</code> 속성에 저장됨.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
@@ -16982,7 +17130,32 @@ Name: median_house_value, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>추가 특성을 위해 사용자 정의 변환기를 만들어보죠:</p>
+<h4 id="&#49688;&#52824;&#54805;-&#53945;&#49457;-&#51204;&#52376;&#47532;-&#44284;&#51221;-2:-&#53945;&#49457;-&#52628;&#44032;">&#49688;&#52824;&#54805; &#53945;&#49457; &#51204;&#52376;&#47532; &#44284;&#51221; 2: &#53945;&#49457; &#52628;&#44032;<a class="anchor-link" href="#&#49688;&#52824;&#54805;-&#53945;&#49457;-&#51204;&#52376;&#47532;-&#44284;&#51221;-2:-&#53945;&#49457;-&#52628;&#44032;">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>직접 변환기를 구현해야 함.</p>
+<ul>
+<li><code>__init__()</code> 메서드: 방당 침실수 특성을 추가여부 지정 키워드 인자 활용. (연습을 위해 일부러 키워드 인자로 지정하였음.)</li>
+<li><code>fit()</code>과 <code>transform()</code> 메서드를 갖는 클래스 선언<ul>
+<li><code>fit()</code> 메서드: 아무 것도 하지 않고 <code>self</code> 리턴. 즉, 아무런 값도 추정할 필요 없음.</li>
+<li><code>transform()</code> 메서드: 속성 추가 기능 구현해야 함<ul>
+<li><code>np.c_()</code> 함수: 두 어레이를 열을 축으로 해서 이어 붙이기</li>
+</ul>
+</li>
+<li>두 메서드의 인자는 모두 넘파이 어레이이어야 함.</li>
+</ul>
+</li>
+<li><code>BaseEstimator</code> 클래스와 <code>TransformerMixin</code> 클래스 상속<ul>
+<li><code>BaseEstimator</code> 클래스 상속: 하이퍼파라미터 튜닝에 필요한 <code>get_params()</code>, <code>set_params()</code> 메서드 자동 구현.
+단, 초기 설정 메서드(<code>__init__()</code>)가 <code>*args</code> 또는 <code>kargs</code> 형식의 인자를 사용하지 않아야 함.</li>
+<li><code>TransformerMixin</code> 클래스 상속: <code>fit_transform()</code> 메서드 자동 구현</li>
+</ul>
+</li>
+</ul>
 
 </div>
 </div>
@@ -16998,10 +17171,10 @@ Name: median_house_value, dtype: float64</pre>
 <span class="n">rooms_ix</span><span class="p">,</span> <span class="n">bedrooms_ix</span><span class="p">,</span> <span class="n">population_ix</span><span class="p">,</span> <span class="n">households_ix</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span>
 
 <span class="k">class</span> <span class="nc">CombinedAttributesAdder</span><span class="p">(</span><span class="n">BaseEstimator</span><span class="p">,</span> <span class="n">TransformerMixin</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">add_bedrooms_per_room</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span> <span class="c1"># *args 또는 **kargs 없음</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">add_bedrooms_per_room</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span> <span class="c1"># *args 또는 **kargs 없으며, 키워드 인자 활용함.</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">add_bedrooms_per_room</span> <span class="o">=</span> <span class="n">add_bedrooms_per_room</span>
     <span class="k">def</span> <span class="nf">fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span>  <span class="c1"># 아무것도 하지 않습니다</span>
+        <span class="k">return</span> <span class="bp">self</span>  <span class="c1"># 아무것도 하지 않음</span>
     <span class="k">def</span> <span class="nf">transform</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">):</span>
         <span class="n">rooms_per_household</span> <span class="o">=</span> <span class="n">X</span><span class="p">[:,</span> <span class="n">rooms_ix</span><span class="p">]</span> <span class="o">/</span> <span class="n">X</span><span class="p">[:,</span> <span class="n">households_ix</span><span class="p">]</span>
         <span class="n">population_per_household</span> <span class="o">=</span> <span class="n">X</span><span class="p">[:,</span> <span class="n">population_ix</span><span class="p">]</span> <span class="o">/</span> <span class="n">X</span><span class="p">[:,</span> <span class="n">households_ix</span><span class="p">]</span>
@@ -17012,7 +17185,7 @@ Name: median_house_value, dtype: float64</pre>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">X</span><span class="p">,</span> <span class="n">rooms_per_household</span><span class="p">,</span> <span class="n">population_per_household</span><span class="p">]</span>
 
-<span class="n">attr_adder</span> <span class="o">=</span> <span class="n">CombinedAttributesAdder</span><span class="p">(</span><span class="n">add_bedrooms_per_room</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">attr_adder</span> <span class="o">=</span> <span class="n">CombinedAttributesAdder</span><span class="p">(</span><span class="n">add_bedrooms_per_room</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="c1"># 연습 용도로 방당 침실수를 추가하지 않음</span>
 <span class="n">housing_extra_attribs</span> <span class="o">=</span> <span class="n">attr_adder</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">housing</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">())</span>
 </pre></div>
 
@@ -17024,7 +17197,10 @@ Name: median_house_value, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>책에서는 간단하게 인덱스 (3, 4, 5, 6)을 하드코딩했지만 다음처럼 동적으로 처리하는 것이 더 좋습니다:</p>
+<p>특성 추가에 사용되는 기본의 특성들의 인덱스를 (3, 4, 5, 6) 처럼 수동으로 지정하는 것 대신에 아래와 같이 동적으로 처리할 수 있음.</p>
+<ul>
+<li><code>get_loc()</code> 메서드 활용</li>
+</ul>
 
 </div>
 </div>
@@ -17047,7 +17223,8 @@ Name: median_house_value, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>또한 <code>housing_extra_attribs</code>는 넘파이 배열이기 때문에 열 이름이 없습니다(안타깝지만 사이킷런을 사용할 때 생기는 문제입니다). <code>DataFrame</code>으로 복원하려면 다음과 같이 할 수 있습니다:</p>
+<p><code>housing_extra_attribs</code>는 넘파이 어레이임. 
+따라서 기존에 사용된 <code>columns</code>와 <code>index</code>를 이용하여 <code>DataFrame</code>으로 복원해야 함.</p>
 
 </div>
 </div>
@@ -17195,6 +17372,14 @@ Name: median_house_value, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="2.5.4-&#53945;&#49457;-&#49828;&#52992;&#51068;&#47553;-(p.-107)">2.5.4 &#53945;&#49457; &#49828;&#52992;&#51068;&#47553; (p. 107)<a class="anchor-link" href="#2.5.4-&#53945;&#49457;-&#49828;&#52992;&#51068;&#47553;-(p.-107)">&#182;</a></h3><h4 id="&#49688;&#52824;&#54805;-&#53945;&#49457;-&#51204;&#52376;&#47532;-&#44284;&#51221;-3:-&#53945;&#49457;-&#49828;&#52992;&#51068;&#47553;">&#49688;&#52824;&#54805; &#53945;&#49457; &#51204;&#52376;&#47532; &#44284;&#51221; 3: &#53945;&#49457; &#49828;&#52992;&#51068;&#47553;<a class="anchor-link" href="#&#49688;&#52824;&#54805;-&#53945;&#49457;-&#51204;&#52376;&#47532;-&#44284;&#51221;-3:-&#53945;&#49457;-&#49828;&#52992;&#51068;&#47553;">&#182;</a></h4><p>여기서는 사이킷런의 <code>StandardScaler</code> 변환기를 이용하여 표준화 방식 사용.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="2.5.5-&#48320;&#54872;-&#54028;&#51060;&#54532;&#46972;&#51064;-(p.108)">2.5.5 &#48320;&#54872; &#54028;&#51060;&#54532;&#46972;&#51064; (p.108)<a class="anchor-link" href="#2.5.5-&#48320;&#54872;-&#54028;&#51060;&#54532;&#46972;&#51064;-(p.108)">&#182;</a></h3>
 </div>
 </div>
@@ -17202,7 +17387,7 @@ Name: median_house_value, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>수치형 특성을 전처리하기 위해 파이프라인을 만듭니다:</p>
+<p>수치형 특성 전처리 세 단계를 하나의 파이프라인으로 묶기</p>
 
 </div>
 </div>
@@ -17217,7 +17402,7 @@ Name: median_house_value, dtype: float64</pre>
 
 <span class="n">num_pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
         <span class="p">(</span><span class="s1">&#39;imputer&#39;</span><span class="p">,</span> <span class="n">SimpleImputer</span><span class="p">(</span><span class="n">strategy</span><span class="o">=</span><span class="s2">&quot;median&quot;</span><span class="p">)),</span>
-        <span class="p">(</span><span class="s1">&#39;attribs_adder&#39;</span><span class="p">,</span> <span class="n">CombinedAttributesAdder</span><span class="p">()),</span>
+        <span class="p">(</span><span class="s1">&#39;attribs_adder&#39;</span><span class="p">,</span> <span class="n">CombinedAttributesAdder</span><span class="p">()),</span>    <span class="c1"># 방당 침실수 특성도 추가. 즉, 총 3개 특성 추가됨.</span>
         <span class="p">(</span><span class="s1">&#39;std_scaler&#39;</span><span class="p">,</span> <span class="n">StandardScaler</span><span class="p">()),</span>
     <span class="p">])</span>
 
@@ -17274,6 +17459,17 @@ Name: median_house_value, dtype: float64</pre>
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>수치형 특성 파이프라인과 범주형 특성을 하나의 파이프라인으로 묶기</p>
+<ul>
+<li><code>ColumnTransformer</code> 변환기: 특성별 파이프라인 변환기를 지정 가능</li>
+</ul>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
@@ -17296,6 +17492,14 @@ Name: median_house_value, dtype: float64</pre>
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>모든 전처리 결과:</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -17342,6 +17546,18 @@ Name: median_house_value, dtype: float64</pre>
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>총 16개의 특성이 전처리 되어 훈련에 사용됨.</p>
+<ul>
+<li>기존의 수치형 특성 8 개 + 추가 특성 3개 + 원-핫 인코딩 카테고리 5개 </li>
+</ul>
+<p>훈련 세트 크기: 16512 개</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
@@ -17367,175 +17583,6 @@ Name: median_house_value, dtype: float64</pre>
 
 <div class="output_text output_subarea output_execute_result">
 <pre>(16512, 16)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>다음은 (판다스 <code>DataFrame</code> 열의 일부를 선택하기 위해) <code>DataFrameSelector</code> 변환기와 <code>FeatureUnion</code>를 사용한 예전 방식입니다:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.base</span> <span class="kn">import</span> <span class="n">BaseEstimator</span><span class="p">,</span> <span class="n">TransformerMixin</span>
-
-<span class="c1"># 수치형 열과 범주형 열을 선택하기 위한 클래스</span>
-<span class="k">class</span> <span class="nc">OldDataFrameSelector</span><span class="p">(</span><span class="n">BaseEstimator</span><span class="p">,</span> <span class="n">TransformerMixin</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attribute_names</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">attribute_names</span> <span class="o">=</span> <span class="n">attribute_names</span>
-    <span class="k">def</span> <span class="nf">fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span>
-    <span class="k">def</span> <span class="nf">transform</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">X</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_names</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>하나의 큰 파이프라인에 이들을 모두 결합하여 수치형과 범주형 특성을 전처리합니다:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">num_attribs</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">housing_num</span><span class="p">)</span>
-<span class="n">cat_attribs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;ocean_proximity&quot;</span><span class="p">]</span>
-
-<span class="n">old_num_pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
-        <span class="p">(</span><span class="s1">&#39;selector&#39;</span><span class="p">,</span> <span class="n">OldDataFrameSelector</span><span class="p">(</span><span class="n">num_attribs</span><span class="p">)),</span>
-        <span class="p">(</span><span class="s1">&#39;imputer&#39;</span><span class="p">,</span> <span class="n">SimpleImputer</span><span class="p">(</span><span class="n">strategy</span><span class="o">=</span><span class="s2">&quot;median&quot;</span><span class="p">)),</span>
-        <span class="p">(</span><span class="s1">&#39;attribs_adder&#39;</span><span class="p">,</span> <span class="n">CombinedAttributesAdder</span><span class="p">()),</span>
-        <span class="p">(</span><span class="s1">&#39;std_scaler&#39;</span><span class="p">,</span> <span class="n">StandardScaler</span><span class="p">()),</span>
-    <span class="p">])</span>
-
-<span class="n">old_cat_pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
-        <span class="p">(</span><span class="s1">&#39;selector&#39;</span><span class="p">,</span> <span class="n">OldDataFrameSelector</span><span class="p">(</span><span class="n">cat_attribs</span><span class="p">)),</span>
-        <span class="p">(</span><span class="s1">&#39;cat_encoder&#39;</span><span class="p">,</span> <span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">sparse</span><span class="o">=</span><span class="kc">False</span><span class="p">)),</span>
-    <span class="p">])</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.pipeline</span> <span class="kn">import</span> <span class="n">FeatureUnion</span>
-
-<span class="n">old_full_pipeline</span> <span class="o">=</span> <span class="n">FeatureUnion</span><span class="p">(</span><span class="n">transformer_list</span><span class="o">=</span><span class="p">[</span>
-        <span class="p">(</span><span class="s2">&quot;num_pipeline&quot;</span><span class="p">,</span> <span class="n">old_num_pipeline</span><span class="p">),</span>
-        <span class="p">(</span><span class="s2">&quot;cat_pipeline&quot;</span><span class="p">,</span> <span class="n">old_cat_pipeline</span><span class="p">),</span>
-    <span class="p">])</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">old_housing_prepared</span> <span class="o">=</span> <span class="n">old_full_pipeline</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">housing</span><span class="p">)</span>
-<span class="n">old_housing_prepared</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[&nbsp;]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>array([[-1.15604281,  0.77194962,  0.74333089, ...,  0.        ,
-         0.        ,  0.        ],
-       [-1.17602483,  0.6596948 , -1.1653172 , ...,  0.        ,
-         0.        ,  0.        ],
-       [ 1.18684903, -1.34218285,  0.18664186, ...,  0.        ,
-         0.        ,  1.        ],
-       ...,
-       [ 1.58648943, -0.72478134, -1.56295222, ...,  0.        ,
-         0.        ,  0.        ],
-       [ 0.78221312, -0.85106801,  0.18664186, ...,  0.        ,
-         0.        ,  0.        ],
-       [-1.43579109,  0.99645926,  1.85670895, ...,  0.        ,
-         1.        ,  0.        ]])</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><code>ColumnTransformer</code>의 결과와 동일합니다:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">housing_prepared</span><span class="p">,</span> <span class="n">old_housing_prepared</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[&nbsp;]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
 </div>
 
 </div>
