@@ -31,7 +31,7 @@
 
 ### 주피터 노트북 학습법
 
-#### 온라인(추천)
+#### 온라인 (추천)
 
 * [구글 코랩 ](https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/)
 <a href="https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> 활용
