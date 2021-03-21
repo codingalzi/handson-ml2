@@ -13084,7 +13084,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>캘리포니아 지역 주택의 여러 특성을 사용하여 지역별 주택 중간 가격 예측하기</p>
+<p>캘리포니아 지역 주택의 여러 특성을 사용하여 지역별 주택 중간 가격을 다양한 회귀 모델을 이용하여 예측한다.</p>
 
 </div>
 </div>
@@ -14790,12 +14790,10 @@ Name: income_cat, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>훈련세트 원본을 그대로 두고 복사해서 사용한다.</p>
 <ul>
-<li>훈련세트 원본을 그대로 두고 복사해서 사용.<ul>
 <li>훈련세트만을 대상으로 탐색과 시각화 적용</li>
 <li>데이터 스누핑 편향 방지 용도</li>
-</ul>
-</li>
 </ul>
 
 </div>
@@ -15368,13 +15366,11 @@ Name: median_house_value, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>구역별 방의 총 개수와 침실의 총 개수 대신 아래 특성이 보다 유용하다.</p>
 <ul>
-<li>구역별 방의 총 개수와 침실의 총 개수 대신 아래 특성이 보다 유용함<ul>
 <li>가구당 방의 개수</li>
 <li>방당 침실 개수</li>
 <li>가구당 인원 수</li>
-</ul>
-</li>
 </ul>
 
 </div>
@@ -15454,9 +15450,7 @@ Name: median_house_value, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>가구당 방 개수의 역할은 여전히 미미함</li>
-</ul>
+<p>가구당 방 개수의 역할은 여전히 미미하다.</p>
 
 </div>
 </div>
@@ -15712,7 +15706,7 @@ Name: median_house_value, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>훈련세트를 대상으로 중간 주택 가격을 타깃값(레이블)로 사용하기 위해 다른 특성으로 분리.</p>
+<p>훈련세트를 대상으로 중간 주택 가격을 타깃값(레이블)로 사용하기 위해 다른 특성으로 분리한다.</p>
 <ul>
 <li><code>housing</code>: 훈련에 사용되는 특성 9개 (중간 주택 가격 제외)</li>
 <li><code>housing_labels</code>: 중간 주택 가격</li>
@@ -16091,7 +16085,7 @@ Name: median_house_value, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>여기서는 옵션 3 활용. 즉, 누락치를 특성 중앙값으로 채웠음.</p>
+<p>여기서는 옵션 3을 활용한다. 즉, 누락치를 특성 중앙값으로 채운다.</p>
 
 </div>
 </div>
@@ -16223,7 +16217,7 @@ Name: median_house_value, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="SimpleImputer-&#48320;&#54872;&#44592;"><code>SimpleImputer</code> &#48320;&#54872;&#44592;<a class="anchor-link" href="#SimpleImputer-&#48320;&#54872;&#44592;">&#182;</a></h5><p><code>SimpleImputer</code> 변환기를 활용하면 옵션 3을 쉽게 처리할 수 있음.</p>
+<h5 id="SimpleImputer-&#48320;&#54872;&#44592;"><code>SimpleImputer</code> &#48320;&#54872;&#44592;<a class="anchor-link" href="#SimpleImputer-&#48320;&#54872;&#44592;">&#182;</a></h5><p><code>SimpleImputer</code> 변환기를 활용하면 옵션 3을 쉽게 처리할 수 있다.</p>
 
 </div>
 </div>
@@ -16245,7 +16239,7 @@ Name: median_house_value, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>중앙값이 수치형 특성에서만 계산될 수 있기 때문에 범주형 특성을 제거한 후에 <code>SimpleImputer</code> 변환기를 적용해야 함.</p>
+<p>중앙값이 수치형 특성에서만 계산될 수 있기 때문에 범주형 특성을 제거한 후에 <code>SimpleImputer</code> 변환기를 적용해야 한다.</p>
 
 </div>
 </div>
@@ -16267,7 +16261,7 @@ Name: median_house_value, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><code>SimpleImputer</code> 변환기의 <code>fit()</code> 메서드는 지정된 통계 특성값을 계산하여 저장해 둠.</p>
+<p><code>SimpleImputer</code> 변환기의 <code>fit()</code> 메서드는 지정된 통계 특성값을 계산하여 저장해 둔다.</p>
 <ul>
 <li><code>statistics_</code> 속성에 저장됨.</li>
 </ul>
@@ -16346,7 +16340,7 @@ Name: median_house_value, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>각 특성의 중앙값이 수동으로 계산한 것 동일함.</p>
+<p>각 특성의 중앙값이 수동으로 계산한 것과 동일하다.</p>
 
 </div>
 </div>
@@ -16388,7 +16382,7 @@ Name: median_house_value, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><code>transform()</code> 메서드를 실행하여 수치형 특성 변환하기.</p>
+<p><code>transform()</code> 메서드를 실행하여 수치형 특성을 변환한다.</p>
 <ul>
 <li>반환값은 넘파이 어레이 자료형임. </li>
 <li>팬다스의 데이터프레임으로 형변환시켜야 함.<ul>
@@ -16430,7 +16424,7 @@ Name: median_house_value, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>앞서 누락치를 수동으로 채운 결과와 동일함을 확인할 수 있음.</p>
+<p>앞서 누락치를 수동으로 채운 결과와 동일함을 확인할 수 있다.</p>
 
 </div>
 </div>
@@ -16556,7 +16550,7 @@ Name: median_house_value, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>누락치를 채우는데 사용한 전략이 중앙값(median)임을 다시 확인 가능.</p>
+<p>누락치를 채우는데 사용한 전략이 중앙값(median)임을 다시 확인할 수 있다.</p>
 
 </div>
 </div>
@@ -16834,7 +16828,7 @@ Name: median_house_value, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>범주형 특성값을 단순 수치화 할 수 있음.</p>
+<p>범주형 특성값을 단순하게 수치화하면 다음과 같다.</p>
 
 </div>
 </div>
@@ -16888,8 +16882,8 @@ Name: median_house_value, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>수치화된 번호는 범주들의 인덱스에 해당. 
-하지만 숫자의 크기가 모델 훈련 과정에 잘못된 영향을 줄 수 있음.</p>
+<p>수치화된 번호는 범주들의 인덱스에 해당한다.
+하지만 숫자의 크기가 모델 훈련 과정에 잘못된 영향을 줄 수 있음에 주의해야 한다.</p>
 
 </div>
 </div>
@@ -16931,7 +16925,7 @@ Name: median_house_value, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>대신에 원-핫-인코딩 활용</p>
+<p>따라서 여기서는 대신에 원-핫-인코딩을 활용한다.</p>
 <ul>
 <li>범주 수 만큼의 새로운 특성 추가</li>
 <li>해당되는 범주와 관련된 특성값은 1, 나머지 특성값은 0.</li>
@@ -16981,8 +16975,7 @@ Name: median_house_value, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><code>OneHotEncoder</code> 변환기</p>
-<ul>
+<h4 id="OneHotEncoder-&#48320;&#54872;&#44592;"><code>OneHotEncoder</code> &#48320;&#54872;&#44592;<a class="anchor-link" href="#OneHotEncoder-&#48320;&#54872;&#44592;">&#182;</a></h4><ul>
 <li>기본적으로 희소 행렬 반환</li>
 <li><code>toarray()</code> 메서드: 희소 행렬을 밀집 배열로 변환</li>
 </ul>
@@ -17032,7 +17025,7 @@ Name: median_house_value, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><code>OneHotEncoder</code> 변환기의 <code>sparse=False</code> 하이퍼파라미터로 지정하면 밀집 행렬 생성</p>
+<p><code>OneHotEncoder</code> 변환기의 <code>sparse=False</code> 하이퍼파라미터로 지정하면 밀집 행렬이 생성된다.</p>
 
 </div>
 </div>
@@ -17081,7 +17074,7 @@ Name: median_house_value, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>사용된 범주 어레이는 <code>categories_</code> 속성에 저장됨.</p>
+<p>사용된 범주 어레이는 <code>categories_</code> 속성에 저장된다.</p>
 
 </div>
 </div>
@@ -17137,7 +17130,7 @@ Name: median_house_value, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>직접 변환기를 구현해야 함.</p>
+<p>직접 변환기를 구현해야 한다.</p>
 <ul>
 <li><code>__init__()</code> 메서드: 방당 침실수 특성을 추가여부 지정 키워드 인자 활용. (연습을 위해 일부러 키워드 인자로 지정하였음.)</li>
 <li><code>fit()</code>과 <code>transform()</code> 메서드를 갖는 클래스 선언<ul>
@@ -17197,7 +17190,7 @@ Name: median_house_value, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>특성 추가에 사용되는 기본의 특성들의 인덱스를 (3, 4, 5, 6) 처럼 수동으로 지정하는 것 대신에 아래와 같이 동적으로 처리할 수 있음.</p>
+<p>특성 추가에 사용되는 기본의 특성들의 인덱스를 (3, 4, 5, 6) 처럼 수동으로 지정하는 것 대신에 아래와 같이 동적으로 처리하는 게 보다 좋다.</p>
 <ul>
 <li><code>get_loc()</code> 메서드 활용</li>
 </ul>
@@ -17223,8 +17216,8 @@ Name: median_house_value, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><code>housing_extra_attribs</code>는 넘파이 어레이임. 
-따라서 기존에 사용된 <code>columns</code>와 <code>index</code>를 이용하여 <code>DataFrame</code>으로 복원해야 함.</p>
+<p><code>housing_extra_attribs</code>는 넘파이 어레이이며,
+따라서 기존에 사용된 <code>columns</code>와 <code>index</code>를 이용하여 <code>DataFrame</code>으로 복원해야 한다.</p>
 
 </div>
 </div>
@@ -17372,7 +17365,7 @@ Name: median_house_value, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="2.5.4-&#53945;&#49457;-&#49828;&#52992;&#51068;&#47553;-(p.-107)">2.5.4 &#53945;&#49457; &#49828;&#52992;&#51068;&#47553; (p. 107)<a class="anchor-link" href="#2.5.4-&#53945;&#49457;-&#49828;&#52992;&#51068;&#47553;-(p.-107)">&#182;</a></h3><h4 id="&#49688;&#52824;&#54805;-&#53945;&#49457;-&#51204;&#52376;&#47532;-&#44284;&#51221;-3:-&#53945;&#49457;-&#49828;&#52992;&#51068;&#47553;">&#49688;&#52824;&#54805; &#53945;&#49457; &#51204;&#52376;&#47532; &#44284;&#51221; 3: &#53945;&#49457; &#49828;&#52992;&#51068;&#47553;<a class="anchor-link" href="#&#49688;&#52824;&#54805;-&#53945;&#49457;-&#51204;&#52376;&#47532;-&#44284;&#51221;-3:-&#53945;&#49457;-&#49828;&#52992;&#51068;&#47553;">&#182;</a></h4><p>여기서는 사이킷런의 <code>StandardScaler</code> 변환기를 이용하여 표준화 방식 사용.</p>
+<h3 id="2.5.4-&#53945;&#49457;-&#49828;&#52992;&#51068;&#47553;-(p.-107)">2.5.4 &#53945;&#49457; &#49828;&#52992;&#51068;&#47553; (p. 107)<a class="anchor-link" href="#2.5.4-&#53945;&#49457;-&#49828;&#52992;&#51068;&#47553;-(p.-107)">&#182;</a></h3><h4 id="&#49688;&#52824;&#54805;-&#53945;&#49457;-&#51204;&#52376;&#47532;-&#44284;&#51221;-3:-&#53945;&#49457;-&#49828;&#52992;&#51068;&#47553;">&#49688;&#52824;&#54805; &#53945;&#49457; &#51204;&#52376;&#47532; &#44284;&#51221; 3: &#53945;&#49457; &#49828;&#52992;&#51068;&#47553;<a class="anchor-link" href="#&#49688;&#52824;&#54805;-&#53945;&#49457;-&#51204;&#52376;&#47532;-&#44284;&#51221;-3:-&#53945;&#49457;-&#49828;&#52992;&#51068;&#47553;">&#182;</a></h4><p>여기서는 사이킷런의 <code>StandardScaler</code> 변환기를 이용하여 표준화 스케일링을 사용한다.</p>
 
 </div>
 </div>
@@ -17387,7 +17380,10 @@ Name: median_house_value, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>수치형 특성 전처리 세 단계를 하나의 파이프라인으로 묶기</p>
+<h4 id="&#49688;&#52824;&#54805;-&#53945;&#49457;-&#51204;&#52376;&#47532;-&#49464;-&#45800;&#44228;&#47484;-&#54616;&#45208;&#51032;-&#54028;&#51060;&#54532;&#46972;&#51064;&#51004;&#47196;-&#47926;&#44592;">&#49688;&#52824;&#54805; &#53945;&#49457; &#51204;&#52376;&#47532; &#49464; &#45800;&#44228;&#47484; &#54616;&#45208;&#51032; &#54028;&#51060;&#54532;&#46972;&#51064;&#51004;&#47196; &#47926;&#44592;<a class="anchor-link" href="#&#49688;&#52824;&#54805;-&#53945;&#49457;-&#51204;&#52376;&#47532;-&#49464;-&#45800;&#44228;&#47484;-&#54616;&#45208;&#51032;-&#54028;&#51060;&#54532;&#46972;&#51064;&#51004;&#47196;-&#47926;&#44592;">&#182;</a></h4><ul>
+<li><code>Pipiline</code> 객체 생성</li>
+<li>변화기 이름과 변환기의 쌍으로 이루어진 리스트 사용.</li>
+</ul>
 
 </div>
 </div>
@@ -17462,8 +17458,7 @@ Name: median_house_value, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>수치형 특성 파이프라인과 범주형 특성을 하나의 파이프라인으로 묶기</p>
-<ul>
+<h4 id="&#49688;&#52824;&#54805;-&#53945;&#49457;-&#54028;&#51060;&#54532;&#46972;&#51064;&#44284;-&#48276;&#51452;&#54805;-&#53945;&#49457;&#51012;-&#54616;&#45208;&#51032;-&#54028;&#51060;&#54532;&#46972;&#51064;&#51004;&#47196;-&#47926;&#44592;">&#49688;&#52824;&#54805; &#53945;&#49457; &#54028;&#51060;&#54532;&#46972;&#51064;&#44284; &#48276;&#51452;&#54805; &#53945;&#49457;&#51012; &#54616;&#45208;&#51032; &#54028;&#51060;&#54532;&#46972;&#51064;&#51004;&#47196; &#47926;&#44592;<a class="anchor-link" href="#&#49688;&#52824;&#54805;-&#53945;&#49457;-&#54028;&#51060;&#54532;&#46972;&#51064;&#44284;-&#48276;&#51452;&#54805;-&#53945;&#49457;&#51012;-&#54616;&#45208;&#51032;-&#54028;&#51060;&#54532;&#46972;&#51064;&#51004;&#47196;-&#47926;&#44592;">&#182;</a></h4><ul>
 <li><code>ColumnTransformer</code> 변환기: 특성별 파이프라인 변환기를 지정 가능</li>
 </ul>
 
@@ -17496,7 +17491,7 @@ Name: median_house_value, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>모든 전처리 결과:</p>
+<p>모든 전처리 결과는 다음과 같다.</p>
 
 </div>
 </div>
@@ -17549,11 +17544,13 @@ Name: median_house_value, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>총 16개의 특성이 전처리 되어 훈련에 사용됨.</p>
 <ul>
+<li>총 16개의 특성이 전처리 되어 훈련에 사용됨.<ul>
 <li>기존의 수치형 특성 8 개 + 추가 특성 3개 + 원-핫 인코딩 카테고리 5개 </li>
 </ul>
-<p>훈련 세트 크기: 16512 개</p>
+</li>
+<li>훈련 세트 크기: 16512 개</li>
+</ul>
 
 </div>
 </div>
@@ -17608,7 +17605,35 @@ Name: median_house_value, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>사이킷런이 제공하는 다양한 회귀 모델을 선택하여 훈련과 예측을 실행하는 방법 소개한다.
+소개되는 모델은 다음과 같다.</p>
+<ul>
+<li>선형 회귀: <code>LinearRegression</code> 클래스 활용</li>
+<li>결정 트리: <code>DecisionTreeRegressor</code> </li>
+</ul>
+<p>또한 훈련되는 모델의 성능을 평가하는 교차 검증 방식도 소개한다.
+모델 평가 기준은 RMSE(평균 제곱근 오차)를 기본으로 사용한다.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="2.6.1-&#54984;&#47144;-&#49464;&#53944;&#50640;&#49436;-&#54984;&#47144;&#54616;&#44256;-&#54217;&#44032;&#54616;&#44592;-(p.-110)">2.6.1 &#54984;&#47144; &#49464;&#53944;&#50640;&#49436; &#54984;&#47144;&#54616;&#44256; &#54217;&#44032;&#54616;&#44592; (p. 110)<a class="anchor-link" href="#2.6.1-&#54984;&#47144;-&#49464;&#53944;&#50640;&#49436;-&#54984;&#47144;&#54616;&#44256;-&#54217;&#44032;&#54616;&#44592;-(p.-110)">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#49440;&#54805;-&#54924;&#44480;-&#47784;&#45944;(LinearRegression)-&#54984;&#47144;">&#49440;&#54805; &#54924;&#44480; &#47784;&#45944;(<code>LinearRegression</code>) &#54984;&#47144;<a class="anchor-link" href="#&#49440;&#54805;-&#54924;&#44480;-&#47784;&#45944;(LinearRegression)-&#54984;&#47144;">&#182;</a></h4><ul>
+<li><code>fit()</code> 메서드를 전처리된 훈련세트와 레이블을 인자로 사용하여 호출<ul>
+<li><strong>주의사항:</strong> <code>LinearRegression</code> 모델은 모델을 학습하는 대신에 무어-펜로즈 역행렬을 이용하여 직접 파라미터를 계산함. (4장 참조)</li>
+</ul>
+</li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -17648,12 +17673,25 @@ Name: median_house_value, dtype: float64</pre>
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>예측하기 (연습용)<ul>
+<li>예측에 사용하는 데이터 또한 동일한 전처리 과정을 거친 후에 사용함</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 훈련 샘플 몇 개를 사용해 전체 파이프라인을 적용해 보겠습니다</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 연습 용도로 훈련 샘플 몇 개를 대상으로 예측 실행</span>
 <span class="n">some_data</span> <span class="o">=</span> <span class="n">housing</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span>
 <span class="n">some_labels</span> <span class="o">=</span> <span class="n">housing_labels</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span>
 <span class="n">some_data_prepared</span> <span class="o">=</span> <span class="n">full_pipeline</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">some_data</span><span class="p">)</span>
@@ -17688,7 +17726,7 @@ Name: median_house_value, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>실제 값과 비교합니다:</p>
+<p>실제 중간 주택 가격은 다음과 같다.</p>
 
 </div>
 </div>
@@ -17724,57 +17762,26 @@ Name: median_house_value, dtype: float64</pre>
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">some_data_prepared</span>
-</pre></div>
-
-    </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#54984;&#47144;-&#49464;&#53944;-&#45824;&#49345;-&#49457;&#45733;-&#54217;&#44032;">&#54984;&#47144; &#49464;&#53944; &#45824;&#49345; &#49457;&#45733; &#54217;&#44032;<a class="anchor-link" href="#&#54984;&#47144;-&#49464;&#53944;-&#45824;&#49345;-&#49457;&#45733;-&#54217;&#44032;">&#182;</a></h4>
 </div>
 </div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[&nbsp;]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>array([[-1.15604281,  0.77194962,  0.74333089, -0.49323393, -0.44543821,
-        -0.63621141, -0.42069842, -0.61493744, -0.31205452, -0.08649871,
-         0.15531753,  1.        ,  0.        ,  0.        ,  0.        ,
-         0.        ],
-       [-1.17602483,  0.6596948 , -1.1653172 , -0.90896655, -1.0369278 ,
-        -0.99833135, -1.02222705,  1.33645936,  0.21768338, -0.03353391,
-        -0.83628902,  1.        ,  0.        ,  0.        ,  0.        ,
-         0.        ],
-       [ 1.18684903, -1.34218285,  0.18664186, -0.31365989, -0.15334458,
-        -0.43363936, -0.0933178 , -0.5320456 , -0.46531516, -0.09240499,
-         0.4222004 ,  0.        ,  0.        ,  0.        ,  0.        ,
-         1.        ],
-       [-0.01706767,  0.31357576, -0.29052016, -0.36276217, -0.39675594,
-         0.03604096, -0.38343559, -1.04556555, -0.07966124,  0.08973561,
-        -0.19645314,  0.        ,  1.        ,  0.        ,  0.        ,
-         0.        ],
-       [ 0.49247384, -0.65929936, -0.92673619,  1.85619316,  2.41221109,
-         2.72415407,  2.57097492, -0.44143679, -0.35783383, -0.00419445,
-         0.2699277 ,  1.        ,  0.        ,  0.        ,  0.        ,
-         0.        ]])</pre>
 </div>
-
-</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>RMSE(평균 제곱근 오차) 계산<ul>
+<li><code>mean_squared_error()</code> 함수는 <code>squared=False</code>로 키워드 인자를 사용하면 바로
+RMSE 반환함. 아래 코드에서는 기본값인 <code>squared=True</code>를 사용하기에 직접 제곱근 값을 계산해야 함.</li>
+</ul>
+</li>
+</ul>
 
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -17817,7 +17824,9 @@ Name: median_house_value, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>노트</strong>: 사이킷런 0.22 버전부터는 <code>squared=False</code> 매개변수로 <code>mean_squared_error()</code> 함수를 호출하면 RMSE를 바로 얻을 수 있습니다.</p>
+<ul>
+<li>MAE(평균 절댓값 오차) 계산</li>
+</ul>
 
 </div>
 </div>
@@ -17857,6 +17866,24 @@ Name: median_house_value, dtype: float64</pre>
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>RMSE가 MAE 보다 크다. 따라서 훈련 세트에 이상치가 많이 포함되어 있다고 유추할 수 있다. 
+앞서 살펴 보았듯이, 여러 이상치를 제거하고 훈련시키면 좀 더 좋은 성능이 나올 수 있다.
+(아래 프로젝트 안내 참조)</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#44208;&#51221;-&#53944;&#47532;-&#54924;&#44480;-&#47784;&#45944;(DecisionTreeRegressor)-&#54984;&#47144;">&#44208;&#51221; &#53944;&#47532; &#54924;&#44480; &#47784;&#45944;(DecisionTreeRegressor) &#54984;&#47144;<a class="anchor-link" href="#&#44208;&#51221;-&#53944;&#47532;-&#54924;&#44480;-&#47784;&#45944;(DecisionTreeRegressor)-&#54984;&#47144;">&#182;</a></h4><p>훈련 및 예측 과정은 동일하다.</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -17898,6 +17925,19 @@ Name: median_house_value, dtype: float64</pre>
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>RMSE가 0으로 측정된다.</p>
+<ul>
+<li>모델이 완벽하게 훈련 세트에 적응함.</li>
+<li>과대적합이 완벽하게 이루어짐. 따라서 모델 성능을 절대로 믿을 수 없음.
+  실제로 아래 교차 검증 결과는 선형 회귀 모델보다 낮은 성능을 보여줌.</li>
+</ul>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -17942,6 +17982,22 @@ Name: median_house_value, dtype: float64</pre>
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>cross_val_score</code> 모델을 활용하여 특정 모델의 성능을 교차 검증(cross validation) 기법으로 평가한다. 
+사용되는 하이퍼파라미터는 다음과 같다.</p>
+<ul>
+<li><code>cv</code>: 폴드 수. 아래 코드는 10개의 폴드 사용.(<code>cv=10</code>)</li>
+<li><code>scoring</code>: 교차 검증에 사용되는 성능 평가 기준을 지정함. 
+  단, 여기서는 높을 수록 좋은 효용함수 사용. 
+  따라서 아래 코드에서는 작을 수록 좋은 비용함수의 음숫값을 사용하도록 지정함.
+  (<code>scoring="neg_mean_squared_error"</code>)</li>
+</ul>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
@@ -17958,6 +18014,15 @@ Name: median_house_value, dtype: float64</pre>
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>결정 트리에 대한 교차 검증 결과가 좋지 않다.
+즉, 앞선 결과가 완벽한 과대적합이었음이 다시 한 번 확인된다.</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -17998,6 +18063,14 @@ Name: median_house_value, dtype: float64</pre>
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>선형 회귀에 대한 교차 검증 결과가 오히려 좀 더 좋다.</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -18040,7 +18113,63 @@ Name: median_house_value, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>노트</strong>: 사이킷런 0.22 버전에서 <code>n_estimators</code>의 기본값이 100으로 바뀌기 때문에 향후를 위해 <code>n_estimators=100</code>로 지정합니다(책에는 등장하지 않습니다).</p>
+<p>팬다스의 시리즈(Series) 자료형이 제공하는 <code>describe()</code> 메서드를 이용하여 10개 검증 결과의 통계 정보를 확인할 수 있다.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">lin_reg</span><span class="p">,</span> <span class="n">housing_prepared</span><span class="p">,</span> <span class="n">housing_labels</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="s2">&quot;neg_mean_squared_error&quot;</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="o">-</span><span class="n">scores</span><span class="p">))</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[&nbsp;]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>count       10.000000
+mean     69052.461363
+std       2879.437224
+min      64969.630564
+25%      67136.363758
+50%      68156.372635
+75%      70982.369487
+max      74739.570526
+dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#47004;&#45924;-&#54252;&#47112;&#49828;&#53944;-&#54924;&#44480;-&#47784;&#45944;(RandomForestRegressor-&#54984;&#47144;">&#47004;&#45924; &#54252;&#47112;&#49828;&#53944; &#54924;&#44480; &#47784;&#45944;(<code>RandomForestRegressor</code> &#54984;&#47144;<a class="anchor-link" href="#&#47004;&#45924;-&#54252;&#47112;&#49828;&#53944;-&#54924;&#44480;-&#47784;&#45944;(RandomForestRegressor-&#54984;&#47144;">&#182;</a></h4><p>무작위로 선택한 특성을 이용하는 결정 트리 여러 개를 훈련 시킨 후 
+훈련된 모델들의 평균 예측값을 예측값으로 사용하는 모델이며,
+아래 코드에서 사용된 하이퍼파라미터는 다음과 같다.</p>
+<ul>
+<li><code>n_estimators=100</code> 기본값 사용: 사용되는 결정 트리 개수 지정</li>
+<li>기타 하이퍼파라미터 사용은 7장 참조</li>
+</ul>
 
 </div>
 </div>
@@ -18123,6 +18252,17 @@ Name: median_house_value, dtype: float64</pre>
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>랜덤 포레스트를 대상으로 교차 검증 진행하면, 
+선형회귀, 결정 트리 모델보다 성능이 좋게 나온다.
+하지만 교차 검증 결과가 바로 위 훈련 결과보자 좋지 않다. 
+즉, 위 훈련 모델이 과대적합이었다는 것을 반증한다.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
@@ -18163,88 +18303,6 @@ Name: median_house_value, dtype: float64</pre>
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">lin_reg</span><span class="p">,</span> <span class="n">housing_prepared</span><span class="p">,</span> <span class="n">housing_labels</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="s2">&quot;neg_mean_squared_error&quot;</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="o">-</span><span class="n">scores</span><span class="p">))</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[&nbsp;]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>count       10.000000
-mean     69052.461363
-std       2879.437224
-min      64969.630564
-25%      67136.363758
-50%      68156.372635
-75%      70982.369487
-max      74739.570526
-dtype: float64</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">SVR</span>
-
-<span class="n">svm_reg</span> <span class="o">=</span> <span class="n">SVR</span><span class="p">(</span><span class="n">kernel</span><span class="o">=</span><span class="s2">&quot;linear&quot;</span><span class="p">)</span>
-<span class="n">svm_reg</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">housing_prepared</span><span class="p">,</span> <span class="n">housing_labels</span><span class="p">)</span>
-<span class="n">housing_predictions</span> <span class="o">=</span> <span class="n">svm_reg</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">housing_prepared</span><span class="p">)</span>
-<span class="n">svm_mse</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">housing_labels</span><span class="p">,</span> <span class="n">housing_predictions</span><span class="p">)</span>
-<span class="n">svm_rmse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">svm_mse</span><span class="p">)</span>
-<span class="n">svm_rmse</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[&nbsp;]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>111094.6308539982</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -18255,7 +18313,34 @@ dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>가능성 있는 모델을 몇 개 선정한 다음에는 모델에 사용된 하이퍼파라미터의 최적값을 찾아야 한다.
+좋은 파라미터를 탐색하는 세 가지 기법은 다음과 같다.</p>
+<ul>
+<li>그리드 탐색</li>
+<li>랜덤 탐색</li>
+<li>앙상블 학습</li>
+</ul>
+<p>여기서는 그리드 탐색과 랜덤 탐색을 간단하게 소개하며, 앙상블 학습은 7장에서 자세히 다룬다.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="2.7.1-&#44536;&#47532;&#46300;-&#53456;&#49353;-(p.115)">2.7.1 &#44536;&#47532;&#46300; &#53456;&#49353; (p.115)<a class="anchor-link" href="#2.7.1-&#44536;&#47532;&#46300;-&#53456;&#49353;-(p.115)">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>GridSearchCV</code> 객체를 활용하며, 특정 하이퍼파라미터에 대한 후보로 지정된 값들의 모든 조합에 대해 교차 검증 평가를 진행한다.</p>
+<ul>
+<li>조합할 수 있는 구체적인 값들을 지정해야 하며, 따라서 적은 경우의 수를 대상으로 탐색할 때 적절함.</li>
+</ul>
+<p>아래 코드는 랜덤 포레스트 회귀 모델의 하이퍼파라미터를 탐색한다.</p>
+
 </div>
 </div>
 </div>
@@ -18267,14 +18352,14 @@ dtype: float64</pre>
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">GridSearchCV</span>
 
 <span class="n">param_grid</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="c1"># 12(=3×4)개의 하이퍼파라미터 조합을 시도합니다.</span>
+    <span class="c1"># 첫째 경우: 총 12(=3×4)개의 하이퍼파라미터 조합 시도</span>
     <span class="p">{</span><span class="s1">&#39;n_estimators&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">30</span><span class="p">],</span> <span class="s1">&#39;max_features&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">]},</span>
-    <span class="c1"># bootstrap은 False로 하고 6(=2×3)개의 조합을 시도합니다.</span>
+    <span class="c1"># 둘째 경우: bootstrap은 False로 하고 총 6(=2×3)개의 조합 시도</span>
     <span class="p">{</span><span class="s1">&#39;bootstrap&#39;</span><span class="p">:</span> <span class="p">[</span><span class="kc">False</span><span class="p">],</span> <span class="s1">&#39;n_estimators&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="s1">&#39;max_features&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]},</span>
   <span class="p">]</span>
 
 <span class="n">forest_reg</span> <span class="o">=</span> <span class="n">RandomForestRegressor</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
-<span class="c1"># 다섯 개의 폴드로 훈련하면 총 (12+6)*5=90번의 훈련이 일어납니다.</span>
+<span class="c1"># 5-겹 교차 검증 시도. 따라서 총 (12+6)*5=90번의 훈련 진행</span>
 <span class="n">grid_search</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">forest_reg</span><span class="p">,</span> <span class="n">param_grid</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
                            <span class="n">scoring</span><span class="o">=</span><span class="s1">&#39;neg_mean_squared_error&#39;</span><span class="p">,</span>
                            <span class="n">return_train_score</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -18329,7 +18414,11 @@ dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>최상의 파라미터 조합은 다음과 같습니다:</p>
+<p>최상의 하이퍼파라미터 조합은 <code>best_params_</code> 속성에 저장된다.</p>
+<ul>
+<li><code>max_features</code>와 <code>n_estimators</code> 두 값 모두 지정된 최댓값이 최적으로 선택됨. 
+  따라서 숫자를 좀 더 키워도 되는 것으로 보임.</li>
+</ul>
 
 </div>
 </div>
@@ -18366,6 +18455,14 @@ dtype: float64</pre>
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>최상의 랜덤 포레스트 회귀 모델은 <code>best_estimator_</code> 속성에 저장된다.</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -18409,7 +18506,10 @@ dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>그리드서치에서 테스트한 하이퍼파라미터 조합의 점수를 확인합니다:</p>
+<p>그리드 탐색에서 테스트한 18개의 하이퍼파라미터 조합에 대한 평가 점수는 다음과 같다.</p>
+<ul>
+<li><code>cv_results_</code> 속성에 저장됨</li>
+</ul>
 
 </div>
 </div>
@@ -18420,6 +18520,7 @@ dtype: float64</pre>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">cvres</span> <span class="o">=</span> <span class="n">grid_search</span><span class="o">.</span><span class="n">cv_results_</span>
+
 <span class="k">for</span> <span class="n">mean_score</span><span class="p">,</span> <span class="n">params</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">cvres</span><span class="p">[</span><span class="s2">&quot;mean_test_score&quot;</span><span class="p">],</span> <span class="n">cvres</span><span class="p">[</span><span class="s2">&quot;params&quot;</span><span class="p">]):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="o">-</span><span class="n">mean_score</span><span class="p">),</span> <span class="n">params</span><span class="p">)</span>
 </pre></div>
@@ -18463,6 +18564,16 @@ dtype: float64</pre>
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>cv_results_</code> 속성에 그리드 탐색 과정에서 알아낸 많은 값들이 저장되어 있다. 
+(넘파이 사전 객체로 저장됨.) 
+팬다스 데이터프레임으로 형변환하면 사전의 키(key)가 열(column)의 항목으로 사용된다.</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -19013,7 +19124,7 @@ dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="&#44536;&#47532;&#46300;-&#53456;&#49353;&#44284;-&#54028;&#51060;&#54532;&#46972;&#51064;">&#44536;&#47532;&#46300; &#53456;&#49353;&#44284; &#54028;&#51060;&#54532;&#46972;&#51064;<a class="anchor-link" href="#&#44536;&#47532;&#46300;-&#53456;&#49353;&#44284;-&#54028;&#51060;&#54532;&#46972;&#51064;">&#182;</a></h4>
+<h4 id="&#9995;-&#44536;&#47532;&#46300;-&#53456;&#49353;&#44284;-&#54028;&#51060;&#54532;&#46972;&#51064;">&#9995; &#44536;&#47532;&#46300; &#53456;&#49353;&#44284; &#54028;&#51060;&#54532;&#46972;&#51064;<a class="anchor-link" href="#&#9995;-&#44536;&#47532;&#46300;-&#53456;&#49353;&#44284;-&#54028;&#51060;&#54532;&#46972;&#51064;">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -19029,13 +19140,13 @@ dtype: float64</pre>
 <li>누락된 값 처리하기</li>
 <li>특성 선택하기</li>
 </ul>
-<p>등에 대해 어떻게 설정하는 것이 좋은지도 함께 찾아준다. 
-조금은 고급 기술이지만, 지금까지 배운 내용을 이해한다면
+<p>등에 대해 어떻게 설정하는 것이 좋은지를 하이퍼파라미터로 지정해 놓으면 
+그리드 탐색 등을 이용하여 어떤 옵션이 좋은지 함께 탐색해준다.</p>
+<p>조금은 고급 기술이지만, 지금까지 배운 내용을 이해한다면
 어렵지 않게 적용할 수 있는 기술이다. 
 파이프라인과 그리드 탐색을 연동한 예제들을 아래 사이트에서 살펴볼 수 있다.</p>
 <ul>
 <li><a href="https://bizzengine.tistory.com/171">알고리즘 체인과 파이프라인</a></li>
-<li><a href="https://tensorflow.blog/2017/12/08/pipeline에서-캐싱을-사용하기/">Pipeline에서 캐싱 사용하기</a></li>
 <li><a href="https://medium.com/swlh/randomized-or-grid-search-with-pipeline-cheatsheet-719c72eda68">A Super Quick Guide to Randomized (or Grid) Search with Pipeline</a></li>
 </ul>
 
@@ -19046,6 +19157,20 @@ dtype: float64</pre>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="2.7.2-&#47004;&#45924;-&#53456;&#49353;-(p.-118)">2.7.2 &#47004;&#45924; &#53456;&#49353; (p. 118)<a class="anchor-link" href="#2.7.2-&#47004;&#45924;-&#53456;&#49353;-(p.-118)">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>조합 대상인 하이퍼파라이미터 값을 지정된 구간에서 임의의 선택하는 방식을 활용한다. 
+탐색 공간이 커질 때 사용하며, 기타 작동 방식은 그리드 탐색과 동일하다.
+아래 코드는 다음 두 하이퍼파라미터의 탐색 구간을 지정한다.</p>
+<ul>
+<li><code>n_iter=10</code>: 10개의 조합을 임의로 선정</li>
+<li><code>cv=5</code>: 각각의 조합에 대해 5겹 교차 검증 실행. 즉, 총 50번 훈련 이루어짐.</li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -19114,6 +19239,16 @@ dtype: float64</pre>
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><code>cv_results_</code> 속성에 저장된 10개 모델의 성능과 사용된 하이퍼파라미터는 다음과 같음.</li>
+</ul>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
@@ -19163,6 +19298,21 @@ dtype: float64</pre>
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>최상의 랜덤 포레스트 모델에서 사용된 특성들의 중요도를 확인하여 일부 특성을 제외할 수 있다.</p>
+<ul>
+<li>랜덤 포레스트 모델의 <code>feature_importances_</code> 속성 활용<ul>
+<li>특성 중요도 측정 방법은 6장에서 설명하는 지니 불순도와 관련됨.</li>
+<li>&#x270b; 참고: <a href="https://medium.com/the-artificial-impostor/feature-importance-measures-for-tree-models-part-i-47f187c1a2c3#:~:text=Gini%20Importance%20or%20Mean%20Decrease%20in%20Impurity%20(MDI">Feature Importance Measures for Tree Models — Part I</a>%20calculates%20each,number%20of%20samples%20it%20splits.)</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
@@ -19200,16 +19350,32 @@ dtype: float64</pre>
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>중요도 기준으로 정렬하여 특성과 함께 보여주면 다음과 같다.</p>
+<ul>
+<li>중간 소득(median income)과 INLAND(내륙, 해안 근접도)가 가장 중요한 특성으로 확인됨</li>
+<li>해안 근접도의 다른 네 가지 특성은 별로 중요하지 않음</li>
+<li>중요도가 낮은 특성은 삭제할 수 있음.</li>
+</ul>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">extra_attribs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;rooms_per_hhold&quot;</span><span class="p">,</span> <span class="s2">&quot;pop_per_hhold&quot;</span><span class="p">,</span> <span class="s2">&quot;bedrooms_per_room&quot;</span><span class="p">]</span>
-<span class="c1">#cat_encoder = cat_pipeline.named_steps[&quot;cat_encoder&quot;] # 예전 방식</span>
+
+<span class="c1"># 범주형 특성에 사용된 5개의 범주 이름을 다시 가져오기</span>
 <span class="n">cat_encoder</span> <span class="o">=</span> <span class="n">full_pipeline</span><span class="o">.</span><span class="n">named_transformers_</span><span class="p">[</span><span class="s2">&quot;cat&quot;</span><span class="p">]</span>
 <span class="n">cat_one_hot_attribs</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">cat_encoder</span><span class="o">.</span><span class="n">categories_</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 <span class="n">attributes</span> <span class="o">=</span> <span class="n">num_attribs</span> <span class="o">+</span> <span class="n">extra_attribs</span> <span class="o">+</span> <span class="n">cat_one_hot_attribs</span>
+
+<span class="c1"># 특성 중요도와 특성 이름을 쌍으로 한 다음에 중요도 기준 내림차순으로 정렬.</span>
 <span class="nb">sorted</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">feature_importances</span><span class="p">,</span> <span class="n">attributes</span><span class="p">),</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 
@@ -19260,6 +19426,16 @@ dtype: float64</pre>
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>튜닝된 모델을 테스트 세트 데이터를 이용하여 성능을 최종적으로 평가한다.
+아래 코드에서는 그리드 탐색으로 찾은 최적 모델을 활용한다.
+최종 성능 편가는 지금까지 전혀 사용하지 않았던 테스트 세트를 훈련 세트와 동일하게 전처리 한 후에 성능 평가를 진행해야 한다.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
@@ -19267,12 +19443,18 @@ dtype: float64</pre>
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">final_model</span> <span class="o">=</span> <span class="n">grid_search</span><span class="o">.</span><span class="n">best_estimator_</span>
 
+<span class="c1"># 테스트 세트의 레이블(타깃) 분류</span>
 <span class="n">X_test</span> <span class="o">=</span> <span class="n">strat_test_set</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&quot;median_house_value&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">y_test</span> <span class="o">=</span> <span class="n">strat_test_set</span><span class="p">[</span><span class="s2">&quot;median_house_value&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 
+<span class="c1"># 훈련 특성 전처리</span>
+<span class="c1"># 주의사항: fit() 메서드는 사용하지 않음.</span>
 <span class="n">X_test_prepared</span> <span class="o">=</span> <span class="n">full_pipeline</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="c1"># 예측하기</span>
 <span class="n">final_predictions</span> <span class="o">=</span> <span class="n">final_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test_prepared</span><span class="p">)</span>
 
+<span class="c1"># RMSE 평가</span>
 <span class="n">final_mse</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">final_predictions</span><span class="p">)</span>
 <span class="n">final_rmse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">final_mse</span><span class="p">)</span>
 </pre></div>
@@ -19281,6 +19463,14 @@ dtype: float64</pre>
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>테스트 세트를 대상으로 한 최종 성능(RMSE)은 아래와 같다.</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -19318,7 +19508,11 @@ dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>테스트 RMSE에 대한 95% 신뢰 구간을 계산할 수 있습니다:</p>
+<p>얻어진 테스트 RMSE에 대한 95% 신뢰 구간을 계산하여 확률적으로 시스템의 성능을 예측할 수 있다.</p>
+<ul>
+<li><code>scipy</code>의 <code>stats</code> 모듈 활용</li>
+<li>아래 코드는 t-분포를 이용하여 신뢰구간 계산</li>
+</ul>
 
 </div>
 </div>
@@ -19365,52 +19559,7 @@ dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>다음과 같이 수동으로 계산할 수도 있습니다:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">squared_errors</span><span class="p">)</span>
-<span class="n">mean</span> <span class="o">=</span> <span class="n">squared_errors</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-<span class="n">tscore</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">ppf</span><span class="p">((</span><span class="mi">1</span> <span class="o">+</span> <span class="n">confidence</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">df</span><span class="o">=</span><span class="n">m</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">tmargin</span> <span class="o">=</span> <span class="n">tscore</span> <span class="o">*</span> <span class="n">squared_errors</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
-<span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mean</span> <span class="o">-</span> <span class="n">tmargin</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mean</span> <span class="o">+</span> <span class="n">tmargin</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[&nbsp;]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>(45685.10470776, 49691.25001877858)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>또는 t-점수 대신 z-점수를 사용할 수도 있습니다:</p>
+<p>z-분포를 이용한 신뢰구간은 다음과 같다.</p>
 
 </div>
 </div>
@@ -19543,7 +19692,7 @@ dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="RandomizedSearchCV&#47484;-&#50948;&#54620;-Scipy-&#48516;&#54252;-&#54632;&#49688;"><code>RandomizedSearchCV</code>&#47484; &#50948;&#54620; Scipy &#48516;&#54252; &#54632;&#49688;<a class="anchor-link" href="#RandomizedSearchCV&#47484;-&#50948;&#54620;-Scipy-&#48516;&#54252;-&#54632;&#49688;">&#182;</a></h3>
+<h3 id="&#9995;-RandomizedSearchCV&#47484;-&#50948;&#54620;-Scipy-&#48516;&#54252;-&#54632;&#49688;">&#9995; <code>RandomizedSearchCV</code>&#47484; &#50948;&#54620; Scipy &#48516;&#54252; &#54632;&#49688;<a class="anchor-link" href="#&#9995;-RandomizedSearchCV&#47484;-&#50948;&#54620;-Scipy-&#48516;&#54252;-&#54632;&#49688;">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -19561,7 +19710,7 @@ dtype: float64</pre>
 아래는 그 중에서 기하분포 <code>geom</code>, 지수분포 <code>expon</code>,
 균등분포 <code>uniform</code>, 정규분포 <code>norm</code> 등을 이용하여
 무작위로 생성된 샘플들의 분포를 히스토그램으로 보여준다.</p>
-<p><strong>주의:</strong> 히스토그램의 y축은 도수를 가리킨다. 이것을 10,00으로 나눈 값으로
+<p><strong>주의:</strong> 히스토그램의 y축은 도수를 가리킨다. 이것을 10,000으로 나눈 값으로
 대체하면 히스토그램에서 해당 확률분포의 그래프가 그려지게 된다.
 즉, 확률밀도함수의 그래프로 감싸인 영역이 표시된다. 
 자세한 사항은 더이상 다루지 않는다. 
