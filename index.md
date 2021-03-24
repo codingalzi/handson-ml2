@@ -44,8 +44,7 @@
 #### 오프라인
 
 먼저 자신의 컴퓨터에
-[프로젝트 리포지토리](https://github.com/codingalzi/handson-ml)
-[<img src="view-on-github.png" alt="View On GitHub" style="height:25px;"/>](https://github.com/codingalzi/handson-ml) 를 
+[프로젝트 리포지토리](https://github.com/codingalzi/handson-ml)를 
 복제합니다.
 
 ```bash

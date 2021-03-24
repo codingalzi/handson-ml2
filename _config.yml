@@ -3,4 +3,4 @@ title: 핸즈온 머신러닝
 description: 머신러닝/딥러닝 기초 지식 제공
 show_downloads: false
 github:
-  is_project_page: false
+  is_project_page: true
