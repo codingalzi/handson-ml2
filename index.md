@@ -11,7 +11,7 @@
 | :--: | :--: | :--: |
 | 강의소개 | 슬라이드 | [&#x1F4F1;](./slides/handson-ml-00.slides.html) &nbsp; [&#x1F4BB;](./slides/handson-ml-00-slides.pdf) |
 | 한 눈에 보는 머신러닝 | 슬라이드 | [&#x1F4F1;](./slides/handson-ml-01.slides.html) &nbsp; [&#x1F4BB;](./slides/handson-ml-01-slides.pdf) |
-|  주피터 노트북 | [&#x1F578;](./notebooks/handson-ml-01.html) &nbsp; [&#x1F4D8;](https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/notebooks/handson-ml-01.ipynb) |
+| | 주피터 노트북 | [&#x1F578;](./notebooks/handson-ml-01.html) &nbsp; [&#x1F4D8;](https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/notebooks/handson-ml-01.ipynb) |
 | 머신러닝 프로젝트 처음부터 끝까지 | 1부 슬라이드 | [&#x1F4F1;](./slides/handson-ml-02a.slides.html) &nbsp; [&#x1F4BB;](./slides/handson-ml-02a-slides.pdf) |
 | | 2부 슬라이드 | [&#x1F4F1;](./slides/handson-ml-02b.slides.html) &nbsp; [&#x1F4BB;](./slides/handson-ml-02b-slides.pdf) |
 | | 3부 슬라이드 | [&#x1F4F1;](./slides/handson-ml-02c.slides.html) &nbsp; [&#x1F4BB;](./slides/handson-ml-02c-slides.pdf) |
