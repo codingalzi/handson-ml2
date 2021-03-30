@@ -14,6 +14,8 @@
 		<node id="10" name="Correlations" qualified_name="Orange.widgets.data.owcorrelations.OWCorrelations" project_name="Orange3" version="" title="Correlations" position="(-382.0, -75.0)" />
 		<node id="11" name="Scatter Plot" qualified_name="Orange.widgets.visualize.owscatterplot.OWScatterPlot" project_name="Orange3" version="" title="Scatter Plot (1)" position="(-206.0, -75.0)" />
 		<node id="12" name="Feature Statistics" qualified_name="Orange.widgets.data.owfeaturestatistics.OWFeatureStatistics" project_name="Orange3" version="" title="Feature Statistics" position="(-381.0, 8.0)" />
+		<node id="13" name="Python Script" qualified_name="Orange.widgets.data.owpythonscript.OWPythonScript" project_name="Orange3" version="" title="Python Script" position="(-379.0, -185.0)" />
+		<node id="14" name="Data Table" qualified_name="Orange.widgets.data.owtable.OWDataTable" project_name="Orange3" version="" title="Data Table" position="(-207.0, -187.0)" />
 	</nodes>
 	<links>
 		<link id="0" source_node_id="1" sink_node_id="2" source_channel="Learner" sink_channel="Learner" enabled="true" />
@@ -31,6 +33,8 @@
 		<link id="12" source_node_id="10" sink_node_id="11" source_channel="Features" sink_channel="Features" enabled="true" />
 		<link id="13" source_node_id="10" sink_node_id="11" source_channel="Data" sink_channel="Data" enabled="true" />
 		<link id="14" source_node_id="7" sink_node_id="12" source_channel="Data Sample" sink_channel="Data" enabled="true" />
+		<link id="15" source_node_id="7" sink_node_id="13" source_channel="Data Sample" sink_channel="Data" enabled="true" />
+		<link id="16" source_node_id="13" sink_node_id="14" source_channel="Data" sink_channel="Data" enabled="true" />
 	</links>
 	<annotations />
 	<thumbnail />
@@ -247,6 +251,8 @@ c5R9lCiMCWxvbmdpdHVkZZRLAmgdSwKMEmhvdXNpbmdfbWVkaWFuX2FnZZRLAowLdG90YWxfcm9v
 bXOUSwKMDnRvdGFsX2JlZHJvb21zlEsCjApwb3B1bGF0aW9ulEsCjApob3VzZWhvbGRzlEsCjA1t
 ZWRpYW5faW5jb21llEsCjA9vY2Vhbl9wcm94aW1pdHmUSwFoGUsCdYwFbWV0YXOUfZR1YmF1Lg==
 </properties>
+		<properties node_id="13" format="literal">{'controlAreaVisible': True, 'currentScriptIndex': 0, 'savedWidgetGeometry': b"\x01\xd9\xd0\xcb\x00\x03\x00\x00\xff\xff\xfb\xfc\x00\x00\x01\x0b\xff\xff\xffm\x00\x00\x03~\xff\xff\xfb\xfc\x00\x00\x01'\xff\xff\xffm\x00\x00\x03~\x00\x00\x00\x01\x00\x00\x00\x00\n\x00\xff\xff\xfb\xfc\x00\x00\x01'\xff\xff\xffm\x00\x00\x03~", 'scriptLibrary': [{'name': 'log-transform.py', 'script': 'import numpy as np\nfrom Orange.data import Table\n\ndata = in_data.copy()\nnew_X = np.log(data.X)\nnew_data = Table(data.domain, new_X, data.Y, data.metas)\nout_data = new_data', 'filename': None}], 'scriptText': 'import numpy as np\nfrom Orange.data import Table\n\ndata = in_data.copy()\nnew_X = np.log(data.X)\nnew_data = Table(data.domain, new_X, data.Y, data.metas)\nout_data = new_data', 'splitterState': b'\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00h\x00\x00\x00h\x01\xff\xff\xff\xff\x01\x00\x00\x00\x02\x00', '__version__': 2}</properties>
+		<properties node_id="14" format="literal">{'auto_commit': True, 'color_by_class': True, 'controlAreaVisible': True, 'dist_color_RGB': (220, 220, 220, 255), 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x03\\\x00\x00\x00\x9a\x00\x00\tt\x00\x00\x04\xdb\x00\x00\x03\\\x00\x00\x00\xb6\x00\x00\tt\x00\x00\x04\xdb\x00\x00\x00\x00\x00\x00\x00\x00\n\x00\x00\x00\x03\\\x00\x00\x00\xb6\x00\x00\tt\x00\x00\x04\xdb', 'select_rows': True, 'selected_cols': [], 'selected_rows': [], 'show_attribute_labels': True, 'show_distributions': False, '__version__': 2}</properties>
 	</node_properties>
 	<session_state>
 		<window_groups />
