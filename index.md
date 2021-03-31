@@ -67,6 +67,10 @@ $ cd handson-ml
 - [Stanford CS229: Machine Learning (Autumn 2018)](https://www.youtube.com/watch?v=jGwO_UgTS7I&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU)
 - [Deep Learning with PyTorch](https://atcold.github.io/pytorch-Deep-Learning/)
 
+#### 캐글(Kaggle) 경진대회 소개
+- [Kaggle과 Titanic research로 시작하는 데이터 분석](https://developers.ascentnet.co.jp/2017/11/24/kaggle-process-review/)
+- [캐글 타이타닉 생존자 예측 도전기](https://cyc1am3n.github.io/2018/10/09/my-first-kaggle-competition_titanic.html)
+
 #### 딥러닝 학습 참고 동영상
 - [SVM with polynomial kernel visualization](https://www.youtube.com/watch?v=OdlNM96sHio&t=0s)
 - [수학자가 설명하는 심층 신경망](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi)
