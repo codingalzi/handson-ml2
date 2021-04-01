@@ -14,9 +14,10 @@
 | | 주피터 노트북 | [&#x1F578;](./notebooks/handson-ml-01.html) &nbsp; [&#x1F4D8;](https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/notebooks/handson-ml-01.ipynb) |
 | 머신러닝 프로젝트 처음부터 끝까지 | 슬라이드 1, 2, 3부 | [&#x1F4F1;](./slides/handson-ml-02a.slides.html)/[&#x1F4F1;](./slides/handson-ml-02b.slides.html)/[&#x1F4F1;](./slides/handson-ml-02c.slides.html) &nbsp;[&#x1F4BB;](./slides/handson-ml-02a-slides.pdf)/[&#x1F4BB;](./slides/handson-ml-02b-slides.pdf)/[&#x1F4BB;](./slides/handson-ml-02c-slides.pdf) |
 | | 주피터 노트북 | [&#x1F578;](./notebooks/handson-ml-02.html) &nbsp; [&#x1F4D8;](https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/notebooks/handson-ml-02.ipynb) |
-| | Orange3 | [&#x1F34A;](https://raw.githubusercontent.com/codingalzi/handson-ml/master/orange3/california_house-prices.ows) &nbsp; [&#x1F4C1;](https://raw.githubusercontent.com/codingalzi/handson-ml/master/notebooks/datasets/housing/housing.csv) |
+| | Orange3 | [&#x1F34A;](https://raw.githubusercontent.com/codingalzi/handson-ml/master/orange3/housing/california_house-prices.ows) &nbsp; [&#x1F4C1;](https://raw.githubusercontent.com/codingalzi/handson-ml/master/notebooks/datasets/housing/housing.csv) |
 | 분류 | 슬라이드 1, 2부| [&#x1F4F1;](./slides/handson-ml-03a.slides.html)/[&#x1F4F1;](./slides/handson-ml-03b.slides.html) &nbsp; [&#x1F4BB;](./slides/handson-ml-03a-slides.pdf)/[&#x1F4BB;](./slides/handson-ml-03b-slides.pdf) |
 | | 주피터 노트북 | [&#x1F578;](./notebooks/handson-ml-03.html) &nbsp; [&#x1F4D8;](https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/notebooks/handson-ml-03.ipynb) |
+| | Orange3 | [&#x1F34A;](https://raw.githubusercontent.com/codingalzi/handson-ml/master/orange3/mnist/mnist.ows) &nbsp; [&#x1F4C1; train](https://drive.google.com/file/d/1hBuOvuXeOcYTS7fL5x5lAWBGrW8zv5TF/view?usp=sharing)/[&#x1F4C1; test](https://drive.google.com/file/d/1DJQ3g1RnHAstuDXoBZ6-zHGX1E20QZN4/view?usp=sharing) |
 | 모델 훈련 | 슬라이드 1, 2부(준비중) | [&#x1F4F1;](./slides/handson-ml-04a.slides.html)/[&#x1F4F1;](./slides/handson-ml-04b.slides.html) &nbsp; [&#x1F4BB;](./slides/handson-ml-04a-slides.pdf)/[&#x1F4BB;](./slides/handson-ml-04b-slides.pdf) |
 | | 주피터 노트북 | [&#x1F578;](./notebooks/handson-ml-04.html) &nbsp; [&#x1F4D8;](https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/notebooks/handson-ml-04.ipynb) |
 
