@@ -20,6 +20,7 @@
 | | Orange3 | [&#x1F34A;](https://raw.githubusercontent.com/codingalzi/handson-ml/master/orange3/mnist/mnist.ows) &nbsp; [&#x1F4C1;](https://drive.google.com/file/d/1hBuOvuXeOcYTS7fL5x5lAWBGrW8zv5TF/view?usp=sharing)/[&#x1F4C1;](https://drive.google.com/file/d/1DJQ3g1RnHAstuDXoBZ6-zHGX1E20QZN4/view?usp=sharing) |
 | 모델 훈련 | 슬라이드 1, 2부(준비중) | [&#x1F4F1;](./slides/handson-ml-04a.slides.html)/[&#x1F4F1;](./slides/handson-ml-04b.slides.html) &nbsp; [&#x1F4BB;](./slides/handson-ml-04a-slides.pdf)/[&#x1F4BB;](./slides/handson-ml-04b-slides.pdf) |
 | | 주피터 노트북 | [&#x1F578;](./notebooks/handson-ml-04.html) &nbsp; [&#x1F4D8;](https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/notebooks/handson-ml-04.ipynb) |
+| | Orange3 | [&#x1F34A;](https://raw.githubusercontent.com/codingalzi/handson-ml/master/orange3/linear_regression/linreg_exp.ows) &nbsp; [&#x1F4C1;](https://raw.githubusercontent.com/codingalzi/handson-ml/master/orange3/linear_regression/linreg_data1.csv)/[&#x1F4C1;](https://raw.githubusercontent.com/codingalzi/handson-ml/master/orange3/linear_regression/linreg_data2.csv) |
 
 **링크 활용법**
 * &#x1F4F1;: 좌우방향 터치 지원 슬라이드
