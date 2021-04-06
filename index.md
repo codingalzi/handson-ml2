@@ -69,6 +69,9 @@ $ cd handson-ml
 - [Stanford CS229: Machine Learning (Autumn 2018)](https://www.youtube.com/watch?v=jGwO_UgTS7I&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU)
 - [Deep Learning with PyTorch](https://atcold.github.io/pytorch-Deep-Learning/)
 
+#### 경사하강법 옵티마이저 알고리즘 소개
+- [An overview of gradient descent optimization algorithms](https://ruder.io/optimizing-gradient-descent/index.html)
+
 #### 캐글(Kaggle) 경진대회 소개
 - [Kaggle과 Titanic research로 시작하는 데이터 분석](https://developers.ascentnet.co.jp/2017/11/24/kaggle-process-review/)
 - [캐글 타이타닉 생존자 예측 도전기](https://cyc1am3n.github.io/2018/10/09/my-first-kaggle-competition_titanic.html)
