@@ -28,7 +28,7 @@
 * &#x1F578;: 읽기 전용 주피터 노트북 웹 페이지
 * &#x1F4D8;: 구글 코랩(colab) 주피터 노트북
 * &#x1F34A;: Orange3 워크플로우 및 데이터
-* <span style="color: red;">text</span>
+* <span style="color: orange;">CO</span>
 
 ### QnA
 
