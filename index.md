@@ -25,10 +25,9 @@
 **링크 활용법**
 * &#x1F4F1;: 좌우방향 터치 지원 슬라이드
 * &#x1F4BB;: pdf 슬라이드
-* &#x1F578;: 읽기 전용 주피터 노트북 웹 페이지
-* &#x1F4D8;: 구글 코랩(colab) 주피터 노트북
+* &#x1F4D8;: 읽기 전용 주피터 노트북 웹 페이지
+* <span style="color: orange;">CO</span>: 구글 코랩(colab) 주피터 노트북
 * &#x1F34A;: Orange3 워크플로우 및 데이터
-* <span style="color: orange;">CO</span>
 
 ### QnA
 
