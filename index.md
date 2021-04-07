@@ -14,13 +14,13 @@
 | | 주피터 노트북 | [&#x1F578;](./notebooks/handson-ml-01.html) &nbsp; [&#x1F4D8;](https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/notebooks/handson-ml-01.ipynb) |
 | 머신러닝 프로젝트 처음부터 끝까지 | 슬라이드 1, 2, 3부 | [&#x1F4F1;](./slides/handson-ml-02a.slides.html)/[&#x1F4F1;](./slides/handson-ml-02b.slides.html)/[&#x1F4F1;](./slides/handson-ml-02c.slides.html) &nbsp;[&#x1F4BB;](./slides/handson-ml-02a-slides.pdf)/[&#x1F4BB;](./slides/handson-ml-02b-slides.pdf)/[&#x1F4BB;](./slides/handson-ml-02c-slides.pdf) |
 | | 주피터 노트북 | [&#x1F578;](./notebooks/handson-ml-02.html) &nbsp; [&#x1F4D8;](https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/notebooks/handson-ml-02.ipynb) |
-| | Orange3 | [&#x1F34A;](https://raw.githubusercontent.com/codingalzi/handson-ml/master/orange3/housing/california_house-prices.ows) &nbsp; [&#x1F4C1;](https://raw.githubusercontent.com/codingalzi/handson-ml/master/notebooks/datasets/housing/housing.csv) |
+| | Orange3 | [&#x1F34A;](https://raw.githubusercontent.com/codingalzi/handson-ml/master/orange3/housing/housing.zip) |
 | 분류 | 슬라이드 1, 2부| [&#x1F4F1;](./slides/handson-ml-03a.slides.html)/[&#x1F4F1;](./slides/handson-ml-03b.slides.html) &nbsp; [&#x1F4BB;](./slides/handson-ml-03a-slides.pdf)/[&#x1F4BB;](./slides/handson-ml-03b-slides.pdf) |
 | | 주피터 노트북 | [&#x1F578;](./notebooks/handson-ml-03.html) &nbsp; [&#x1F4D8;](https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/notebooks/handson-ml-03.ipynb) |
-| | Orange3 | [&#x1F34A;](https://raw.githubusercontent.com/codingalzi/handson-ml/master/orange3/mnist/mnist.ows)/[&#x1F34A;](https://raw.githubusercontent.com/codingalzi/handson-ml/master/orange3/iris/iris.ows) &nbsp; [&#x1F4C1;](https://raw.githubusercontent.com/codingalzi/handson-ml/master/orange3/mnist/mnist.zip) |
-| 모델 훈련 | 슬라이드 1, 2부(준비중) | [&#x1F4F1;](./slides/handson-ml-04a.slides.html)/[&#x1F4F1;](./slides/handson-ml-04b.slides.html) &nbsp; [&#x1F4BB;](./slides/handson-ml-04a-slides.pdf)/[&#x1F4BB;](./slides/handson-ml-04b-slides.pdf) |
+| | Orange3 | [&#x1F34A;](https://raw.githubusercontent.com/codingalzi/handson-ml/master/orange3/mnist/mnist.zip) |
+| 모델 훈련 | 슬라이드 1, 2부 | [&#x1F4F1;](./slides/handson-ml-04a.slides.html)/[&#x1F4F1;](./slides/handson-ml-04b.slides.html) &nbsp; [&#x1F4BB;](./slides/handson-ml-04a-slides.pdf)/[&#x1F4BB;](./slides/handson-ml-04b-slides.pdf) |
 | | 주피터 노트북 | [&#x1F578;](./notebooks/handson-ml-04.html) &nbsp; [&#x1F4D8;](https://colab.research.google.com/github/codingalzi/handson-ml/blob/master/notebooks/handson-ml-04.ipynb) |
-| | Orange3 | [&#x1F34A;](https://raw.githubusercontent.com/codingalzi/handson-ml/master/orange3/linear_regression/linreg_exp.ows) &nbsp; [&#x1F4C1;](https://raw.githubusercontent.com/codingalzi/handson-ml/master/orange3/linear_regression/linreg_data1.csv)/[&#x1F4C1;](https://raw.githubusercontent.com/codingalzi/handson-ml/master/orange3/linear_regression/linreg_data2.csv) |
+| | Orange3 | [&#x1F34A;](https://raw.githubusercontent.com/codingalzi/handson-ml/master/orange3/training_models/training_models.zip)/[&#x1F34A;](https://raw.githubusercontent.com/codingalzi/handson-ml/master/orange3/iris/iris.zip) |
 
 **링크 활용법**
 * &#x1F4F1;: 좌우방향 터치 지원 슬라이드
