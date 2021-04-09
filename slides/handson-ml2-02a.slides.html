@@ -7,7 +7,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 
-<title>handson-ml-04b slides</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>handson-ml2-02a slides</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 <!-- General and theme style sheets -->
 <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.0.2/dist/reveal.css">
@@ -14385,7 +14385,7 @@ div.jp-OutputPrompt {
 <div class="slides"><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="4&#51109;-&#47784;&#45944;-&#54984;&#47144;-2&#48512;">4&#51109; &#47784;&#45944; &#54984;&#47144; 2&#48512;<a class="anchor-link" href="#4&#51109;-&#47784;&#45944;-&#54984;&#47144;-2&#48512;">&#182;</a></h1>
+<h1 id="2&#51109;-&#47672;&#49888;&#47084;&#45789;-&#54532;&#47196;&#51229;&#53944;-&#52376;&#51020;&#48512;&#53552;-&#45149;&#44620;&#51648;-(1&#48512;)">2&#51109; &#47672;&#49888;&#47084;&#45789; &#54532;&#47196;&#51229;&#53944; &#52376;&#51020;&#48512;&#53552; &#45149;&#44620;&#51648; (1&#48512;)<a class="anchor-link" href="#2&#51109;-&#47672;&#49888;&#47084;&#45789;-&#54532;&#47196;&#51229;&#53944;-&#52376;&#51020;&#48512;&#53552;-&#45149;&#44620;&#51648;-(1&#48512;)">&#182;</a></h1>
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
@@ -14396,20 +14396,42 @@ div.jp-OutputPrompt {
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="4.5-&#44508;&#51228;&#47484;-&#49324;&#50857;&#54616;&#45716;-&#49440;&#54805;-&#47784;&#45944;">4.5 &#44508;&#51228;&#47484; &#49324;&#50857;&#54616;&#45716; &#49440;&#54805; &#47784;&#45944;<a class="anchor-link" href="#4.5-&#44508;&#51228;&#47484;-&#49324;&#50857;&#54616;&#45716;-&#49440;&#54805;-&#47784;&#45944;">&#182;</a></h2>
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="&#51088;&#50976;&#46020;&#50752;-&#44508;&#51228;">&#51088;&#50976;&#46020;&#50752; &#44508;&#51228;<a class="anchor-link" href="#&#51088;&#50976;&#46020;&#50752;-&#44508;&#51228;">&#182;</a></h3>
+<h2 id="&#51452;&#50836;-&#45236;&#50857;">&#51452;&#50836; &#45236;&#50857;<a class="anchor-link" href="#&#51452;&#50836;-&#45236;&#50857;">&#182;</a></h2>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>자유도(degree of freedom): 학습 모델 결정에 영향을 주는 요소(특성)들의 수<ul>
-<li>단순 선형 회귀의 경우: 특성 수</li>
-<li>다항 선형 회귀 경우: 차수</li>
+<li>주택 가격을 예측하는 회귀 작업을 살펴보면서 선형 회귀, 결정 트리, 랜덤 포레스트 등 여러 알고리즘의 기본 사용법 소개</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>머신러닝 시스템 전체 훈련 과정 살펴보기</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div align="center"><img src="images/ch02/homl02-01d.png" width="600"></div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="2.1-&#49892;&#51228;-&#45936;&#51060;&#53552;&#47196;-&#51089;&#50629;&#54616;&#44592;">2.1 &#49892;&#51228; &#45936;&#51060;&#53552;&#47196; &#51089;&#50629;&#54616;&#44592;<a class="anchor-link" href="#2.1-&#49892;&#51228;-&#45936;&#51060;&#53552;&#47196;-&#51089;&#50629;&#54616;&#44592;">&#182;</a></h2>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>유명한 공개 데이터 저장소<ul>
+<li><a href="http://archive.ics.uci.edu/ml">UC 얼바인(UC Irvine) 대학교 머신러닝 저장소</a></li>
+<li><a href="http://www.kaggle.com/datasets">캐글(Kaggle) 데이터셋</a></li>
+<li><a href="https://registry.opendata.aws">아마존 AWS 데이터셋</a></li>
 </ul>
 </li>
 </ul>
@@ -14419,220 +14441,10 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>규제(regularization): 자유도 제한<ul>
-<li>단순 선형 회귀 모델에 대한 규제: 가중치 역할 제한</li>
-<li>다항 선형 회귀 모델에 대한 규제: 차수 줄이기</li>
-</ul>
-</li>
-</ul>
-
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="&#44032;&#51473;&#52824;&#47484;-&#44508;&#51228;&#54616;&#45716;-&#49440;&#54805;-&#54924;&#44480;-&#47784;&#45944;">&#44032;&#51473;&#52824;&#47484; &#44508;&#51228;&#54616;&#45716; &#49440;&#54805; &#54924;&#44480; &#47784;&#45944;<a class="anchor-link" href="#&#44032;&#51473;&#52824;&#47484;-&#44508;&#51228;&#54616;&#45716;-&#49440;&#54805;-&#54924;&#44480;-&#47784;&#45944;">&#182;</a></h3>
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>릿지 회귀</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>라쏘 회귀</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>엘라스틱넷</li>
-</ul>
-
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="&#44508;&#51228;-&#51201;&#50857;-&#51452;&#51032;&#49324;&#54637;">&#44508;&#51228; &#51201;&#50857; &#51452;&#51032;&#49324;&#54637;<a class="anchor-link" href="#&#44508;&#51228;-&#51201;&#50857;-&#51452;&#51032;&#49324;&#54637;">&#182;</a></h3>
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>규제항은 훈련 과정에만 사용된다. 테스트 과정에는 다른 기준으로 성능을 평가한다.</p>
-<ul>
-<li>훈련 과정: 비용 최소화 목표</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>테스트 과정: 최종 목표에 따른 성능 평가<ul>
-<li>예제: 분류기의 경우 재현율/정밀도 기준으로 성능 평가</li>
-</ul>
-</li>
-</ul>
-
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="4.5.1-&#47551;&#51648;-&#54924;&#44480;">4.5.1 &#47551;&#51648; &#54924;&#44480;<a class="anchor-link" href="#4.5.1-&#47551;&#51648;-&#54924;&#44480;">&#182;</a></h3>
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>비용함수</li>
-</ul>
-$$J(\theta) = \textrm{MSE}(\theta) + \alpha \, \frac{1}{2} \sum_{i=1}^{n}\theta_i^2$$
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>$\alpha$(알파): 규제 강도 지정. 
-  $\alpha=0$이면 규제가 전혀 없는 기본 선형 회귀</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>$\alpha$가 커질 수록 가중치의 역할이 줄어듦. 
-  비용을 줄이기 위해 가중치를 작게 유지하는 방향으로 학습</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>$\theta_0$은 규제하지 않음</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>주의사항: 특성 스케일링 전처리를 해야 성능이 좋아짐.</li>
-</ul>
-
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="4.5.2-&#46972;&#50136;-&#54924;&#44480;">4.5.2 &#46972;&#50136; &#54924;&#44480;<a class="anchor-link" href="#4.5.2-&#46972;&#50136;-&#54924;&#44480;">&#182;</a></h3>
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>비용함수</li>
-</ul>
-$$J(\theta) = \textrm{MSE}(\theta) + \alpha \, \sum_{i=1}^{n}\mid\theta_i\mid$$
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>$\alpha$(알파): 규제 강도 지정.
-  $\alpha=0$이면 규제가 전혀 없는 기본 선형 회귀</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>$\theta_i$: 덜 중요한 특성을 무시하기 위해 $\mid\theta_i\mid$가 0에 수렴하도록 학습 유도.</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>$\theta_0$은 규제하지 않음</li>
-</ul>
-
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="&#46972;&#50136;-&#54924;&#44480;-&#45824;-&#47551;&#51648;-&#54924;&#44480;-&#48708;&#44368;">&#46972;&#50136; &#54924;&#44480; &#45824; &#47551;&#51648; &#54924;&#44480; &#48708;&#44368;<a class="anchor-link" href="#&#46972;&#50136;-&#54924;&#44480;-&#45824;-&#47551;&#51648;-&#54924;&#44480;-&#48708;&#44368;">&#182;</a></h4>
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<div align="center"><img src="images/ch04/lasso_vs_ridge_plot.png" width="600"/></div>
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="4.5.3-&#50648;&#46972;&#49828;&#54001;&#45367;">4.5.3 &#50648;&#46972;&#49828;&#54001;&#45367;<a class="anchor-link" href="#4.5.3-&#50648;&#46972;&#49828;&#54001;&#45367;">&#182;</a></h3>
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>비용함수</li>
-</ul>
-$$J(\theta) = \textrm{MSE}(\theta) + r\, \alpha \, \sum_{i=1}^{n}\mid\theta_i\mid + \,\frac{1-r}{2}\, \alpha\, \sum_{i=1}^{n}\theta_i^2$$
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>릿지 회귀와 라쏘 회귀를 절충한 모델</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>혼합 비율 $r$을 이용하여 릿지 규제와 라쏘 규제를 적절하게 조절</li>
-</ul>
-
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="&#44508;&#51228;-&#49324;&#50857;-&#48169;&#48277;">&#44508;&#51228; &#49324;&#50857; &#48169;&#48277;<a class="anchor-link" href="#&#44508;&#51228;-&#49324;&#50857;-&#48169;&#48277;">&#182;</a></h3>
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>대부분의 경우 약간이라도 규제 사용 추천</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>릿지 규제가 기본</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>유용한 속성이 많지 않다고 판단되는 경우 <ul>
-<li>라쏘 규제나 엘라스틱넷 활용 추천</li>
-<li>불필요한 속성의 가중치를 0으로 만들기 때문</li>
+<li>메타 포털(공개 데이터 저장소가 나열)<ul>
+<li><a href="http://dataportals.org">데이터 포털(Data Portals)</a></li>
+<li><a href="http://opendatamonitor.eu">오픈 데이터 모니터(Open Data Monitor)</a></li>
+<li><a href="http://quandl.com">퀀들(Quandl)</a></li>
 </ul>
 </li>
 </ul>
@@ -14642,9 +14454,10 @@ $$J(\theta) = \textrm{MSE}(\theta) + r\, \alpha \, \sum_{i=1}^{n}\mid\theta_i\mi
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>특성 수가 훈련 샘플 수보다 크거나 특성 몇 개가 강하게 연관되어 있는 경우<ul>
-<li>라쏘 규제는 적절치 않음.</li>
-<li>엘라스틱넷 추천</li>
+<li>인기 있는 공개 데이터 저장소가 나열되어 있는 다른 페이지<ul>
+<li><a href="https://goo.gl/SJHN2k">위키백과 머신러닝 데이터셋 목록</a></li>
+<li><a href="https://homl.info/10">Quora.com</a></li>
+<li><a href="http://www.reddit.com/r/datasets">데이터셋 서브레딧(subreddit)</a></li>
 </ul>
 </li>
 </ul>
@@ -14653,13 +14466,13 @@ $$J(\theta) = \textrm{MSE}(\theta) + r\, \alpha \, \sum_{i=1}^{n}\mid\theta_i\mi
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="4.5.4-&#51312;&#44592;-&#51333;&#47308;">4.5.4 &#51312;&#44592; &#51333;&#47308;<a class="anchor-link" href="#4.5.4-&#51312;&#44592;-&#51333;&#47308;">&#182;</a></h3>
+<h2 id="2.2-&#53360;-&#44536;&#47548;-&#48372;&#44592;">2.2 &#53360; &#44536;&#47548; &#48372;&#44592;<a class="anchor-link" href="#2.2-&#53360;-&#44536;&#47548;-&#48372;&#44592;">&#182;</a></h2>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>모델의 훈련 세트에 대한 과대 적합 방지를 위해 훈련을 적절한 시기에 중단시키기.</li>
+<h3 id="&#51452;&#50612;&#51652;-&#45936;&#51060;&#53552;">&#51452;&#50612;&#51652; &#45936;&#51060;&#53552;<a class="anchor-link" href="#&#51452;&#50612;&#51652;-&#45936;&#51060;&#53552;">&#182;</a></h3><ul>
+<li>미국 캘리포니아 주의 20,640개 지역별 인구조사 데이터</li>
 </ul>
 
 </div>
@@ -14667,201 +14480,42 @@ $$J(\theta) = \textrm{MSE}(\theta) + r\, \alpha \, \sum_{i=1}^{n}\mid\theta_i\mi
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>조기 종료: 검증 데이터에 대한 손실이 줄어 들다가 다시 커지는 순간 훈련 종료</li>
+<li>특성 10개: 경도, 위도, 중간 주택 연도, 방의 총 개수, 침실 총 개수, 인구, 가구 수, 중간 소득, 중간 주택 가격, 해안 근접도</li>
 </ul>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<div align="center"><img src="images/ch04/homl04-11.png" width="600"/></div>
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>확률적 경사 하강법 등의 경우 손실 곡선의 진동 발생. 
-  검증 손실이 한동안 최솟값보다 높게 유지될 때 훈련 멈춤. 최소 검증 손실 모델 확인.</li>
+<li>목표: 구역별 중간 주택 가격 예측 시스템(모델) 구현하기</li>
 </ul>
 
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="4.6-&#47196;&#51648;&#49828;&#54001;-&#54924;&#44480;">4.6 &#47196;&#51648;&#49828;&#54001; &#54924;&#44480;<a class="anchor-link" href="#4.6-&#47196;&#51648;&#49828;&#54001;-&#54924;&#44480;">&#182;</a></h2>
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>회귀 모델을 분류 모델로 활용할 수 있다.</p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>이진 분류: 로지스틱 회귀</li>
+<li>미국 캘리포니아 지도</li>
 </ul>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>다중 클래스 분류: 소프트맥스 회귀</li>
-</ul>
-
+<div align="center"><img src="images/ch02/LA-USA01.png" width="600"></div>
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="4.6.1-&#54869;&#47456;-&#52628;&#51221;">4.6.1 &#54869;&#47456; &#52628;&#51221;<a class="anchor-link" href="#4.6.1-&#54869;&#47456;-&#52628;&#51221;">&#182;</a></h3>
+<h3 id="2.2.1-&#47928;&#51228;-&#51221;&#51032;">2.2.1 &#47928;&#51228; &#51221;&#51032;<a class="anchor-link" href="#2.2.1-&#47928;&#51228;-&#51221;&#51032;">&#182;</a></h3>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>시그모이드 함수</li>
-</ul>
-$$\sigma(t) = \frac{1}{1 + e^{-t}}$$
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<div align="center"><img src="images/ch04/homl04-12.png" width="600"/></div>
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>로지스틱 회귀 모델에서 샘플 $\mathbf x$가 양성 클래스에 속할 확률</li>
-</ul>
-$$\hat p = h_\theta (\mathbf x)
-= \sigma(\theta_0 + \theta_1\, x_1 + \cdots + \theta_n\, x_n)$$
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="&#50696;&#52769;&#44050;">&#50696;&#52769;&#44050;<a class="anchor-link" href="#&#50696;&#52769;&#44050;">&#182;</a></h4>$$
-\hat y = 
-\begin{cases}
-0 &amp; \text{if}\,\, \hat p &lt; 0.5 \\
-1 &amp; \text{if}\,\, \hat p \ge 0.5
-\end{cases}
-$$
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>양성 클래스인 경우: </li>
-</ul>
-$$\theta_0 + \theta_1\, x_1 + \cdots + \theta_n\, x_n \ge 0$$
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>음성 클래스인 경우: </li>
-</ul>
-$$\theta_0 + \theta_1\, x_1 + \cdots + \theta_n\, x_n &lt; 0$$
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="4.6.2-&#54984;&#47144;&#44284;-&#48708;&#50857;&#54632;&#49688;">4.6.2 &#54984;&#47144;&#44284; &#48708;&#50857;&#54632;&#49688;<a class="anchor-link" href="#4.6.2-&#54984;&#47144;&#44284;-&#48708;&#50857;&#54632;&#49688;">&#182;</a></h3>
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>비용함수: 로그 손실(log loss) 함수 사용</li>
-</ul>
-$$
-J(\theta) = 
-- \frac{1}{m}\, \sum_{i=1}^{m}\, [y^{(i)}\, \log(\,\hat p^{(i)}\,) + (1-y^{(i)})\, \log(\,1 - \hat p^{(i)}\,)]
-$$
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>모델 훈련: 위 비용함수에 대해 경사 하강법 적용</li>
-</ul>
-
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="&#47196;&#44536;-&#49552;&#49892;-&#54632;&#49688;-&#51060;&#54644;">&#47196;&#44536; &#49552;&#49892; &#54632;&#49688; &#51060;&#54644;<a class="anchor-link" href="#&#47196;&#44536;-&#49552;&#49892;-&#54632;&#49688;-&#51060;&#54644;">&#182;</a></h4>
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>틀린 예측을 하면 손실값이 많이 커짐</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-$$
-- [y\, \log(\,\hat p\,) + (1-y)\, \log(\,1 - \hat p\,)]
-$$
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<div align="center"><img src="images/ch04/homl04-12-10a.png" width="700"/></div>
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="&#47196;&#44536;-&#49552;&#49892;-&#54632;&#49688;&#51032;-&#54200;&#46020;-&#54632;&#49688;">&#47196;&#44536; &#49552;&#49892; &#54632;&#49688;&#51032; &#54200;&#46020; &#54632;&#49688;<a class="anchor-link" href="#&#47196;&#44536;-&#49552;&#49892;-&#54632;&#49688;&#51032;-&#54200;&#46020;-&#54632;&#49688;">&#182;</a></h4>
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-$$
-\dfrac{\partial}{\partial \theta_j} \text{J}(\boldsymbol{\theta}) = \dfrac{1}{m}\sum\limits_{i=1}^{m}\left(\mathbf{\sigma(\boldsymbol{\theta}}^T \mathbf{x}^{(i)}) - y^{(i)}\right)\, x_j^{(i)}
-$$
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>편도 함수가 선형 회귀의 경우와 매우 비슷한 것에 대한 확률론적 근거가 있음.</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li><strong>참고:</strong> <a href="https://www.youtube.com/watch?v=jGwO_UgTS7I&amp;list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU">앤드류 응(Andrew Ng) 교수의 Stanford CS229</a></li>
-</ul>
-
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="4.6.3-&#44208;&#51221;-&#44221;&#44228;">4.6.3 &#44208;&#51221; &#44221;&#44228;<a class="anchor-link" href="#4.6.3-&#44208;&#51221;-&#44221;&#44228;">&#182;</a></h3>
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="&#50696;&#51228;:-&#48531;&#44867;-&#45936;&#51060;&#53552;&#49483;">&#50696;&#51228;: &#48531;&#44867; &#45936;&#51060;&#53552;&#49483;<a class="anchor-link" href="#&#50696;&#51228;:-&#48531;&#44867;-&#45936;&#51060;&#53552;&#49483;">&#182;</a></h4>
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>꽃받침(sepal)과 꽃입(petal)과 관련된 4개의 특성 사용<ul>
-<li>꽃받침 길이</li>
-<li>꽃받침 너비</li>
-<li>꽃잎 길이</li>
-<li>꽃잎 너비</li>
+<li>지도 학습(supervised learning)<ul>
+<li>레이블: 구역별 중간 주택 가격</li>
 </ul>
 </li>
 </ul>
@@ -14871,62 +14525,9 @@ $$
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>타깃: 세 개의 품종<ul>
-<li>0: Iris-Setosa(세토사)</li>
-<li>1: Iris-Versicolor(버시컬러)</li>
-<li>2: Iris-Virginica(버지니카)</li>
-</ul>
-</li>
-</ul>
-
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="&#44867;&#51086;&#51032;-&#45320;&#48708;&#47484;-&#44592;&#51456;&#51004;&#47196;-Iris-Virginica-&#50668;&#48512;-&#54032;&#51221;&#54616;&#44592;">&#44867;&#51086;&#51032; &#45320;&#48708;&#47484; &#44592;&#51456;&#51004;&#47196; Iris-Virginica &#50668;&#48512; &#54032;&#51221;&#54616;&#44592;<a class="anchor-link" href="#&#44867;&#51086;&#51032;-&#45320;&#48708;&#47484;-&#44592;&#51456;&#51004;&#47196;-Iris-Virginica-&#50668;&#48512;-&#54032;&#51221;&#54616;&#44592;">&#182;</a></h4><ul>
-<li>결정경계: 약 1.6cm</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<div align="center"><img src="images/ch04/homl04-14.png" width="700"/></div>
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="&#44867;&#51086;&#51032;-&#45320;&#48708;&#50752;-&#44600;&#51060;&#47484;-&#44592;&#51456;&#51004;&#47196;-Iris-Virginica-&#50668;&#48512;-&#54032;&#51221;&#54616;&#44592;">&#44867;&#51086;&#51032; &#45320;&#48708;&#50752; &#44600;&#51060;&#47484; &#44592;&#51456;&#51004;&#47196; Iris-Virginica &#50668;&#48512; &#54032;&#51221;&#54616;&#44592;<a class="anchor-link" href="#&#44867;&#51086;&#51032;-&#45320;&#48708;&#50752;-&#44600;&#51060;&#47484;-&#44592;&#51456;&#51004;&#47196;-Iris-Virginica-&#50668;&#48512;-&#54032;&#51221;&#54616;&#44592;">&#182;</a></h4><ul>
-<li>결정경계: 검정 점선</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<div align="center"><img src="images/ch04/homl04-15.png" width="700"/></div>
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="&#47196;&#51648;&#49828;&#54001;-&#54924;&#44480;-&#44508;&#51228;&#54616;&#44592;">&#47196;&#51648;&#49828;&#54001; &#54924;&#44480; &#44508;&#51228;&#54616;&#44592;<a class="anchor-link" href="#&#47196;&#51648;&#49828;&#54001;-&#54924;&#44480;-&#44508;&#51228;&#54616;&#44592;">&#182;</a></h3>
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>하이퍼파라미터 <code>penalty</code>와 <code>C</code> 이용</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li><code>penalty</code><ul>
-<li><code>l1</code>, <code>l2</code>, <code>elasticnet</code> 세 개중에 하나 사용.</li>
-<li>기본은 <code>l2</code>, 즉, $\ell_2$ 규제를 사용하는 릿지 규제.</li>
-<li><code>elasticnet</code>을 선택한 경우 <code>l1_ration</code> 옵션 값을 함께 지정.</li>
+<li>회귀(regression): 중간 주택 가격 예측<ul>
+<li>다중 회귀(multiple regression): 여러 특성을 활용한 예측</li>
+<li>단변량 회귀(univariate regression): 구역마다 하나의 가격만 예측</li>
 </ul>
 </li>
 </ul>
@@ -14936,9 +14537,62 @@ $$
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li><code>C</code><ul>
-<li>릿지 규제 정도를 지정하는 $\alpha$의 역수에 해당. </li>
-<li>따라서 0에 가까울 수록 강한 규제 의미.</li>
+<li>배치 학습(batch learning): 빠르게 변하는 데이터에 적응할 필요가 없음</li>
+</ul>
+
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="2.2.2-&#49457;&#45733;-&#52769;&#51221;-&#51648;&#54364;-&#49440;&#53469;">2.2.2 &#49457;&#45733; &#52769;&#51221; &#51648;&#54364; &#49440;&#53469;<a class="anchor-link" href="#2.2.2-&#49457;&#45733;-&#52769;&#51221;-&#51648;&#54364;-&#49440;&#53469;">&#182;</a></h3>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>사용하는 모델에 따라 모델 성능 측정 기준(norm)을 다르게 선택한다. 
+선형 회귀 모델의 경우 일반적으로 아래 두 기준 중 하나를 사용한다.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>평균 제곱근 오차(RMSE)</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>평균 절대 오차(MAE)</li>
+</ul>
+
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="&#54217;&#44512;-&#51228;&#44273;&#44540;-&#50724;&#52264;(root-mean-square-error,-RMSE)">&#54217;&#44512; &#51228;&#44273;&#44540; &#50724;&#52264;(root mean square error, RMSE)<a class="anchor-link" href="#&#54217;&#44512;-&#51228;&#44273;&#44540;-&#50724;&#52264;(root-mean-square-error,-RMSE)">&#182;</a></h4><ul>
+<li>유클리디안 노름(Euclidean norm) 또는 $\ell_2$ 노름(norm)으로도 불림</li>
+<li>참고: 노름(norm)은 거리 측정 기준을 나타냄.</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+$$\text{RMSE}(\mathbf X, h) = \sqrt{\frac 1 m \sum_{i=1}^{m} (h(\mathbf x^{(i)}) - y^{(i)})^2}$$
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>기호 설명<ul>
+<li>$\mathbf X$: 훈련 데이터셋 전체 샘플들의 특성값들로 구성된 행렬, 레이블(타겟) 제외.</li>
+<li>$\mathbf x^{(i)}$: $i$ 번째 샘플의 전체 특성값 벡터. 레이블(타겟) 제외.</li>
+<li>$y^{(i)}$: $i$ 번째 샘플의 레이블</li>
+<li>$h$: 예측 함수</li>
+<li>$\hat y^{(i)} = h(\mathbf x^{(i)})$: $i$번째 샘플에 대한 예측 값</li>
 </ul>
 </li>
 </ul>
@@ -14947,13 +14601,21 @@ $$
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="4.6.4-&#49548;&#54532;&#53944;&#47589;&#49828;(softmax)-&#54924;&#44480;">4.6.4 &#49548;&#54532;&#53944;&#47589;&#49828;(softmax) &#54924;&#44480;<a class="anchor-link" href="#4.6.4-&#49548;&#54532;&#53944;&#47589;&#49828;(softmax)-&#54924;&#44480;">&#182;</a></h3>
+<h4 id="&#54217;&#44512;-&#51208;&#45824;-&#50724;&#52264;(mean-absolute-error,-MAE)">&#54217;&#44512; &#51208;&#45824; &#50724;&#52264;(mean absolute error, MAE)<a class="anchor-link" href="#&#54217;&#44512;-&#51208;&#45824;-&#50724;&#52264;(mean-absolute-error,-MAE)">&#182;</a></h4><ul>
+<li>MAE는 맨해튼 노름 또는 $\ell_1$ 노름으로도 불림</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+$$\text{MAE}(\mathbf X, h) = \frac 1 m \sum_{i=1}^{m} \mid h(\mathbf x^{(i)}) - y^{(i)} \mid$$
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>로지스틱 회귀 모델을 일반화하여 다중 클래스 분류를 지원하도록 한 회귀 모델</li>
+<li>이상치가 많은 경우 활용</li>
 </ul>
 
 </div>
@@ -14961,7 +14623,7 @@ $$
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li><strong>다항 로지스틱 회귀</strong> 라고도 불림</li>
+<li>$\ell_1$ 노름과 $\ell_2$ 노름을 일반해서 $\ell_n$ 노름을 정의할 수도 있음</li>
 </ul>
 
 </div>
@@ -14969,118 +14631,164 @@ $$
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>주의사항: 소프트맥스 회귀는 다중 출력 분류 지원 못함. 
-  예를 들어, 하나의 사진에서 여러 사람의 얼굴 인식 불가능.</li>
-</ul>
-
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="&#49548;&#54532;&#53944;&#47589;&#49828;-&#54924;&#44480;-&#54617;&#49845;-&#50500;&#51060;&#46356;&#50612;">&#49548;&#54532;&#53944;&#47589;&#49828; &#54924;&#44480; &#54617;&#49845; &#50500;&#51060;&#46356;&#50612;<a class="anchor-link" href="#&#49548;&#54532;&#53944;&#47589;&#49828;-&#54924;&#44480;-&#54617;&#49845;-&#50500;&#51060;&#46356;&#50612;">&#182;</a></h4>
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>샘플 $\mathbf x$가 주어졌을 때 각각의 분류 클래스 $k$ 에 대한 점수 $s_k(\mathbf x)$ 계산.
-  즉, <code>k*(n+1)</code> 개의 파라미터를 학습시켜야 함.</li>
-</ul>
-$$
-s_k(\mathbf x) = \theta_0^{(k)} + \theta_1^{(k)}\, x_1 + \cdots + \theta_n^{(k)}\, x_n
-$$<p></p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li><strong>소프트맥스 함수</strong>를 이용하여 각 클래스 $k$에 속할 확률 $\hat p_k$ 계산</li>
-</ul>
-$$
-\hat p_k = 
-\frac{\exp(s_k(\mathbf x))}{\sum_{j=1}^{K}\exp(s_j(\mathbf x))}
-$$
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>추정 확률이 가장 높은 클래스 선택</li>
-</ul>
-$$
-\hat y = 
-\mathrm{argmax}_k s_k(\mathbf x)
-$$
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="&#49548;&#54532;&#53944;&#47589;&#49828;-&#54924;&#44480;-&#48708;&#50857;&#54632;&#49688;">&#49548;&#54532;&#53944;&#47589;&#49828; &#54924;&#44480; &#48708;&#50857;&#54632;&#49688;<a class="anchor-link" href="#&#49548;&#54532;&#53944;&#47589;&#49828;-&#54924;&#44480;-&#48708;&#50857;&#54632;&#49688;">&#182;</a></h3>
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>각 분류 클래스 $k$에 대한 적절한 가중치 벡터 $\theta_k$를 학습해 나가야 함.</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>비용함수: 크로스 엔트로피 비용 함수 사용</li>
-</ul>
-$$
-J(\Theta) = 
-- \frac{1}{m}\, \sum_{i=1}^{m}\sum_{k=1}^{K} y^{(i)}_k\, \log(\hat{p}_k^{(i)})
-$$
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>위 비용함수에 대해 경사 하강법 적용</li>
+<li>RMSE가 MAE보다 이상치에 더 민감하지만, 이상치가 많지 않을 경우 일반적으로 RMSE 사용</li>
 </ul>
 
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>$K=2$이면 로지스틱 회귀의 로그 손실 함수와 정확하게 일치.</li>
-</ul>
-
+<h2 id="2.3-&#45936;&#51060;&#53552;-&#44032;&#51256;&#50724;&#44592;">2.3 &#45936;&#51060;&#53552; &#44032;&#51256;&#50724;&#44592;<a class="anchor-link" href="#2.3-&#45936;&#51060;&#53552;-&#44032;&#51256;&#50724;&#44592;">&#182;</a></h2>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="&#52280;&#44256;">&#52280;&#44256;<a class="anchor-link" href="#&#52280;&#44256;">&#182;</a></h3>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>주어진 샘플의 타깃 클래스를 제대로 예측할 경우 높은 확률값 계산</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>크로스 엔트로피 개념은 정보 이론에서 유래함. 자세한 설명은 생략.</li>
+<li>여기서부터 코랩 노트북 함께 참조</li>
 </ul>
 
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="&#45796;&#51473;-&#53364;&#47000;&#49828;-&#48516;&#47448;-&#50696;&#51228;">&#45796;&#51473; &#53364;&#47000;&#49828; &#48516;&#47448; &#50696;&#51228;<a class="anchor-link" href="#&#45796;&#51473;-&#53364;&#47000;&#49828;-&#48516;&#47448;-&#50696;&#51228;">&#182;</a></h3>
+<h3 id="2.3.2-&#45936;&#51060;&#53552;-&#45796;&#50868;&#47196;&#46300;">2.3.2 &#45936;&#51060;&#53552; &#45796;&#50868;&#47196;&#46300;<a class="anchor-link" href="#2.3.2-&#45936;&#51060;&#53552;-&#45796;&#50868;&#47196;&#46300;">&#182;</a></h3><ul>
+<li>저자의 깃허브 저장소에 있는 압축파일 다운로드</li>
+</ul>
+
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>사이킷런의 <code>LogisticRegression</code> 예측기 활용<ul>
-<li><code>multi_class=multinomial</code>로 지정</li>
-<li><code>solver=lbfgs</code>: 다중 클래스 분류 사용할 때 반드시 지정</li>
+<li>압축파일을 풀어 csv 파일로 저장</li>
+</ul>
+
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="2.3.3-&#45936;&#51060;&#53552;-&#44396;&#51312;-&#54993;&#50612;&#48372;&#44592;">2.3.3 &#45936;&#51060;&#53552; &#44396;&#51312; &#54993;&#50612;&#48372;&#44592;<a class="anchor-link" href="#2.3.3-&#45936;&#51060;&#53552;-&#44396;&#51312;-&#54993;&#50612;&#48372;&#44592;">&#182;</a></h3>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="&#45936;&#51060;&#53552;&#49483;-&#44592;&#48376;-&#51221;&#48372;-&#54869;&#51064;">&#45936;&#51060;&#53552;&#49483; &#44592;&#48376; &#51221;&#48372; &#54869;&#51064;<a class="anchor-link" href="#&#45936;&#51060;&#53552;&#49483;-&#44592;&#48376;-&#51221;&#48372;-&#54869;&#51064;">&#182;</a></h4><ul>
+<li>pandas의 데이터프레임 활용<ul>
+<li><code>head()</code>, <code>info()</code>, <code>describe()</code>, <code>hist()</code> 등을 사용하여 데이터 구조 훑어보기</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="head()-&#47700;&#49436;&#46300;-&#54876;&#50857;-&#44208;&#44284;"><code>head()</code> &#47700;&#49436;&#46300; &#54876;&#50857; &#44208;&#44284;<a class="anchor-link" href="#head()-&#47700;&#49436;&#46300;-&#54876;&#50857;-&#44208;&#44284;">&#182;</a></h4><div align="center"><img src="images/ch02/homl02-05.png" width="600"></div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="info()-&#47700;&#49436;&#46300;-&#54876;&#50857;-&#44208;&#44284;"><code>info()</code> &#47700;&#49436;&#46300; &#54876;&#50857; &#44208;&#44284;<a class="anchor-link" href="#info()-&#47700;&#49436;&#46300;-&#54876;&#50857;-&#44208;&#44284;">&#182;</a></h4>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div align="center"><img src="images/ch02/homl02-05a.png" width="450"></div>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li><p>구역 수: 20,640개</p>
+</li>
+<li><p>구역별로 경도, 위도, 중간 주택 연도, 해안 근접도 등 총 10개의 조사 항목</p>
+<ul>
+<li>'해안 근접도'는 범주형 특성이고 나머지는 수치형 특성.</li>
+</ul>
+</li>
+<li><p>'방의 총 개수'의 경우 누락된 데이터인 207개의 null 값 존재</p>
+</li>
+</ul>
+
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="&#48276;&#51452;&#54805;-&#53945;&#49457;-&#53456;&#49353;">&#48276;&#51452;&#54805; &#53945;&#49457; &#53456;&#49353;<a class="anchor-link" href="#&#48276;&#51452;&#54805;-&#53945;&#49457;-&#53456;&#49353;">&#182;</a></h4><ul>
+<li>'해안 근접도'는 5개의 범주로 구분</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<table>
+<thead><tr>
+<th>특성값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lt;1H OCEAN</td>
+<td>해안에서 1시간 이내</td>
+</tr>
+<tr>
+<td>INLAND</td>
+<td>내륙</td>
+</tr>
+<tr>
+<td>NEAR OCEAN</td>
+<td>해안 근처</td>
+</tr>
+<tr>
+<td>NEAR BAY</td>
+<td>샌프란시스코의 Bay Area 지역</td>
+</tr>
+<tr>
+<td>ISLAND</td>
+<td>섬</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="&#49688;&#52824;&#54805;-&#53945;&#49457;-&#53456;&#49353;">&#49688;&#52824;&#54805; &#53945;&#49457; &#53456;&#49353;<a class="anchor-link" href="#&#49688;&#52824;&#54805;-&#53945;&#49457;-&#53456;&#49353;">&#182;</a></h4>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div align="center"><img src="images/ch02/housing-describe.png"></div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="&#49688;&#52824;&#54805;-&#53945;&#49457;&#48324;-&#55176;&#49828;&#53664;&#44536;&#47016;">&#49688;&#52824;&#54805; &#53945;&#49457;&#48324; &#55176;&#49828;&#53664;&#44536;&#47016;<a class="anchor-link" href="#&#49688;&#52824;&#54805;-&#53945;&#49457;&#48324;-&#55176;&#49828;&#53664;&#44536;&#47016;">&#182;</a></h4>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div align="center"><img src="images/ch02/feature-histogram.png" width="600px"></div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="2.3.4-&#53580;&#49828;&#53944;-&#49464;&#53944;-&#47564;&#46308;&#44592;">2.3.4 &#53580;&#49828;&#53944; &#49464;&#53944; &#47564;&#46308;&#44592;<a class="anchor-link" href="#2.3.4-&#53580;&#49828;&#53944;-&#49464;&#53944;-&#47564;&#46308;&#44592;">&#182;</a></h3>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>모델 학습 시작 이전에 준비된 데이터셋을 훈련 세트과 테스트 세트로 구분<ul>
+<li>테스트 세트 크기: 전체 데이터 셋의 20%</li>
 </ul>
 </li>
 </ul>
@@ -15090,9 +14798,9 @@ $$
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>붓꽃 꽃잎의 너비와 길이를 기준으로 품종 분류<ul>
-<li>결정경계: 배경색으로 구분</li>
-<li>곡선: Iris-Versicolor 클래스에 속할 확률</li>
+<li>테스트 세트에 포함된 데이터는 미리 분석하지 말 것.<ul>
+<li>미리 분석 시 <strong>데이터 스누핑 편향</strong>을 범할 가능성이 높아짐</li>
+<li>미리 보면서 알아낸 직관이 학습 모델 설정에 영향을 미칠 수 있음 </li>
 </ul>
 </li>
 </ul>
@@ -15101,7 +14809,269 @@ $$
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<div align="center"><img src="images/ch04/homl04-16.png" width="700"/></div>
+<ul>
+<li>훈련 세트와 데이터 세트를 구분하는 방식에 따라 결과가 조금씩 달라짐 <ul>
+<li>무작위 샘플링 vs. 계층적 샘플링</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>여기서는 계층적 샘플링 활용</li>
+</ul>
+
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="&#44228;&#52789;&#51201;-&#49368;&#54540;&#47553;">&#44228;&#52789;&#51201; &#49368;&#54540;&#47553;<a class="anchor-link" href="#&#44228;&#52789;&#51201;-&#49368;&#54540;&#47553;">&#182;</a></h4><ul>
+<li>계층: 동질 그룹<ul>
+<li>예제: 소득별 계층</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>테스트 세트: 전체 계층을 대표하도록 각 계층별로 적절한 샘플 추출</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>예제: 소득 범주<ul>
+<li>계층별로 충분한 크기의 샘플이 포함되도록 지정해야 학습 과정에서 편향이 발생하지 않음</li>
+<li>특정 소득 구간에 포함된 샘플이 과하게 적거나 많으면 해당 계층의 중요도가 과대 혹은 과소 평가됨</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>전체 데이터셋의 중간 소득 히스토그램 활용</li>
+</ul>
+<div align="center"><img src="images/ch02/homl02-08.png" width="500"></div>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>대부분 구역의 중간 소득이 <strong>1.5~6.0</strong>(15,000~60,000&#x24;) 사이</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li><p>소득 구간을 아래 숫자를 기준으로 5개로 구분</p>
+<div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">4.6</span><span class="p">,</span> <span class="mf">6.0</span><span class="p">,</span> <span class="n">np</span><span class="p">,</span><span class="n">inf</span><span class="p">]</span>
+</pre></div>
+</li>
+</ul>
+
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="&#44228;&#52789;-&#49368;&#54540;&#47553;&#44284;-&#47924;&#51089;&#50948;-&#49368;&#54540;&#47553;-&#48708;&#44368;">&#44228;&#52789; &#49368;&#54540;&#47553;&#44284; &#47924;&#51089;&#50948; &#49368;&#54540;&#47553; &#48708;&#44368;<a class="anchor-link" href="#&#44228;&#52789;-&#49368;&#54540;&#47553;&#44284;-&#47924;&#51089;&#50948;-&#49368;&#54540;&#47553;-&#48708;&#44368;">&#182;</a></h4>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div align="center"><img src="images/ch02/homl02-07.png" width="700"></div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="2.4-&#45936;&#51060;&#53552;-&#51060;&#54644;&#47484;-&#50948;&#54620;-&#53456;&#49353;&#44284;-&#49884;&#44033;&#54868;">2.4 &#45936;&#51060;&#53552; &#51060;&#54644;&#47484; &#50948;&#54620; &#53456;&#49353;&#44284; &#49884;&#44033;&#54868;<a class="anchor-link" href="#2.4-&#45936;&#51060;&#53552;-&#51060;&#54644;&#47484;-&#50948;&#54620;-&#53456;&#49353;&#44284;-&#49884;&#44033;&#54868;">&#182;</a></h2>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="&#51452;&#51032;-&#49324;&#54637;">&#51452;&#51032; &#49324;&#54637;<a class="anchor-link" href="#&#51452;&#51032;-&#49324;&#54637;">&#182;</a></h3><ul>
+<li>테스트 세트를 제외한 훈련 세트에 대해서만 시각화를 이용하여 탐색</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>데이터 스누핑 편향 방지 용도</li>
+</ul>
+
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="2.4.1-&#51648;&#47532;&#51201;-&#45936;&#51060;&#53552;-&#49884;&#44033;&#54868;">2.4.1 &#51648;&#47532;&#51201; &#45936;&#51060;&#53552; &#49884;&#44033;&#54868;<a class="anchor-link" href="#2.4.1-&#51648;&#47532;&#51201;-&#45936;&#51060;&#53552;-&#49884;&#44033;&#54868;">&#182;</a></h3><ul>
+<li>구역이 집결된 지역과 그렇지 않은 지역 구분 가능</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>샌프란시스코의 베이 에어리어, LA, 샌디에고 등 밀집된 지역 확인 가능</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div align="center"><img src="images/ch02/homl02-09.png" width="500"></div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>주택 가격이 해안 근접도 또는 인구 밀도와 관련이 큼</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>해안 근접도: 위치에 따라 다르게 작용<ul>
+<li>대도시 근처: 해안 근처 주택 가격이 상대적 높음</li>
+<li>북부 캘리포니아 지역: 높지 않음</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div align="center"><img src="images/ch02/homl02-11.png" width="500"></div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="2.4.2-&#49345;&#44288;&#44288;&#44228;-&#51312;&#49324;">2.4.2 &#49345;&#44288;&#44288;&#44228; &#51312;&#49324;<a class="anchor-link" href="#2.4.2-&#49345;&#44288;&#44288;&#44228;-&#51312;&#49324;">&#182;</a></h3><ul>
+<li>중간 주택 가격 특성과 다른 특성 사이의 상관관계: 상관계수 활용</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div align="center"><img src="images/ch02/homl02-12.png" width="600"></div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="&#49345;&#44288;&#44228;&#49688;&#51032;-&#53945;&#51669;">&#49345;&#44288;&#44228;&#49688;&#51032; &#53945;&#51669;<a class="anchor-link" href="#&#49345;&#44288;&#44228;&#49688;&#51032;-&#53945;&#51669;">&#182;</a></h4>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div align="center"><img src="images/ch02/homl02-14.png" width="400"></div><p>&lt;그림 출처: <a href="https://en.wikipedia.org/wiki/Pearson_correlation_coefficient">위키백과</a>&gt;</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li><p>상관계수: $[-1, 1]$ 구간의 값</p>
+</li>
+<li><p>1에 가까울 수록: 강한 양의 선형 상관관계</p>
+</li>
+<li><p>-1에 가까울 수록: 강한 음의 선형 상관관계</p>
+</li>
+<li><p>0에 가까울 수록: 매우 약한 선형 상관관계</p>
+</li>
+</ul>
+
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="&#51452;&#51032;&#49324;&#54637;">&#51452;&#51032;&#49324;&#54637;<a class="anchor-link" href="#&#51452;&#51032;&#49324;&#54637;">&#182;</a></h4><ul>
+<li>상관계수가 0에 가까울 때: 선형 관계가 거의 없다는 의미이지, 아무런 관계가 없다는 의미는 아님</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>상관계수는 기울기와 아무 연관 없음</li>
+</ul>
+
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="&#49345;&#44288;&#44228;&#49688;&#47484;-&#53685;&#54644;-&#54869;&#51064;&#54624;-&#49688;-&#51080;&#45716;-&#51221;&#48372;">&#49345;&#44288;&#44228;&#49688;&#47484; &#53685;&#54644; &#54869;&#51064;&#54624; &#49688; &#51080;&#45716; &#51221;&#48372;<a class="anchor-link" href="#&#49345;&#44288;&#44228;&#49688;&#47484;-&#53685;&#54644;-&#54869;&#51064;&#54624;-&#49688;-&#51080;&#45716;-&#51221;&#48372;">&#182;</a></h4><ul>
+<li>중간 주택 가격과 중간 소득의 상관계수가 0.68로 가장 높음<ul>
+<li>중간 소득이 올라가면 중간 주택 가격도 상승하는 경향이 있음</li>
+<li>점들이 너무 넓게 퍼져 있음. 완벽한 선형관계와 거리 멂.</li>
+</ul>
+</li>
+</ul>
+<div align="center"><img src="images/ch02/homl02-13.png" width="400"></div>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>50만 달러 수평선: 가격 제한 결과로 보임<ul>
+<li>45만, 35만, 28만, 그 아래 정도에서도 수평선 존재. 이유는 알려지지 않음.</li>
+<li>이상한 형태를 학습하지 않도록 해당 구역을 제거하는 것이 좋음. (여기서는 그대로 두고 사용)</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="2.4.3-&#53945;&#49457;-&#51312;&#54633;&#51004;&#47196;-&#49892;&#54744;">2.4.3 &#53945;&#49457; &#51312;&#54633;&#51004;&#47196; &#49892;&#54744;<a class="anchor-link" href="#2.4.3-&#53945;&#49457;-&#51312;&#54633;&#51004;&#47196;-&#49892;&#54744;">&#182;</a></h3><ul>
+<li>구역별 방의 총 개수와 침실의 총 개수 대신 아래 특성이 보다 유용함<ul>
+<li>가구당 방 개수(rooms for household)</li>
+<li>방 하나당 침실 개수(bedrooms for room)</li>
+<li>가구당 인원(population per household)</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div align="center"><img src="images/ch02/homl02-12a.png" width="600"></div>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>중간 주택 가격과 방 하나당 침실 개수의 연관성 다소 있음</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>가구당 방 개수의 역할은 여전히 미미함</li>
+</ul>
+
 </div>
 </div></section></section>
 </div>
