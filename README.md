@@ -5,7 +5,7 @@
 소스코드에 설명을 추가한 주피터 노트북과 챕터별 강의 슬라이드를 제공합니다. 
 
 주피터 노트북과 슬라이이드의 학습내용과 프로그래밍 환경과 관련된 자세한 사항은 
-[강의노트 홈페이지](https://codingalzi.github.io/handson-ml/)에서 
+[강의노트 홈페이지](https://codingalzi.github.io/handson-ml2/)에서 
 확인할 수 있습니다.
 
 ### 감사의 글
