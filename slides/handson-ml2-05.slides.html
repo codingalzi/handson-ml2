@@ -14630,7 +14630,8 @@ div.jp-OutputPrompt {
 <ul>
 <li><p>사이킷런의 선형 SVM 분류기 <code>LinearSVC</code> 활용</p>
 <ul>
-<li><code>C</code>: 만약 0이라면 하드 마진 분류이지만 허용되지 않음. 무조건 양수이어야 하며 클 수록 강한 규제 의미.</li>
+<li><code>C</code>: 무조건 양수이어야 하며 클 수록 마진 위반을 적게, 즉 도로폭을 작게 만듦. 
+  결국 규제를 덜 가하게 되어 모델의 자유도를 올려 과대적합 가능성을 키움.</li>
 <li><p><code>hinge</code>: 힌지 손실. 예측값과 실제 라벨 사이의 차이가 클 수록 큰 손실이 가해짐.</p>
 <div class="highlight"><pre><span></span><span class="n">svm_clf1</span> <span class="o">=</span> <span class="n">LinearSVC</span><span class="p">(</span><span class="n">C</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">loss</span><span class="o">=</span><span class="s2">&quot;hinge&quot;</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
 </pre></div>
@@ -14700,6 +14701,14 @@ div.jp-OutputPrompt {
 </li>
 </ul>
 
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>경첩 손실(hinge loss) 함수</li>
+</ul>
+<div align="center"><img src="images/ch05/homl05-06c.png" width="400"/></div>
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
@@ -14809,6 +14818,15 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <div align="center"><img src="images/ch05/homl05-06b.png" width="800"/></div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>3차원의 선형 방정식 그래프 예제:</li>
+</ul>
+$$z = \frac{3}{5} x + \frac{1}{5}y + 5 \quad\Longleftrightarrow\quad 3x + y - 5z + 25 = 0$$<div align="center"><img src="images/ch05/homl05-06d.png" width="600"/></div><p>&lt;그림 출처: <a href="https://www.geogebra.org/3d">지오지브라(GeoGebra)</a>&gt;</p>
+
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
@@ -14942,7 +14960,8 @@ $$
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<div align="center"><img src="images/ch05/homl05-08a.png" width="600"/></div>
+<div align="center"><img src="images/ch05/homl05-08a.png" width="600"/></div><p>&lt;그림 출처: <a href="https://www.desmos.com/calculator?lang=ko">데스모스(desmos)</a>&gt;</p>
+
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
