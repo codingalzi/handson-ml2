@@ -14631,7 +14631,8 @@ div.jp-OutputPrompt {
 <li><p>사이킷런의 선형 SVM 분류기 <code>LinearSVC</code> 활용</p>
 <ul>
 <li><code>C</code>: 무조건 양수이어야 하며 클 수록 마진 위반을 적게, 즉 도로폭을 작게 만듦. 
-  결국 규제를 덜 가하게 되어 모델의 자유도를 올려 과대적합 가능성을 키움.</li>
+  결국 C가 클 수록 규제를 덜 가하게 되어 모델의 자유도를 올려 과대적합 가능성을 키움.
+  또한 C 값을 매우 크게 잡으면 하드 마진 분류로 기능하게 됨.</li>
 <li><p><code>hinge</code>: 힌지 손실. 예측값과 실제 라벨 사이의 차이가 클 수록 큰 손실이 가해짐.</p>
 <div class="highlight"><pre><span></span><span class="n">svm_clf1</span> <span class="o">=</span> <span class="n">LinearSVC</span><span class="p">(</span><span class="n">C</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">loss</span><span class="o">=</span><span class="s2">&quot;hinge&quot;</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
 </pre></div>
