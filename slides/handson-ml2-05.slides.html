@@ -14632,8 +14632,9 @@ div.jp-OutputPrompt {
 <ul>
 <li><code>C</code>: 무조건 양수이어야 하며 클 수록 마진 위반을 적게, 즉 도로폭을 작게 만듦. 
   결국 C가 클 수록 규제를 덜 가하게 되어 모델의 자유도를 올려 과대적합 가능성을 키움.
-  또한 C 값을 매우 크게 잡으면 하드 마진 분류로 기능하게 됨.</li>
-<li><p><code>hinge</code>: 힌지 손실. 예측값과 실제 라벨 사이의 차이가 클 수록 큰 손실이 가해짐.</p>
+  또한 <code>C=float("inf")</code>로 지정하면 하드 마진 분류 모델이 됨.</li>
+<li><code>hinge</code>: 힌지 손실. 예측값과 실제 라벨 사이의 차이가 클 수록 큰 손실이 가해짐.</li>
+<li><p><code>dual=True</code>: 쌍대성(duality) 이용 여부. True가 기본. 하지만 특성 수가 샘플 수보다 작을 때는 False 권장.</p>
 <div class="highlight"><pre><span></span><span class="n">svm_clf1</span> <span class="o">=</span> <span class="n">LinearSVC</span><span class="p">(</span><span class="n">C</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">loss</span><span class="o">=</span><span class="s2">&quot;hinge&quot;</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
 </pre></div>
 </li>
@@ -14670,6 +14671,37 @@ div.jp-OutputPrompt {
 </tr>
 </tbody>
 </table>
+
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="&#49828;&#52992;&#51068;-&#51312;&#51221;&#51032;-&#51473;&#50836;&#49457;">&#49828;&#52992;&#51068; &#51312;&#51221;&#51032; &#51473;&#50836;&#49457;<a class="anchor-link" href="#&#49828;&#52992;&#51068;-&#51312;&#51221;&#51032;-&#51473;&#50836;&#49457;">&#182;</a></h3>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li><code>LinearSVC</code> 모델의 경우 편향도 규제 대상임. 
+  따라서 평균을 빼서 0으로 편향을 없애는 것이 중요. 하지만 표준화 스케일링을 하면 자연스럽게 해결됨.</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>반면에 <code>SVC</code> 모델은 편향을 규제하지는 않음. 
+  그럼에도 불구하고 기본적으로 표준화 스케일링을 진행하는 것이 보다 좋은 성능의 모델을 훈련시킴.</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>이전의 두 그림 모두 표준화 스케일링 전처리를 한 후에 학습을 시킨 모델임.</li>
+</ul>
 
 </div>
 </div></section></section><section><section>
