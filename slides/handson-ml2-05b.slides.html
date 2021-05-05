@@ -14415,42 +14415,28 @@ div.jp-OutputPrompt {
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="1&#48512;-&#51452;&#50836;-&#45236;&#50857;">1&#48512; &#51452;&#50836; &#45236;&#50857;<a class="anchor-link" href="#1&#48512;-&#51452;&#50836;-&#45236;&#50857;">&#182;</a></h2>
+<h2 id="&#51452;&#50836;-&#45236;&#50857;">&#51452;&#50836; &#45236;&#50857;<a class="anchor-link" href="#&#51452;&#50836;-&#45236;&#50857;">&#182;</a></h2>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><strong>1부</strong></p>
 <ul>
-<li>선형 SVM 분류</li>
+<li><p>선형 SVM 분류</p>
+</li>
+<li><p>비선형 SVM 분류</p>
+</li>
 </ul>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>비선형 SVM 분류</li>
-</ul>
-
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="2&#48512;-&#51452;&#50836;-&#45236;&#50857;">2&#48512; &#51452;&#50836; &#45236;&#50857;<a class="anchor-link" href="#2&#48512;-&#51452;&#50836;-&#45236;&#50857;">&#182;</a></h2>
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>SVM 회귀</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>SVM 이론</li>
+<h3 id="2&#48512;">2&#48512;<a class="anchor-link" href="#2&#48512;">&#182;</a></h3><ul>
+<li><p>SVM 회귀</p>
+</li>
+<li><p>SVM 이론</p>
+</li>
 </ul>
 
 </div>
@@ -14469,7 +14455,7 @@ div.jp-OutputPrompt {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
 <li>SVM 분류 <ul>
-<li>목표: 마진 오류 발생 정도를 조절하면서 두 클래스 사이의 도로폭을 최대한 넓게 하기</li>
+<li>목표: 마진 오류 발생 정도를 조절(<code>C</code> 이용)하면서 두 클래스 사이의 도로폭을 최대한 넓게 하기</li>
 <li>마진 오류: 도로 위에 위치한 샘플</li>
 </ul>
 </li>
@@ -14481,8 +14467,9 @@ div.jp-OutputPrompt {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
 <li>SVM 회귀 <ul>
-<li>목표: 마진 오류 발생 정도를 조절하면서 지정된 폭의 도로 안에 가능한 많은 샘플 포함하기</li>
+<li>목표: 마진 오류 발생 정도를 조절(<code>C</code> 이용)하면서 지정된 폭의 도로 안에 가능한 많은 샘플 포함하기</li>
 <li>마진 오류: 도로 밖에 위치한 샘플</li>
+<li>참고: <a href="https://kr.mathworks.com/help/stats/understanding-support-vector-machine-regression.html">MathWorks: SVM 회귀 이해하기</a></li>
 </ul>
 </li>
 </ul>
@@ -14517,7 +14504,7 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>마진 안에 포함되는 샘플를 추가해도 예측에 영향 주지 않음. 즉 <code>epsilon</code>에 둔감함.</li>
+<li>마진 안, 즉 결정 경계 도로 위에 포함되는 샘플를 추가해도 예측에 영향 주지 않음. 즉 <code>epsilon</code>에 둔감함.</li>
 </ul>
 
 </div>
@@ -14558,26 +14545,22 @@ div.jp-OutputPrompt {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <table>
 <thead><tr>
-<th style="text-align:right">왼편 그래프</th>
-<th style="text-align:right">오른편 그래프</th>
+<th style="text-align:right">왼편 그래프(C=100)</th>
+<th style="text-align:right">오른편 그래프(C=0.01)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:right">2차 다항 커널</td>
-<td style="text-align:right">2차 다항 커널</td>
+<td style="text-align:right">규제 보다 약함</td>
+<td style="text-align:right">규제 보다 강함</td>
 </tr>
 <tr>
-<td style="text-align:right">C=100(규제 보다 적음)</td>
-<td style="text-align:right">C=0.01(규제 보다 많음)</td>
-</tr>
-<tr>
-<td style="text-align:right">샘플에 더 민감</td>
 <td style="text-align:right">샘플에 덜 민감</td>
+<td style="text-align:right">샘플에 더 민감</td>
 </tr>
 <tr>
-<td style="text-align:right">도록폭을 보다 좁게</td>
-<td style="text-align:right">도로폭을 보다 넓게</td>
+<td style="text-align:right">마진 오류 보다 적게</td>
+<td style="text-align:right">마진 오류 보다 많이</td>
 </tr>
 </tbody>
 </table>
@@ -14618,62 +14601,35 @@ div.jp-OutputPrompt {
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>(선형) SVM 작동 원리<ul>
-<li>결정 함수와 예측</li>
-<li>목적 함수</li>
-<li>2차 계획법(QP, quadratic programming)</li>
-<li>쌍대 문제</li>
-</ul>
-</li>
-</ul>
-
+<h3 id="SVM-&#48516;&#47448;&#44592;&#51032;-&#44208;&#51221;-&#54632;&#49688;,-&#50696;&#52769;,-&#44208;&#51221;-&#44221;&#44228;,-&#47785;&#51201;&#54632;&#49688;">SVM &#48516;&#47448;&#44592;&#51032; &#44208;&#51221; &#54632;&#49688;, &#50696;&#52769;, &#44208;&#51221; &#44221;&#44228;, &#47785;&#51201;&#54632;&#49688;<a class="anchor-link" href="#SVM-&#48516;&#47448;&#44592;&#51032;-&#44208;&#51221;-&#54632;&#49688;,-&#50696;&#52769;,-&#44208;&#51221;-&#44221;&#44228;,-&#47785;&#51201;&#54632;&#49688;">&#182;</a></h3>
 </div>
 </div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="&#44208;&#51221;-&#54632;&#49688;&#50752;-&#50696;&#52769;">&#44208;&#51221; &#54632;&#49688;&#50752; &#50696;&#52769;<a class="anchor-link" href="#&#44208;&#51221;-&#54632;&#49688;&#50752;-&#50696;&#52769;">&#182;</a></h4>
+</div>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>커널 SVM 작동원리<ul>
-<li>쌍대 문제를 해결할 때 커널 기법 활용 가능</li>
-</ul>
-</li>
+<li>결정 함수: 아래 값을 이용하여 클래스 분류</li>
 </ul>
 
 </div>
-</div></section></section><section><section>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+$$
+h(\mathbf x) = \mathbf w^T \mathbf x + b = w_1 x_1 + \cdots + w_n x_n + b
+$$
+</div>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>온라인 SVM<ul>
-<li>온라인 선형 SVM</li>
-<li>온라인 커널 SVM</li>
-</ul>
-</li>
+<li>예측값: 결정 함수의 값이 양수이면 양성, 음수이면 음성으로 분류</li>
 </ul>
 
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="(&#49440;&#54805;)-SVM-&#51089;&#46041;-&#50896;&#47532;:-&#44208;&#51221;-&#54632;&#49688;&#50752;-&#50696;&#52769;">(&#49440;&#54805;) SVM &#51089;&#46041; &#50896;&#47532;: &#44208;&#51221; &#54632;&#49688;&#50752; &#50696;&#52769;<a class="anchor-link" href="#(&#49440;&#54805;)-SVM-&#51089;&#46041;-&#50896;&#47532;:-&#44208;&#51221;-&#54632;&#49688;&#50752;-&#50696;&#52769;">&#182;</a></h3>
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="&#49440;&#54805;-SVM-&#48516;&#47448;&#44592;-&#47784;&#45944;&#51032;-&#44208;&#51221;-&#54632;&#49688;">&#49440;&#54805; SVM &#48516;&#47448;&#44592; &#47784;&#45944;&#51032; &#44208;&#51221; &#54632;&#49688;<a class="anchor-link" href="#&#49440;&#54805;-SVM-&#48516;&#47448;&#44592;-&#47784;&#45944;&#51032;-&#44208;&#51221;-&#54632;&#49688;">&#182;</a></h4>
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-\begin{align*}
-h(\mathbf x) &amp;= \mathbf w^T \mathbf x + b \\
-             &amp;= w_1 x_1 + \cdots + w_n x_n + b
-\end{align*}
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="&#49440;&#54805;-SVM-&#48516;&#47448;&#44592;-&#50696;&#52769;">&#49440;&#54805; SVM &#48516;&#47448;&#44592; &#50696;&#52769;<a class="anchor-link" href="#&#49440;&#54805;-SVM-&#48516;&#47448;&#44592;-&#50696;&#52769;">&#182;</a></h4>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
@@ -14688,22 +14644,43 @@ $$
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="&#44208;&#51221;-&#44221;&#44228;">&#44208;&#51221; &#44221;&#44228;<a class="anchor-link" href="#&#44208;&#51221;-&#44221;&#44228;">&#182;</a></h4><ul>
-<li><p>결정 함수의 값이 0인 점들의 집합</p>
-<p>$$\{\mathbf x \mid h(\mathbf x)=0  \}$$</p>
-</li>
+<h4 id="&#44208;&#51221;-&#44221;&#44228;">&#44208;&#51221; &#44221;&#44228;<a class="anchor-link" href="#&#44208;&#51221;-&#44221;&#44228;">&#182;</a></h4>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>결정 경계: 결정 함수의 값이 0인 점들의 집합</li>
 </ul>
 
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+$$\{\mathbf x \mid h(\mathbf x)=0  \}$$
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>도로 경계: 결정 함수의 값이 1 또는 -1인 샘플들의 집합</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+$$\{\mathbf{x} \mid h(\mathbf x)= \pm 1 \}$$
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>결정 경계 예제<ul>
-<li>붓꽃 분류: 꽃잎 길이와 너비를 기준으로 Iris-Virginica(초록색 삼각형) 품종 여부 판단</li>
-</ul>
-</li>
-</ul>
+<h4 id="&#50696;&#51228;">&#50696;&#51228;<a class="anchor-link" href="#&#50696;&#51228;">&#182;</a></h4>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>붓꽃 분류. 꽃잎 길이와 너비를 기준으로 버지니카(Iris-Virginica, 초록 삼각형) 품종 여부 판단</p>
 
 </div>
 </div>
@@ -14711,29 +14688,24 @@ $$
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <div align="center"><img src="images/ch05/homl05-13.png" width="600"/></div>
 </div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="&#44208;&#51221;-&#54632;&#49688;&#51032;-&#44592;&#50872;&#44592;">&#44208;&#51221; &#54632;&#49688;&#51032; &#44592;&#50872;&#44592;<a class="anchor-link" href="#&#44208;&#51221;-&#54632;&#49688;&#51032;-&#44592;&#50872;&#44592;">&#182;</a></h4>
+</div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>두 점선에 유의할 것<ul>
-<li>$h(\mathbf x)$가 1 또는 -1인 샘플들의 집합</li>
-<li>마진과 밀접하게 관련됨.</li>
-</ul>
-</li>
+<li>결정 함수의 기울기가 작아질 수록 도로 경계 폭이 커짐.</li>
 </ul>
 
 </div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="(&#49440;&#54805;)-SVM-&#51089;&#46041;-&#50896;&#47532;:-&#47785;&#51201;-&#54632;&#49688;">(&#49440;&#54805;) SVM &#51089;&#46041; &#50896;&#47532;: &#47785;&#51201; &#54632;&#49688;<a class="anchor-link" href="#(&#49440;&#54805;)-SVM-&#51089;&#46041;-&#50896;&#47532;:-&#47785;&#51201;-&#54632;&#49688;">&#182;</a></h3>
 </div>
-</div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="&#44208;&#51221;-&#54632;&#49688;&#51032;-&#44592;&#50872;&#44592;&#50752;-&#47560;&#51652;-&#54253;">&#44208;&#51221; &#54632;&#49688;&#51032; &#44592;&#50872;&#44592;&#50752; &#47560;&#51652; &#54253;<a class="anchor-link" href="#&#44208;&#51221;-&#54632;&#49688;&#51032;-&#44592;&#50872;&#44592;&#50752;-&#47560;&#51652;-&#54253;">&#182;</a></h4><ul>
-<li>결정 함수의 기울기가 작아질 수록 마진 폭이 커짐. 아래 그림 참조</li>
-<li>결정 함수의 기울기가 $\| \mathbf w \|$에 비례함.</li>
+<ul>
+<li>결정 함수의 기울기가 $\| \mathbf w \|$에 비례함. 따라서 도로 폭을 크게 하기 위해 $\| \mathbf w \|$를 최소화 해야 함.</li>
 </ul>
 
 </div>
@@ -14746,9 +14718,9 @@ $$
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>마진을 크게 하기 위해 $\| \mathbf w \|$를 최소화 해야 함.<ul>
-<li>하드 마진: 모든 양성(음성) 샘플에 대한 결정 함수의 값이 1(-1)보다 크다(작다)</li>
-<li>소프트 마진: 모든 샘플에 대한 결정 함수의 값이 지정된 값 이상 또는 이하 이어야 한다.</li>
+<li>결정 함수의 기울기가 $\| \mathbf w \|$에 비례함. 따라서 도로 폭을 크게 하기 위해 $\| \mathbf w \|$를 최소화 해야 함.<ul>
+<li>하드 마진: 모든 양성(음성) 샘플에 대한 결정 함수의 값이 1(-1)보다 큼(작음).</li>
+<li>소프트 마진: 모든 샘플에 대한 결정 함수의 값이 지정된 값 이상 또는 이하 이어야 함.</li>
 </ul>
 </li>
 </ul>
@@ -14757,111 +14729,112 @@ $$
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="&#54616;&#46300;-&#47560;&#51652;-&#49440;&#54805;-SVM-&#48516;&#47448;&#44592;&#51032;-&#47785;&#51201;-&#54632;&#49688;">&#54616;&#46300; &#47560;&#51652; &#49440;&#54805; SVM &#48516;&#47448;&#44592;&#51032; &#47785;&#51201; &#54632;&#49688;<a class="anchor-link" href="#&#54616;&#46300;-&#47560;&#51652;-&#49440;&#54805;-SVM-&#48516;&#47448;&#44592;&#51032;-&#47785;&#51201;-&#54632;&#49688;">&#182;</a></h4><ul>
-<li><p>목적 함수:</p>
-<p>$$\frac 1 2 \mathbf w^T \mathbf w$$</p>
-</li>
-<li><p>아래 조건 하에서 목적 함수를 최소화 시키는 $\mathbf w$와 $b$를 구해야 함:</p>
-<p>$$t^{(i)} (\mathbf w^T \mathbf x^{(i)} + b) \ge 1$$</p>
-</li>
-<li><p>단, 다음이 성립:</p>
+<h4 id="&#47785;&#51201;&#54632;&#49688;">&#47785;&#51201;&#54632;&#49688;<a class="anchor-link" href="#&#47785;&#51201;&#54632;&#49688;">&#182;</a></h4>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>$x^{(i)}$: $i$ 번째 샘플</li>
-<li>$t^{(i)}$: 양성 샘플일 때 1, 음성 샘플일 때 -1</li>
-</ul>
-</li>
+<li>$\| \mathbf w \|$를 최소화해야 함.</li>
 </ul>
 
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>$\| \mathbf w \|$를 최소하하는 것과 아래 식을 최소화하는 것이 동일한 의미이며, 
+  아래 함수의 미분가능성 때문에 수학적으로 다루기가 보다 쉬움.</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>따라서 아래 함수를 <strong>목적 함수</strong>로 정하고 전역 최솟점을 찾아야 함.</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+$$\frac 1 2 \| \mathbf w \|^2 = \frac 1 2 \mathbf w^T \mathbf w$$
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="&#49548;&#54532;&#53944;-&#47560;&#51652;-&#49440;&#54805;-SVM-&#48516;&#47448;&#44592;&#51032;-&#47785;&#51201;-&#54632;&#49688;">&#49548;&#54532;&#53944; &#47560;&#51652; &#49440;&#54805; SVM &#48516;&#47448;&#44592;&#51032; &#47785;&#51201; &#54632;&#49688;<a class="anchor-link" href="#&#49548;&#54532;&#53944;-&#47560;&#51652;-&#49440;&#54805;-SVM-&#48516;&#47448;&#44592;&#51032;-&#47785;&#51201;-&#54632;&#49688;">&#182;</a></h4><ul>
-<li><p>목적 함수:</p>
-<p>$$\frac 1 2 \mathbf w^T \mathbf w + C \sum_{i=0}^{m-1} \zeta^{(i)}$$</p>
-</li>
-<li><p>아래 조건 하에서 목적 함수를 최소화 시키는 $\mathbf w$와 $b$를 구해야 함:</p>
-<p>$$t^{(i)} (\mathbf w^T \mathbf x^{(i)} + b) \ge 1 - \zeta^{(i)}$$</p>
-</li>
+<h4 id="&#54616;&#46300;-&#47560;&#51652;-&#49440;&#54805;-SVM-&#48516;&#47448;&#44592;&#51032;-&#47785;&#51201;-&#54632;&#49688;">&#54616;&#46300; &#47560;&#51652; &#49440;&#54805; SVM &#48516;&#47448;&#44592;&#51032; &#47785;&#51201; &#54632;&#49688;<a class="anchor-link" href="#&#54616;&#46300;-&#47560;&#51652;-&#49440;&#54805;-SVM-&#48516;&#47448;&#44592;&#51032;-&#47785;&#51201;-&#54632;&#49688;">&#182;</a></h4>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>모든 샘플 $\mathbf{x}^{(i)}$에 대해 아래 조건을 만족시키면서 목적 함수를 최소화하는 $\mathbf w$와 $b$를 구해야 함.
+  즉, <strong>제약이 있는 최적화 문제</strong>를 해결해야 함.</li>
 </ul>
 
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+$$\frac 1 2 \mathbf w^T \mathbf w$$$$
+\text{(조건)}\quad t^{(i)} (\mathbf w^T \mathbf x^{(i)} + b) \ge 1
+$$
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>단, </li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+$$
+t^{(i)} = 
+\begin{cases}
+0 &amp; \text{$x^{(i)}$가 음성인 경우} \\
+1 &amp; \text{$x^{(i)}$가 양성인 경우} 
+\end{cases}
+$$
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="&#49548;&#54532;&#53944;-&#47560;&#51652;-&#49440;&#54805;-SVM-&#48516;&#47448;&#44592;&#51032;-&#47785;&#51201;-&#54632;&#49688;">&#49548;&#54532;&#53944; &#47560;&#51652; &#49440;&#54805; SVM &#48516;&#47448;&#44592;&#51032; &#47785;&#51201; &#54632;&#49688;<a class="anchor-link" href="#&#49548;&#54532;&#53944;-&#47560;&#51652;-&#49440;&#54805;-SVM-&#48516;&#47448;&#44592;&#51032;-&#47785;&#51201;-&#54632;&#49688;">&#182;</a></h4>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li><p>단, 다음이 성립:</p>
+<li>목적함수와 조건이 다음과 같음.</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+$$\frac 1 2 \mathbf w^T \mathbf w + C \sum_{i=0}^{m-1} \zeta^{(i)}$$<p></p>
+$$\text{(조건)}\quad t^{(i)} (\mathbf w^T \mathbf x^{(i)} + b) \ge 1 - \zeta^{(i)}$$
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>$x^{(i)}$: $i$ 번째 샘플</li>
-<li>$t^{(i)}$: 양성 샘플일 때 1, 음성 샘플일 때 -1</li>
 <li>$\zeta^{(i)}\ge 0$: <strong>슬랙 변수</strong>. $i$ 번째 샘플에 대한 마진 오류 허용 정도 지정.</li>
 </ul>
-</li>
-<li><p>$C$: 아래 두 목표 사이의 트레이드오프를 조절하는 하이퍼파라미터</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
+<li>$C$: 아래 두 목표 사이의 트레이드오프를 조절하는 하이퍼파라미터<ul>
 <li>목표 1: 슬랙 변수의 값을 작게 만들기</li>
-<li>목표 2: 마진을 크게 하기 위해 $\frac 1 2 \mathbf w^T \mathbf w$ 값을 가능하면 작게 만들기</li>
-</ul>
-</li>
-</ul>
-
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="(&#49440;&#54805;)-SVM-&#51089;&#46041;-&#50896;&#47532;:-2&#52264;-&#44228;&#54925;&#48277;(QP)">(&#49440;&#54805;) SVM &#51089;&#46041; &#50896;&#47532;: 2&#52264; &#44228;&#54925;&#48277;(QP)<a class="anchor-link" href="#(&#49440;&#54805;)-SVM-&#51089;&#46041;-&#50896;&#47532;:-2&#52264;-&#44228;&#54925;&#48277;(QP)">&#182;</a></h3>
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>하드(소프트) 마진 문제: 선형 제약조건이 있는 블록 2차 최적화 문제</li>
-<li>2차 계획법(QP, quadratic programming) 문제로 알려짐.</li>
-<li>해법에 대한 설명은 이 책의 수준을 벗어남.</li>
-</ul>
-
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="(&#49440;&#54805;)-SVM-&#51089;&#46041;-&#50896;&#47532;:-&#49933;&#45824;-&#47928;&#51228;">(&#49440;&#54805;) SVM &#51089;&#46041; &#50896;&#47532;: &#49933;&#45824; &#47928;&#51228;<a class="anchor-link" href="#(&#49440;&#54805;)-SVM-&#51089;&#46041;-&#50896;&#47532;:-&#49933;&#45824;-&#47928;&#51228;">&#182;</a></h3>
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>쌍대 문제(dual problem): 주어진 문제의 답과 동일한 답을 갖는 문제</li>
-<li>하드(소프트) 마진과 관련된 2차 계획법 문제의 답을 보다 쉽게 해결할 수 있는 쌍대 문제를 이용하여 해결 가능</li>
-</ul>
-
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="&#49440;&#54805;-SVM-&#47785;&#51201;-&#54632;&#49688;&#51032;-&#49933;&#45824;-&#47928;&#51228;">&#49440;&#54805; SVM &#47785;&#51201; &#54632;&#49688;&#51032; &#49933;&#45824; &#47928;&#51228;<a class="anchor-link" href="#&#49440;&#54805;-SVM-&#47785;&#51201;-&#54632;&#49688;&#51032;-&#49933;&#45824;-&#47928;&#51228;">&#182;</a></h4><ul>
-<li><p>아랙 식을 최소화하는 $\alpha$ 찾기. 단, $\alpha^{(i)} &gt; 0$:</p>
-<p>$$
-  \frac 1 2 \sum<em>{i=0}^{m-1} \sum</em>{j=0}^{m-1} \alpha^{(i)} \alpha^{(j)} t^{(i)} t^{(j)} \mathbf x^{{(i)}^T} \mathbf x^{(j)}</p>
-<ul>
-<li>\sum_{i=0}^{m-1} \alpha^{(i)}
-$$</li>
-</ul>
-</li>
-</ul>
-
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li><p>쌍대 문제의 답 $\hat \alpha$를 이용하여 $\hat{\mathbf w}$ 와 $\hat b$를 선형 SVM 모델의 파라미터로 활용</p>
-<ul>
-<li><p>$n_s$: 서포트 벡터 수, 즉, ${\hat \alpha}^{(i)} &gt; 0$ 인 샘플 수</p>
-<p>\begin{align*}
-\hat{\mathbf w} &amp;= \sum_{i=0}^{m-1} {\hat \alpha}^{(i)} t^{(i)} \mathbf x^{(i)} \\
-\hat b &amp;= \frac{1}{n_s} \sum_{i=0, \; {\hat \alpha}^{(i)} &gt; 0}^{m-1} \big( t^{(i)} - {\hat{\mathbf w}^T} \mathbf x^{(i)} \big)
-\end{align*}</p>
-</li>
+<li>목표 2: 마진을 크게 하기 위해 $\mathbf w$ 값을 가능하면 작게 만들기</li>
 </ul>
 </li>
 </ul>
@@ -14875,35 +14848,54 @@ $$</li>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="&#49933;&#45824;-&#47928;&#51228;&#50752;-&#52964;&#45328;-SVM">&#49933;&#45824; &#47928;&#51228;&#50752; &#52964;&#45328; SVM<a class="anchor-link" href="#&#49933;&#45824;-&#47928;&#51228;&#50752;-&#52964;&#45328;-SVM">&#182;</a></h4><ul>
-<li>커널 SVM이 작동 원리는 원래의 문제가 아닌 쌍대 문제 해결과 관련됨.</li>
+<h4 id="&#49933;&#45824;-&#47928;&#51228;">&#49933;&#45824; &#47928;&#51228;<a class="anchor-link" href="#&#49933;&#45824;-&#47928;&#51228;">&#182;</a></h4>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>쌍대 문제(dual problem): 주어진 문제의 답과 동일한 답을 갖는 문제</li>
 </ul>
 
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>선형 SVM 목적 함수의 쌍대 문제: 아래 식을 최소화하는 $\alpha$ 찾기(단, $\alpha^{(i)} &gt; 0$).</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div align="center"><img src="images/ch05/homl05-15.png" width="310"/></div>
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="&#50696;&#51228;:-2&#52264;-&#45796;&#54637;-&#52964;&#45328;-&#51089;&#46041;-&#50500;&#51060;&#46356;&#50612;">&#50696;&#51228;: 2&#52264; &#45796;&#54637; &#52964;&#45328; &#51089;&#46041; &#50500;&#51060;&#46356;&#50612;<a class="anchor-link" href="#&#50696;&#51228;:-2&#52264;-&#45796;&#54637;-&#52964;&#45328;-&#51089;&#46041;-&#50500;&#51060;&#46356;&#50612;">&#182;</a></h4>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>특히 아래 쌍대 목적 함수에서 사용된 $\mathbf x^{{(i)}^T} \mathbf x^{(j)} $에 주의해야 함.</li>
+<li>원래 아래 2차 다항식 함수를 적용한 후에 쌍대 목적 함수의 최적화 문제를 해결해야 함.</li>
 </ul>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<div align="center"><img src="images/ch05/homl05-15.png" width="300"/></div>
+$$
+\phi(\mathbf x) = (x_1^2, \sqrt{2} x_1 x_2, x_2^2)^T
+$$
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="&#50696;&#51228;:-2&#52264;-&#45796;&#54637;-&#52964;&#45328;-&#51089;&#46041;-&#50500;&#51060;&#46356;&#50612;">&#50696;&#51228;: 2&#52264; &#45796;&#54637; &#52964;&#45328; &#51089;&#46041; &#50500;&#51060;&#46356;&#50612;<a class="anchor-link" href="#&#50696;&#51228;:-2&#52264;-&#45796;&#54637;-&#52964;&#45328;-&#51089;&#46041;-&#50500;&#51060;&#46356;&#50612;">&#182;</a></h4><ul>
-<li><p>원래 아래 2차 다항식 함수를 적용한 후에 쌍대 목적 함수의 최적화 문제를 해결해야 함.</p>
-<p>$$
-  \phi(\mathbf x) = (x_1^2, \sqrt{2} x_1 x_2, x_2^2)^T
-  $$</p>
-</li>
-<li><p>원래 아래 식의 최적화 문제를 해결해야 함.</p>
-</li>
+<ul>
+<li>따라서 아래 쌍대 문제를 최소화하는 $\alpha$를 찾아야 함.</li>
 </ul>
 <div align="center"><img src="images/ch05/homl05-16.png" width="350"/></div>
 </div>
@@ -14911,8 +14903,13 @@ $$</li>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>하지만 다음이 성립함</li>
+<li>하지만 다음이 성립함.</li>
 </ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 $$
 \phi(\mathbf a)^T \phi(\mathbf b) = ({\mathbf a}^T \mathbf b)^2
 $$
@@ -14921,69 +14918,75 @@ $$
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>따라서 2차 다항식 함수 $\phi$ 전혀 적용할 필요 없이 아래 함수에 대한 최적화 문제를 해결하면 됨.</li>
+<li>따라서 2차 다항식 함수 $\phi$를 전혀 적용할 필요 없이, 즉 다항 특성을 전혀 추가할 필요 없이
+  아래 함수에 대한 최적화 문제를 해결하면 다항 특성을 추가한 효과를 얻게 됨.</li>
 </ul>
 <div align="center"><img src="images/ch05/homl05-17.png" width="310"/></div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="&#50696;&#51228;:-&#51648;&#50896;&#46104;&#45716;-&#52964;&#45328;">&#50696;&#51228;: &#51648;&#50896;&#46104;&#45716; &#52964;&#45328;<a class="anchor-link" href="#&#50696;&#51228;:-&#51648;&#50896;&#46104;&#45716;-&#52964;&#45328;">&#182;</a></h4>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>커널 기법으로 구해진 쌍대문제의 해 $\hat \alpha$를 이용하여 예측값 $h(\phi(\mathbf x))$ 또한 
- $\phi(\mathbf x)$ 없이 계산할 수 있음.</li>
+<li>다항식: </li>
 </ul>
 
 </div>
-</div></section></section><section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="&#50696;&#51228;:-&#51648;&#50896;&#46104;&#45716;-&#52964;&#45328;">&#50696;&#51228;: &#51648;&#50896;&#46104;&#45716; &#52964;&#45328;<a class="anchor-link" href="#&#50696;&#51228;:-&#51648;&#50896;&#46104;&#45716;-&#52964;&#45328;">&#182;</a></h4><ul>
-<li><p>선형:</p>
-<p>$$K(\mathbf a, \mathbf b) = \mathbf a^T  \mathbf b$$</p>
-</li>
-<li><p>다항식:</p>
-<p>$$K(\mathbf a, \mathbf b) = \big( \gamma \mathbf a^T  \mathbf b + r \big)^d$$</p>
-</li>
-<li><p>가우시안 RBF:</p>
-<p>$$K(\mathbf a, \mathbf b) = \exp \big( \!-\! \gamma \| \mathbf a -  \mathbf b \|^2 \big )$$</p>
-</li>
-<li><p>시그모이드:</p>
-<p>$$K(\mathbf a, \mathbf b) = \tanh\! \big( \gamma \mathbf a^T  \mathbf b + r \big)$$</p>
-</li>
+$$K(\mathbf a, \mathbf b) = \big( \gamma \mathbf a^T  \mathbf b + r \big)^d$$
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>가우시안 RBF:</li>
 </ul>
 
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+$$K(\mathbf a, \mathbf b) = \exp \big( \!-\! \gamma \| \mathbf a -  \mathbf b \|^2 \big )$$
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="&#50728;&#46972;&#51064;-SVM">&#50728;&#46972;&#51064; SVM<a class="anchor-link" href="#&#50728;&#46972;&#51064;-SVM">&#182;</a></h3>
 </div>
-</div></section></section><section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>온라인 학습: 새로운 샘플에 대해 점진적으로 학습하기</li>
+<li>경사하강법을 이용하여 선형 SVM 분류기를 직접 구현할 수 있음.</li>
 </ul>
 
 </div>
-</div></section></section><section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="&#49440;&#54805;-&#50728;&#46972;&#51064;-SVM">&#49440;&#54805; &#50728;&#46972;&#51064; SVM<a class="anchor-link" href="#&#49440;&#54805;-&#50728;&#46972;&#51064;-SVM">&#182;</a></h4><ul>
-<li>특정 비용함수를 최소화하기 위한 경사하강법 사용</li>
-<li>예제: 사이킷런의 SGDClassifier<ul>
-<li><code>loss</code> 하이퍼파라미터를 <code>hinge</code> 로 설정하면 선형 SVM 모델 지정</li>
-</ul>
-</li>
+<ul>
+<li>비용함수는 아래와 같음.</li>
 </ul>
 
 </div>
-</div></section></section><section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="&#48708;&#49440;&#54805;-&#50728;&#46972;&#51064;-SVM">&#48708;&#49440;&#54805; &#50728;&#46972;&#51064; SVM<a class="anchor-link" href="#&#48708;&#49440;&#54805;-&#50728;&#46972;&#51064;-SVM">&#182;</a></h4><ul>
-<li>온라인 커널 SVM 구현 가능.</li>
-<li>하지만 신경망 알고리즘 사용 추천</li>
+$$
+J(\mathbf{w}, b) = \dfrac{1}{2} \mathbf{w}^T \mathbf{w} \,+\, C {\displaystyle \sum\limits_{i=1}^{m}max\left(0, t^{(i)} - (\mathbf{w}^T \mathbf{x}^{(i)} + b) \right)}
+$$
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>자세한 내용은 주피터 노트북의 부록 B 참조: <a href="https://codingalzi.github.io/handson-ml2/notebooks/handson-ml2-05.html">[html]</a>, <a href="https://colab.research.google.com/github/codingalzi/handson-ml2/blob/master/notebooks/handson-ml2-05.ipynb">[구글 코랩]</a></li>
 </ul>
 
 </div>

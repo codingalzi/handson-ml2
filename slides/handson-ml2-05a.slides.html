@@ -14415,42 +14415,26 @@ div.jp-OutputPrompt {
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="1&#48512;-&#51452;&#50836;-&#45236;&#50857;">1&#48512; &#51452;&#50836; &#45236;&#50857;<a class="anchor-link" href="#1&#48512;-&#51452;&#50836;-&#45236;&#50857;">&#182;</a></h2>
+<h2 id="&#51452;&#50836;-&#45236;&#50857;">&#51452;&#50836; &#45236;&#50857;<a class="anchor-link" href="#&#51452;&#50836;-&#45236;&#50857;">&#182;</a></h2>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
+<h3 id="1&#48512;">1&#48512;<a class="anchor-link" href="#1&#48512;">&#182;</a></h3><ul>
 <li>선형 SVM 분류</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
 <li>비선형 SVM 분류</li>
 </ul>
 
 </div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="2&#48512;-&#51452;&#50836;-&#45236;&#50857;">2&#48512; &#51452;&#50836; &#45236;&#50857;<a class="anchor-link" href="#2&#48512;-&#51452;&#50836;-&#45236;&#50857;">&#182;</a></h2>
-</div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><strong>2부</strong></p>
 <ul>
-<li>SVM 회귀</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>SVM 이론</li>
+<li><p>SVM 회귀</p>
+</li>
+<li><p>SVM 이론</p>
+</li>
 </ul>
 
 </div>
@@ -15015,12 +14999,9 @@ $$z = \frac{3}{5} x + \frac{1}{5}y + 5 \quad\Longleftrightarrow\quad 3x + y - 5z
   $$</p>
 <ul>
 <li>$\ell$: 랜드마크</li>
-<li>$\gamma$: 랜드마크에서 멀어질 수록 0에 수렴하는 속도를 조절함<ul>
-<li>$\gamma$ 값이 클수록 가까운 샘플 선호하며 과대적합 위험 커짐.</li>
-<li>0: 랜드마크에서 아주 멀리 떨어진 경우</li>
-<li>1: 랜드마크와 같은 위치인 경우        </li>
-</ul>
-</li>
+<li>$\gamma$: 랜드마크에서 멀어질 수록 0에 수렴하는 속도를 조절함</li>
+<li>$\gamma$ 값이 클수록 가까운 샘플 선호, 즉 샘플들 사이의 영향을 보다 적게 고려하여
+  모델의 자유도를 높이게 되어 과대적합 위험 커짐.</li>
 </ul>
 </li>
 </ul>
@@ -15033,13 +15014,13 @@ $$z = \frac{3}{5} x + \frac{1}{5}y + 5 \quad\Longleftrightarrow\quad 3x + y - 5z
 <li>예제</li>
 </ul>
 $$
-y = \phi(\mathbf x, 1) = \exp(-10\, \lVert \mathbf x - 1 \lVert^2)
+\exp(-5\, \lVert \mathbf x - 1 \lVert^2) \qquad\qquad\qquad \exp(-100\, \lVert \mathbf x - 1 \lVert^2)
 $$
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<div align="center"><img src="images/ch05/homl05-08a.png" width="600"/></div><p>&lt;그림 출처: <a href="https://www.desmos.com/calculator?lang=ko">데스모스(desmos)</a>&gt;</p>
+<div align="center"><img src="images/ch05/homl05-08b.png" width="1200"/></div><p>&lt;그림 출처: <a href="https://www.desmos.com/calculator?lang=ko">데스모스(desmos)</a>&gt;</p>
 
 </div>
 </div></section></section><section><section>
