@@ -113,25 +113,6 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .ss { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Symbol */
 .highlight .il { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Integer.Long */
   </style>
-<style type="text/css">
-    
-
-<script>
-    MathJax.Hub.Config({
-        "HTML-CSS": {
-            /*preferredFont: "TeX",*/
-            /*availableFonts: ["TeX", "STIX"],*/
-            styles: {
-                scale: 100,
-                ".MathJax_Display": {
-                    "font-size": "100%",
-                }
-            }
-        }
-    });
-</script>
-    
-  </style>
 
 
 
@@ -14663,7 +14644,7 @@ $$\{\mathbf x \mid h(\mathbf x)=0  \}$$
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>도로 경계: 결정 함수의 값이 1 또는 -1인 샘플들의 집합</li>
+<li>결정 경계 도로의 경계: 결정 함수의 값이 1 또는 -1인 샘플들의 집합</li>
 </ul>
 
 </div>
@@ -14697,7 +14678,7 @@ $$\{\mathbf{x} \mid h(\mathbf x)= \pm 1 \}$$
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>결정 함수의 기울기가 작아질 수록 도로 경계 폭이 커짐.</li>
+<li>결정 경계면(결정 함수의 그래프, 하이퍼플레인)의 기울기가 작아질 수록 도로 경계 폭이 커짐.</li>
 </ul>
 
 </div>
@@ -14705,7 +14686,8 @@ $$\{\mathbf{x} \mid h(\mathbf x)= \pm 1 \}$$
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>결정 함수의 기울기가 $\| \mathbf w \|$에 비례함. 따라서 도로 폭을 크게 하기 위해 $\| \mathbf w \|$를 최소화 해야 함.</li>
+<li>결정 경계면 기울기가 $\| \mathbf w \|$에 비례함. 
+  따라서 결정 경계 도로의 폭을 크게 하기 위해 $\| \mathbf w \|$를 최소화해야 함.</li>
 </ul>
 
 </div>
@@ -14718,11 +14700,15 @@ $$\{\mathbf{x} \mid h(\mathbf x)= \pm 1 \}$$
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>결정 함수의 기울기가 $\| \mathbf w \|$에 비례함. 따라서 도로 폭을 크게 하기 위해 $\| \mathbf w \|$를 최소화 해야 함.<ul>
-<li>하드 마진: 모든 양성(음성) 샘플에 대한 결정 함수의 값이 1(-1)보다 큼(작음).</li>
-<li>소프트 마진: 모든 샘플에 대한 결정 함수의 값이 지정된 값 이상 또는 이하 이어야 함.</li>
+<li>하드 마진 모델 훈련: 모든 양성(음성) 샘플이 결정 경계 도로 밖에 위치하도록 하는 기울기 찾기.</li>
 </ul>
-</li>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>소프트 마진 모델 훈련: 결정 경계 도로 위에 위치하는 샘플의 수를 제한하면서 결정 경계 도로의 폭이 최대가 되도록 하는 기울기 찾기.</li>
 </ul>
 
 </div>
@@ -14735,24 +14721,8 @@ $$\{\mathbf{x} \mid h(\mathbf x)= \pm 1 \}$$
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>$\| \mathbf w \|$를 최소화해야 함.</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>$\| \mathbf w \|$를 최소하하는 것과 아래 식을 최소화하는 것이 동일한 의미이며, 
-  아래 함수의 미분가능성 때문에 수학적으로 다루기가 보다 쉬움.</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>따라서 아래 함수를 <strong>목적 함수</strong>로 정하고 전역 최솟점을 찾아야 함.</li>
+<li>결정 경계면의 기울기 $\| \mathbf w \|$를 최소화하는 것과 아래 식을 최소화하는 것이 동일한 의미임.
+  따라서 아래 식을 목적함수로 지정함.</li>
 </ul>
 
 </div>
@@ -14760,6 +14730,14 @@ $$\{\mathbf{x} \mid h(\mathbf x)= \pm 1 \}$$
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 $$\frac 1 2 \| \mathbf w \|^2 = \frac 1 2 \mathbf w^T \mathbf w$$
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>이유: 함수의 미분가능성 때문에 수학적으로 다루기가 보다 쉬움. $1/2$ 또한 계산의 편의를 위해 추가됨.</li>
+</ul>
+
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
@@ -14770,8 +14748,7 @@ $$\frac 1 2 \| \mathbf w \|^2 = \frac 1 2 \mathbf w^T \mathbf w$$
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>모든 샘플 $\mathbf{x}^{(i)}$에 대해 아래 조건을 만족시키면서 목적 함수를 최소화하는 $\mathbf w$와 $b$를 구해야 함.
-  즉, <strong>제약이 있는 최적화 문제</strong>를 해결해야 함.</li>
+<li>목적함수를 최소화하는 파라미터 벡터 $\mathbf{w}$를 구하기 위해 다음 <strong>최적화 문제</strong>를 해결해야 함.</li>
 </ul>
 
 </div>
@@ -14786,20 +14763,58 @@ $$
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>단, </li>
+<li>즉, 모든 샘플 $\mathbf{x}^{(i)}$에 대해 만족시켜야 하는 조건이 추가되었음. 
+  $t^{(i)}$는 $i$ 번째 샘플의 클래스(양성/음성)를 가리킴.</li>
+</ul>
+$$
+t^{(i)} = 
+\begin{cases}
+-1 &amp; \text{$x^{(i)}$가 음성인 경우} \\
+1 &amp; \text{$x^{(i)}$가 양성인 경우} 
+\end{cases}
+$$
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="&#51312;&#44148;&#49885;&#51032;-&#51032;&#48120;">&#51312;&#44148;&#49885;&#51032; &#51032;&#48120;<a class="anchor-link" href="#&#51312;&#44148;&#49885;&#51032;-&#51032;&#48120;">&#182;</a></h4>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+$$
+\text{(조건)}\quad t^{(i)} (\mathbf w^T \mathbf x^{(i)} + b) \ge 1
+$$
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>위 조건식의 의미는 다음과 같다.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>$\mathbf x^{(i)}$가 양성인 경우<ul>
+<li>$t^{(i)} = 1$</li>
+<li>따라서 $\mathbf w^T \mathbf x^{(i)} + b \ge 1$, 즉 양성으로 예측해야 함.</li>
+</ul>
+</li>
 </ul>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-$$
-t^{(i)} = 
-\begin{cases}
-0 &amp; \text{$x^{(i)}$가 음성인 경우} \\
-1 &amp; \text{$x^{(i)}$가 양성인 경우} 
-\end{cases}
-$$
+<ul>
+<li>$\mathbf x^{(i)}$가 음성인 경우<ul>
+<li>$t^{(i)} = -1$</li>
+<li>따라서 $\mathbf w^T \mathbf x^{(i)} + b \le -1$, 즉 음성으로 예측해야 함.</li>
+</ul>
+</li>
+</ul>
+
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
@@ -14824,7 +14839,8 @@ $$\text{(조건)}\quad t^{(i)} (\mathbf w^T \mathbf x^{(i)} + b) \ge 1 - \zeta^{
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>$\zeta^{(i)}\ge 0$: <strong>슬랙 변수</strong>. $i$ 번째 샘플에 대한 마진 오류 허용 정도 지정.</li>
+<li>$\zeta^{(i)}\ge 0$: <strong>슬랙 변수</strong>. $i$ 번째 샘플에 대한 마진 오류 허용 정도 지정.
+  ($\zeta$는 그리스어 알파벳이며 '체타(zeta)'라고 발음함.)</li>
 </ul>
 
 </div>
@@ -14833,10 +14849,126 @@ $$\text{(조건)}\quad t^{(i)} (\mathbf w^T \mathbf x^{(i)} + b) \ge 1 - \zeta^{
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
 <li>$C$: 아래 두 목표 사이의 트레이드오프를 조절하는 하이퍼파라미터<ul>
-<li>목표 1: 슬랙 변수의 값을 작게 만들기</li>
-<li>목표 2: 마진을 크게 하기 위해 $\mathbf w$ 값을 가능하면 작게 만들기</li>
+<li>목표 1: 결정 경계 도로의 폭을 가능하면 크게 하기 위해 $\|\mathbf w\|$ 값을 가능하면 작게 만들기.</li>
+<li>목표 2: 마진 오류 수를 제한하기, 즉 슬랙 변수의 값을 작게 유지하기.</li>
 </ul>
 </li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li><strong>참고:</strong> 결정 경계 도로의 폭, 즉 마진 폭은 결정 경계면($\hat y = \mathbf{w}^T \mathbf{x} + b$)의 기울기 $\|\mathbf w\|$ 에 의해 결정됨</li>
+</ul>
+
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="$\zeta$&#51032;-&#50669;&#54624;">$\zeta$&#51032; &#50669;&#54624;<a class="anchor-link" href="#$\zeta$&#51032;-&#50669;&#54624;">&#182;</a></h4>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li><p>$\zeta^{(i)} &gt; 0$이면 해당 샘플 $\mathbf{x}^{(i)}$에 대해 다음이 성립하여 마진 오류가 될 수 있음.</p>
+<p>$$1 - \zeta^{(i)} \le t^{(i)} (\mathbf w^T \mathbf x^{(i)} + b) &lt; 1$$</p>
+</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>이유: 결정 경계면(하이퍼플레인) 상에서 보면 결정 함숫값이 $1$보다 작은 샘플이기에
+  실제 데이터셋의 공간에서는 결정 경계 도로 안에 위치하게 됨.
+  (결정 경계 도로의 양 경계는 결정 함숫값이 $1$인 샘플들로 이루어졌음.)</li>
+</ul>
+
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="C&#50752;-&#47560;&#51652;-&#54253;&#51032;-&#44288;&#44228;-(1&#48512;)"><code>C</code>&#50752; &#47560;&#51652; &#54253;&#51032; &#44288;&#44228; (1&#48512;)<a class="anchor-link" href="#C&#50752;-&#47560;&#51652;-&#54253;&#51032;-&#44288;&#44228;-(1&#48512;)">&#182;</a></h4>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+$$\frac 1 2 \mathbf w^T \mathbf w + C \sum_{i=0}^{m-1} \zeta^{(i)}$$<p></p>
+$$\text{(조건)}\quad t^{(i)} (\mathbf w^T \mathbf x^{(i)} + b) \ge 1 - \zeta^{(i)}$$
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>가정: 보다 간단한 설명을 위해 편향 $b$는 $0$이거나 무시될 정도로 작다고 가정. (표준화 전처리를 사용하면 됨.)</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>$C$가 매우 큰 경우<ul>
+<li>$\zeta$는 $0$에 매우 가까울 정도로 아주 작아짐.</li>
+<li>예를 들어 양성 샘플 $\mathbf{x}^{(i)}$에 대해, 즉 $t^{(i)} = 1$, 
+  $\mathbf{w}^T \mathbf{x}^{(i)}$ 가 $1$보다 크거나 아니면 $1$보다 아주 조금만 작아야 함.
+  즉, 결정 경계면의 기울기 $\|w\|$가 어느 정도 커야 함.</li>
+<li>결정 경계의 도로폭이 좁아짐.</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="C&#50752;-&#47560;&#51652;-&#54253;&#51032;-&#44288;&#44228;-(2&#48512;)"><code>C</code>&#50752; &#47560;&#51652; &#54253;&#51032; &#44288;&#44228; (2&#48512;)<a class="anchor-link" href="#C&#50752;-&#47560;&#51652;-&#54253;&#51032;-&#44288;&#44228;-(2&#48512;)">&#182;</a></h4>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+$$\frac 1 2 \mathbf w^T \mathbf w + C \sum_{i=0}^{m-1} \zeta^{(i)}$$<p></p>
+$$\text{(조건)}\quad t^{(i)} (\mathbf w^T \mathbf x^{(i)} + b) \ge 1 - \zeta^{(i)}$$
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>$C$가 매우 작은 경우<ul>
+<li>$\zeta$가 어느 정도 커도 됨.</li>
+<li>$\mathbf{w}^T \mathbf{x}^{(i)}$ 가 1보다 많이 작아도 됨. 즉, $\|w\|$ 가 작아도 됨.</li>
+<li>결정 경계의 도로폭이 넓어짐.</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="$\zeta$&#51032;-&#50669;&#54624;">$\zeta$&#51032; &#50669;&#54624;<a class="anchor-link" href="#$\zeta$&#51032;-&#50669;&#54624;">&#182;</a></h4>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li><p>$\zeta^{(i)}$가 0이 아니라면 해당 샘플 $\mathbf{x}^{(i)}$에 대해 다음이 성립하여 마진 오류가 될 수 있음.</p>
+<p>$$1 - \zeta^{(i)} \le \mathbf{w}^T \mathbf{x}^{(i)} &lt; 1$$</p>
+</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>이유: 결정 경계면(하이퍼플레인) 상에서 보면 결정 함숫값이 $1$보다 작은 샘플이기에
+  실제 데이터셋의 공간에서는 결정 경계 도로 안에 위치하게 됨.
+  (결정 경계 도로의 양 경계는 결정 함숫값이 $1$인 샘플들로 이루어졌음.)</li>
 </ul>
 
 </div>
@@ -14869,35 +15001,25 @@ $$\text{(조건)}\quad t^{(i)} (\mathbf w^T \mathbf x^{(i)} + b) \ge 1 - \zeta^{
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<div align="center"><img src="images/ch05/homl05-15.png" width="310"/></div>
+$$
+\frac{1}{2} \sum_{i=1}^{m} \sum_{j=1}^{m} \alpha^{(i)}\alpha^{(j)} t^{(i)} t^{(j)} {\mathbf{x}^{(i)}}^T\mathbf{x}^{(j)} - \sum_{j=1}^{m} \alpha^{(i)}
+$$
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="&#50696;&#51228;:-2&#52264;-&#45796;&#54637;-&#52964;&#45328;-&#51089;&#46041;-&#50500;&#51060;&#46356;&#50612;">&#50696;&#51228;: 2&#52264; &#45796;&#54637; &#52964;&#45328; &#51089;&#46041; &#50500;&#51060;&#46356;&#50612;<a class="anchor-link" href="#&#50696;&#51228;:-2&#52264;-&#45796;&#54637;-&#52964;&#45328;-&#51089;&#46041;-&#50500;&#51060;&#46356;&#50612;">&#182;</a></h4>
+<h4 id="&#49933;&#45824;-&#47928;&#51228;-&#54876;&#50857;-&#50696;&#51228;:-&#45796;&#54637;-&#52964;&#45328;">&#49933;&#45824; &#47928;&#51228; &#54876;&#50857; &#50696;&#51228;: &#45796;&#54637; &#52964;&#45328;<a class="anchor-link" href="#&#49933;&#45824;-&#47928;&#51228;-&#54876;&#50857;-&#50696;&#51228;:-&#45796;&#54637;-&#52964;&#45328;">&#182;</a></h4>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>원래 아래 2차 다항식 함수를 적용한 후에 쌍대 목적 함수의 최적화 문제를 해결해야 함.</li>
+<li>원래 $d$차 다항식 함수 $\phi()$를 적용한 후에 쌍대 목적 함수의 최적화 문제를 해결해야 함.
+  즉, 아래 문제를 최소화하는 $\alpha$를 찾는 게 쌍대문제임.</li>
 </ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 $$
-\phi(\mathbf x) = (x_1^2, \sqrt{2} x_1 x_2, x_2^2)^T
+\frac{1}{2} \sum_{i=1}^{m} \sum_{j=1}^{m} \alpha^{(i)}\alpha^{(j)} t^{(i)} t^{(j)} \phi(\mathbf{x}^{(i)})^T \phi(\mathbf{x}^{(j)}) - \sum_{j=1}^{m} \alpha^{(i)}
 $$
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>따라서 아래 쌍대 문제를 최소화하는 $\alpha$를 찾아야 함.</li>
-</ul>
-<div align="center"><img src="images/ch05/homl05-16.png" width="350"/></div>
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
@@ -14905,23 +15027,20 @@ $$
 <ul>
 <li>하지만 다음이 성립함.</li>
 </ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 $$
-\phi(\mathbf a)^T \phi(\mathbf b) = ({\mathbf a}^T \mathbf b)^2
+\phi(\mathbf a)^T \phi(\mathbf b) = ({\mathbf a}^T \mathbf b)^d
 $$
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>따라서 2차 다항식 함수 $\phi$를 전혀 적용할 필요 없이, 즉 다항 특성을 전혀 추가할 필요 없이
+<li>따라서 다항식 함수 $\phi$를 적용할 필요 없이, 즉 다항 특성을 전혀 추가할 필요 없이
   아래 함수에 대한 최적화 문제를 해결하면 다항 특성을 추가한 효과를 얻게 됨.</li>
 </ul>
-<div align="center"><img src="images/ch05/homl05-17.png" width="310"/></div>
+$$
+\frac{1}{2} \sum_{i=1}^{m} \sum_{j=1}^{m} \alpha^{(i)}\alpha^{(j)} t^{(i)} t^{(j)} \left({\mathbf{x}^{(i)}}^T\mathbf{x}^{(j)}\right)^d - \sum_{j=1}^{m} \alpha^{(i)}
+$$
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
@@ -14979,7 +15098,7 @@ $$K(\mathbf a, \mathbf b) = \exp \big( \!-\! \gamma \| \mathbf a -  \mathbf b \|
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 $$
-J(\mathbf{w}, b) = \dfrac{1}{2} \mathbf{w}^T \mathbf{w} \,+\, C {\displaystyle \sum\limits_{i=1}^{m}max\left(0, t^{(i)} - (\mathbf{w}^T \mathbf{x}^{(i)} + b) \right)}
+J(\mathbf{w}, b) = \dfrac{1}{2} \mathbf{w}^T \mathbf{w} \,+\, C {\displaystyle \sum_{i=1}^{m}\max\left(0, 1 - t^{(i)}(\mathbf{w}^T \mathbf{x}^{(i)} + b) \right)}
 $$
 </div>
 </div>
