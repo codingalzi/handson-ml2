@@ -23,6 +23,8 @@
 | | Orange3 | [&#x1F34A;](https://raw.githubusercontent.com/codingalzi/handson-ml2/master/orange3/training_models/training_models.zip)/[&#x1F34A;](https://raw.githubusercontent.com/codingalzi/handson-ml2/master/orange3/iris/iris.zip) |
 | 서포트 벡터 머신 | 슬라이드 1, 2부 | [&#x1F4F1;](./slides/handson-ml2-05a.slides.html)/[&#x1F4F1;](./slides/handson-ml2-05b.slides.html) &nbsp; [&#x1F4BB;](./slides/handson-ml2-05a-slides.pdf)/[&#x1F4BB;](./slides/handson-ml2-05b-slides.pdf) |
 | | 주피터 노트북 | [&#x1F4D9;](./notebooks/handson-ml2-05.html) &nbsp; [<span style="color: orange;">CO</span>](https://colab.research.google.com/github/codingalzi/handson-ml2/blob/master/notebooks/handson-ml2-05.ipynb) |
+| 결정트리 | 슬라이드 | [&#x1F4F1;](./slides/handson-ml2-06.slides.html) &nbsp; [&#x1F4BB;](./slides/handson-ml2-06-slides.pdf) |
+| | 주피터 노트북 | [&#x1F4D9;](./notebooks/handson-ml2-06.html) &nbsp; [<span style="color: orange;">CO</span>](https://colab.research.google.com/github/codingalzi/handson-ml2/blob/master/notebooks/handson-ml2-06.ipynb) |
 
 **링크 활용법**
 * &#x1F4F1;: 좌우방향 터치 지원 슬라이드
