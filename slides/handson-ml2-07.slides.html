@@ -113,6 +113,25 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .ss { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Symbol */
 .highlight .il { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Integer.Long */
   </style>
+<style type="text/css">
+    
+
+<script>
+    MathJax.Hub.Config({
+        "HTML-CSS": {
+            /*preferredFont: "TeX",*/
+            /*availableFonts: ["TeX", "STIX"],*/
+            styles: {
+                scale: 100,
+                ".MathJax_Display": {
+                    "font-size": "100%",
+                }
+            }
+        }
+    });
+</script>
+    
+  </style>
 
 
 
@@ -14440,8 +14459,75 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>부스팅 기법: 예측기 여러 개를 순차적으로 쌓아 예측값의 편차를 줄인 모델을 구현한다.<ul>
+<li>부스팅 기법: 예측기 여러 개를 순차적으로 쌓아 예측값의 편향를 줄인 모델을 구현한다.<ul>
 <li>예제: 에이다 부스트(AdaBoost), 그레이디언트 부스팅(Gradient Tree Boosting) 등 </li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="&#54200;&#54693;&#44284;-&#48516;&#49328;">&#54200;&#54693;&#44284; &#48516;&#49328;<a class="anchor-link" href="#&#54200;&#54693;&#44284;-&#48516;&#49328;">&#182;</a></h3>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>앙상블 학습의 핵심: 편향과 분산 줄이기</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>편향: 예측값과 정답이 떨어져 있는 정도. 정답에 대한 잘못된 가정으로 발생하며, 편향이 크면 과소적합 발생.</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>분산: 샘플의 작은 변동에 반응하는 정도. 정답에 대한 너무 복잡한 모델을 설정하는 경우 발생할 수 있으며,
+  분산이 크면 과대적합 발생.</li>
+</ul>
+
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="&#54200;&#54693;&#44284;-&#48516;&#49328;&#51032;-&#53944;&#47112;&#51060;&#46300;&#50724;&#54532;">&#54200;&#54693;&#44284; &#48516;&#49328;&#51032; &#53944;&#47112;&#51060;&#46300;&#50724;&#54532;<a class="anchor-link" href="#&#54200;&#54693;&#44284;-&#48516;&#49328;&#51032;-&#53944;&#47112;&#51060;&#46300;&#50724;&#54532;">&#182;</a></h4>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>편향과 분산의 트레이드오프: 편향과 분산을 동시에 좋아지게 할 수는 없음.</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>예제: 훈련 세트 크기<ul>
+<li>훈련 세트 작게: 편향은 커지고, 분산은 작아짐.</li>
+<li>훈련 세트 크게: 편향은 작아지고, 분산은 커짐.</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>예제: 특성 개수<ul>
+<li>특성 개수 작게: 편향은 커지고, 분산은 작아짐.</li>
+<li>특성 개수 크게: 편향은 작아지고, 분산은 커짐.</li>
 </ul>
 </li>
 </ul>
@@ -14575,16 +14661,16 @@ div.jp-OutputPrompt {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>적중률 90% 모델 10개의 다수결을 따르면 100%에 가까운 성능이 가능함.</p>
+<p>적중률 80% 모델 10개의 다수결을 따르면 100%에 가까운 성능이 가능함.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ensemble_win_proba</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ensemble_win_proba</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14600,13 +14686,13 @@ div.jp-OutputPrompt {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>0.9998530974</pre>
+<pre>0.9936306176</pre>
 </div>
 
 </div>
@@ -14655,8 +14741,7 @@ div.jp-OutputPrompt {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><img src="images/ch07/homl07-01.png" width="500"/></p>
-
+<div align="center"><img src="images/ch07/homl07-01.png" width="500"/></div>
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
@@ -14674,8 +14759,7 @@ div.jp-OutputPrompt {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><img src="images/ch07/homl07-02.png" width="500"/></p>
-
+<div align="center"><img src="images/ch07/homl07-02.png" width="500"/></div>
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
@@ -14695,8 +14779,7 @@ div.jp-OutputPrompt {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><img src="images/ch07/homl07-04.png" width="500"/></p>
-<p>&lt;그림출처: <a href="https://www.kaggle.com/fengdanye/machine-learning-6-basic-ensemble-learning">kaggle</a>&gt;</p>
+<div align="center"><img src="images/ch07/homl07-04.png" width="500"/></div><p>&lt;그림출처: <a href="https://www.kaggle.com/fengdanye/machine-learning-6-basic-ensemble-learning">kaggle</a>&gt;</p>
 
 </div>
 </div></section></section><section><section>
@@ -14752,9 +14835,20 @@ div.jp-OutputPrompt {
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="&#51221;&#51032;">&#51221;&#51032;<a class="anchor-link" href="#&#51221;&#51032;">&#182;</a></h3>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>동일한 예측기를 훈련 세트의 다양한 부분집합을 대상으로 학습시키는 방식</li>
-<li>학습에 사용되는 부분집합에 따라 훈련세트가 다른 예측기를 학습시키는 앙상블 학습 기법임.</li>
+<li>여러 개의 동일 모델을 훈련 세트의 다양한 부분집합을 대상으로 학습시키는 방식</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
 <li>부분집합을 임의로 선택할 때 중복 허용 여부에 따라 앙상블 학습 방식이 달라짐<ul>
 <li><strong>배깅</strong>: 중복 허용 샘플링</li>
 <li><strong>페이스팅</strong>: 중복 미허용 샘플링</li>
@@ -14766,18 +14860,21 @@ div.jp-OutputPrompt {
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="&#48176;&#44613;-&#44288;&#47144;-&#51452;&#51032;&#49324;&#54637;">&#48176;&#44613; &#44288;&#47144; &#51452;&#51032;&#49324;&#54637;<a class="anchor-link" href="#&#48176;&#44613;-&#44288;&#47144;-&#51452;&#51032;&#49324;&#54637;">&#182;</a></h4><ul>
+<h3 id="&#48176;&#44613;">&#48176;&#44613;<a class="anchor-link" href="#&#48176;&#44613;">&#182;</a></h3>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
 <li>배깅(bagging): bootstrap aggregation의 줄임말</li>
 <li>통계 분야에서 <strong>부트스트래핑</strong>, 즉, 중복허용 리샘플링으로 불림</li>
-<li>배깅 방식만은 동일 훈련 샘플을 여러번 샘플링할 수 있음.</li>
 </ul>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><img src="images/ch07/homl07-05.png" width="500"/></p>
-
+<div align="center"><img src="images/ch07/homl07-05.png" width="500"/></div>
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
@@ -14788,8 +14885,14 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>개별 예측기의 결과를 종합해서 최종 예측값 지정</li>
 <li>분류 모델: 직접 투표 방식 사용. 즉, 수집된 예측값들 중에서 최빈값(mode) 선택</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
 <li>회귀 모델: 수집된 예측값들의 평균값 선택</li>
 </ul>
 
@@ -14803,18 +14906,27 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li><p>개별 예측기의 경우에 비해 편향은 비슷하지만 분산은 줄어듦. 즉, 과대적합의 위험성이 줄어듦.</p>
-</li>
-<li><p>개별 예측기: 배깅/페이스팅 방식으로 학습하면 전체 훈련 세트를 대상으로 학습한 경우에 비해 편향이 커짐.
-  따라서 과소적합 위험성 커짐.</p>
-</li>
+<li>개별 예측기의 경우에 비해 편향은 조금 커지거나 거의 비슷하지만 분산은 줄어듦.
+  배깅이 표본 샘플링의 다양성을 보다 많이 추가하기 때문임.
+  배깅이 과대적합의 위험성일 보다 줄어주며, 따라서 배깅 방식이 기본으로 사용됨.</li>
 </ul>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><strong>참고:</strong> <a href="https://scikit-learn.org/stable/auto_examples/ensemble/plot_bias_variance.html#sphx-glr-auto-examples-ensemble-plot-bias-variance-py">Single estimator versus bagging: bias-variance decomposition</a>의 <a href="...">번역본</a></p>
+<ul>
+<li>개별 예측기: 배깅/페이스팅 방식으로 학습하면 전체 훈련 세트를 대상으로 학습한 경우에 비해 편향이 커짐.
+  따라서 과소적합 위험성 커짐.</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li><strong>참고:</strong> <a href="https://scikit-learn.org/stable/auto_examples/ensemble/plot_bias_variance.html#sphx-glr-auto-examples-ensemble-plot-bias-variance-py">Single estimator versus bagging: bias-variance decomposition</a></li>
+</ul>
 
 </div>
 </div></section></section><section><section>
@@ -14837,37 +14949,15 @@ div.jp-OutputPrompt {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<div class="highlight"><pre><span></span><span class="n">bag_clf</span> <span class="o">=</span> <span class="n">BaggingClassifier</span><span class="p">(</span><span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">),</span> 
-                            <span class="n">n_estimators</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">max_samples</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">bootstrap</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="n">bag_clf</span> <span class="o">=</span> <span class="n">BaggingClassifier</span><span class="p">(</span><span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">),</span> <span class="n">n_estimators</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> 
+                            <span class="n">max_samples</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">bootstrap</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
 </pre></div>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<div align="center"><img src="images/ch07/homl07-06.png" width="500"/></div>
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="&#48176;&#44613;(Bagging)-vs.-&#54168;&#51060;&#49828;&#54021;(Pasting)">&#48176;&#44613;(Bagging) vs. &#54168;&#51060;&#49828;&#54021;(Pasting)<a class="anchor-link" href="#&#48176;&#44613;(Bagging)-vs.-&#54168;&#51060;&#49828;&#54021;(Pasting)">&#182;</a></h3>
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>일반적으로 배깅 방식이 편향은 키우고, 분산은 줄임. 
-  표본 샘플링의 무작위성으로 인해 예측기들 사이의 상관관계 정도가 약화되기 때문임.</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>전반적으로 배깅 방식이 좀 더 나은 모델 생성. 하지만 교차검증을 통해 확인 필요.</li>
-</ul>
-
+<div align="center"><img src="images/ch07/homl07-06.png" width="600"/></div>
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
@@ -14878,14 +14968,40 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li><p>oob(out-of-bag) 샘플: 선택되지 않은 훈련 샘플. 예측기별 약 63% 정도.</p>
-</li>
-<li><p>oob 샘플을 활용하여 앙상블 학습에 사용된 개별 예측기의 성능 평가 가능
-  앙상블 모델의 oob 평가는 개별 예측기의 oob 점수의 평균값 사용.</p>
-</li>
-<li><p><code>BaggingClassifier</code> 의 <code>oob_score=True</code> 로 설정하면 oob 평가를 자동으로 실행
-  평가점수는 <code>oob_score_</code> 속성에 저정됨.
-  테스트세트에 대한 정확도와 비슷한 결과가 나옴.</p>
+<li>oob(out-of-bag) 샘플: 배깅 모델에 포함된 예측기로부터 선택되지 않은 훈련 샘플. 평균적으로 훈련 세트의 약 37% 정도.</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>각 예측기가 oob 샘플을 성능 검증에 활용.</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>앙상블 모델 자체의 성능 검증은 각 예측기의 oob 검증결과의 평균값 활용</li>
+</ul>
+
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="&#50521;&#49345;&#48660;-&#47784;&#45944;&#51032;-&#44160;&#51613;&#44284;-&#53580;&#49828;&#53944;">&#50521;&#49345;&#48660; &#47784;&#45944;&#51032; &#44160;&#51613;&#44284; &#53580;&#49828;&#53944;<a class="anchor-link" href="#&#50521;&#49345;&#48660;-&#47784;&#45944;&#51032;-&#44160;&#51613;&#44284;-&#53580;&#49828;&#53944;">&#182;</a></h3>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li><code>BaggingClassifier</code> 의 <code>oob_score=True</code> 옵션<ul>
+<li>훈련 종료 후 oob 평가 자동 실행</li>
+<li>평가점수는 <code>oob_score_</code> 속성에 저정됨.</li>
+<li>테스트세트에 대한 정확도와 비슷한 결과가 나옴.</li>
+</ul>
 </li>
 </ul>
 
@@ -14893,32 +15009,8 @@ div.jp-OutputPrompt {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<div class="highlight"><pre><span></span><span class="n">bag_clf</span> <span class="o">=</span> <span class="n">BaggingClassifier</span><span class="p">(</span>
-    <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">),</span> <span class="n">n_estimators</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> 
-    <span class="n">max_samples</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">bootstrap</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">oob_score</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
-
-<span class="n">bag_clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
-<span class="n">bag_clf</span><span class="o">.</span><span class="n">oob_score_</span>
-</pre></div>
-
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="oob_decision_function_-&#49549;&#49457;"><code>oob_decision_function_</code> &#49549;&#49457;<a class="anchor-link" href="#oob_decision_function_-&#49549;&#49457;">&#182;</a></h4>
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>각 훈련 샘플의 클래스 확률 또한 계산한다.</p>
-<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">bag_clf</span><span class="o">.</span><span class="n">oob_decision_function_</span>
-<span class="n">array</span><span class="p">([[</span><span class="mf">0.31746032</span><span class="p">,</span> <span class="mf">0.68253968</span><span class="p">],</span>
-        <span class="p">[</span><span class="mf">0.34117647</span><span class="p">,</span> <span class="mf">0.65882353</span><span class="p">],</span>
-        <span class="p">[</span><span class="mf">1.</span>        <span class="p">,</span> <span class="mf">0.</span>        <span class="p">],</span>
-        <span class="o">...</span>
-        <span class="p">[</span><span class="mf">1.</span>        <span class="p">,</span> <span class="mf">0.</span>        <span class="p">],</span>
-        <span class="p">[</span><span class="mf">0.03108808</span><span class="p">,</span> <span class="mf">0.96891192</span><span class="p">],</span>
-        <span class="p">[</span><span class="mf">0.57291667</span><span class="p">,</span> <span class="mf">0.42708333</span><span class="p">]])</span>
+<div class="highlight"><pre><span></span><span class="n">bag_clf</span> <span class="o">=</span> <span class="n">BaggingClassifier</span><span class="p">(</span><span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">),</span> <span class="n">n_estimators</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> 
+                            <span class="n">max_samples</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">bootstrap</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">oob_score</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -14927,16 +15019,27 @@ div.jp-OutputPrompt {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="7.3-&#47004;&#45924;-&#54056;&#52824;&#50752;-&#47004;&#45924;-&#49436;&#48652;&#49828;&#54168;&#51060;&#49828;">7.3 &#47004;&#45924; &#54056;&#52824;&#50752; &#47004;&#45924; &#49436;&#48652;&#49828;&#54168;&#51060;&#49828;<a class="anchor-link" href="#7.3-&#47004;&#45924;-&#54056;&#52824;&#50752;-&#47004;&#45924;-&#49436;&#48652;&#49828;&#54168;&#51060;&#49828;">&#182;</a></h2>
 </div>
-</div></section></section><section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li><p><code>BaggingClassifier</code>는 특성 샘플링 기능 지원: <code>max_features</code>와 <code>bootstrap_features</code></p>
-</li>
-<li><p>이미지 등 매우 높은 차원의 데이터셋을 다룰 때 유용</p>
-</li>
-<li><p>더 다양한 예측기를 만들며, 편향이 커지지만 분산은 낮아짐</p>
-</li>
+<li><code>BaggingClassifier</code>는 특성에 대한 샘플링 기능도 지원: <code>max_features</code>와 <code>bootstrap_features</code></li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>이미지 등 매우 높은 차원의 데이터셋을 다룰 때 유용</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>더 다양한 예측기를 만들며, 편향이 커지지만 분산은 낮아짐</li>
 </ul>
 
 </div>
@@ -14949,16 +15052,27 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li><p>학습에 사용할 특성 수 지정</p>
-</li>
-<li><p>특성 선택은 무작위</p>
+<li>학습에 사용할 특성 수 지정</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
+<li>특성 선택은 무작위<ul>
 <li>정수인 경우: 지정된 수만큼 특성 선택</li>
 <li>부동소수점($\in [0, 1]$)인 경우: 지정된 비율만큼 특성 선택</li>
 </ul>
 </li>
-<li><p>max_samples와 유사 기능 수행</p>
-</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>max_samples와 유사 기능 수행</li>
 </ul>
 
 </div>
@@ -14972,7 +15086,21 @@ div.jp-OutputPrompt {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
 <li>학습에 사용할 특성을 선택할 때 중복 허용 여부 지정</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
 <li>기본값은 False. 즉, 중복 허용하지 않음.</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
 <li>botostrap과 유사 기능 수행</li>
 </ul>
 
@@ -14986,18 +15114,11 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li><p>훈련 샘플과 훈련 특성 모두를 대상으로 중복을 허용하며 임의의 샘플 수와 임의의 특성 수만큼을 샘플링해서 학습하는 기법</p>
-</li>
-<li><p>아래 두 조건이 참이어야 함</p>
-<ul>
-<li><code>bootstrap=True</code> 또는 <code>max_samples &lt; 1.0</code></li>
-<li><code>bootstrap_features=True</code> 또는 <code>max_features &lt; 1.0</code></li>
-</ul>
-</li>
+<li>훈련 샘플과 훈련 특성 모두를 대상으로 중복을 허용하며 임의의 샘플 수와 임의의 특성 수만큼을 샘플링해서 학습하는 기법</li>
 </ul>
 
 </div>
-</div></section></section><section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="&#47004;&#45924;-&#49436;&#48652;&#49828;&#54168;&#51060;&#49828;-&#44592;&#48277;">&#47004;&#45924; &#49436;&#48652;&#49828;&#54168;&#51060;&#49828; &#44592;&#48277;<a class="anchor-link" href="#&#47004;&#45924;-&#49436;&#48652;&#49828;&#54168;&#51060;&#49828;-&#44592;&#48277;">&#182;</a></h3>
@@ -15006,14 +15127,7 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li><p>전체 훈련 세트를 학습 대상으로 삼지만 훈련 특성은 임의의 특성 수만큼 샘플링해서 학습하는 기법</p>
-</li>
-<li><p>아래 두 조건이 참이어야 함</p>
-<ul>
-<li><code>bootstrap=False</code> 그리고 <code>max_samples=1.0</code></li>
-<li><code>bootstrap_features=True</code> 또는 <code>max_features &lt; 1.0</code></li>
-</ul>
-</li>
+<li>전체 훈련 세트를 학습 대상으로 삼지만 훈련 특성은 임의의 특성 수만큼 샘플링해서 학습하는 기법</li>
 </ul>
 
 </div>
@@ -15022,21 +15136,27 @@ div.jp-OutputPrompt {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="7.4-&#47004;&#45924;&#54252;&#47112;&#49828;&#53944;">7.4 &#47004;&#45924;&#54252;&#47112;&#49828;&#53944;<a class="anchor-link" href="#7.4-&#47004;&#45924;&#54252;&#47112;&#49828;&#53944;">&#182;</a></h2>
 </div>
-</div></section></section><section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
 <li><p>배깅/페이스팅 방법을 적용한 결정트리의 앙상블을 최적화한 모델</p>
-</li>
+<ul>
 <li><p>분류 용도: <code>RandomForestClassifier</code></p>
 </li>
-<li>회귀 용도: <code>RandomForestRegressor</code></li>
+<li><p>회귀 용도: <code>RandomForestRegressor</code></p>
+</li>
+</ul>
+</li>
 </ul>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>아래 두 모델은 기본적으로 동일한 모델임. </li>
+</ul>
 <div class="highlight"><pre><span></span><span class="n">rnd_clf</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> 
                                  <span class="n">max_leaf_nodes</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span>
                                  <span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span>
@@ -15051,23 +15171,15 @@ div.jp-OutputPrompt {
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="&#50741;&#49496;">&#50741;&#49496;<a class="anchor-link" href="#&#50741;&#49496;">&#182;</a></h3>
+<h3 id="&#47004;&#45924;&#54252;&#47112;&#49828;&#53944;-&#54616;&#51060;&#54140;&#54028;&#46972;&#48120;&#53552;">&#47004;&#45924;&#54252;&#47112;&#49828;&#53944; &#54616;&#51060;&#54140;&#54028;&#46972;&#48120;&#53552;<a class="anchor-link" href="#&#47004;&#45924;&#54252;&#47112;&#49828;&#53944;-&#54616;&#51060;&#54140;&#54028;&#46972;&#48120;&#53552;">&#182;</a></h3>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li><code>BaggingClassifier</code>와 <code>DecisionTreeClassifier</code>의 옵션을 거의 모두 가짐.</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>예외<ul>
+<li><code>BaggingClassifier</code>와 <code>DecisionTreeClassifier</code>의 옵션을 거의 모두 가짐. 예외는 다음과 같음.<ul>
 <li><code>DecisitionClassifier</code>의 옵션 중: <code>splitter='random'</code>, <code>presort=False</code>, <code>max_samples=1.0</code></li>
-<li><code>BaggingClassifier</code>의 옵션 중: <code>base_estimator=DecisionClassifier(지정된옵션,...)</code></li>
+<li><code>BaggingClassifier</code>의 옵션 중: <code>base_estimator=DecisionClassifier(...)</code></li>
 </ul>
 </li>
 </ul>
@@ -15077,17 +15189,27 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li><p><code>max_features='auto'</code>가 <code>RandomForestClassifier</code>의 기본값임. 
-  따라서 특성 선택에 무작위성 사용됨. 결정트리에 비해 편향은 크게, 분산은 낮게.</p>
+<li><code>splitter='random'</code> 옵션: 특성 일부를 무작위적으로 선택한 후 최적의 임곗값 선택</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li><p>선택되는 특성 수:</p>
-<p>$$\sqrt{\text{전체 특성 수}}$$</p>
-</li>
-<li><p><code>splitter='random'</code> 옵션과 함께 사용되어 특성은 무작위적으로 선택되나 임곗값은 최적의
-  값을 선택함.</p>
-</li>
+<li><code>max_features='auto'</code>가 <code>RandomForestClassifier</code>의 기본값임. 
+  따라서 특성 선택에 무작위성 사용됨.<ul>
+<li>선택되는 특성 수: 약 $\sqrt{\text{전체 특성 수}}$</li>
 </ul>
 </li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>결정트리에 비해 편향은 크게, 분산은 낮게.</li>
 </ul>
 
 </div>
@@ -15100,8 +15222,30 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>특성과 특성 임곗값 모두 무작위 선택</li>
+<li><strong>익스트림 랜덤 트리(extremely randomized tree) 앙상블</strong> 이라고도 불림.</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>무작위로 선택된 일부 특성에 대해 특성 임곗값도 무작위로 몇 개 선택한 후 그중에서 최적 선택</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
 <li>일반적인 램덤포레스트보다 속도가 훨씬 빠름</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
 <li>이 방식을 사용하면 편향은 늘고, 분산은 줄어듦</li>
 </ul>
 
@@ -15109,16 +15253,8 @@ div.jp-OutputPrompt {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="&#47004;&#45924;&#54252;&#47112;&#49828;&#53944;&#51032;-&#47560;&#46356;-&#48516;&#54624;-&#48169;&#49885;">&#47004;&#45924;&#54252;&#47112;&#49828;&#53944;&#51032; &#47560;&#46356; &#48516;&#54624; &#48169;&#49885;<a class="anchor-link" href="#&#47004;&#45924;&#54252;&#47112;&#49828;&#53944;&#51032;-&#47560;&#46356;-&#48516;&#54624;-&#48169;&#49885;">&#182;</a></h4>
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>특성: 무작위 선택</li>
-<li>특성 임곗값: 선택된 특성별로 무작위로 선택한 1개의 임곗값을 이용하여 분할한 다음 최적값 선택</li>
-<li>참고: <a href="https://github.com/scikit-learn/scikit-learn/blob/15a949460dbf19e5e196b8ef48f9712b72a3b3c3/sklearn/tree/_classes.py#L1285">ExtraTreeClassifier 클래스 정의</a>
-  라이브러리에 따라 1개가 아닌 서너개의 임곗값을 무작위로 선택하는 경우도 있음.</li>
+<li>참고: <a href="https://github.com/scikit-learn/scikit-learn/blob/15a949460dbf19e5e196b8ef48f9712b72a3b3c3/sklearn/tree/_classes.py#L1285">ExtraTreeClassifier 클래스 정의</a></li>
 </ul>
 
 </div>
@@ -15157,8 +15293,9 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>사이킷런의 <code>RandomForestClassifier</code>: 훈련이 끝난 뒤 특성별 중요도의 전체 합이 1이 되도록 하는 방식<ul>
-<li>특성별 상대적 중요도를 측정한 후 <code>feature_importances_</code> 속성에 저장</li>
+<li>사이킷런의 <code>RandomForestClassifier</code><ul>
+<li>특성별 상대적 중요도를 측정해서 중요도의 전체 합이 1이 되도록 함.</li>
+<li><code>feature_importances_</code> 속성에 저장됨.</li>
 </ul>
 </li>
 </ul>
@@ -15172,12 +15309,31 @@ div.jp-OutputPrompt {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>꽃잎 길이(petal length): 44.1%</li>
-<li>곷잎 너비(petal width): 42.3%</li>
-<li>꽃받침 길이(sepal length): 11.3%</li>
-<li>곷받침 너비(sepal width): 2.3%</li>
-</ul>
+<table>
+<thead><tr>
+<th style="text-align:center">특성</th>
+<th style="text-align:right">중요도(%)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">꽃잎 길이</td>
+<td style="text-align:right">44.1</td>
+</tr>
+<tr>
+<td style="text-align:center">곷잎 너비</td>
+<td style="text-align:right">42.3</td>
+</tr>
+<tr>
+<td style="text-align:center">꽃받침 길이</td>
+<td style="text-align:right">11.3</td>
+</tr>
+<tr>
+<td style="text-align:center">곷받침 너비</td>
+<td style="text-align:right">2.3</td>
+</tr>
+</tbody>
+</table>
 
 </div>
 </div></section></section><section><section>
@@ -15201,18 +15357,40 @@ div.jp-OutputPrompt {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="7.5-&#48512;&#49828;&#54021;">7.5 &#48512;&#49828;&#54021;<a class="anchor-link" href="#7.5-&#48512;&#49828;&#54021;">&#182;</a></h2>
 </div>
-</div></section></section><section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li><p>부스팅(boosting): 성능이 약한 학습기의 여러 개를 선형으로 연결하여 강한 성능의 학습기를 만드는 앙상블 기법</p>
-<ul>
-<li>순차적으로 이전 학습기의 결과를 바탕으로 성능을 조금씩 높혀가는 방식</li>
-<li>순차적으로 학습하기에 배깅/페이스팅에 비해 확장성이 떨어짐</li>
+<li>부스팅(boosting): 성능이 약한 학습기의 여러 개를 선형으로 연결하여 강한 성능의 학습기를 만드는 앙상블 기법.
+  대표적 알고리즘은 다음과 같음.<ul>
+<li>에이다부스트(AdaBoost)</li>
+<li>그레이디언트 부스팅(Gradient Boosting)</li>
 </ul>
 </li>
-<li><p>성능이 약한 예측기의 단점을 보완하여 좋은 성능의 예측기를 훈련해 나가는 것이 부스팅의 기본 아이디어</p>
-</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>순차적으로 이전 학습기의 결과를 바탕으로 성능을 조금씩 높혀감. 즉, 편향을 줄여나감.</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>성능이 약한 예측기의 단점을 보완하여 좋은 성능의 예측기를 훈련해 나가는 것이 부스팅의 기본 아이디어</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>순차적으로 학습하기에 배깅/페이스팅에 비해 확장성이 떨어짐</li>
 </ul>
 
 </div>
@@ -15225,7 +15403,8 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>좀 더 나은 예측기를 생성하기 위해 잘못 적용된 가중치를 조정하여 새로운 예측기를 추가하는 앙상블 기법.</li>
+<li>좀 더 나은 예측기를 생성하기 위해 잘못 적용된 가중치를 조정하여 새로운 예측기를 추가하는 앙상블 기법.
+  이전 모델이 제대로 학습하지 못한, 즉 과소적합했던 샘플들에 대한 가중치를 더 높이는 방식으로 새로운 모델 생성.</li>
 </ul>
 
 </div>
@@ -15233,7 +15412,20 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>이전 모델이 제대로 학습하지 못한, 즉 과소적합했던 샘플들에 대한 가중치를 더 높이는 방식으로 새로운 모델 생성.</li>
+<li>새로운 예측기는 학습하기 어려운 샘플에 조금씩 더 잘 적응하는 모델이 연속적으로 만들어져 감.</li>
+</ul>
+<div align="center"><img src="images/ch07/homl07-08.png" width="500"/></div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="&#49368;&#54540;-&#44032;&#51473;&#52824;">&#49368;&#54540; &#44032;&#51473;&#52824;<a class="anchor-link" href="#&#49368;&#54540;-&#44032;&#51473;&#52824;">&#182;</a></h4>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>훈련중에 특정 샘플을 보다 강조하도록 유도하는 가중치를 가리킴.</li>
 </ul>
 
 </div>
@@ -15241,30 +15433,73 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>따라서 새로운 예측기는 학습하기 어려운 샘플에 조금씩 더 잘 적응하는 모델이 연속적으로 만들어져 감.</li>
-</ul>
-
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><img src="images/ch07/homl07-08.png" width="500"/></p>
-
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="&#50696;&#51228;:-&#50640;&#51060;&#45796;-&#48512;&#49828;&#53944;-+-SVC">&#50696;&#51228;: &#50640;&#51060;&#45796; &#48512;&#49828;&#53944; + SVC<a class="anchor-link" href="#&#50696;&#51228;:-&#50640;&#51060;&#45796;-&#48512;&#49828;&#53944;-+-SVC">&#182;</a></h4><ul>
-<li>moons 데이터셋에 rbf 커널을 사용하는 SVC 모델 적용</li>
-<li>5번 연속으로 학습한 결과</li>
+<li>사이킷런 모델의 <code>fit()</code> 메서드는 <code>sample_weight</code> 옵션인자를 추가로 사용하여
+  훈련 세트의 각 샘플에 대한 가중치를 지정할 수 있음.</li>
 </ul>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><img src="images/ch07/homl07-09.png" width="600"/></p>
+<ul>
+<li>샘플 가중치는 모든 샘플에 대해 주어지며, <code>sampe_weight</code> 옵션인자를 이용하여
+  각 샘플에 대한 가중치를 결정함.</li>
+</ul>
 
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li><code>sample_weight</code> 옵션인자를 지정하지 않으면 모든 샘플의 가중치를 동일하게 간주함.</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>참고: <a href="https://github.com/scikit-learn/scikit-learn/blob/15a949460/sklearn/svm/_base.py#L119">SVC의 <code>fit()</code> 메서드 정의</a></li>
+</ul>
+
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="&#50640;&#51060;&#45796;&#48512;&#49828;&#53944;-&#50508;&#44256;&#47532;&#51608;-&#51089;&#46041;-&#44284;&#51221;">&#50640;&#51060;&#45796;&#48512;&#49828;&#53944; &#50508;&#44256;&#47532;&#51608; &#51089;&#46041; &#44284;&#51221;<a class="anchor-link" href="#&#50640;&#51060;&#45796;&#48512;&#49828;&#53944;-&#50508;&#44256;&#47532;&#51608;-&#51089;&#46041;-&#44284;&#51221;">&#182;</a></h4>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>moons 데이터셋에 rbf 커널을 사용하는 SVC 모델을 5번 연속 새로 생성하는 
+  방식으로 학습한 결과를 보여줌.</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>새로운 예측기의 <code>fit()</code> 메서드는 이전 예측기의 경우와 다른 <code>sample_weight</code> 옵션값을 사용함.</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>새로운 예측기는 이전의 예측기의 예측값이 틀린 샘플을 보다 강조하도록 유도됨.</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>왼편과 오른편은 학습률만 다름.</li>
+</ul>
+<div align="center"><img src="images/ch07/homl07-09.png" width="600"/></div>
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
@@ -15283,30 +15518,31 @@ div.jp-OutputPrompt {
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="&#50696;&#51228;:-&#50640;&#51060;&#45796;-&#48512;&#49828;&#53944;-+-&#44208;&#51221;&#53944;&#47532;">&#50696;&#51228;: &#50640;&#51060;&#45796; &#48512;&#49828;&#53944; + &#44208;&#51221;&#53944;&#47532;<a class="anchor-link" href="#&#50696;&#51228;:-&#50640;&#51060;&#45796;-&#48512;&#49828;&#53944;-+-&#44208;&#51221;&#53944;&#47532;">&#182;</a></h4><ul>
-<li>moons 데이터셋에 결정트리 사용</li>
+<h4 id="&#50696;&#51228;:-&#50640;&#51060;&#45796;&#48512;&#49828;&#53944;-+-&#44208;&#51221;&#53944;&#47532;">&#50696;&#51228;: &#50640;&#51060;&#45796;&#48512;&#49828;&#53944; + &#44208;&#51221;&#53944;&#47532;<a class="anchor-link" href="#&#50696;&#51228;:-&#50640;&#51060;&#45796;&#48512;&#49828;&#53944;-+-&#44208;&#51221;&#53944;&#47532;">&#182;</a></h4>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li><p><code>AdaBoostClassifier</code> 의 기본 모델임.</p>
+<div class="highlight"><pre><span></span><span class="n">ada_clf</span> <span class="o">=</span> <span class="n">AdaBoostClassifier</span><span class="p">(</span>
+      <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">max_depth</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> 
+      <span class="n">n_estimators</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span>
+      <span class="n">algorithm</span><span class="o">=</span><span class="s2">&quot;SAMME.R&quot;</span><span class="p">,</span> 
+      <span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> 
+      <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+</pre></div>
+</li>
 </ul>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<div class="highlight"><pre><span></span><span class="n">ada_clf</span> <span class="o">=</span> <span class="n">AdaBoostClassifier</span><span class="p">(</span>
-    <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">max_depth</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> 
-    <span class="n">n_estimators</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span>
-    <span class="n">algorithm</span><span class="o">=</span><span class="s2">&quot;SAMME.R&quot;</span><span class="p">,</span> 
-    <span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> 
-    <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
-
-<span class="n">ada_clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><img src="images/ch07/homl07-10.png" width="400"/></p>
-
+<ul>
+<li>훈련 세트: moons 데이터셋</li>
+</ul>
+<div align="center"><img src="images/ch07/homl07-10.png" width="400"/></div>
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
@@ -15367,8 +15603,7 @@ div.jp-OutputPrompt {
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><img src="images/ch07/homl07-11.png" width="450"/></p>
-
+<div align="center"><img src="images/ch07/homl07-11.png" width="500"/></div>
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
@@ -15415,8 +15650,7 @@ div.jp-OutputPrompt {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><img src="images/ch07/homl07-12.png" width="500"/></p>
-
+<div align="center"><img src="images/ch07/homl07-12.png" width="500"/></div>
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
