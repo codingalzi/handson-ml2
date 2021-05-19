@@ -57,6 +57,25 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .ss { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Symbol */
 .highlight .il { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Integer.Long */
   </style>
+<style type="text/css">
+    
+
+<script>
+    MathJax.Hub.Config({
+        "HTML-CSS": {
+            /*preferredFont: "TeX",*/
+            /*availableFonts: ["TeX", "STIX"],*/
+            styles: {
+                scale: 100,
+                ".MathJax_Display": {
+                    "font-size": "100%",
+                }
+            }
+        }
+    });
+</script>
+    
+  </style>
 
 
 
@@ -14555,11 +14574,11 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>아래 코드는 SVM이 특성 스케일에 민감하다는 것을 보여주는 그림을 그려준다.</p>
+<p>아래 코드는 SVM이 특성 축척에 민감하다는 것을 보여주는 그림을 그려준다.</p>
 <ul>
 <li>학습 데이터: 작위적으로 지정된 데이터 네 개 (특성 수는 2)</li>
-<li>왼편 그림: 스케일링 없음</li>
-<li>오른편 그림: 스케일링 전처리 추가</li>
+<li>왼편 그림: 축척 조정 없음</li>
+<li>오른편 그림: 축척 조정 전처리 추가</li>
 </ul>
 
 </div>
@@ -14588,7 +14607,7 @@ a.anchor-link {
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Unscaled&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">90</span><span class="p">])</span>
 
-<span class="c1"># 오른편 그림(스케일링 전처리 사용)</span>
+<span class="c1"># 오른편 그림(축척 조정 전처리 사용)</span>
 <span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>
 <span class="n">scaler</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
 <span class="n">X_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">Xs</span><span class="p">)</span>
@@ -14798,11 +14817,11 @@ a.anchor-link {
 </li>
 <li>훈련 세트: 붓꽃 데이터 전체</li>
 <li>타깃: 버지니카 품종 여부 (음성 0, 양성 1)</li>
-<li>표준화 스케일링 전처리 사용</li>
+<li>표준화 축척 조정 전처리 사용</li>
 </ul>
 <p><strong>주의사항:</strong> <code>LinearSVC</code> 모델의 <code>C</code>에 의한 규제에 편향(절편)도 포함된다.
 따라서 평균을 빼서 0으로 편향을 없애는 것이 중요하다. 
-하지만 표준화 스케일링을 하면 자연스럽게 해결된다.</p>
+하지만 표준화 축척 조정을 하면 자연스럽게 해결된다.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -14925,7 +14944,7 @@ a.anchor-link {
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">svm_clf1</span> <span class="o">=</span> <span class="n">LinearSVC</span><span class="p">(</span><span class="n">C</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">loss</span><span class="o">=</span><span class="s2">&quot;hinge&quot;</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>     <span class="c1"># C=1</span>
 <span class="n">svm_clf2</span> <span class="o">=</span> <span class="n">LinearSVC</span><span class="p">(</span><span class="n">C</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">loss</span><span class="o">=</span><span class="s2">&quot;hinge&quot;</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>   <span class="c1"># C=100</span>
 
-<span class="c1"># 스케일링 전처리 사용</span>
+<span class="c1"># 축척 조정 전처리 사용</span>
 <span class="n">scaler</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
 
 <span class="n">scaled_svm_clf1</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
@@ -15040,7 +15059,7 @@ $$<p>참고: <a href="https://github.com/ageron/handson-ml/issues/250">https://g
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 스케일되지 않은 파라미터로 변경</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 축척이 조정되지 않은 파라미터로 변경</span>
 <span class="n">b1</span> <span class="o">=</span> <span class="n">svm_clf1</span><span class="o">.</span><span class="n">decision_function</span><span class="p">([</span><span class="o">-</span><span class="n">scaler</span><span class="o">.</span><span class="n">mean_</span> <span class="o">/</span> <span class="n">scaler</span><span class="o">.</span><span class="n">scale_</span><span class="p">])</span>  <span class="c1"># 절편</span>
 <span class="n">b2</span> <span class="o">=</span> <span class="n">svm_clf2</span><span class="o">.</span><span class="n">decision_function</span><span class="p">([</span><span class="o">-</span><span class="n">scaler</span><span class="o">.</span><span class="n">mean_</span> <span class="o">/</span> <span class="n">scaler</span><span class="o">.</span><span class="n">scale_</span><span class="p">])</span>  <span class="c1"># 절편</span>
 <span class="n">w1</span> <span class="o">=</span> <span class="n">svm_clf1</span><span class="o">.</span><span class="n">coef_</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="n">scaler</span><span class="o">.</span><span class="n">scale_</span>                            <span class="c1"># 기울기 파라미터</span>
@@ -15668,7 +15687,7 @@ moons 데이터셋은 지정된 수의 데이터가 선형 분류가 불가능�
 <p>예를 들어 아래 코드는 3차와 10차 다항 특성을 추가한 효과를 이용하여 moons 데이터셋을 분류한 
 결과를 그림으로 보여준다.</p>
 <ul>
-<li>표준화 스케일링 적용</li>
+<li>표준화 축척 조정 적용</li>
 <li><code>kernel=poly</code>: 다항 커널 선택</li>
 <li>다항 특성<ul>
 <li>왼편: <code>degree=3</code> </li>
@@ -17758,7 +17777,7 @@ SGDClassifier(alpha=0.00200): [0.117] [[0.77714169 0.72981762]]
 <span class="n">w3</span> <span class="o">=</span> <span class="o">-</span><span class="n">sgd_clf</span><span class="o">.</span><span class="n">coef_</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="n">sgd_clf</span><span class="o">.</span><span class="n">coef_</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 <span class="n">b3</span> <span class="o">=</span> <span class="o">-</span><span class="n">sgd_clf</span><span class="o">.</span><span class="n">intercept_</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="n">sgd_clf</span><span class="o">.</span><span class="n">coef_</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 
-<span class="c1"># 결정경계를 원본 스케일로 변환합니다</span>
+<span class="c1"># 결정경계를 원본 축척으로 변환합니다</span>
 <span class="n">line1</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">inverse_transform</span><span class="p">([[</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span> <span class="o">*</span> <span class="n">w1</span> <span class="o">+</span> <span class="n">b1</span><span class="p">],</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">w1</span> <span class="o">+</span> <span class="n">b1</span><span class="p">]])</span>
 <span class="n">line2</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">inverse_transform</span><span class="p">([[</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span> <span class="o">*</span> <span class="n">w2</span> <span class="o">+</span> <span class="n">b2</span><span class="p">],</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">w2</span> <span class="o">+</span> <span class="n">b2</span><span class="p">]])</span>
 <span class="n">line3</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">inverse_transform</span><span class="p">([[</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span> <span class="o">*</span> <span class="n">w3</span> <span class="o">+</span> <span class="n">b3</span><span class="p">],</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">w3</span> <span class="o">+</span> <span class="n">b3</span><span class="p">]])</span>
@@ -17967,7 +17986,7 @@ SGDClassifier(alpha=0.00200): [0.117] [[0.77714169 0.72981762]]
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>MNIST에서 89.5% 정확도면 나쁜 성능입니다. 선형 모델이 MNIST 문제에 너무 단순하기 때문이지만 먼저 데이터의 스케일을 조정할 필요가 있습니다:</p>
+<p>MNIST에서 89.5% 정확도면 나쁜 성능입니다. 선형 모델이 MNIST 문제에 너무 단순하기 때문이지만 먼저 데이터의 축척을 조정할 필요가 있습니다:</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -18528,7 +18547,7 @@ SGDClassifier(alpha=0.00200): [0.117] [[0.77714169 0.72981762]]
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>데이터의 스케일을 조정하는 것을 잊지 마세요:</p>
+<p>데이터의 축척을 조정하는 것을 잊지 마세요:</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">

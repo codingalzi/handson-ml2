@@ -57,6 +57,25 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .ss { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Symbol */
 .highlight .il { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Integer.Long */
   </style>
+<style type="text/css">
+    
+
+<script>
+    MathJax.Hub.Config({
+        "HTML-CSS": {
+            /*preferredFont: "TeX",*/
+            /*availableFonts: ["TeX", "STIX"],*/
+            styles: {
+                scale: 100,
+                ".MathJax_Display": {
+                    "font-size": "100%",
+                }
+            }
+        }
+    });
+</script>
+    
+  </style>
 
 
 
@@ -18625,7 +18644,17 @@ Name: median_house_value, dtype: float64</pre>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="2.5.4-&#53945;&#49457;-&#49828;&#52992;&#51068;&#47553;-(p.-107)">2.5.4 &#53945;&#49457; &#49828;&#52992;&#51068;&#47553; (p. 107)<a class="anchor-link" href="#2.5.4-&#53945;&#49457;-&#49828;&#52992;&#51068;&#47553;-(p.-107)">&#182;</a></h3><h4 id="&#49688;&#52824;&#54805;-&#53945;&#49457;-&#51204;&#52376;&#47532;-&#44284;&#51221;-3:-&#53945;&#49457;-&#49828;&#52992;&#51068;&#47553;">&#49688;&#52824;&#54805; &#53945;&#49457; &#51204;&#52376;&#47532; &#44284;&#51221; 3: &#53945;&#49457; &#49828;&#52992;&#51068;&#47553;<a class="anchor-link" href="#&#49688;&#52824;&#54805;-&#53945;&#49457;-&#51204;&#52376;&#47532;-&#44284;&#51221;-3:-&#53945;&#49457;-&#49828;&#52992;&#51068;&#47553;">&#182;</a></h4><p>여기서는 사이킷런의 <code>StandardScaler</code> 변환기를 이용하여 표준화 스케일링을 사용한다.</p>
+<h3 id="2.5.4-&#53945;&#49457;&#51032;-&#52629;&#52377;-&#51312;&#51221;-(p.-107)">2.5.4 &#53945;&#49457;&#51032; &#52629;&#52377; &#51312;&#51221; (p. 107)<a class="anchor-link" href="#2.5.4-&#53945;&#49457;&#51032;-&#52629;&#52377;-&#51312;&#51221;-(p.-107)">&#182;</a></h3>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="&#49688;&#52824;&#54805;-&#53945;&#49457;-&#51204;&#52376;&#47532;-&#44284;&#51221;-3:-&#53945;&#49457;&#51032;-&#52629;&#52377;-&#51312;&#51221;">&#49688;&#52824;&#54805; &#53945;&#49457; &#51204;&#52376;&#47532; &#44284;&#51221; 3: &#53945;&#49457;&#51032; &#52629;&#52377; &#51312;&#51221;<a class="anchor-link" href="#&#49688;&#52824;&#54805;-&#53945;&#49457;-&#51204;&#52376;&#47532;-&#44284;&#51221;-3:-&#53945;&#49457;&#51032;-&#52629;&#52377;-&#51312;&#51221;">&#182;</a></h4>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>여기서는 사이킷런의 <code>StandardScaler</code> 변환기를 이용하여 표준화 축척 조정(스케일링, scaling)을 사용한다.</p>
 
 </div>
 </div>
@@ -22714,7 +22743,7 @@ dtype: float64</pre>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><code>C</code>에 사용된 분포는 매우 다릅니다. 주어진 범위안에서 균등 분포로 샘플링됩니다. 그래서 오른쪽 로그 분포가 거의 일정하게 나타납니다. 이런 분포는 원하는 스케일이 정확이 무엇인지 모를 때 사용하면 좋습니다:</p>
+<p><code>C</code>에 사용된 분포는 매우 다릅니다. 주어진 범위안에서 균등 분포로 샘플링됩니다. 그래서 오른쪽 로그 분포가 거의 일정하게 나타납니다. 이런 분포는 원하는 축척(scale)이 정확이 무엇인지 모를 때 사용하면 좋습니다:</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -22768,7 +22797,7 @@ dtype: float64</pre>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><code>reciprocal()</code> 함수는 하이퍼파라미터의 스케일에 대해 전혀 감을 잡을 수 없을 때 사용합니다(오른쪽 그래프에서 볼 수 있듯이 주어진 범위안에서 모든 값이 균등합니다). 반면 지수 분포는 하이퍼파라미터의 스케일을 (어느정도) 알고 있을 때 사용하는 것이 좋습니다.</p>
+<p><code>reciprocal()</code> 함수는 하이퍼파라미터의 축척에 대해 전혀 감을 잡을 수 없을 때 사용합니다(오른쪽 그래프에서 볼 수 있듯이 주어진 범위안에서 모든 값이 균등합니다). 반면 지수 분포는 하이퍼파라미터의 축척을 (어느정도) 알고 있을 때 사용하는 것이 좋습니다.</p>
 
 </div>
 </div>
