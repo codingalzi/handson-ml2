@@ -25,7 +25,7 @@
 | | 주피터 노트북 | [&#x1F4D9;](./notebooks/handson-ml2-05.html) &nbsp; [<span style="color: orange;">CO</span>](https://colab.research.google.com/github/codingalzi/handson-ml2/blob/master/notebooks/handson-ml2-05.ipynb) |
 | 결정트리 | 슬라이드 | [&#x1F4F1;](./slides/handson-ml2-06.slides.html) &nbsp; [&#x1F4BB;](./slides/handson-ml2-06-slides.pdf) |
 | | 주피터 노트북 | [&#x1F4D9;](./notebooks/handson-ml2-06.html) &nbsp; [<span style="color: orange;">CO</span>](https://colab.research.google.com/github/codingalzi/handson-ml2/blob/master/notebooks/handson-ml2-06.ipynb) |
-| 앙상블 학습 | 슬라이드 | [&#x1F4F1;](./slides/handson-ml2-07.slides.html) &nbsp; [&#x1F4BB;](./slides/handson-ml2-07-slides.pdf) |
+| 앙상블 학습과 랜덤 포레스트 | 슬라이드 1, 2부| [&#x1F4F1;](./slides/handson-ml2-07a.slides.html)/[&#x1F4F1;](./slides/handson-ml2-07b.slides.html) &nbsp; [&#x1F4BB;](./slides/handson-ml2-07a-slides.pdf)/[&#x1F4BB;](./slides/handson-ml2-07b-slides.pdf) |
 | | 주피터 노트북 | [&#x1F4D9;](./notebooks/handson-ml2-07.html) &nbsp; [<span style="color: orange;">CO</span>](https://colab.research.google.com/github/codingalzi/handson-ml2/blob/master/notebooks/handson-ml2-07.ipynb) |
 
 **링크 활용법**
