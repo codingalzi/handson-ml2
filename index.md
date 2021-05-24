@@ -1,3 +1,4 @@
+<!--  마크다운에서 수식 표현하기 설정 시작 -->
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     TeX: {
@@ -21,6 +22,7 @@ MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
 <script type="text/javascript" async
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
+<!--  마크다운에서 수식 표현하기 설정 끝 -->
 
 [&lt;핸즈온 머신러닝(2판)&gt;의 소스코드](https://github.com/ageron/handson-ml2)를 
 담은 주피터 노트북을 바탕으로 머신러닝/딥러닝의 기초를 소개합니다.
