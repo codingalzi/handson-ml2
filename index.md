@@ -1,27 +1,58 @@
 <!--  마크다운에서 수식 표현하기 설정 시작 -->
+<script>
+    MathJax.Hub.Config({
+        "HTML-CSS": {
+            /*preferredFont: "TeX",*/
+            /*availableFonts: ["TeX", "STIX"],*/
+            styles: {
+                scale: 100,
+                ".MathJax_Display": {
+                    "font-size": "100%",
+                }
+            }
+        }
+    });
+</script>
+    
+<!-- Load mathjax -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML-full,Safe"> </script>
+<!-- MathJax configuration -->
 <script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    TeX: {
-      equationNumbers: {
-        autoNumber: "AMS"
-      }
-    },
-    tex2jax: {
-    inlineMath: [ ['$', '$'] ],
-    displayMath: [ ['$$', '$$'] ],
-    processEscapes: true,
-  }
-});
-MathJax.Hub.Register.MessageHook("Math Processing Error",function (message) {
-          alert("Math Processing Error: "+message[1]);
-	      });
-MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
-	        alert("Math Processing Error: "+message[1]);
-	      });
+init_mathjax = function() {
+    if (window.MathJax) {
+    // MathJax loaded
+        MathJax.Hub.Config({
+            TeX: {
+                equationNumbers: {
+                autoNumber: "AMS",
+                useLabelIds: true
+                }
+            },
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+                processEscapes: true,
+                processEnvironments: true
+            },
+            displayAlign: 'center',
+            CommonHTML: {
+                linebreaks: { 
+                automatic: true 
+                }
+            },
+            "HTML-CSS": {
+                linebreaks: { 
+                automatic: true 
+                }
+            }
+        });
+    
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+    }
+}
+init_mathjax();
 </script>
-<script type="text/javascript" async
-  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
+<!-- End of mathjax configuration -->
 <!--  마크다운에서 수식 표현하기 설정 끝 -->
 
 [&lt;핸즈온 머신러닝(2판)&gt;의 소스코드](https://github.com/ageron/handson-ml2)를 
