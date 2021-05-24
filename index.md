@@ -31,9 +31,9 @@ MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
 
 자료를 $\alpha x_1$공개한 저자 오렐리앙 제롱(Aur&eacute;lien G&eacute;ron)과 강의자료를 지원한 한빛아카데미에게 진심어린 감사를 전합니다.
 
-$$
+\[
 \sum_i^j K_{ij}
-$$
+\]
 
 ### 목차
 
