@@ -1,4 +1,4 @@
-<script src="https://raw.githubusercontent.com/codingalzi/handson-ml2/master/_includes/mathjax_support.html"></script>
+<script src="./_includes/mathjax_support.html"></script>
 
 [&lt;핸즈온 머신러닝(2판)&gt;의 소스코드](https://github.com/ageron/handson-ml2)를 
 담은 주피터 노트북을 바탕으로 머신러닝/딥러닝의 기초를 소개합니다.
