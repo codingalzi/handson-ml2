@@ -1,7 +1,26 @@
-<!-- MathJax -->
-    <script type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-    </script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    tex2jax: {
+    inlineMath: [ ['$', '$'] ],
+    displayMath: [ ['$$', '$$'] ],
+    processEscapes: true,
+  }
+});
+MathJax.Hub.Register.MessageHook("Math Processing Error",function (message) {
+          alert("Math Processing Error: "+message[1]);
+	      });
+MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
+	        alert("Math Processing Error: "+message[1]);
+	      });
+</script>
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
 
 [&lt;핸즈온 머신러닝(2판)&gt;의 소스코드](https://github.com/ageron/handson-ml2)를 
 담은 주피터 노트북을 바탕으로 머신러닝/딥러닝의 기초를 소개합니다.
