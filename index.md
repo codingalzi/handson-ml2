@@ -58,14 +58,6 @@ init_mathjax();
 [&lt;핸즈온 머신러닝(2판)&gt;의 소스코드](https://github.com/ageron/handson-ml2)를 
 담은 주피터 노트북을 바탕으로 머신러닝/딥러닝의 기초를 소개합니다.
 
-$\alpha$는 그리스어 알파벳임.
-
-$$
-\sum_i^j F_{ij}
-$$
-
-위 식이 성립한다.
-
 ### 감사의 글
 
 자료를 공개한 저자 오렐리앙 제롱(Aur&eacute;lien G&eacute;ron)과 강의자료를 지원한 한빛아카데미에게 진심어린 감사를 전합니다.
