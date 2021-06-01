@@ -113,25 +113,6 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .ss { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Symbol */
 .highlight .il { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Integer.Long */
   </style>
-<style type="text/css">
-    
-
-<script>
-    MathJax.Hub.Config({
-        "HTML-CSS": {
-            /*preferredFont: "TeX",*/
-            /*availableFonts: ["TeX", "STIX"],*/
-            styles: {
-                scale: 100,
-                ".MathJax_Display": {
-                    "font-size": "100%",
-                }
-            }
-        }
-    });
-</script>
-    
-  </style>
 
 
 
@@ -14417,7 +14398,7 @@ div.jp-OutputPrompt {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="&#51452;&#50836;-&#45236;&#50857;">&#51452;&#50836; &#45236;&#50857;<a class="anchor-link" href="#&#51452;&#50836;-&#45236;&#50857;">&#182;</a></h2>
 </div>
-</div></section></section><section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
@@ -14485,7 +14466,7 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>차원을 축소하면 정보손실 발생하여 성능 저하 가능. 하지만 학습속도 빨라짐.</li>
+<li>차원축소로 인한 정보손실을 어느 정도 감안하면서 훈련 속도와 성능을 최대로 유지하는 것이 목표</li>
 </ul>
 
 </div>
@@ -14500,7 +14481,8 @@ div.jp-OutputPrompt {
 <ul>
 <li>MNIST 데이터셋<ul>
 <li>사진의 중앙에만 집중해도 숫자 인식에 별 문제 없음.</li>
-<li>주성분 분석(PCA) 기법을 이용하여 154개의 픽셀만 대상으로 학습 가능</li>
+<li>주성분 분석(PCA) 기법을 이용하여 784개 픽셀 대신 154개만 대상으로 
+  충분히 학습 가능</li>
 </ul>
 </li>
 </ul>
@@ -14511,7 +14493,7 @@ div.jp-OutputPrompt {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
 <li>데이터 시각화<ul>
-<li>차원 수를 2, 3차원으로 줄이면 그래프 시각화 가능</li>
+<li>차원을 2, 3차원으로 줄이면 그래프 시각화 가능</li>
 <li>군집 같은 시각적인 패턴을 감지하여 데이터에 대한 통찰 얻을 수 있음.</li>
 </ul>
 </li>
@@ -14592,7 +14574,7 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>모든 훈련 샘플이 고차원 공간 안의 저차원 부분공간에 가깝게 놓여있는 경우가 일반적으로 발생</li>
+<li>모든 훈련 샘플이 고차원 공간의 일부인 저차원 부분공간에 가깝게 놓여 있는 경우가 일반적으로 발생</li>
 </ul>
 
 </div>
@@ -14619,8 +14601,20 @@ div.jp-OutputPrompt {
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="&#45824;&#54364;&#51201;&#51064;-&#52264;&#50896;&#52629;&#49548;-&#44592;&#48277;">&#45824;&#54364;&#51201;&#51064; &#52264;&#50896;&#52629;&#49548; &#44592;&#48277;<a class="anchor-link" href="#&#45824;&#54364;&#51201;&#51064;-&#52264;&#50896;&#52629;&#49548;-&#44592;&#48277;">&#182;</a></h3><ul>
+<h3 id="&#45824;&#54364;&#51201;&#51064;-&#52264;&#50896;&#52629;&#49548;-&#44592;&#48277;">&#45824;&#54364;&#51201;&#51064; &#52264;&#50896;&#52629;&#49548; &#44592;&#48277;<a class="anchor-link" href="#&#45824;&#54364;&#51201;&#51064;-&#52264;&#50896;&#52629;&#49548;-&#44592;&#48277;">&#182;</a></h3>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
 <li>사영(projection)</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
 <li>다양체 학습(manifold learning)</li>
 </ul>
 
@@ -14628,7 +14622,12 @@ div.jp-OutputPrompt {
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="&#49324;&#50689;-&#44592;&#48277;">&#49324;&#50689; &#44592;&#48277;<a class="anchor-link" href="#&#49324;&#50689;-&#44592;&#48277;">&#182;</a></h3><ul>
+<h3 id="&#49324;&#50689;-&#44592;&#48277;">&#49324;&#50689; &#44592;&#48277;<a class="anchor-link" href="#&#49324;&#50689;-&#44592;&#48277;">&#182;</a></h3>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
 <li>$n$차원 공간에 존재하는 $d$차원 부분공간을 $d$차원 공간으로 사영하기. 단, $d &lt; n$.</li>
 </ul>
 
@@ -14659,9 +14658,21 @@ div.jp-OutputPrompt {
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="&#48512;&#51201;&#51208;&#54620;-&#49324;&#50689;-&#50696;&#51228;">&#48512;&#51201;&#51208;&#54620; &#49324;&#50689; &#50696;&#51228;<a class="anchor-link" href="#&#48512;&#51201;&#51208;&#54620;-&#49324;&#50689;-&#50696;&#51228;">&#182;</a></h4><ul>
+<h3 id="&#48512;&#51201;&#51208;&#54620;-&#49324;&#50689;">&#48512;&#51201;&#51208;&#54620; &#49324;&#50689;<a class="anchor-link" href="#&#48512;&#51201;&#51208;&#54620;-&#49324;&#50689;">&#182;</a></h3>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
 <li>사영이 경우에 따라 보다 복잡한 결과를 낼 수 있음.</li>
-<li>롤케이크를 $x_1$과 $x_2$ 축으로 사영하면 샘플구분이 보다 어려워짐.</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>롤케이크를 $x_1$과 $x_2$ 축으로 사영하면 샘플 구분이 보다 어려워짐.</li>
 </ul>
 
 </div>
@@ -14679,7 +14690,12 @@ div.jp-OutputPrompt {
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="&#45796;&#50577;&#52404;-&#54617;&#49845;">&#45796;&#50577;&#52404; &#54617;&#49845;<a class="anchor-link" href="#&#45796;&#50577;&#52404;-&#54617;&#49845;">&#182;</a></h3><ul>
+<h3 id="&#45796;&#50577;&#52404;-&#54617;&#49845;">&#45796;&#50577;&#52404; &#54617;&#49845;<a class="anchor-link" href="#&#45796;&#50577;&#52404;-&#54617;&#49845;">&#182;</a></h3>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
 <li>롤케이크의 경우 사영 보다는 돌돌 말린 것을 펼치면 보다 적절한 2차원 이미지를 얻게 됨.</li>
 </ul>
 
@@ -14698,9 +14714,25 @@ div.jp-OutputPrompt {
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="&#45796;&#50577;&#52404;-&#44032;&#51221;">&#45796;&#50577;&#52404; &#44032;&#51221;<a class="anchor-link" href="#&#45796;&#50577;&#52404;-&#44032;&#51221;">&#182;</a></h3><ul>
+<h3 id="&#45796;&#50577;&#52404;-&#44032;&#51221;">&#45796;&#50577;&#52404; &#44032;&#51221;<a class="anchor-link" href="#&#45796;&#50577;&#52404;-&#44032;&#51221;">&#182;</a></h3>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
 <li>대부분의 고차원 데이터셋이 더 낮은 차원의 다양체게 가깝다는 가정</li>
-<li>저차원의 다양체 공간으로 차원축소를 진행하면 보다 간단한 다양체가 된다라는 가정과 함께 사용되지만 일반적으로 사실 아님.</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>저차원의 다양체 공간으로 차원축소를 진행하면 보다 간단한 다양체가 된다라는 가정과 함께 사용되지만 일반적으로 사실 아님.<ul>
+<li>위쪽 경우: 사영 후 보다 단순해짐.</li>
+<li>아랫쪽 경우: 사영 후 보다 복잡해짐.</li>
+</ul>
+</li>
 </ul>
 
 </div>
@@ -14719,8 +14751,9 @@ div.jp-OutputPrompt {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
 <li>사영<ul>
-<li>PCA(주성분 분석)</li>
-<li>커널 PCA (비선형 사영)</li>
+<li>PCA(주성분 분석): 선형 PCA, 랜덤 PCA, 점진적 PCA</li>
+<li>커널 PCA (비선형 사영): 선형 커널, RBF 커널, 시그모이드 커널</li>
+<li>기타: 랜덤 사영(Random Projection), LDA(선형 판별 분석, Linear Discriminant Analysis)</li>
 </ul>
 </li>
 </ul>
@@ -14732,6 +14765,7 @@ div.jp-OutputPrompt {
 <ul>
 <li>다양체 학습<ul>
 <li>LLE(지역 선형 임베딩)</li>
+<li>기타: MDS, Isomap, t-SNE 등</li>
 </ul>
 </li>
 </ul>
@@ -14838,7 +14872,7 @@ div.jp-OutputPrompt {
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="&#51452;&#49457;&#48516;-&#52286;&#44592;&#50752;-&#49324;&#50689;&#54616;&#44592;">&#51452;&#49457;&#48516; &#52286;&#44592;&#50752; &#49324;&#50689;&#54616;&#44592;<a class="anchor-link" href="#&#51452;&#49457;&#48516;-&#52286;&#44592;&#50752;-&#49324;&#50689;&#54616;&#44592;">&#182;</a></h3>
+<h3 id="&#51452;&#49457;&#48516;&#44284;-&#49324;&#50689;">&#51452;&#49457;&#48516;&#44284; &#49324;&#50689;<a class="anchor-link" href="#&#51452;&#49457;&#48516;&#44284;-&#49324;&#50689;">&#182;</a></h3>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
@@ -14876,18 +14910,14 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>예제: 데이터셋의 차원을 2로 줄이기</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<li><p>예제: 데이터셋의 차원을 2로 줄이기</p>
 <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">PCA</span>
 
-<span class="n">pca</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">(</span><span class="n">n_components</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
-<span class="n">X2D</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+  <span class="n">pca</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">(</span><span class="n">n_components</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
+  <span class="n">X2D</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 </pre></div>
+</li>
+</ul>
 
 </div>
 </div></section></section><section><section>
@@ -14907,13 +14937,9 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>예제<ul>
-<li>아래 사영 그림에서 설명된 3차원 데이터셋의 경우.<ul>
+<li>예제: 아래 사영 그림에서 설명된 3차원 데이터셋의 경우.<ul>
 <li>$z_1$ 축: 84.2%</li>
 <li>$z_2$ 축: 14.6%</li>
-</ul>
-</li>
-<li>따라서 마지막 주성분에는 1.2% 정도만 분산에 기여하므로 매우 적은 양의 정보가 포함되어 있음.</li>
 </ul>
 </li>
 </ul>
@@ -14933,13 +14959,13 @@ div.jp-OutputPrompt {
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="&#51201;&#51208;&#54620;-&#52264;&#50896;-&#49688;-&#49440;&#53469;&#54616;&#44592;">&#51201;&#51208;&#54620; &#52264;&#50896; &#49688; &#49440;&#53469;&#54616;&#44592;<a class="anchor-link" href="#&#51201;&#51208;&#54620;-&#52264;&#50896;-&#49688;-&#49440;&#53469;&#54616;&#44592;">&#182;</a></h3>
+<h3 id="&#51201;&#51208;&#54620;-&#52264;&#50896;">&#51201;&#51208;&#54620; &#52264;&#50896;<a class="anchor-link" href="#&#51201;&#51208;&#54620;-&#52264;&#50896;">&#182;</a></h3>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>추천 적절한 차원 수: 밝혀진 분산 비율의 합이 95% 정도 되도록 하는 주성분들로 구성</li>
+<li>적절한 차원: 밝혀진 분산 비율의 합이 95% 정도 되도록 하는 주성분들로 구성</li>
 </ul>
 
 </div>
@@ -14947,24 +14973,24 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>단, 데이터 시각화 목적의 경우: 2개 또는 3개</li>
+<li>데이터 시각화 목적의 경우: 2개 또는 3개</li>
 </ul>
 
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="&#49444;&#47749;-&#48516;&#49328;-&#48708;&#50984;-&#54876;&#50857;">&#49444;&#47749; &#48516;&#49328; &#48708;&#50984; &#54876;&#50857;<a class="anchor-link" href="#&#49444;&#47749;-&#48516;&#49328;-&#48708;&#50984;-&#54876;&#50857;">&#182;</a></h4>
+<h3 id="&#49444;&#47749;-&#48516;&#49328;-&#48708;&#50984;-&#54876;&#50857;">&#49444;&#47749; &#48516;&#49328; &#48708;&#50984; &#54876;&#50857;<a class="anchor-link" href="#&#49444;&#47749;-&#48516;&#49328;-&#48708;&#50984;-&#54876;&#50857;">&#182;</a></h3>
 </div>
-</div></section></section><section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>설명 분산 비율의 합과 차원 수 사이의 그래프 활용</li>
+<li>설명 분산 비율의 합과 차원 사이의 그래프 활용</li>
 </ul>
 
 </div>
-</div></section></section><section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
@@ -15002,16 +15028,12 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>아래 코드: 154개 주성분 사용하여 차원축소하기</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<li><p>아래 코드: 154개 주성분 사용하여 차원축소하기</p>
 <div class="highlight"><pre><span></span><span class="n">pca</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">(</span><span class="n">n_components</span> <span class="o">=</span> <span class="mi">154</span><span class="p">)</span>
-<span class="n">X_reduced</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+  <span class="n">X_reduced</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
 </pre></div>
+</li>
+</ul>
 
 </div>
 </div></section></section><section><section>
@@ -15050,23 +15072,40 @@ div.jp-OutputPrompt {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="&#47004;&#45924;-PCA">&#47004;&#45924; PCA<a class="anchor-link" href="#&#47004;&#45924;-PCA">&#182;</a></h3>
 </div>
-</div></section></section><section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
 <li>주성분 선택을 위해 사용되는 SVD 알고리즘을 확률적으로 작동하도록 만드는 기법</li>
-<li>보다 빠르게 지정된 개수의 주성분에 대한 근삿값을 찾아줌.</li>
-<li>$d$가 $n$ 보다 많이 작으면 기본 SVD 보다 훨씬 빠름.</li>
-<li>아래 코드: <code>svd_solver</code> 옵션을 <code>"randomized"</code>로 설정</li>
 </ul>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>보다 빠르게 지정된 개수의 주성분에 대한 근삿값을 찾아줌.</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>$d$가 $n$ 보다 많이 작으면 기본 SVD 보다 훨씬 빠름.</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li><p>아래 코드: <code>svd_solver</code> 옵션을 <code>"randomized"</code>로 설정</p>
 <div class="highlight"><pre><span></span><span class="n">rnd_pca</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">(</span><span class="n">n_components</span> <span class="o">=</span> <span class="mi">154</span><span class="p">,</span> <span class="n">svd_solver</span><span class="o">=</span><span class="s2">&quot;randomized&quot;</span><span class="p">)</span>
-<span class="n">X_reduced</span> <span class="o">=</span> <span class="n">rnd_pca</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+  <span class="n">X_reduced</span> <span class="o">=</span> <span class="n">rnd_pca</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
 </pre></div>
+</li>
+</ul>
 
 </div>
 </div></section></section><section><section>
@@ -15094,7 +15133,30 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>아래 코드: 넘파이의 <code>array_split()</code> 함수 활용</li>
+<li><p><code>partial_fit()</code> 활용에 주의할 것.</p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">IncrementalPCA</span>
+
+  <span class="n">n_batches</span> <span class="o">=</span> <span class="mi">100</span>
+  <span class="n">inc_pca</span> <span class="o">=</span> <span class="n">IncrementalPCA</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">154</span><span class="p">)</span>
+  <span class="k">for</span> <span class="n">X_batch</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">array_split</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">n_batches</span><span class="p">):</span>
+      <span class="n">inc_pca</span><span class="o">.</span><span class="n">partial_fit</span><span class="p">(</span><span class="n">X_batch</span><span class="p">)</span>
+
+  <span class="n">X_reduced</span> <span class="o">=</span> <span class="n">inc_pca</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+</pre></div>
+</li>
+</ul>
+
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="&#45336;&#54028;&#51060;&#51032;-memmap()-&#53364;&#47000;&#49828;-&#54876;&#50857;-&#44032;&#45733;">&#45336;&#54028;&#51060;&#51032; <code>memmap()</code> &#53364;&#47000;&#49828; &#54876;&#50857; &#44032;&#45733;<a class="anchor-link" href="#&#45336;&#54028;&#51060;&#51032;-memmap()-&#53364;&#47000;&#49828;-&#54876;&#50857;-&#44032;&#45733;">&#182;</a></h4>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>바이너리 파일로 저장된 (매우 큰) 데이터셋을 마치 메모리에 들어있는 것처럼 취급할 수 있는 도구 제공</li>
 </ul>
 
 </div>
@@ -15102,30 +15164,12 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li><code>partial_fit()</code> 활용에 주의할 것.</li>
-</ul>
-
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">IncrementalPCA</span>
-
-<span class="n">n_batches</span> <span class="o">=</span> <span class="mi">100</span>
-<span class="n">inc_pca</span> <span class="o">=</span> <span class="n">IncrementalPCA</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">154</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">X_batch</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">array_split</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">n_batches</span><span class="p">):</span>
-    <span class="n">inc_pca</span><span class="o">.</span><span class="n">partial_fit</span><span class="p">(</span><span class="n">X_batch</span><span class="p">)</span>
-
-<span class="n">X_reduced</span> <span class="o">=</span> <span class="n">inc_pca</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+<li><p>이를 이용하여 미니배치/온라인 학습 가능</p>
+<div class="highlight"><pre><span></span><span class="n">X_mm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">memmap</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;float32&quot;</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;readonly&quot;</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">n</span><span class="p">))</span>
+  <span class="n">inc_pca</span> <span class="o">=</span> <span class="n">IncrementalPCA</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">154</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span><span class="p">)</span>
+  <span class="n">inc_pca</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_mm</span><span class="p">)</span>
 </pre></div>
-
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="&#45336;&#54028;&#51060;&#51032;-memmap()-&#53364;&#47000;&#49828;-&#54876;&#50857;-&#44032;&#45733;">&#45336;&#54028;&#51060;&#51032; <code>memmap()</code> &#53364;&#47000;&#49828; &#54876;&#50857; &#44032;&#45733;<a class="anchor-link" href="#&#45336;&#54028;&#51060;&#51032;-memmap()-&#53364;&#47000;&#49828;-&#54876;&#50857;-&#44032;&#45733;">&#182;</a></h4><ul>
-<li>바이너리 파일로 저장된 (매우 큰) 데이터셋을 마치 메모리에 들어있는 것처럼 취급할 수 있는 도구 제공</li>
-<li>이를 이용하여 미니배치/온라인 학습 가능</li>
+</li>
 </ul>
 
 </div>
@@ -15137,46 +15181,64 @@ div.jp-OutputPrompt {
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="&#52964;&#45328;-&#44592;&#48277;">&#52964;&#45328; &#44592;&#48277;<a class="anchor-link" href="#&#52964;&#45328;-&#44592;&#48277;">&#182;</a></h3>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
 <li>5장의 커널 트릭을 이용한 기법</li>
-<li>PCA를 바로 실행하지 못하는 데이터셋을
-  보다 고차원으로 보낸 후 PCA를 실행하는 
-  효과를 내는 기법.
-  실제로 고차원으로 보내지는 않음.</li>
-<li>사영된 후에 샘플의 군집을 유지하거나 꼬인 다양체 모양의 데이터셋을 펼칠 때 유용.</li>
 </ul>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">KernelPCA</span>
+<ul>
+<li>PCA를 바로 실행하지 못하는 데이터셋을
+  보다 고차원으로 보낸 후 PCA를 실행하는 
+  효과를 내는 기법.
+  실제로 고차원으로 보내지는 않음.</li>
+</ul>
 
-<span class="n">rbf_pca</span> <span class="o">=</span> <span class="n">KernelPCA</span><span class="p">(</span><span class="n">n_components</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">kernel</span><span class="o">=</span><span class="s2">&quot;rbf&quot;</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mf">0.04</span><span class="p">)</span>
-<span class="n">X_reduced</span> <span class="o">=</span> <span class="n">rbf_pca</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="&#47204;&#52992;&#51060;&#53356;&#50640;-&#51201;&#50857;&#54620;-&#45796;&#50577;&#54620;-&#52964;&#45328;-&#50696;&#51228;">&#47204;&#52992;&#51060;&#53356;&#50640; &#51201;&#50857;&#54620; &#45796;&#50577;&#54620; &#52964;&#45328; &#50696;&#51228;<a class="anchor-link" href="#&#47204;&#52992;&#51060;&#53356;&#50640;-&#51201;&#50857;&#54620;-&#45796;&#50577;&#54620;-&#52964;&#45328;-&#50696;&#51228;">&#182;</a></h4>
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<div align="center"><img src="images/ch08/homl08-12.png" width="550"/></div>
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="&#52964;&#45328;-&#49440;&#53469;&#44284;-&#54616;&#51060;&#54140;&#54028;&#46972;&#48120;&#53552;-&#53916;&#45789;">&#52964;&#45328; &#49440;&#53469;&#44284; &#54616;&#51060;&#54140;&#54028;&#46972;&#48120;&#53552; &#53916;&#45789;<a class="anchor-link" href="#&#52964;&#45328;-&#49440;&#53469;&#44284;-&#54616;&#51060;&#54140;&#54028;&#46972;&#48120;&#53552;-&#53916;&#45789;">&#182;</a></h4>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>PCA는 기본적으로 비지도 학습</li>
+<li><p>사영된 후에 샘플의 군집을 유지하거나 꼬인 다양체 모양의 데이터셋을 펼칠 때 유용.</p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">KernelPCA</span>
+
+  <span class="n">rbf_pca</span> <span class="o">=</span> <span class="n">KernelPCA</span><span class="p">(</span><span class="n">n_components</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">kernel</span><span class="o">=</span><span class="s2">&quot;rbf&quot;</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mf">0.04</span><span class="p">)</span>
+  <span class="n">X_reduced</span> <span class="o">=</span> <span class="n">rbf_pca</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+</pre></div>
+</li>
+</ul>
+
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="&#47204;&#52992;&#51060;&#53356;&#50752;-&#52964;&#45328;">&#47204;&#52992;&#51060;&#53356;&#50752; &#52964;&#45328;<a class="anchor-link" href="#&#47204;&#52992;&#51060;&#53356;&#50752;-&#52964;&#45328;">&#182;</a></h3>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div align="center"><img src="images/ch08/homl08-12.png" width="600"/></div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="&#52964;&#45328;-&#49440;&#53469;&#44284;-&#54616;&#51060;&#54140;&#54028;&#46972;&#48120;&#53552;-&#53916;&#45789;">&#52964;&#45328; &#49440;&#53469;&#44284; &#54616;&#51060;&#54140;&#54028;&#46972;&#48120;&#53552; &#53916;&#45789;<a class="anchor-link" href="#&#52964;&#45328;-&#49440;&#53469;&#44284;-&#54616;&#51060;&#54140;&#54028;&#46972;&#48120;&#53552;-&#53916;&#45789;">&#182;</a></h3>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>kPCA는 기본적으로 비지도 학습.<ul>
+<li><strong>참고:</strong> 차원축소 기법 일부는 지도학습임. 대표적인 예제는 LDA.</li>
+</ul>
+</li>
 </ul>
 
 </div>
@@ -15199,35 +15261,46 @@ div.jp-OutputPrompt {
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>방식 1: 전처리 용도로 사용 후 예측기와 연동하는 그리드탐색 등을 활용하여 성능 측정 가능</li>
-</ul>
-
+<h4 id="&#48169;&#49885;-1">&#48169;&#49885; 1<a class="anchor-link" href="#&#48169;&#49885;-1">&#182;</a></h4>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li><p>전처리 용도로 사용 후 예측기와 연동하는 그리드탐색 등을 활용하여 성능 측정 가능</p>
 <div class="highlight"><pre><span></span><span class="n">clf</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
-        <span class="p">(</span><span class="s2">&quot;kpca&quot;</span><span class="p">,</span> <span class="n">KernelPCA</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">2</span><span class="p">)),</span>
-        <span class="p">(</span><span class="s2">&quot;log_reg&quot;</span><span class="p">,</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">solver</span><span class="o">=</span><span class="s2">&quot;lbfgs&quot;</span><span class="p">))</span> <span class="p">])</span>
+          <span class="p">(</span><span class="s2">&quot;kpca&quot;</span><span class="p">,</span> <span class="n">KernelPCA</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">2</span><span class="p">)),</span>
+          <span class="p">(</span><span class="s2">&quot;log_reg&quot;</span><span class="p">,</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">solver</span><span class="o">=</span><span class="s2">&quot;lbfgs&quot;</span><span class="p">))</span> <span class="p">])</span>
 
-<span class="n">param_grid</span> <span class="o">=</span> <span class="p">[{</span>
-        <span class="s2">&quot;kpca__gamma&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.03</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>
-        <span class="s2">&quot;kpca__kernel&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;rbf&quot;</span><span class="p">,</span> <span class="s2">&quot;sigmoid&quot;</span><span class="p">]</span> <span class="p">}]</span>
+  <span class="n">param_grid</span> <span class="o">=</span> <span class="p">[{</span>
+          <span class="s2">&quot;kpca__gamma&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.03</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>
+          <span class="s2">&quot;kpca__kernel&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;rbf&quot;</span><span class="p">,</span> <span class="s2">&quot;sigmoid&quot;</span><span class="p">]</span> <span class="p">}]</span>
 
-<span class="n">grid_search</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">param_grid</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-<span class="n">grid_search</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+  <span class="n">grid_search</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">param_grid</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+  <span class="n">grid_search</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 </pre></div>
+</li>
+</ul>
 
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="&#48169;&#49885;-2">&#48169;&#49885; 2<a class="anchor-link" href="#&#48169;&#49885;-2">&#182;</a></h4>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>방식 2: 가장 낮은 재구성 오차를 만드는 커널과 하이퍼파라미터 선택 가능<ul>
-<li>단점: kPCA의 재구성은 선형 PCA 보다 훨씬 어려움. 아래 그림 참조</li>
+<li>가장 낮은 재구성 오차를 만드는 커널과 하이퍼파라미터 선택 가능.</li>
 </ul>
-</li>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>다만, kPCA의 재구성은 선형 PCA 보다 훨씬 어려움. 아래 그림 참조</li>
 </ul>
 
 </div>
@@ -15241,11 +15314,32 @@ div.jp-OutputPrompt {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="8.5-LLE">8.5 LLE<a class="anchor-link" href="#8.5-LLE">&#182;</a></h2>
 </div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="LLE(&#44397;&#49548;-&#49440;&#54805;-&#49341;&#51077;)-&#44592;&#48376;-&#50500;&#51060;&#46356;&#50612;">LLE(&#44397;&#49548; &#49440;&#54805; &#49341;&#51077;) &#44592;&#48376; &#50500;&#51060;&#46356;&#50612;<a class="anchor-link" href="#LLE(&#44397;&#49548;-&#49440;&#54805;-&#49341;&#51077;)-&#44592;&#48376;-&#50500;&#51060;&#46356;&#50612;">&#182;</a></h3>
+</div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>국소 선형 삽입(LLE)은 비선형 차원축소 기법</li>
+<li>대표적인 다양체 학습 기법</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>롤케이크 데이터셋의 경우처럼 전체적으론 비선형인 다양체이지만 국소적으로는 데이터가 선형적으로 연관되어 있음.</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>국소적 관계가 가장 잘 보존되는 훈련 세트의 저차원 표현 찾을 수 있음.</li>
 </ul>
 
 </div>
@@ -15260,36 +15354,7 @@ div.jp-OutputPrompt {
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="LLE-&#44592;&#48376;-&#50500;&#51060;&#46356;&#50612;">LLE &#44592;&#48376; &#50500;&#51060;&#46356;&#50612;<a class="anchor-link" href="#LLE-&#44592;&#48376;-&#50500;&#51060;&#46356;&#50612;">&#182;</a></h3>
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>가장 가까운 이웃에 얼마나 선형적으로 연관되어 있는지 측정</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>이후 국소적 관계가 가장 잘 보존되는 훈련 세트의 저차원 표현 찾음.</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>잡음이 많지 않은 다양체를 펼치는 데 잘 작동</li>
-</ul>
-
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="&#50696;&#51228;:-&#47204;&#52992;&#51060;&#53356;">&#50696;&#51228;: &#47204;&#52992;&#51060;&#53356;<a class="anchor-link" href="#&#50696;&#51228;:-&#47204;&#52992;&#51060;&#53356;">&#182;</a></h4>
+<h3 id="&#50696;&#51228;:-&#47204;&#52992;&#51060;&#53356;">&#50696;&#51228;: &#47204;&#52992;&#51060;&#53356;<a class="anchor-link" href="#&#50696;&#51228;:-&#47204;&#52992;&#51060;&#53356;">&#182;</a></h3>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
@@ -15321,41 +15386,52 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
+<li>사영 기법<ul>
 <li>랜덤 사영</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>다차원 스케일링</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>Isomap</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>t-SNE</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
 <li>선형 판별 분석</li>
 </ul>
+</li>
+</ul>
 
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>다양체 학습<ul>
+<li>다차원 스케일링</li>
+<li>Isomap</li>
+<li>t-SNE</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="MNIST-&#45936;&#51060;&#53552;&#49483;-&#49884;&#44033;&#54868;">MNIST &#45936;&#51060;&#53552;&#49483; &#49884;&#44033;&#54868;<a class="anchor-link" href="#MNIST-&#45936;&#51060;&#53552;&#49483;-&#49884;&#44033;&#54868;">&#182;</a></h3>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>다양한 차원축소 기법을 이용한 MNIST 데이터셋 시각화 가능</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>참조: <a href="https://scikit-learn.org/stable/auto_examples/manifold/plot_lle_digits.html#sphx-glr-auto-examples-manifold-plot-lle-digits-py">사이킷런 활용 손글씨 데이터셋 시각화</a></li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div align="center"><img src="https://scikit-learn.org/stable/_images/sphx_glr_plot_lle_digits_001.png" width="600"/></div>
 </div>
 </div></section></section>
 </div>
