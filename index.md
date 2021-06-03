@@ -29,6 +29,8 @@
 | | 주피터 노트북 | [&#x1F4D9;](./notebooks/handson-ml2-07.html) &nbsp; [<span style="color: orange;">CO</span>](https://colab.research.google.com/github/codingalzi/handson-ml2/blob/master/notebooks/handson-ml2-07.ipynb) |
 | 차원축소 | 슬라이드 | [&#x1F4F1;](./slides/handson-ml2-08.slides.html) &nbsp; [&#x1F4BB;](./slides/handson-ml2-08-slides.pdf) |
 | | 주피터 노트북 | [&#x1F4D9;](./notebooks/handson-ml2-08.html) &nbsp; [<span style="color: orange;">CO</span>](https://colab.research.google.com/github/codingalzi/handson-ml2/blob/master/notebooks/handson-ml2-08.ipynb) |
+| 비지도 학습 | 슬라이드 | [&#x1F4F1;](./slides/handson-ml2-09.slides.html) &nbsp; [&#x1F4BB;](./slides/handson-ml2-09-slides.pdf) |
+| | 주피터 노트북 | [&#x1F4D9;](./notebooks/handson-ml2-09.html) &nbsp; [<span style="color: orange;">CO</span>](https://colab.research.google.com/github/codingalzi/handson-ml2/blob/master/notebooks/handson-ml2-09.ipynb) |
 
 **링크 활용법**
 * &#x1F4F1;: 좌우방향 터치 지원 슬라이드

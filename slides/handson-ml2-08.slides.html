@@ -15401,6 +15401,69 @@ $$</p>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="LLE-&#51060;&#47200;">LLE &#51060;&#47200;<a class="anchor-link" href="#LLE-&#51060;&#47200;">&#182;</a></h3>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>다음 세 단계를 거쳐야 함.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>$1$. 최근접 이웃 찾기: 지정된 숫자의 최근접 이웃 찾기</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>$2$. 가중치 행렬 찾기: 아래 최적화 문제를 해결하는 가중치 행렬 찾기</p>
+$$
+\hat{\mathbf{W}} = \underset{\mathbf{W}}{\textrm{argmin}} \sum_{i=1}^{m} \left( \mathbf{x}^{(i)} - \sum_{j=1}^{m}w_{i,j}\, \mathbf{x}^{(j)} \right)
+$$<p>단, 아래 조건 성립해야 함:</p>
+<ul>
+<li>$w_{i,j} = 0$: $\mathbf{x}^{(j)}$ 가 $\mathbf{x}^{(j)}$ 의 최근접 이웃이 아닐 때.</li>
+<li>$\sum_{j=1}^{m} = 1$: 모든 $i=1, 2, \dots, m$에 대해.</li>
+</ul>
+
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>$3$. 아래 관계를 만족하는 최적의 $d$ 차원의 데이터셋 찾기</p>
+$$
+\mathbf{Z} = \underset{\mathbf{Z}}{\textrm{argmin}} \sum_{i=1}^{m} \left( \mathbf{z}^{(i)} - \sum_{j=1}^{m}\hat{w}_{i,j}\, \mathbf{z}^{(j)} \right)^2
+$$<p>단, $\hat{w}_{i,j}$ 는 2단계에서 찾은 $\hat{\mathbf{W}}$의 항목임.</p>
+
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="&#49324;&#51060;&#53431;&#47088;&#51032;-LLE-&#47784;&#45944;-&#50741;&#49496;">&#49324;&#51060;&#53431;&#47088;&#51032; LLE &#47784;&#45944; &#50741;&#49496;<a class="anchor-link" href="#&#49324;&#51060;&#53431;&#47088;&#51032;-LLE-&#47784;&#45944;-&#50741;&#49496;">&#182;</a></h3>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>앞서 설명한 단계를 해결하는 방식에 따라 <code>method</code> 옵션이 달라짐.</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li><code>method</code> 옵션 종류: <code>"statndard"</code>, <code>"hessian"</code>, <code>"modified"</code>, <code>"ltsa"</code><ul>
+<li>기본값은 <code>"statndard"</code>.</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="8.6-&#44592;&#53440;-&#52264;&#50896;&#52629;&#49548;-&#44592;&#48277;">8.6 &#44592;&#53440; &#52264;&#50896;&#52629;&#49548; &#44592;&#48277;<a class="anchor-link" href="#8.6-&#44592;&#53440;-&#52264;&#50896;&#52629;&#49548;-&#44592;&#48277;">&#182;</a></h2>
 </div>
 </div>
