@@ -14435,7 +14435,7 @@ div.jp-OutputPrompt {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
 <li>다양체 학습 알고리즘<ul>
-<li>LLE(국소 선형 삽입)</li>
+<li>LLE(국소적 선형 임베딩)</li>
 </ul>
 </li>
 </ul>
@@ -15338,7 +15338,7 @@ $$</p>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="LLE(&#44397;&#49548;-&#49440;&#54805;-&#49341;&#51077;)-&#44592;&#48376;-&#50500;&#51060;&#46356;&#50612;">LLE(&#44397;&#49548; &#49440;&#54805; &#49341;&#51077;) &#44592;&#48376; &#50500;&#51060;&#46356;&#50612;<a class="anchor-link" href="#LLE(&#44397;&#49548;-&#49440;&#54805;-&#49341;&#51077;)-&#44592;&#48376;-&#50500;&#51060;&#46356;&#50612;">&#182;</a></h3>
+<h3 id="LLE(&#44397;&#49548;&#51201;-&#49440;&#54805;-&#51076;&#48288;&#46377;)-&#44592;&#48376;-&#50500;&#51060;&#46356;&#50612;">LLE(&#44397;&#49548;&#51201; &#49440;&#54805; &#51076;&#48288;&#46377;) &#44592;&#48376; &#50500;&#51060;&#46356;&#50612;<a class="anchor-link" href="#LLE(&#44397;&#49548;&#51201;-&#49440;&#54805;-&#51076;&#48288;&#46377;)-&#44592;&#48376;-&#50500;&#51060;&#46356;&#50612;">&#182;</a></h3>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
@@ -15440,13 +15440,14 @@ $$<p>단, $\hat{w}_{i,j}$ 는 2단계에서 찾은 $\hat{\mathbf{W}}$의 항목�
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="&#49324;&#51060;&#53431;&#47088;&#51032;-LLE-&#47784;&#45944;-&#50741;&#49496;">&#49324;&#51060;&#53431;&#47088;&#51032; LLE &#47784;&#45944; &#50741;&#49496;<a class="anchor-link" href="#&#49324;&#51060;&#53431;&#47088;&#51032;-LLE-&#47784;&#45944;-&#50741;&#49496;">&#182;</a></h3>
+<h3 id="&#49324;&#51060;&#53431;&#47088;&#51032;-LLE-&#47784;&#45944;-&#50508;&#44256;&#47532;&#51608;">&#49324;&#51060;&#53431;&#47088;&#51032; LLE &#47784;&#45944; &#50508;&#44256;&#47532;&#51608;<a class="anchor-link" href="#&#49324;&#51060;&#53431;&#47088;&#51032;-LLE-&#47784;&#45944;-&#50508;&#44256;&#47532;&#51608;">&#182;</a></h3>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>앞서 설명한 단계를 해결하는 방식에 따라 <code>method</code> 옵션이 달라짐.</li>
+<li>앞서 언급하 2단계를 해결하는 방식에 따라 <code>LocallyLinearEmbedding</code> 모델의 
+  <code>method</code> 옵션이 달라짐.</li>
 </ul>
 
 </div>
@@ -15454,10 +15455,30 @@ $$<p>단, $\hat{w}_{i,j}$ 는 2단계에서 찾은 $\hat{\mathbf{W}}$의 항목�
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li><code>method</code> 옵션 종류: <code>"statndard"</code>, <code>"hessian"</code>, <code>"modified"</code>, <code>"ltsa"</code><ul>
-<li>기본값은 <code>"statndard"</code>.</li>
+<li><code>method</code> 옵션 종류: <code>"statndard"</code>, <code>"modified"</code>, <code>"hessian"</code>, <code>"ltsa"</code><ul>
+<li><code>"statndard"</code>: 국소적 주성분 분석 아이디어를 활용하는 알고리즘. 기본값임.</li>
+<li><code>"modified"</code>: 이웃 개수가 훈련 샘플의 차원보다 클 때 적용. 다중 가중치 벡터 활용.</li>
+<li><code>"hessian"</code>: 헤세(Hesse)의 아이겐맵(Eigenmap)을 활용하는 알고리즘.</li>
+<li><code>"ltsa"</code>: 국소적 접공간 설정(Local Tangent Space Alignment) 알고리즘.</li>
 </ul>
 </li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>시간복잡도: 알고리즘 마다 조금씩 다르다. 
+  또한 3단계의 알고리즘이 $O(dm^2)$이기에 대용량의 훈련 세트에 부적절함.</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>참고: <a href="https://scikit-learn.org/stable/modules/manifold.html#locally-linear-embedding">scikit-learn's Locally Linear Embedding</a></li>
 </ul>
 
 </div>
