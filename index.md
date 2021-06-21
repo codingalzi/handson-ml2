@@ -61,7 +61,7 @@
 복제합니다.
 
 ```bash
-$ git clone https://github.com/codingalzi/handson-ml.git
+$ git clone https://github.com/codingalzi/handson-ml2.git
 $ cd handson-ml
 ```
 
