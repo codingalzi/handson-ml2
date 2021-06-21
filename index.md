@@ -39,9 +39,11 @@
 * <span style="color: orange;">CO</span>: 구글 코랩(colab) 주피터 노트북
 * &#x1F34A;: Orange3 워크플로우 및 데이터
 
-### QnA
+### 주제별 동영상
 
-* 챕터별 질의응답을 [QnA 파일](qna.md)에 모아놓았습니다.
+주요 주제별 강의 동영상도 
+[유튜브](https://www.youtube.com/playlist?list=PL5aSjzJqCaPYlKXQ_olS0V-QJ28SZpTW3)에서
+시청할 수 있습니다. 
 
 ### 주피터 노트북 학습법
 
